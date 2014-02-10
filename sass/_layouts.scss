@@ -1,0 +1,57 @@
+// Primary layout styles
+
+#wrap {
+	
+	width:100%;
+
+	#container {
+		@include outer-container;
+
+		#topNav {
+			@include span-columns(8);
+		}
+
+		.search {
+			@include span-columns(2);
+			
+		}
+
+		#pageTitle {
+			@include row(block);
+			#logo {
+				@include span-columns(2);	
+			}
+			h1 {
+				@include span-columns(10);
+				@include omega();
+			}
+		}
+
+		#mainNav,
+		#breadcrumbs,
+		#carousel,
+		#bbnav,
+		#content,
+		#footer,
+		#page_bottom {
+			@include span-columns(12);
+		}
+
+	}
+
+	#sprflt {
+		@include span-columns(12);
+		#mainContent {
+			@include span-columns(9 of 12);
+			@include shift(1);
+			@include omega();
+		}
+		#subNav {
+			@include span-columns(2 of 12);
+		}
+		#footer {
+			@include span-columns(12 of 12);	
+		}
+	}
+
+}

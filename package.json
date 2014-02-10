@@ -1,0 +1,24 @@
+{
+  "name": "ucsc-pages",
+  "version": "0.0.1",
+  "description": "Responsive evolution of current UCSC web templates.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch": "node app.js"
+  },
+  "author": "Rob Knight",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "cheerio": "~0.13.1",
+    "request": "~2.33.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-compass": "~1.1.2",
+    "gulp-clean": "~0.2.4",
+    "gulp-notify": "~0.4.1",
+    "gulp-livereload": "~1.0.1",
+    "tiny-lr": "0.0.5"
+  }
+}

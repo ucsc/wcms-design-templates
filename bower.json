@@ -1,0 +1,25 @@
+{
+  "name": "responsive-css-only",
+  "version": "0.0.1",
+  "authors": [
+    "Rob Knight <raknight@ucsc.edu>"
+  ],
+  "description": "UCSC Adaptive templates",
+  "main": "./app/index.html",
+  "keywords": [
+    "responsive"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.0"
+  }
+}

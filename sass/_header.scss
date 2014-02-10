@@ -1,0 +1,7 @@
+#logo {
+	@include hide-text();
+	@include size(144px 45px);
+	background-position: left top;
+	background-repeat: no-repeat; 
+	@include retina-image('../images/logos/ucsc-logo-small', 144px 45px);
+}

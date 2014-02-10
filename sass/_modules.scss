@@ -1,0 +1,48 @@
+.three {
+	@include span-columns(12);
+
+	.wrap {
+		@include span-columns(4);
+		@include media($mobile) {
+ 			@include span-columns(12);
+		}
+	}
+
+}
+
+.four {
+	@include span-columns(12);
+
+	.wrap {
+		@include span-columns(3);
+		@include media($mobile) {
+ 			@include span-columns(12);
+		}		
+	}
+
+}
+
+.combined {
+	@include box-sizing(border-box);
+	@include pad(); 
+	border-radius: $border-radius-base;
+	background-color: lighten($primary-sand, 10%);
+	@include module-box-shadow();
+
+	.wrap {
+		border-right: 1px solid darken($primary-sand, 10%);
+		border-left: 1px solid darken($primary-sand, 30%);
+		@include reset-display;
+		
+	}
+
+	h2 {
+		border-bottom: #E5E4DE 1px solid;
+		color: #8E8C87;
+		font-weight: normal;
+		margin: 0 0 1em 0;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+	}
+
+}
