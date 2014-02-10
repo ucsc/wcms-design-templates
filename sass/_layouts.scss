@@ -8,21 +8,29 @@
 		@include outer-container;
 
 		#topNav {
-			@include span-columns(8);
+			@include span-columns(8 of 12);
 		}
 
 		.search {
-			@include span-columns(2);
-			
+			@include span-columns(2 of 12);
 		}
 
 		#pageTitle {
+			@include span-columns(12);
 			@include row(block);
 			#logo {
-				@include span-columns(2);	
+				@include span-columns(2 of 12);
+
+				.dept & {
+					@include hide-text();
+					@include size(144px 45px);
+					background-position: left top;
+					background-repeat: no-repeat; 
+					@include retina-image('../images/logos/ucsc-logo-small', 144px 45px);
+				}
 			}
 			h1 {
-				@include span-columns(10);
+				@include span-columns(10 of 12);
 				@include omega();
 			}
 		}
@@ -35,6 +43,7 @@
 		#footer,
 		#page_bottom {
 			@include span-columns(12);
+			@include row(block);
 		}
 
 	}

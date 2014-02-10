@@ -59,10 +59,17 @@ body {
       /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
       #wrap #container .search:last-child {
         margin-right: 0; }
-    /* line 19, ../../sass/_layouts.scss */
+    /* line 18, ../../sass/_layouts.scss */
     #wrap #container #pageTitle {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
       *zoom: 1;
       display: block; }
+      /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      #wrap #container #pageTitle:last-child {
+        margin-right: 0; }
       /* line 18, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
       #wrap #container #pageTitle:before, #wrap #container #pageTitle:after {
         content: " ";
@@ -79,7 +86,22 @@ body {
         /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
         #wrap #container #pageTitle #logo:last-child {
           margin-right: 0; }
-      /* line 24, ../../sass/_layouts.scss */
+        /* line 24, ../../sass/_layouts.scss */
+        .dept #wrap #container #pageTitle #logo {
+          color: transparent;
+          font: 0/0 a;
+          text-shadow: none;
+          width: 144px;
+          height: 45px;
+          background-position: left top;
+          background-repeat: no-repeat;
+          background-image: url("../images/logos/ucsc-logo-small.png"); }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+            /* line 24, ../../sass/_layouts.scss */
+            .dept #wrap #container #pageTitle #logo {
+              background-image: url("../images/logos/ucsc-logo-small@2x.png");
+              background-size: 144px 45px; } }
+      /* line 32, ../../sass/_layouts.scss */
       #wrap #container #pageTitle h1 {
         float: left;
         display: block;
@@ -89,7 +111,7 @@ body {
         /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
         #wrap #container #pageTitle h1:last-child {
           margin-right: 0; }
-    /* line 36, ../../sass/_layouts.scss */
+    /* line 44, ../../sass/_layouts.scss */
     #wrap #container #mainNav,
     #wrap #container #breadcrumbs,
     #wrap #container #carousel,
@@ -100,7 +122,9 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 100%; }
+      width: 100%;
+      *zoom: 1;
+      display: block; }
       /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
       #wrap #container #mainNav:last-child,
       #wrap #container #breadcrumbs:last-child,
@@ -110,7 +134,32 @@ body {
       #wrap #container #footer:last-child,
       #wrap #container #page_bottom:last-child {
         margin-right: 0; }
-  /* line 42, ../../sass/_layouts.scss */
+      /* line 18, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+      #wrap #container #mainNav:before, #wrap #container #mainNav:after,
+      #wrap #container #breadcrumbs:before,
+      #wrap #container #breadcrumbs:after,
+      #wrap #container #carousel:before,
+      #wrap #container #carousel:after,
+      #wrap #container #bbnav:before,
+      #wrap #container #bbnav:after,
+      #wrap #container #content:before,
+      #wrap #container #content:after,
+      #wrap #container #footer:before,
+      #wrap #container #footer:after,
+      #wrap #container #page_bottom:before,
+      #wrap #container #page_bottom:after {
+        content: " ";
+        display: table; }
+      /* line 23, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+      #wrap #container #mainNav:after,
+      #wrap #container #breadcrumbs:after,
+      #wrap #container #carousel:after,
+      #wrap #container #bbnav:after,
+      #wrap #container #content:after,
+      #wrap #container #footer:after,
+      #wrap #container #page_bottom:after {
+        clear: both; }
+  /* line 51, ../../sass/_layouts.scss */
   #wrap #sprflt {
     float: left;
     display: block;
@@ -119,7 +168,7 @@ body {
     /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
     #wrap #sprflt:last-child {
       margin-right: 0; }
-    /* line 44, ../../sass/_layouts.scss */
+    /* line 53, ../../sass/_layouts.scss */
     #wrap #sprflt #mainContent {
       float: left;
       display: block;
@@ -130,7 +179,7 @@ body {
       /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
       #wrap #sprflt #mainContent:last-child {
         margin-right: 0; }
-    /* line 49, ../../sass/_layouts.scss */
+    /* line 58, ../../sass/_layouts.scss */
     #wrap #sprflt #subNav {
       float: left;
       display: block;
@@ -139,7 +188,7 @@ body {
       /* line 40, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
       #wrap #sprflt #subNav:last-child {
         margin-right: 0; }
-    /* line 52, ../../sass/_layouts.scss */
+    /* line 61, ../../sass/_layouts.scss */
     #wrap #sprflt #footer {
       float: left;
       display: block;
@@ -229,19 +278,3 @@ body {
     margin: 0 0 1em 0;
     padding-bottom: 5px;
     text-transform: uppercase; }
-
-/* line 1, ../../sass/_header.scss */
-#logo {
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
-  width: 144px;
-  height: 45px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-image: url("../images/logos/ucsc-logo-small.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    /* line 1, ../../sass/_header.scss */
-    #logo {
-      background-image: url("../images/logos/ucsc-logo-small@2x.png");
-      background-size: 144px 45px; } }
