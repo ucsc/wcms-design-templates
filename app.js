@@ -52,6 +52,9 @@ pages.forEach(function(i){
 				};
 			});
 
+			// Add .row elements (we'll need to change this in the WCMS later)
+			var topRow = $('#topNav').html() + $('.search').html();
+
 	    var html = $.html();
 
 	    // Write the local file

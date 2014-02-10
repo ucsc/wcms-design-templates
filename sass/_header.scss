@@ -1,3 +1,40 @@
-#logo {
+/* 
+*		Global header
+*/
+
+// Top nav current
+#topNav {
+	> li {
+		background-image: none;
+		border-left: 1px solid #C2CDC9;
+		float: left;
+		font-size: 12px;
+		line-height: 1.2em;
+		list-style-type: none;
+		padding: 25px 10px 1px 10px;
+	}
+}
+
+.search {
+	
+
+	form {
+	
+	}
+
+	label {
+		@include hide-text();
+	}
+
+	.query {
+		color: #A3A3A1;
+		height: 15px;
+		line-height: 1em;
+		padding: 4px 0 0 0;
+		vertical-align: top;
+		width: 165px;
+	}
+
+	
 
 }

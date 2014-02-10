@@ -1,6 +1,6 @@
 {
-  "name": "ucsc-pages",
-  "version": "0.0.1",
+  "name": "ucsc-responsive-pages",
+  "version": "0.5.0",
   "description": "Responsive evolution of current UCSC web templates.",
   "main": "app.js",
   "scripts": {

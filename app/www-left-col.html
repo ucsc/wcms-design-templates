@@ -21,48 +21,39 @@
 </script>
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="http://static.ucsc.edu/css/fixie.css" />
-<![endif]--> <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4301164-1']);
-  _gaq.push(['_setDomainName', '.ucsc.edu']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<script type="text/javascript">
-    $('.newsletter-btn').click(function() { _gaq.push(['_trackEvent', 'Buttons', 'Newsletter', 'Go to subscribe page']); });
-    $('.handle').click(function() { _gaq.push(['_trackEvent', 'Buttons', 'EnjoyTheView', document.getElementsByTagName('title')[0]]); });
-</script>
-
+<![endif]-->
    
 </head>
 
 <body class="contentLeftNav homeEnv">
+
+<!-- Accessibility links. Hidden until they receive :focus -->
+<ul id="access-links">
+    <li><a href="#mainContent">Skip to main content</a></li>
+    <li><a href="#mainNav">Skip to primary navigation</a></li>
+</ul>
+
  <div id="wrap">
    <div id="container">
      <div id="content">
        
-       <a href="../index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a>
-       <ul id="topNav">
+        <div class="row">
+            <a href="../index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a>
+            <ul id="topNav">
 <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
 <li><a href="../tools/people.html" title="Find People - UCSC People Search">People</a></li>
 <li><a href="../tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
 <li><a href="../tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
 </ul> 
-
-       <div class="search">
-         <!-- Google Custom Search --><div>
+            <div class="search">
+                <!-- Google Custom Search --><div>
 <form action="http://www.ucsc.edu/search" id="cse-search-box"><input name="cx" type="hidden" value="012090462228956765947:d0ywvq7bxee"> <input name="cof" type="hidden" value="FORID:9"> <input name="ie" type="hidden" value="UTF-8"> <label class="hide" for="q">Search</label><input class="query" id="q" name="q" type="text" value="Search UCSC"> <input alt="Search button" class="srchBtn" src="http://static.ucsc.edu/images/search_button.gif" type="image"></form>
 </div><!-- end GCS -->
-       </div>
-
-       <ul id="mainNav">
+            </div>
+        </div>
+        
+        <div class="row">
+            <ul id="mainNav">
 <li class="first"><a href="../about/index.html">About</a></li>
 <li><a href="../admissions/index.html">Admissions</a></li>
 <li><a href="../academics/index.html">Academics</a></li>
@@ -80,23 +71,24 @@
 </ul>
 </li>
 </ul> 
+        </div>
 
-       <div id="breadcrumbs">
-         <p><a href="../index.html">
+        <div class="row" id="breadcrumbs">
+            <p><a href="../index.html">
 		Home</a> »
 			Research » In the Divisions</p>
-       </div>
+        </div>
 
-       <div id="sprflt">
-         <div id="subNav">
-           
-	   <ul><li><a href="highlights.html">Highlights</a></li><li><a href="programs.html">Programs and Units</a></li><li><a href="opportunities.html">Opportunities</a></li><li><a href="facilities.html">Facilities</a></li><li><a class="current" href="divisions.html">In the Divisions</a></li></ul>
-	   
-         </div>
+        <div class="row" id="sprflt">
+            <div id="subNav">
+                
+                <ul><li><a href="highlights.html">Highlights</a></li><li><a href="programs.html">Programs and Units</a></li><li><a href="opportunities.html">Opportunities</a></li><li><a href="facilities.html">Facilities</a></li><li><a class="current" href="divisions.html">In the Divisions</a></li></ul>
+                
+            </div>
 
-         <div id="mainContent">
-          
-          <h1 id="title">Research in the Divisions</h1><div id="bannerBox"><img alt="" id="banner" src="http://www.ucsc.edu/research/images/res-in-divisions-550.jpg"></div><div class="contentBox"><p>UC Santa Cruz faculty and students have made significant contributions to the body of research that has earned the University of California the ranking as the foremost public research institution in the world.</p>
+            <div id="mainContent">
+                
+                <h1 id="title">Research in the Divisions</h1><div id="bannerBox"><img alt="" id="banner" src="http://www.ucsc.edu/research/images/res-in-divisions-550.jpg"></div><div class="contentBox"><p>UC Santa Cruz faculty and students have made significant contributions to the body of research that has earned the University of California the ranking as the foremost public research institution in the world.</p>
 <p>Here are links to research activities and opportunities in UCSC's four academic divisions and the Baskin School of Engineering:</p>
 <ul>
 <li><a href="http://artsites.ucsc.edu/ari/">Division of the Arts</a> (Arts Research Institute)</li>
@@ -105,21 +97,19 @@
 <li><a href="http://socialsciences.ucsc.edu/research/">Division of Social Sciences</a></li>
 <li><a href="http://www.ce.ucsc.edu/research">Baskin School of Engineering</a></li>
 </ul></div>
-          
-         </div>
+                
+            </div>
         
-        <div id="footer">
-          <p class="links"><a href="../feedback/index.html">Feedback</a></p>
-          <p class="address home">UC Santa Cruz, 1156 High Street, Santa Cruz, Ca 95064<br>
-&#169;2012 Regents of the University of California. All Rights Reserved.</p>
+            <div id="footer">
+                <p class="links"><a href="../feedback/index.html">Feedback</a></p>
+                <p class="address home">UC Santa Cruz, 1156 High Street, Santa Cruz, Ca 95064<br> &#169;2014 Regents of the University of California. All Rights Reserved.</p>
 <p class="social-media"><a href="http://www.facebook.com/ucsantacruz"><img alt="Facebook" height="24" src="http://www.ucsc.edu/research/../images/interface/icon_facebook.png" width="48"></a> <a href="http://twitter.com/ucsc"><img alt="Twitter" height="24" src="http://www.ucsc.edu/research/../images/interface/icon_twitter.png" width="48"></a> <a href="http://youtube.com/ucsantacruz"><img alt="YouTube" height="24" src="http://www.ucsc.edu/research/../images/interface/icon_youtube.png" width="48"></a> <a href="http://www.linkedin.com/groups?home=&amp;gid=102708"><img alt="UC Santa Cruz - LinkedIn" height="24" src="http://www.ucsc.edu/research/../images/interface/icon_linkedin.png" width="48"></a></p>
-        </div>
-       
-       </div><!-- /sptflt -->
+            </div>
+        </div><!-- /sptflt -->
 
-      <div id="page_bottom">
-        <p><a href="http://its.ucsc.edu/terms/">Privacy Policy and Terms of Use</a></p>
-      </div>
+        <div class="row" id="page_bottom">
+            <p><a href="http://its.ucsc.edu/terms/">Privacy Policy and Terms of Use</a></p>
+        </div>
 
        <div class="sleed" style="background-color:#ece9d8">&#160;</div>
 
@@ -127,21 +117,20 @@
   </div><!-- /container -->
 </div><!-- /wrap -->
 
-<!-- Start of gaug.es stats  -->
 <script type="text/javascript">
-  var _gauges = _gauges || [];
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4301164-1']);
+  _gaq.push(['_setDomainName', '.ucsc.edu']);
+  _gaq.push(['_trackPageview']);
+
   (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '501c4647f5a1f52a1000000f');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
 </script>
-<!-- End of gaug.es stats -->
 
 </body>
 </html>

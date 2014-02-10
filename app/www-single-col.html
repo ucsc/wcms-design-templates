@@ -2,64 +2,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head><!-- @reload -->
   <title>iPhone &amp; Android Apps</title>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!--[if lte IE 7]>
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <![endif]-->
 <link href="css/ucsc.css" rel="stylesheet" type="text/css"><!-- jQuery and Modernizr  -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript">
+</script>
+<script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript">
+</script>
 <!-- Enjoy the View, Lightbox, default value, and custom JS functions -->
-<script src="http://static.ucsc.edu/js/jquery.tabSlideOut.v1.3.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/jquery.lightbox-0.5.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/jquery.defaultvalue.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/ucsc_base.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/enjoy_the_view.js" type="text/javascript"></script>
-<!-- Lightbox CSS -->
-<link href="http://static.ucsc.edu/css/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" type="text/css"><!--[if IE]>
+<script src="http://static.ucsc.edu/js/jquery.tabSlideOut.v1.3.js" type="text/javascript">
+</script>
+<script src="http://static.ucsc.edu/js/jquery.defaultvalue.js" type="text/javascript">
+</script>
+<script src="http://static.ucsc.edu/js/ucsc_base_noLB.js" type="text/javascript">
+</script>
+<script src="http://static.ucsc.edu/js/enjoy_the_view.js" type="text/javascript">
+</script>
+<!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="http://static.ucsc.edu/css/fixie.css" />
-<![endif]--> <!-- Google Analytics -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4301164-1']);
-  _gaq.push(['_setDomainName', '.ucsc.edu']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<script type="text/javascript">
-    $('.newsletter-btn').click(function() { _gaq.push(['_trackEvent', 'Buttons', 'Newsletter', 'Go to subscribe page']); });
-	$('.handle').click(function() { _gaq.push(['_trackEvent', 'Buttons', 'EnjoyTheView', document.getElementsByTagName('title')[0]]); });
-</script>
-
+<![endif]-->
    
 </head>
 
 <body class="contentSingleCol homeEnv">
+
+<!-- Accessibility links. Hidden until they receive :focus -->
+<ul id="access-links">
+    <li><a href="#mainContent">Skip to main content</a></li>
+    <li><a href="#mainNav">Skip to primary navigation</a></li>
+</ul>
+
  <div id="wrap">
    <div id="container">
      <div id="content">
        
-       <a href="../index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a>
-       <ul id="topNav">
+        <div class="row">
+            <a href="../index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a>
+            <ul id="topNav">
 <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
 <li><a href="../tools/people.html" title="Find People - UCSC People Search">People</a></li>
 <li><a href="../tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
 <li><a href="../tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
 </ul> 
-
-       <div class="search">
-         <!-- Google Custom Search --><div>
-<form action="http://www.ucsc.edu/search" id="cse-search-box"><input name="cx" type="hidden" value="012090462228956765947:d0ywvq7bxee"> <input name="cof" type="hidden" value="FORID:9"> <input name="ie" type="hidden" value="UTF-8"> <label class="hide" for="q">Search</label><input class="query" name="q" type="text" value="Search UCSC"> <input alt="Search button" class="srchBtn" src="http://static.ucsc.edu/images/search_button.gif" type="image"></form>
+            <div class="search">
+                <!-- Google Custom Search --><div>
+<form action="http://www.ucsc.edu/search" id="cse-search-box"><input name="cx" type="hidden" value="012090462228956765947:d0ywvq7bxee"> <input name="cof" type="hidden" value="FORID:9"> <input name="ie" type="hidden" value="UTF-8"> <label class="hide" for="q">Search</label><input class="query" id="q" name="q" type="text" value="Search UCSC"> <input alt="Search button" class="srchBtn" src="http://static.ucsc.edu/images/search_button.gif" type="image"></form>
 </div><!-- end GCS -->
-       </div>
-
-       <ul id="mainNav">
+            </div>
+        </div>
+        
+        <div class="row">
+            <ul id="mainNav">
 <li class="first"><a href="../about/index.html">About</a></li>
 <li><a href="../admissions/index.html">Admissions</a></li>
 <li><a href="../academics/index.html">Academics</a></li>
@@ -72,23 +66,24 @@
 <li><a href="../quickstart/faculty-staff/index.html">Faculty &amp; Staff</a></li>
 <li><a href="http://alumni.ucsc.edu">Alumni</a></li>
 <li><a href="../quickstart/prospective-students/index.html">Prospective Students</a></li>
-<li><a href="../quickstart/family/index.html">Parents &amp; Family</a></li>
+<li><a href="../quickstart/family/index_v2.html">Parents &amp; Family</a></li>
 <li><a href="../quickstart/community/index.html">Community</a></li>
 </ul>
 </li>
 </ul> 
-
-       <div id="breadcrumbs">
-         <p><a href="../index.html">
+        </div>
+        
+        <div class="row" id="breadcrumbs">
+            <p><a href="../index.html">
 		Home</a> »
 			Mobile » iPhone &amp; Android Apps</p>
-       </div>
+        </div>
 
-       <div id="sprflt">
+        <div class="row" id="sprflt">
          
-         <div id="mainContent">
-          
-          <h1 id="title">iPhone &amp; Android Apps</h1><div class="contentBox"><style type="text/css">/**/
+            <div id="mainContent">
+                
+                <h1 id="title">iPhone &amp; Android Apps</h1><div class="contentBox"><style type="text/css">/**/
 #mainContent ul li {
 	background-image: none !important;
 }
@@ -233,34 +228,38 @@ hr {
 </ul>
 </div>
 <div class="clear"></div></div>
-          
-          
-         </div>
+                
+                
+            </div>
         
-        <div id="footer">
-          <p class="links"><a href="../feedback/index.html">Feedback</a></p>
-          <p class="address home">UC Santa Cruz, 1156 High Street, Santa Cruz, Ca 95064<br>
-&#169;2012 Regents of the University of California. All Rights Reserved.</p>
+            <div id="footer">
+                <p class="links"><a href="../feedback/index.html">Feedback</a></p>
+                <p class="address home">UC Santa Cruz, 1156 High Street, Santa Cruz, Ca 95064<br> &#169;2014 Regents of the University of California. All Rights Reserved.</p>
 <p class="social-media"><a href="http://www.facebook.com/ucsantacruz"><img alt="Facebook" height="24" src="http://www.ucsc.edu/mobile/../images/interface/icon_facebook.png" width="48"></a> <a href="http://twitter.com/ucsc"><img alt="Twitter" height="24" src="http://www.ucsc.edu/mobile/../images/interface/icon_twitter.png" width="48"></a> <a href="http://youtube.com/ucsantacruz"><img alt="YouTube" height="24" src="http://www.ucsc.edu/mobile/../images/interface/icon_youtube.png" width="48"></a> <a href="http://www.linkedin.com/groups?home=&amp;gid=102708"><img alt="UC Santa Cruz - LinkedIn" height="24" src="http://www.ucsc.edu/mobile/../images/interface/icon_linkedin.png" width="48"></a></p>
-        </div>
+            </div>
        
-       </div><!-- /sprflt -->
+        </div><!-- /sprflt -->
 
        
        
-
     </div><!-- /content -->
   </div><!-- /container -->
 </div><!-- /wrap -->
 
-<!-- Start of HubSpot Logging Code  -->
-<script language="javascript" type="text/javascript">
-var hs_portalid=17157; 
-var hs_salog_version = "2.00";
-var hs_ppa = "ucsc.app101.hubspot.com";
-document.write(unescape("%3Cscript src='" + document.location.protocol + "//" + hs_ppa + "/salog.js.aspx' type='text/javascript'%3E%3C/script%3E"));
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4301164-1']);
+  _gaq.push(['_setDomainName', '.ucsc.edu']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
-<!-- End of HubSpot Logging Code -->
 
 </body>
 </html>
