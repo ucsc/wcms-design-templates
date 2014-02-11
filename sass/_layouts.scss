@@ -2,57 +2,45 @@
 
 #wrap {
 	
-	width:100%;
-
 	#container {
 		@include outer-container;
+	}
 
-		.row {
-			border: 1px solid red;
-			@include row(table);
-		}
+	.row {
+		// border: 1px solid red;
+		// @include span-columns(12);
+		@include row(block);
+		@include omega();
+	}
 
-		// Top row: global-nav and search
-		#topNav {
-			@include span-columns(10 of 12);
-		}
-		.search {
-			@include span-columns(2 of 12);
-		}
-
-		// Second row: logo and site title
-		#pageTitle {
-			@include span-columns(12);
-			@include row(block);
-
-			h1 {
-				@include span-columns(10 of 12);
-				@include omega();
-			}
-		
-		}
-
-		#logo {
-			@include span-columns(2 of 12);
-			@include hide-text();
-			background-position: left top;
-			background-repeat: no-repeat; 
-
-			.dept & {
-				@include size(144px 45px);
-				@include retina-image('../images/logos/ucsc-logo-small', 144px 45px);
-			}
-
-			.homeEnv & {
-				@include size(261px 72px);
-				@include retina-image('../images/logos/ucsc-logo-large', 261px 72px);
-			}
-
-		}
-
-		
+	// Top row: global-nav and search
+	#topNav {
+		@include span-columns(5 of 12);
+		@include omega();
+		@include reset-display();
+		margin:0;
+		//border:2px solid blue;
 
 	}
+
+	.search {
+		@include span-columns(3 of 12);
+		//border:2px solid purple;
+		margin-top: 1em;
+		@include omega();
+	}
+
+	// Second row: logo and site title
+	#pageTitle {
+		@include span-columns(4);
+		@include row(block);
+
+		h1 {
+			@include span-columns(1 of 12);
+			@include omega();
+		}
+	}
+		
 
 	#sprflt {
 		@include span-columns(12);

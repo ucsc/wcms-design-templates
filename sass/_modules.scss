@@ -2,7 +2,7 @@
 	@include span-columns(12);
 
 	.wrap {
-		@include span-columns(4);
+		@include span-columns(4 of 12);
 		@include media($mobile) {
  			@include span-columns(12);
 		}
@@ -23,26 +23,40 @@
 }
 
 .combined {
-	@include box-sizing(border-box);
-	@include pad(); 
 	border-radius: $border-radius-base;
 	background-color: lighten($primary-sand, 10%);
 	@include module-box-shadow();
-
+	@include omega();
+	
 	.wrap {
-		border-right: 1px solid darken($primary-sand, 10%);
-		border-left: 1px solid darken($primary-sand, 30%);
-		@include reset-display;
-		
+		@include pad();
+		border-right:1px solid lighten($primary-blue, 20%);
+		@include omega();
 	}
+
+
 
 	h2 {
 		border-bottom: #E5E4DE 1px solid;
 		color: #8E8C87;
+		position: relative;
+		font-size: 1rem;
 		font-weight: normal;
 		margin: 0 0 1em 0;
 		padding-bottom: 5px;
 		text-transform: uppercase;
+		span {
+			color: #585755;
+		}
+		.more {
+			
+			position: absolute;
+			right: 0;
+			font-size: 9px;
+			letter-spacing: .5px;
+			line-height: 3.4em;
+			text-transform: uppercase;
+		}
 	}
 
 }

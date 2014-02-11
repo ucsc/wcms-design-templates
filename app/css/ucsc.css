@@ -12,6 +12,7 @@
 
 /* line 66, ../../sass/_config.scss */
 body {
+  color: #5d5c5b;
   background-color: #f6f4ec;
   font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 14px;
@@ -19,154 +20,139 @@ body {
   padding: 0;
   margin: 0; }
 
-/* line 77, ../../sass/_config.scss */
-#pageTitle h1 a {
+/* line 76, ../../sass/_config.scss */
+a {
+  color: #5585a2;
+  text-decoration: none; }
+  /* line 81, ../../sass/_config.scss */
+  a:focus, a:hover, a:active {
+    text-decoration: underline; }
+
+/* line 88, ../../sass/_config.scss */
+#pageTitle h1 a, #pageTitle .h1 a {
   text-decoration: none;
   font-weight: normal;
   margin: 0;
   font-size: 42px;
   line-height: 42px;
-  padding: 0 0 0 10px;
+  padding: 0;
   text-transform: uppercase;
   letter-spacing: -1px;
   color: #F1B521; }
 
-/* line 3, ../../sass/_layouts.scss */
-#wrap {
+/* line 5, ../../sass/_layouts.scss */
+#wrap #container {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #wrap #container:before, #wrap #container:after {
+    content: " ";
+    display: table; }
+  /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #wrap #container:after {
+    clear: both; }
+/* line 9, ../../sass/_layouts.scss */
+#wrap .row {
+  *zoom: 1;
+  display: block;
+  margin-right: 0; }
+  /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #wrap .row:before, #wrap .row:after {
+    content: " ";
+    display: table; }
+  /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #wrap .row:after {
+    clear: both; }
+/* line 17, ../../sass/_layouts.scss */
+#wrap #topNav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  margin-right: 0;
+  margin: 0; }
+  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  #wrap #topNav:last-child {
+    margin-right: 0; }
+/* line 26, ../../sass/_layouts.scss */
+#wrap .search {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-top: 1em;
+  margin-right: 0; }
+  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  #wrap .search:last-child {
+    margin-right: 0; }
+/* line 34, ../../sass/_layouts.scss */
+#wrap #pageTitle {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  *zoom: 1;
+  display: block; }
+  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  #wrap #pageTitle:last-child {
+    margin-right: 0; }
+  /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #wrap #pageTitle:before, #wrap #pageTitle:after {
+    content: " ";
+    display: table; }
+  /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #wrap #pageTitle:after {
+    clear: both; }
+  /* line 38, ../../sass/_layouts.scss */
+  #wrap #pageTitle h1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%;
+    margin-right: 0; }
+    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    #wrap #pageTitle h1:last-child {
+      margin-right: 0; }
+/* line 45, ../../sass/_layouts.scss */
+#wrap #sprflt {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
   width: 100%; }
-  /* line 7, ../../sass/_layouts.scss */
-  #wrap #container {
-    *zoom: 1;
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto; }
-    /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-    #wrap #container:before, #wrap #container:after {
-      content: " ";
-      display: table; }
-    /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-    #wrap #container:after {
-      clear: both; }
-    /* line 10, ../../sass/_layouts.scss */
-    #wrap #container .row {
-      border: 1px solid red;
-      *zoom: 1;
-      display: table;
-      width: 100%;
-      table-layout: fixed; }
-      /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-      #wrap #container .row:before, #wrap #container .row:after {
-        content: " ";
-        display: table; }
-      /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-      #wrap #container .row:after {
-        clear: both; }
-    /* line 16, ../../sass/_layouts.scss */
-    #wrap #container #topNav {
-      display: table-cell;
-      padding-right: 2.12189%;
-      width: 85.06228%; }
-    /* line 19, ../../sass/_layouts.scss */
-    #wrap #container .search {
-      display: table-cell;
-      padding-right: 1.17883%;
-      width: 15.88078%; }
-    /* line 24, ../../sass/_layouts.scss */
-    #wrap #container #pageTitle {
-      display: table-cell;
-      padding-right: 2.16118%;
-      width: 102.16118%;
-      *zoom: 1;
-      display: block; }
-      /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-      #wrap #container #pageTitle:before, #wrap #container #pageTitle:after {
-        content: " ";
-        display: table; }
-      /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-      #wrap #container #pageTitle:after {
-        clear: both; }
-      /* line 28, ../../sass/_layouts.scss */
-      #wrap #container #pageTitle h1 {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 82.94039%;
-        margin-right: 0; }
-        /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-        #wrap #container #pageTitle h1:last-child {
-          margin-right: 0; }
-    /* line 35, ../../sass/_layouts.scss */
-    #wrap #container #logo {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 14.70196%;
-      color: transparent;
-      font: 0/0 a;
-      text-shadow: none;
-      background-position: left top;
-      background-repeat: no-repeat; }
-      /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-      #wrap #container #logo:last-child {
-        margin-right: 0; }
-      /* line 41, ../../sass/_layouts.scss */
-      .dept #wrap #container #logo {
-        width: 144px;
-        height: 45px;
-        background-image: url("../images/logos/ucsc-logo-small.png"); }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-          /* line 41, ../../sass/_layouts.scss */
-          .dept #wrap #container #logo {
-            background-image: url("../images/logos/ucsc-logo-small@2x.png");
-            background-size: 144px 45px; } }
-      /* line 46, ../../sass/_layouts.scss */
-      .homeEnv #wrap #container #logo {
-        width: 261px;
-        height: 72px;
-        background-image: url("../images/logos/ucsc-logo-large.png"); }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-          /* line 46, ../../sass/_layouts.scss */
-          .homeEnv #wrap #container #logo {
-            background-image: url("../images/logos/ucsc-logo-large@2x.png");
-            background-size: 261px 72px; } }
-  /* line 57, ../../sass/_layouts.scss */
-  #wrap #sprflt {
+  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  #wrap #sprflt:last-child {
+    margin-right: 0; }
+  /* line 47, ../../sass/_layouts.scss */
+  #wrap #sprflt #mainContent {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 8.5298%;
+    margin-right: 0; }
+    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    #wrap #sprflt #mainContent:last-child {
+      margin-right: 0; }
+  /* line 52, ../../sass/_layouts.scss */
+  #wrap #sprflt #subNav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    #wrap #sprflt #subNav:last-child {
+      margin-right: 0; }
+  /* line 55, ../../sass/_layouts.scss */
+  #wrap #sprflt #footer {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #wrap #sprflt:last-child {
+    #wrap #sprflt #footer:last-child {
       margin-right: 0; }
-    /* line 59, ../../sass/_layouts.scss */
-    #wrap #sprflt #mainContent {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%;
-      margin-left: 8.5298%;
-      margin-right: 0; }
-      /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-      #wrap #sprflt #mainContent:last-child {
-        margin-right: 0; }
-    /* line 64, ../../sass/_layouts.scss */
-    #wrap #sprflt #subNav {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 14.70196%; }
-      /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-      #wrap #sprflt #subNav:last-child {
-        margin-right: 0; }
-    /* line 67, ../../sass/_layouts.scss */
-    #wrap #sprflt #footer {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-      #wrap #sprflt #footer:last-child {
-        margin-right: 0; }
 
 /* line 1, ../../sass/_modules.scss */
 .three {
@@ -228,26 +214,38 @@ body {
 
 /* line 25, ../../sass/_modules.scss */
 .combined {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 2.35765%;
   border-radius: 5px;
   background-color: white;
+  border: 1px solid #E7E5DE;
   border-bottom: solid 1px #DFDED2;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05); }
-  /* line 32, ../../sass/_modules.scss */
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  margin-right: 0; }
+  /* line 31, ../../sass/_modules.scss */
   .combined .wrap {
-    border-right: 1px solid #e6e0c9;
-    border-left: 1px solid #c5b884; }
+    padding: 2.35765%;
+    border-right: 1px solid #95b5c8;
+    margin-right: 0; }
   /* line 39, ../../sass/_modules.scss */
   .combined h2 {
     border-bottom: #E5E4DE 1px solid;
     color: #8E8C87;
+    position: relative;
+    font-size: 1rem;
     font-weight: normal;
     margin: 0 0 1em 0;
     padding-bottom: 5px;
     text-transform: uppercase; }
+    /* line 48, ../../sass/_modules.scss */
+    .combined h2 span {
+      color: #585755; }
+    /* line 51, ../../sass/_modules.scss */
+    .combined h2 .more {
+      position: absolute;
+      right: 0;
+      font-size: 9px;
+      letter-spacing: .5px;
+      line-height: 3.4em;
+      text-transform: uppercase; }
 
 /* 
 *		Global header
@@ -257,24 +255,122 @@ body {
   background-image: none;
   border-left: 1px solid #C2CDC9;
   float: left;
-  font-size: 12px;
   line-height: 1.2em;
   list-style-type: none;
   padding: 25px 10px 1px 10px; }
 
-/* line 25, ../../sass/_header.scss */
+/* line 17, ../../sass/_header.scss */
+#logo {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  background-position: left center;
+  background-repeat: no-repeat;
+  margin-right: 0;
+  padding: 10em 0; }
+  /* line 24, ../../sass/_header.scss */
+  .dept #logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    width: 144px;
+    height: 45px;
+    background-image: url("../images/logos/ucsc-logo-small.png"); }
+    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .dept #logo:last-child {
+      margin-right: 0; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+      /* line 24, ../../sass/_header.scss */
+      .dept #logo {
+        background-image: url("../images/logos/ucsc-logo-small@2x.png");
+        background-size: 144px 45px; } }
+  /* line 30, ../../sass/_header.scss */
+  .homeEnv #logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    height: 180px;
+    background-image: url("../images/logos/ucsc-logo-large.png");
+    padding: 0; }
+    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .homeEnv #logo:last-child {
+      margin-right: 0; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+      /* line 30, ../../sass/_header.scss */
+      .homeEnv #logo {
+        background-image: url("../images/logos/ucsc-logo-large@2x.png");
+        background-size: 261px 72px; } }
+
+/* line 41, ../../sass/_header.scss */
 .search label {
   color: transparent;
   font: 0/0 a;
   text-shadow: none; }
-/* line 29, ../../sass/_header.scss */
+/* line 45, ../../sass/_header.scss */
 .search .query {
-  color: #A3A3A1;
-  height: 15px;
-  line-height: 1em;
-  padding: 4px 0 0 0;
+  color: #5d5c5b;
+  border: 1px solid #dcdcdb;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  line-height: 120%;
+  padding: 0.4em 0.6em;
   vertical-align: top;
-  width: 165px; }
+  min-width: 165px; }
+  /* line 55, ../../sass/_header.scss */
+  .search .query:focus, .search .query:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
+
+/* line 63, ../../sass/_header.scss */
+#mainNav {
+  display: table;
+  border-radius: 5px;
+  border: 1px solid #E7E5DE;
+  border-bottom: solid 1px #DFDED2;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  table-layout: fixed;
+  padding-left: 0 !important;
+  border-collapse: separate; }
+  /* line 71, ../../sass/_header.scss */
+  #mainNav > li {
+    float: none;
+    display: table-cell;
+    width: 1%;
+    position: relative; }
+    /* line 76, ../../sass/_header.scss */
+    #mainNav > li > a, #mainNav > li span {
+      background-image: -moz-linear-gradient(top, #f4f1e6, white);
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
+      color: #cb9001;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      font-size: .8em;
+      font-weight: bold;
+      padding: 0.4em 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      -moz-text-shadow: 1px 1px 0px #ffffff;
+      text-shadow: 1px 1px 0px #FFF;
+      text-align: center; }
+      /* line 93, ../../sass/_header.scss */
+      #mainNav > li > a:focus, #mainNav > li > a:hover, #mainNav > li > a:active, #mainNav > li span:focus, #mainNav > li span:hover, #mainNav > li span:active {
+        color: #cb9001;
+        text-decoration: none;
+        background: #296FA3;
+        background-color: #5585a2;
+        background-repeat: repeat-x;
+        background-image: -moz-linear-gradient(top, #296fa3, #5992bd);
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#296fa3), to(#5992bd));
+        background-position: top left;
+        -moz-text-shadow: none;
+        text-shadow: none; }
+    /* line 106, ../../sass/_header.scss */
+    #mainNav > li ul {
+      position: absolute;
+      left: -900em; }
 
 /* line 2, ../../sass/_homeless.scss */
 #access-links {
