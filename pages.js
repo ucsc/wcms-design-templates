@@ -1,21 +1,27 @@
 exports.pages=[
 	{
-		"name": "www-front",
+		"name": "campus-home",
 		"site": "http://www.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
 	{		
-		"name": "department-front",
-		"site": "http://history.ucsc.edu",
-		"path": "/",
+		"name": "campus-landing",
+		"site": "http://www.ucsc.edu",
+		"path": "/about/",
 		"file": "index.html"
 	},
 	{		
-		"name": "division-front",
-		"site": "http://humanities.ucsc.edu",
-		"path": "/",
-		"file": "index.html"
+		"name": "campus-left-nav",
+		"site": "http://www.ucsc.edu",
+		"path": "/research/",
+		"file": "divisions.html"
+	},
+	{		
+		"name": "campus-single-col",
+		"site": "http://www.ucsc.edu",
+		"path": "/mobile/",
+		"file": "mobile_apps.html"
 	},
 	{		
 		"name": "news-front",
@@ -28,23 +34,23 @@ exports.pages=[
 		"site": "http://news.ucsc.edu",
 		"path": "/2014/02/",
 		"file": "friends-foundation-international.html"
-	},
+	},	
 	{		
-		"name": "www-landing",
-		"site": "http://www.ucsc.edu",
-		"path": "/about/",
+		"name": "div-home",
+		"site": "http://humanities.ucsc.edu",
+		"path": "/",
 		"file": "index.html"
 	},
 	{		
-		"name": "www-left-col",
-		"site": "http://www.ucsc.edu",
-		"path": "/research/",
-		"file": "divisions.html"
+		"name": "dept-home",
+		"site": "http://history.ucsc.edu",
+		"path": "/",
+		"file": "index.html"
 	},
 	{		
-		"name": "www-single-col",
-		"site": "http://www.ucsc.edu",
-		"path": "/mobile/",
-		"file": "mobile_apps.html"
+		"name": "simplified-home",
+		"site": "http://audit.ucsc.edu",
+		"path": "/",
+		"file": "index.html"
 	}
 ]
