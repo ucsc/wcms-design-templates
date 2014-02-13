@@ -39,7 +39,7 @@ pages.forEach(function(i){
 	    $('link').first().attr("href","css/ucsc.css");
 
 	    // Add Hammer.app reload code to the <head>
-	    $('head').prepend('<!-- @reload -->');
+	    // $('head').prepend('<!-- @reload -->');
 	    
 	    // Iterate over <img> tags to look for relative 'src' paths 
 			$('img').map(function(i, el) {
@@ -63,11 +63,11 @@ pages.forEach(function(i){
 	  		console.log(url + ' saved as => ' + filename + '.html');
 			});
 
-			var listing = '<div><a href="' + filename + '.html">' + filename + '</a></div>\n';
+			var listing = '<li><a href="' + filename + '.html">' + filename + '</a></li>\n';
 
 			fs.appendFile(appPath + 'index.html', listing, function (err) {
 				if (err) throw err;
-				console.log(filename + ' link added to index.html.');
+				// console.log(filename + ' link added to index.html.');
 			});
 
 	});
