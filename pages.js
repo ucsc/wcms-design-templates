@@ -24,7 +24,7 @@ exports.pages=[
 		"file": "mobile_apps.html"
 	},
 	{		
-		"name": "news-front",
+		"name": "news-home",
 		"site": "http://news.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
