@@ -5,8 +5,11 @@
 @import "bourbon";
 @import "neat";
 @import 'config';
-@import 'mixins';
+@import 'utilities';
+@import 'typography';
 @import 'layouts';
 @import 'modules';
+@import 'module-events';
+@import 'module-news';
 @import 'header';
 @import 'homeless';

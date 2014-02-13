@@ -1,0 +1,32 @@
+#news,
+.news {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			clear: both;
+			margin: 0;
+			padding: 0;
+			font-size: 12px;
+			background-image: none;
+			list-style-type: none;
+			img {
+				@include module-box-shadow();
+				&.fltlft {
+					float: left;
+					display: block;
+					margin: 0 10px 10px 0;
+					
+				}
+			}
+			.date {
+				color: #929290;
+				font-size: 9px;
+				letter-spacing: 1px;
+				display: block;
+			}
+
+		}
+	}
+}

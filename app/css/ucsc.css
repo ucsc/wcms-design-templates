@@ -4,31 +4,37 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 2, ../../sass/_config.scss */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 66, ../../sass/_config.scss */
+/* line 2, ../../sass/_typography.scss */
 body {
+  padding: 0 1em;
   color: #5d5c5b;
   background-color: #f6f4ec;
   font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  padding: 0;
   margin: 0; }
+  @media screen and (max-width: 40em) {
+    /* line 2, ../../sass/_typography.scss */
+    body {
+      border: 12px solid red; } }
+  @media screen and (min-width: 40.0625em) {
+    /* line 2, ../../sass/_typography.scss */
+    body {
+      border: 12px solid blue; } }
+  @media screen and (min-width: 60em) {
+    /* line 2, ../../sass/_typography.scss */
+    body {
+      border: 12px solid purple; } }
 
-/* line 76, ../../sass/_config.scss */
+/* line 21, ../../sass/_typography.scss */
 a {
   color: #5585a2;
   text-decoration: none; }
-  /* line 81, ../../sass/_config.scss */
+  /* line 26, ../../sass/_typography.scss */
   a:focus, a:hover, a:active {
     text-decoration: underline; }
 
-/* line 88, ../../sass/_config.scss */
+/* line 33, ../../sass/_typography.scss */
 #pageTitle h1 a, #pageTitle .h1 a {
   text-decoration: none;
   font-weight: normal;
@@ -40,33 +46,35 @@ a {
   letter-spacing: -1px;
   color: #F1B521; }
 
-/* line 5, ../../sass/_layouts.scss */
-#wrap #container {
+/* line 7, ../../sass/_layouts.scss */
+#container {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
   /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #wrap #container:before, #wrap #container:after {
+  #container:before, #container:after {
     content: " ";
     display: table; }
   /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #wrap #container:after {
+  #container:after {
     clear: both; }
-/* line 9, ../../sass/_layouts.scss */
-#wrap .row {
+
+/* line 11, ../../sass/_layouts.scss */
+.row {
   *zoom: 1;
   display: block;
   margin-right: 0; }
   /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #wrap .row:before, #wrap .row:after {
+  .row:before, .row:after {
     content: " ";
     display: table; }
   /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #wrap .row:after {
+  .row:after {
     clear: both; }
-/* line 17, ../../sass/_layouts.scss */
-#wrap #topNav {
+
+/* line 19, ../../sass/_layouts.scss */
+#topNav {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -74,10 +82,11 @@ a {
   margin-right: 0;
   margin: 0; }
   /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #wrap #topNav:last-child {
+  #topNav:last-child {
     margin-right: 0; }
-/* line 26, ../../sass/_layouts.scss */
-#wrap .search {
+
+/* line 28, ../../sass/_layouts.scss */
+.search {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -85,10 +94,11 @@ a {
   margin-top: 1em;
   margin-right: 0; }
   /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #wrap .search:last-child {
+  .search:last-child {
     margin-right: 0; }
-/* line 34, ../../sass/_layouts.scss */
-#wrap #pageTitle {
+
+/* line 36, ../../sass/_layouts.scss */
+#pageTitle {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -96,36 +106,37 @@ a {
   *zoom: 1;
   display: block; }
   /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #wrap #pageTitle:last-child {
+  #pageTitle:last-child {
     margin-right: 0; }
   /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #wrap #pageTitle:before, #wrap #pageTitle:after {
+  #pageTitle:before, #pageTitle:after {
     content: " ";
     display: table; }
   /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #wrap #pageTitle:after {
+  #pageTitle:after {
     clear: both; }
-  /* line 38, ../../sass/_layouts.scss */
-  #wrap #pageTitle h1 {
+  /* line 40, ../../sass/_layouts.scss */
+  #pageTitle h1 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 6.17215%;
     margin-right: 0; }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #wrap #pageTitle h1:last-child {
+    #pageTitle h1:last-child {
       margin-right: 0; }
-/* line 45, ../../sass/_layouts.scss */
-#wrap #sprflt {
+
+/* line 47, ../../sass/_layouts.scss */
+#sprflt {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
   /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #wrap #sprflt:last-child {
+  #sprflt:last-child {
     margin-right: 0; }
-  /* line 47, ../../sass/_layouts.scss */
-  #wrap #sprflt #mainContent {
+  /* line 49, ../../sass/_layouts.scss */
+  #sprflt #mainContent {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -133,86 +144,75 @@ a {
     margin-left: 8.5298%;
     margin-right: 0; }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #wrap #sprflt #mainContent:last-child {
+    #sprflt #mainContent:last-child {
       margin-right: 0; }
-  /* line 52, ../../sass/_layouts.scss */
-  #wrap #sprflt #subNav {
+  /* line 54, ../../sass/_layouts.scss */
+  #sprflt #subNav {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%; }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #wrap #sprflt #subNav:last-child {
+    #sprflt #subNav:last-child {
       margin-right: 0; }
-  /* line 55, ../../sass/_layouts.scss */
-  #wrap #sprflt #footer {
+  /* line 57, ../../sass/_layouts.scss */
+  #sprflt #footer {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #wrap #sprflt #footer:last-child {
+    #sprflt #footer:last-child {
       margin-right: 0; }
 
-/* line 1, ../../sass/_modules.scss */
+/* line 7, ../../sass/_modules.scss */
 .three {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  .three:last-child {
-    margin-right: 0; }
-  /* line 4, ../../sass/_modules.scss */
-  .three .wrap {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    .three .wrap:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 45em) {
-      /* line 4, ../../sass/_modules.scss */
-      .three .wrap {
-        float: left;
-        display: block;
-        margin-right: 4.82916%;
-        width: 204.82916%; }
-        /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-        .three .wrap:last-child {
-          margin-right: 0; } }
-
-/* line 13, ../../sass/_modules.scss */
-.four {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  .four:last-child {
-    margin-right: 0; }
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-align-items: stretch;
+  align-items: stretch; }
   /* line 16, ../../sass/_modules.scss */
-  .four .wrap {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    .four .wrap:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 45em) {
-      /* line 16, ../../sass/_modules.scss */
-      .four .wrap {
-        float: left;
-        display: block;
-        margin-right: 4.82916%;
-        width: 204.82916%; }
-        /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-        .four .wrap:last-child {
-          margin-right: 0; } }
+  .three .wrap {
+    flex: 1;
+    margin: 0;
+    padding: 1em 1.8em; }
+  @media screen and (max-width: 40em) {
+    /* line 7, ../../sass/_modules.scss */
+    .three {
+      display: block;
+      *zoom: 1;
+      display: block; }
+      /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+      .three:before, .three:after {
+        content: " ";
+        display: table; }
+      /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+      .three:after {
+        clear: both; } }
 
-/* line 25, ../../sass/_modules.scss */
+/* line 29, ../../sass/_modules.scss */
+.four {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-align-items: stretch;
+  align-items: stretch; }
+  /* line 38, ../../sass/_modules.scss */
+  .four > .wrap {
+    flex: 1;
+    margin: 0;
+    padding: 1em 1.8em; }
+  @media screen and (max-width: 40em) {
+    /* line 29, ../../sass/_modules.scss */
+    .four {
+      display: block; } }
+
+/* line 52, ../../sass/_modules.scss */
 .combined {
   border-radius: 5px;
   background-color: white;
@@ -220,25 +220,26 @@ a {
   border-bottom: solid 1px #DFDED2;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
   margin-right: 0; }
-  /* line 31, ../../sass/_modules.scss */
+  /* line 58, ../../sass/_modules.scss */
   .combined .wrap {
     padding: 2.35765%;
-    border-right: 1px solid #95b5c8;
+    border-right: 1px solid white;
+    border-left: 1px solid #f6f4ec;
     margin-right: 0; }
-  /* line 39, ../../sass/_modules.scss */
+  /* line 68, ../../sass/_modules.scss */
   .combined h2 {
     border-bottom: #E5E4DE 1px solid;
     color: #8E8C87;
     position: relative;
-    font-size: 1rem;
+    font-size: 1.4em;
     font-weight: normal;
     margin: 0 0 1em 0;
     padding-bottom: 5px;
     text-transform: uppercase; }
-    /* line 48, ../../sass/_modules.scss */
+    /* line 77, ../../sass/_modules.scss */
     .combined h2 span {
       color: #585755; }
-    /* line 51, ../../sass/_modules.scss */
+    /* line 80, ../../sass/_modules.scss */
     .combined h2 .more {
       position: absolute;
       right: 0;
@@ -247,20 +248,91 @@ a {
       line-height: 3.4em;
       text-transform: uppercase; }
 
+/* line 4, ../../sass/_module-events.scss */
+#events dt,
+.events dt {
+  color: #5d5c5b;
+  float: left;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0 0.4em 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 14%;
+  clear: left; }
+  /* line 16, ../../sass/_module-events.scss */
+  #events dt strong,
+  #events dt span,
+  .events dt strong,
+  .events dt span {
+    color: #6E6D68;
+    font-size: 1.4rem;
+    letter-spacing: -1px;
+    line-height: 1em;
+    display: block; }
+/* line 24, ../../sass/_module-events.scss */
+#events dd,
+.events dd {
+  border-left: 1px solid #DEDCD1;
+  float: left;
+  margin: 0 0 1em 0;
+  padding: 0.2em 0.2em 0.2em 4%;
+  font-size: 14px;
+  width: 82%; }
+
+/* line 3, ../../sass/_module-news.scss */
+#news ul,
+.news ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  /* line 7, ../../sass/_module-news.scss */
+  #news ul li,
+  .news ul li {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    background-image: none;
+    list-style-type: none; }
+    /* line 14, ../../sass/_module-news.scss */
+    #news ul li img,
+    .news ul li img {
+      border: 1px solid #E7E5DE;
+      border-bottom: solid 1px #DFDED2;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05); }
+      /* line 16, ../../sass/_module-news.scss */
+      #news ul li img.fltlft,
+      .news ul li img.fltlft {
+        float: left;
+        display: block;
+        margin: 0 10px 10px 0; }
+    /* line 23, ../../sass/_module-news.scss */
+    #news ul li .date,
+    .news ul li .date {
+      color: #929290;
+      font-size: 9px;
+      letter-spacing: 1px;
+      display: block; }
+
 /* 
 *		Global header
 */
-/* line 7, ../../sass/_header.scss */
-#topNav > li {
-  background-image: none;
-  border-left: 1px solid #C2CDC9;
-  float: left;
-  line-height: 1.2em;
-  list-style-type: none;
-  padding: 25px 10px 1px 10px; }
+/* line 6, ../../sass/_header.scss */
+#topNav {
+  border: 1px solid purple; }
+  /* line 8, ../../sass/_header.scss */
+  #topNav > li {
+    background-image: none;
+    border-left: 1px solid #C2CDC9;
+    float: left;
+    line-height: 1.2em;
+    list-style-type: none;
+    padding: 25px 10px 1px 10px; }
 
-/* line 17, ../../sass/_header.scss */
+/* line 18, ../../sass/_header.scss */
 #logo {
+  border: 1px solid green;
   color: transparent;
   font: 0/0 a;
   text-shadow: none;
@@ -268,7 +340,7 @@ a {
   background-repeat: no-repeat;
   margin-right: 0;
   padding: 10em 0; }
-  /* line 24, ../../sass/_header.scss */
+  /* line 26, ../../sass/_header.scss */
   .dept #logo {
     float: left;
     display: block;
@@ -276,53 +348,60 @@ a {
     width: 14.70196%;
     width: 144px;
     height: 45px;
+    background-size: contain;
+    max-width: 144px;
     background-image: url("../images/logos/ucsc-logo-small.png"); }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
     .dept #logo:last-child {
       margin-right: 0; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-      /* line 24, ../../sass/_header.scss */
+      /* line 26, ../../sass/_header.scss */
       .dept #logo {
         background-image: url("../images/logos/ucsc-logo-small@2x.png");
         background-size: 144px 45px; } }
-  /* line 30, ../../sass/_header.scss */
+  /* line 34, ../../sass/_header.scss */
   .homeEnv #logo {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
-    height: 180px;
+    background-size: contain;
+    max-width: 261px;
+    height: 72px;
     background-image: url("../images/logos/ucsc-logo-large.png");
     padding: 0; }
     /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
     .homeEnv #logo:last-child {
       margin-right: 0; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-      /* line 30, ../../sass/_header.scss */
+      /* line 34, ../../sass/_header.scss */
       .homeEnv #logo {
         background-image: url("../images/logos/ucsc-logo-large@2x.png");
         background-size: 261px 72px; } }
 
-/* line 41, ../../sass/_header.scss */
-.search label {
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none; }
 /* line 45, ../../sass/_header.scss */
-.search .query {
-  color: #5d5c5b;
-  border: 1px solid #dcdcdb;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  line-height: 120%;
-  padding: 0.4em 0.6em;
-  vertical-align: top;
-  min-width: 165px; }
-  /* line 55, ../../sass/_header.scss */
-  .search .query:focus, .search .query:active {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
+.search {
+  border: 1px solid red; }
+  /* line 47, ../../sass/_header.scss */
+  .search label {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none; }
+  /* line 51, ../../sass/_header.scss */
+  .search .query {
+    color: #5d5c5b;
+    border: 1px solid #dcdcdb;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 120%;
+    padding: 0.4em 0.6em;
+    vertical-align: top;
+    min-width: 165px; }
+    /* line 61, ../../sass/_header.scss */
+    .search .query:focus, .search .query:active {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
 
-/* line 63, ../../sass/_header.scss */
+/* line 69, ../../sass/_header.scss */
 #mainNav {
   display: table;
   border-radius: 5px;
@@ -333,13 +412,19 @@ a {
   table-layout: fixed;
   padding-left: 0 !important;
   border-collapse: separate; }
-  /* line 71, ../../sass/_header.scss */
+  /* line 77, ../../sass/_header.scss */
   #mainNav > li {
     float: none;
     display: table-cell;
     width: 1%;
     position: relative; }
-    /* line 76, ../../sass/_header.scss */
+    /* line 82, ../../sass/_header.scss */
+    #mainNav > li:first-child a {
+      border-radius: 5px 0 0 5px; }
+    /* line 87, ../../sass/_header.scss */
+    #mainNav > li:last-child a, #mainNav > li:last-child span {
+      border-radius: 0 5px 5px 0; }
+    /* line 91, ../../sass/_header.scss */
     #mainNav > li > a, #mainNav > li span {
       background-image: -moz-linear-gradient(top, #f4f1e6, white);
       background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
@@ -355,7 +440,7 @@ a {
       -moz-text-shadow: 1px 1px 0px #ffffff;
       text-shadow: 1px 1px 0px #FFF;
       text-align: center; }
-      /* line 93, ../../sass/_header.scss */
+      /* line 108, ../../sass/_header.scss */
       #mainNav > li > a:focus, #mainNav > li > a:hover, #mainNav > li > a:active, #mainNav > li span:focus, #mainNav > li span:hover, #mainNav > li span:active {
         color: #cb9001;
         text-decoration: none;
@@ -367,7 +452,7 @@ a {
         background-position: top left;
         -moz-text-shadow: none;
         text-shadow: none; }
-    /* line 106, ../../sass/_header.scss */
+    /* line 121, ../../sass/_header.scss */
     #mainNav > li ul {
       position: absolute;
       left: -900em; }

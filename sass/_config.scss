@@ -1,31 +1,26 @@
-// Use border-box sizing on all elements
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-} 
-
-
 // Layout debugging
 $visual-grid: true;
 $visual-grid-index: front;
 
+// Layout variables for Bourbon Neat
+$border-box-sizing: true;
+$max-width: em(1088);
+$default-feature: min-width;
+$grids-columns: 12;
+$column: golden-ratio(1em, 3);
+$gutter: golden-ratio(1em, 1);
 
 
-// Color variables for the design. See http://neat.bourbon.io/docs/ for details.
-// 
-// $primary-blue: #296FA3;
-// $primary-gold: #CB9001;
-// $primary-sand: #F6F4EC;
-// $primary-gray: #5D5C5B;
-// 
-// Compatibility untested.
+// Set breakpoint variables
+$desktop: new-breakpoint(min-width em(960) 6);
+$tablet: 	new-breakpoint(min-width em(641) 6);
+$mobile: 	new-breakpoint(max-width em(640) 6);
 
+// Set color variables
 $primary-blue: #5585a2;
 $primary-gold: #cb9001;
 $primary-sand: #F6F4EC;
 $primary-gray: #5D5C5B;
-
 
 
 $font-family-sans-serif:  "Lucida Grande", "Lucida Sans Unicode", sans-serif !default;
@@ -53,47 +48,3 @@ $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
 $border-radius-base: 			5px;
-
-
-
-
-$mobile: new-breakpoint(max-width 45em 6);
-
-
-// 
-// Primary typography 
-// 
-body {
-	color: $primary-gray;
-	background-color: $primary-sand;
-	font-family: $font-family-sans-serif;
-	font-size: $font-size-base;
-	line-height: $line-height-computed;
-	padding: 0;
-	margin: 0;
-}
-
-a {
-	color: $primary-blue;
-	text-decoration: none;
-	&:focus,
-	&:hover,
-	&:active {
-		text-decoration: underline;
-	}
-}
-
-h1, .h1 {
-
-	#pageTitle & a {
-		text-decoration: none;
-		font-weight: normal;
-		margin: 0;
-		font-size: 42px;
-		line-height: 42px;
-		padding: 0;	
-		text-transform: uppercase;
-		letter-spacing: -1px;
-		color: #F1B521;
-	}
-}

@@ -1,26 +1,53 @@
+%modules {
+	@include span-columns(12);
+	@include row(block);
+}
+
+// Module row with three columns
 .three {
-	@include span-columns(12);
-
+	@include reset-display();
+	width:100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-align-items: stretch;
+	align-items: stretch;
 	.wrap {
-		@include span-columns(4 of 12);
-		@include media($mobile) {
- 			@include span-columns(12);
-		}
+		flex:1;
+		margin:0;
+		padding:1em 1.8em;
+	}
+	@include media($mobile) {
+		display: block;
+		@include row(block);
 	}
 
 }
 
+// Module row with four columns
 .four {
-	@include span-columns(12);
-
-	.wrap {
-		@include span-columns(3);
-		@include media($mobile) {
- 			@include span-columns(12);
-		}		
+	@include reset-display();
+	width:100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	> .wrap {
+		flex:1;
+		margin:0;
+		padding:1em 1.8em;
+		// @include span-columns(3);
 	}
+	@include media($mobile) {
+		display: block;
+	}		
 
 }
+
+
 
 .combined {
 	border-radius: $border-radius-base;
@@ -30,9 +57,11 @@
 	
 	.wrap {
 		@include pad();
-		border-right:1px solid lighten($primary-blue, 20%);
+		border-right:1px solid lighten($primary-sand, 20%);
+		border-left:1px solid $primary-sand;
 		@include omega();
 	}
+
 
 
 
@@ -40,7 +69,7 @@
 		border-bottom: #E5E4DE 1px solid;
 		color: #8E8C87;
 		position: relative;
-		font-size: 1rem;
+		font-size: 1.4em;
 		font-weight: normal;
 		margin: 0 0 1em 0;
 		padding-bottom: 5px;
@@ -49,7 +78,7 @@
 			color: #585755;
 		}
 		.more {
-			
+
 			position: absolute;
 			right: 0;
 			font-size: 9px;

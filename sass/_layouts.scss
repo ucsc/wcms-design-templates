@@ -1,9 +1,11 @@
 // Primary layout styles
 
 #wrap {
+
+}
 	
 	#container {
-		@include outer-container;
+		@include outer-container();
 	}
 
 	.row {
@@ -56,5 +58,3 @@
 			@include span-columns(12 of 12);	
 		}
 	}
-
-}
