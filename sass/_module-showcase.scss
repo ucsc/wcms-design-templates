@@ -1,0 +1,16 @@
+#profile,
+#know,
+#video,
+.showcase {
+
+	img {
+		display:block;
+		width:100%;
+		height:auto;
+		&.play_btn {
+			width:auto;
+			position:absolute;
+		}
+	}
+
+}

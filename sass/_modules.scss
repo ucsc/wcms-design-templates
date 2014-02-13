@@ -16,6 +16,9 @@
 		flex:1;
 		-webkit-flex: 1;
 	}
+	.inner {
+		height: 100%;
+	}
 	@include media($mobile) {
 		display: block;
 		@include row(block);
@@ -38,8 +41,18 @@
 		-webkit-flex: 1;
 		margin:0;
 		padding:1em 1.8em;
-		// @include span-columns(3);
 	}
+	h4, .header {
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+		font-size: $base-font-size;
+		font-weight: normal;
+		span {
+			font-weight: bold;
+			color: #585755;
+		}
+	}
+
 	@include media($mobile) {
 		display: block;
 	}		
@@ -75,7 +88,6 @@
 			color: #585755;
 		}
 		.more {
-
 			position: absolute;
 			right: 0;
 			font-size: 9px;
