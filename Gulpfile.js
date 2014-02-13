@@ -33,6 +33,11 @@ gulp.task('compass', function() {
 		// .pipe(notify("Compass task was run."));
 });
 
+gulp.task('html', function(){  
+    gulp.src('./app/*.html')
+    .pipe(refresh(server));
+})
+
 // The default task (called when you run `gulp`)
 gulp.task('default', function() {
  		
@@ -42,4 +47,8 @@ gulp.task('default', function() {
 		  gulp.run('compass');
 		});
   
+		gulp.watch('app/*.html', function() {
+		  gulp.run('html');
+		});  	
+
 });
