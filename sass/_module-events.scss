@@ -2,7 +2,6 @@
 .events {
 
 	dt {
-		@extend %box-sizing;
 		color: $primary-gray;
 		float: left;
 		font-size: $font-size-base;
@@ -22,7 +21,6 @@
 		}
 	}
 	dd {
-		@extend %box-sizing;
 		border-left: 1px solid #DEDCD1;
 		float: left;
 		margin:0 0 1em 0;

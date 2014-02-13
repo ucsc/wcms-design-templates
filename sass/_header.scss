@@ -4,11 +4,16 @@
 
 // Top nav current
 #topNav {
-	border:1px solid purple;
+	@include span-columns(9);
+	display:flex;
+	display: -webkit-flex;
+	justify-content:flex-end;
+	-webkit-justify-content:flex-end;
 	> li {
 		background-image: none;
 		border-left: 1px solid #C2CDC9;
-		float: left;
+		display:flex;
+		display: -webkit-flex;
 		line-height: 1.2em;
 		list-style-type: none;
 		padding: 25px 10px 1px 10px;
@@ -16,7 +21,6 @@
 }
 
 #logo {
-	border:1px solid green;
 	@include hide-text();
 	background-position: left center;
 	background-repeat: no-repeat;
@@ -43,7 +47,8 @@
 }
 
 .search {
-	border:1px solid red;
+	@include span-columns(3);
+	margin-top: -0.4em;
 	label {
 		@include hide-text();
 	}
@@ -53,10 +58,11 @@
 		border: 1px solid lighten($primary-gray, 50%);
 		box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
 		border-radius: $border-radius-base;
-		line-height: 120%;
-		padding:0.4em 0.6em;
+		line-height: 140%;
+		font-size: $base-font-size - 2;
+		padding:0.4em;
 		vertical-align: top;
-		min-width: 165px;
+		width: 100%;
 		&:focus,
 		&:active {
 			box-shadow:0 0 8px rgba(0,0,0,0.2);

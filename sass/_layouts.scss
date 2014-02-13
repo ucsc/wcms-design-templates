@@ -17,7 +17,7 @@
 
 	// Top row: global-nav and search
 	#topNav {
-		@include span-columns(5 of 12);
+		// @include span-columns(5 of 12);
 		@include omega();
 		@include reset-display();
 		margin:0;
@@ -28,7 +28,6 @@
 	.search {
 		@include span-columns(3 of 12);
 		//border:2px solid purple;
-		margin-top: 1em;
 		@include omega();
 	}
 

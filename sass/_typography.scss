@@ -8,13 +8,13 @@ body {
 	line-height: $line-height-computed;
 	margin: 0;
 	@include media($mobile) {
-    border: 12px solid red;
+    border-top: 18px solid red;
   }
 	@include media($tablet) {
-    border: 12px solid blue;
+    border-top: 18px solid blue;
   }
 	@include media($desktop) {
-    border: 12px solid purple;
+    border-top: 18px solid purple;
   }  
 }
 
