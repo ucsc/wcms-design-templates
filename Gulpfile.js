@@ -29,8 +29,8 @@ gulp.task('compass', function() {
 			image: 'app/images',
 			require: ['bourbon', 'neat']
 	}))
-		.pipe(refresh(server))
-		.pipe(notify("Compass task was run."));
+		.pipe(refresh(server));
+		// .pipe(notify("Compass task was run."));
 });
 
 // The default task (called when you run `gulp`)
