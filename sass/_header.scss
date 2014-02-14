@@ -42,6 +42,10 @@
 		height:72px;
 		@include retina-image('../images/logos/ucsc-logo-large', 261px 72px);
 		padding: 0;
+		@include media($mobile) {
+			@include span-columns(10 of 12);
+			border: 1px solid red;
+		}
 	}
 
 }
@@ -127,6 +131,27 @@
 		ul {
 			position: absolute;
 			left: -900em;
+		}
+	}
+	@include media($mobile) {
+		position: absolute;
+		margin-right: -100%;
+		border-radius:0;
+		border:2px solid red;
+		background-image: none;
+		display:block;
+		width:100%;
+		li {
+			display: block;
+			width:auto;
+			border-radius:0;
+			a, span {
+				border-radius:0;
+				background-image: none;
+				text-align: left;
+				display: block;	
+			}
+			
 		}
 	}
 }

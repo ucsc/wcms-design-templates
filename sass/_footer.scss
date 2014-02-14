@@ -1,0 +1,26 @@
+#footer {
+
+	display: flex;
+	justify-content: center;
+	align-content: baseline;
+
+	.address {
+		flex:2;
+		order: 1;
+		text-transform: uppercase;
+		font-size: golden-ratio($base-font-size, -1);
+		line-height: 148%;
+	}
+
+	.links {
+		flex: 1;
+		order: 2;
+	}
+
+	.social-media {
+		flex: 1;
+		order: 3;
+	}
+
+
+}

@@ -239,12 +239,13 @@ a {
     font-size: 1.4em;
     font-weight: normal;
     margin: 0 0 1em 0;
-    padding-bottom: 5px;
+    clear: both;
+    padding-bottom: 0.4em;
     text-transform: uppercase; }
-    /* line 87, ../../sass/_modules.scss */
+    /* line 88, ../../sass/_modules.scss */
     .combined h2 span, .combined .header span {
       color: #585755; }
-    /* line 90, ../../sass/_modules.scss */
+    /* line 91, ../../sass/_modules.scss */
     .combined h2 .more, .combined .header .more {
       position: absolute;
       right: 0;
@@ -253,10 +254,10 @@ a {
       line-height: 3.4em;
       text-transform: uppercase; }
 
-/* line 104, ../../sass/_modules.scss */
+/* line 105, ../../sass/_modules.scss */
 .separate .wrap {
   padding: 2.35765%; }
-/* line 108, ../../sass/_modules.scss */
+/* line 109, ../../sass/_modules.scss */
 .separate .inner {
   padding: 1em;
   background-color: #ECE9D8;
@@ -268,7 +269,7 @@ a {
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05); }
-/* line 121, ../../sass/_modules.scss */
+/* line 122, ../../sass/_modules.scss */
 .separate h3, .separate .header {
   border: 1px solid #E5E4DE;
   color: #8E8C87;
@@ -277,7 +278,7 @@ a {
   margin: 0 0 10px 0;
   padding: 4px 6px;
   text-transform: uppercase; }
-  /* line 129, ../../sass/_modules.scss */
+  /* line 130, ../../sass/_modules.scss */
   .separate h3 span, .separate .header span {
     font-weight: bold;
     color: #585755; }
@@ -435,8 +436,19 @@ a {
       .homeEnv #logo {
         background-image: url("../images/logos/ucsc-logo-large@2x.png");
         background-size: 261px 72px; } }
+    @media screen and (max-width: 40em) {
+      /* line 38, ../../sass/_header.scss */
+      .homeEnv #logo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        border: 1px solid red; }
+        /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .homeEnv #logo:last-child {
+          margin-right: 0; } }
 
-/* line 49, ../../sass/_header.scss */
+/* line 53, ../../sass/_header.scss */
 .search {
   float: left;
   display: block;
@@ -446,12 +458,12 @@ a {
   /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
   .search:last-child {
     margin-right: 0; }
-  /* line 52, ../../sass/_header.scss */
+  /* line 56, ../../sass/_header.scss */
   .search label {
     color: transparent;
     font: 0/0 a;
     text-shadow: none; }
-  /* line 56, ../../sass/_header.scss */
+  /* line 60, ../../sass/_header.scss */
   .search .query {
     color: #5d5c5b;
     border: 1px solid #dcdcdb;
@@ -462,11 +474,11 @@ a {
     padding: 0.4em;
     vertical-align: top;
     width: 100%; }
-    /* line 67, ../../sass/_header.scss */
+    /* line 71, ../../sass/_header.scss */
     .search .query:focus, .search .query:active {
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
 
-/* line 75, ../../sass/_header.scss */
+/* line 79, ../../sass/_header.scss */
 #mainNav {
   display: table;
   border-radius: 5px;
@@ -477,19 +489,19 @@ a {
   table-layout: fixed;
   padding-left: 0 !important;
   border-collapse: separate; }
-  /* line 83, ../../sass/_header.scss */
+  /* line 87, ../../sass/_header.scss */
   #mainNav > li {
     float: none;
     display: table-cell;
     width: 1%;
     position: relative; }
-    /* line 88, ../../sass/_header.scss */
+    /* line 92, ../../sass/_header.scss */
     #mainNav > li:first-child a {
       border-radius: 5px 0 0 5px; }
-    /* line 93, ../../sass/_header.scss */
+    /* line 97, ../../sass/_header.scss */
     #mainNav > li:last-child a, #mainNav > li:last-child span {
       border-radius: 0 5px 5px 0; }
-    /* line 97, ../../sass/_header.scss */
+    /* line 101, ../../sass/_header.scss */
     #mainNav > li > a, #mainNav > li span {
       background-image: -moz-linear-gradient(top, #f4f1e6, white);
       background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
@@ -505,7 +517,7 @@ a {
       -moz-text-shadow: 1px 1px 0px #ffffff;
       text-shadow: 1px 1px 0px #FFF;
       text-align: center; }
-      /* line 114, ../../sass/_header.scss */
+      /* line 118, ../../sass/_header.scss */
       #mainNav > li > a:focus, #mainNav > li > a:hover, #mainNav > li > a:active, #mainNav > li span:focus, #mainNav > li span:hover, #mainNav > li span:active {
         color: #cb9001;
         text-decoration: none;
@@ -517,10 +529,52 @@ a {
         background-position: top left;
         -moz-text-shadow: none;
         text-shadow: none; }
-    /* line 127, ../../sass/_header.scss */
+    /* line 131, ../../sass/_header.scss */
     #mainNav > li ul {
       position: absolute;
       left: -900em; }
+  @media screen and (max-width: 40em) {
+    /* line 79, ../../sass/_header.scss */
+    #mainNav {
+      position: absolute;
+      margin-right: -100%;
+      border-radius: 0;
+      border: 2px solid red;
+      background-image: none;
+      display: block;
+      width: 100%; }
+      /* line 144, ../../sass/_header.scss */
+      #mainNav li {
+        display: block;
+        width: auto;
+        border-radius: 0; }
+        /* line 148, ../../sass/_header.scss */
+        #mainNav li a, #mainNav li span {
+          border-radius: 0;
+          background-image: none;
+          text-align: left;
+          display: block; } }
+
+/* line 1, ../../sass/_footer.scss */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-content: baseline; }
+  /* line 7, ../../sass/_footer.scss */
+  #footer .address {
+    flex: 2;
+    order: 1;
+    text-transform: uppercase;
+    font-size: 9.88875px;
+    line-height: 148%; }
+  /* line 15, ../../sass/_footer.scss */
+  #footer .links {
+    flex: 1;
+    order: 2; }
+  /* line 20, ../../sass/_footer.scss */
+  #footer .social-media {
+    flex: 1;
+    order: 3; }
 
 /* line 2, ../../sass/_homeless.scss */
 #access-links {
