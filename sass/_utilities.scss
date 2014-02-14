@@ -32,3 +32,25 @@
         }
     }
 }
+
+@mixin meta-small($scale) {
+  text-transform: uppercase;
+  font-size: golden-ratio($base-font-size, $scale);
+  line-height: golden-ratio($base-font-size, 0);
+}
+
+// Debugging mixins
+
+@mixin show-media($text, $bgcolor) {
+  &:before {
+    content: $text;
+    display:block;
+    width: 100%;
+    padding:0.5em 1em;
+    text-align:center;
+    background-color:$bgcolor;
+    color:white;
+    position: relative;
+    left: -14px;
+  }    
+}

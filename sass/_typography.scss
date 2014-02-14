@@ -8,13 +8,13 @@ body {
 	line-height: $line-height-computed;
 	margin: 0;
 	@include media($mobile) {
-    border-top: 18px solid red;
+		@include show-media("Mobile", green);
   }
 	@include media($tablet) {
-    border-top: 18px solid blue;
+    @include show-media("Tablet: Portrait", orange);
   }
 	@include media($desktop) {
-    border-top: 18px solid purple;
+    @include show-media("Desktop", blue);
   }  
 }
 

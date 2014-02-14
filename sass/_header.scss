@@ -44,7 +44,6 @@
 		padding: 0;
 		@include media($mobile) {
 			@include span-columns(10 of 12);
-			border: 1px solid red;
 		}
 	}
 
@@ -135,12 +134,16 @@
 	}
 	@include media($mobile) {
 		position: absolute;
-		margin-right: -100%;
+		right: -100%;
 		border-radius:0;
-		border:2px solid red;
 		background-image: none;
+		background-color: $primary-gray;
 		display:block;
-		width:100%;
+		width:60%;
+		.toggle & {
+			z-index: 1000;
+			right:40%;
+		}
 		li {
 			display: block;
 			width:auto;
