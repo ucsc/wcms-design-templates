@@ -1,11 +1,12 @@
-var pkg = require('./package.json');
-var gulp = require('gulp');
-var compass = require('gulp-compass');
-var clean = require('gulp-clean');
-var notify = require('gulp-notify');
-var refresh = require('gulp-livereload');
-var lr = require('tiny-lr')
-var server = lr();
+var pkg 				= require('./package.json'),
+		gulp 				= require('gulp'),
+		autoprefix 	= require('gulp-autoprefixer'),
+		compass 		= require('gulp-compass'),
+		clean 			= require('gulp-clean'),
+		notify 			= require('gulp-notify'),
+		refresh 		= require('gulp-livereload'),
+		lr 					= require('tiny-lr'),
+		server 			= lr();
 
 
 // Create a server to preview our built pages
@@ -21,14 +22,15 @@ gulp.task('clean', function() {
 		.pipe(clean());
 });
 
-gulp.task('compass', function() {
+gulp.task('styles', function() {
 	gulp.src('./sass/*.scss')
 		.pipe(compass({
 			css: 'app/css',
 			sass: 'sass',
 			image: 'app/images',
-			require: ['bourbon', 'neat']
-	}))
+			require: ['bourbon', 'neat']}))
+		.pipe(autoprefix('last 2 versions'))
+    .pipe(gulp.dest('./app/css/'))
 		.pipe(refresh(server));
 		// .pipe(notify("Compass task was run."));
 });
@@ -36,15 +38,13 @@ gulp.task('compass', function() {
 gulp.task('html', function(){  
     gulp.src('./app/*.html')
     .pipe(refresh(server));
-})
+});
 
 // The default task (called when you run `gulp`)
-gulp.task('default', function() {
- 		
- 		gulp.run('clean', 'compass', 'lr-server');
+gulp.task('default', ['clean', 'styles', 'lr-server'], function() {
 
 		gulp.watch('sass/*.scss', function() {
-		  gulp.run('compass');
+		  gulp.run('styles');
 		});
   
 		gulp.watch('app/*.html', function() {
