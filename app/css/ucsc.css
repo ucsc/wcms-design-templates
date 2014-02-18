@@ -1,6 +1,5 @@
 /* line 2, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -99,8 +98,15 @@ a {
 
 /* line 19, ../../sass/_layouts.scss */
 #topNav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
   margin-right: 0;
   margin: 0; }
+  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  #topNav:last-child {
+    margin-right: 0; }
 
 /* line 28, ../../sass/_layouts.scss */
 .search {
@@ -185,13 +191,21 @@ a {
 .three {
   width: 100%;
   display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-align-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch; }
   /* line 15, ../../sass/_modules.scss */
   .three .wrap {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     -webkit-flex: 1; }
   /* line 19, ../../sass/_modules.scss */
@@ -215,13 +229,21 @@ a {
 .four {
   width: 100%;
   display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-align-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch; }
   /* line 39, ../../sass/_modules.scss */
   .four > .wrap {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     -webkit-flex: 1;
     margin: 0;
@@ -288,8 +310,6 @@ a {
   min-height: 226px;
   margin: 0;
   border-bottom: solid 1px #DAD8C8;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05); }
@@ -387,6 +407,209 @@ a {
       display: block;
       margin: -2px 0 0 0; }
 
+/* From Bootstrap css line #6501 */
+/* line 2, ../../sass/_module-carousel.scss */
+.carousel-caption {
+  /*right: 15%;*/
+  /*left: 15%;*/
+  bottom: 15%;
+  z-index: 10;
+  /*padding-top: 20px;*/
+  /*padding-bottom: 20px;*/
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+
+/* From Bootstrap css line #6527 */
+/* line 13, ../../sass/_module-carousel.scss */
+.carousel-caption {
+  /*right: 20%;*/
+  /*left: 20%;*/
+  padding-bottom: 30px; }
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+/* line 23, ../../sass/_module-carousel.scss */
+.carousel {
+  max-width: 1080px;
+  height: auto;
+  margin: 0 auto 60px auto; }
+
+/* Since positioning the image, we need to help out the caption */
+/* line 29, ../../sass/_module-carousel.scss */
+.carousel-caption {
+  position: absolute;
+  z-index: 0; }
+
+/* Declare heights because of positioning of img element */
+/* line 35, ../../sass/_module-carousel.scss */
+.carousel .item {
+  width: 100%;
+  max-width: 1080px;
+  height: 320px;
+  /*background-color: rgba(0,69,140,1);*/ }
+
+/* line 41, ../../sass/_module-carousel.scss */
+.carousel-inner > .item > img {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  z-index: 0; }
+
+/* MY CSS */
+/* line 49, ../../sass/_module-carousel.scss */
+.carousel .item .left, .carousel .item .right, .carousel .item .top, .carousel .item .bottom {
+  display: block;
+  width: 100%; }
+
+/* line 53, ../../sass/_module-carousel.scss */
+.carousel .item .left, .carousel .item .right {
+  padding: 20px;
+  max-width: 40%;
+  bottom: 25% !important;
+  background-color: rgba(0, 69, 140, 0.9); }
+
+/* line 59, ../../sass/_module-carousel.scss */
+.carousel .item .top, .carousel .item .bottom {
+  text-align: center;
+  max-width: 1080px;
+  height: 85px;
+  background-color: rgba(241, 181, 33, 0.9); }
+
+/* line 65, ../../sass/_module-carousel.scss */
+.carousel .item .left {
+  float: left;
+  text-align: right; }
+
+/* line 70, ../../sass/_module-carousel.scss */
+.carousel .item .right {
+  height: auto;
+  margin: 0 0 0 60%;
+  text-align: left; }
+
+/* line 76, ../../sass/_module-carousel.scss */
+.carousel .item .top {
+  margin: 0 0 170px 0; }
+
+/* line 80, ../../sass/_module-carousel.scss */
+.carousel .item .bottom {
+  margin: 0; }
+
+/* line 83, ../../sass/_module-carousel.scss */
+.carousel .item .bottom h1, .carousel .item .top h1 {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+/*END MY CSS*/
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Bump up size of carousel content */
+  /* line 97, ../../sass/_module-carousel.scss */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.4; } }
+@media (max-width: 919px) {
+  /* line 107, ../../sass/_module-carousel.scss */
+  .carousel .item {
+    /*background-color: rgba(0,69,140,1);*/
+    height: auto; }
+
+  /* line 111, ../../sass/_module-carousel.scss */
+  .carousel-caption {
+    position: static; }
+
+  /* line 114, ../../sass/_module-carousel.scss */
+  .carousel-inner > .item > img {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    z-index: 0; }
+
+  /* line 120, ../../sass/_module-carousel.scss */
+  .carousel .item .left {
+    padding: 0 20px 20px;
+    max-width: 100%;
+    margin-bottom: 15px;
+    text-align: center; }
+
+  /* line 126, ../../sass/_module-carousel.scss */
+  .carousel .item .right {
+    padding: 0 20px 20px;
+    max-width: 100%;
+    margin: 0 0 15px;
+    text-align: center;
+    float: left; }
+
+  /* line 133, ../../sass/_module-carousel.scss */
+  .carousel .item .top {
+    padding: 0 20px 20px;
+    max-width: 100%;
+    margin: 0 0 15px;
+    text-align: center;
+    float: left;
+    height: auto; }
+
+  /* line 141, ../../sass/_module-carousel.scss */
+  .carousel .item .bottom {
+    padding: 0 20px 20px;
+    max-width: 100%;
+    margin: 0 0 15px;
+    text-align: center;
+    float: left;
+    height: auto; }
+
+  /* line 149, ../../sass/_module-carousel.scss */
+  .carousel .item .bottom h1, .carousel .item .top h1 {
+    margin-top: 20px;
+    margin-bottom: 10px; } }
+/*
+
+@media (max-width:768px) {
+.carousel .item .left {
+	display: block;
+	padding: 5px;
+	max-width: 100%;
+	text-align:center;
+}
+.carousel .item .right {
+	display: block;
+	padding: 5px;
+	max-width: 100%;
+	margin: 0;
+	text-align:center;
+}
+	
+}
+
+ @media only screen and (min-device-width: 568px) and (max-width:769px) {
+	.carousel .item {
+		background-color: rgba(0,69,140,1);
+}
+	carousel-caption {
+		position: absolute;
+	}
+	.carousel-inner > .item > img {
+		z-index: 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 568px) {
+.carousel .item {
+  width: 100%;
+  max-width: 100%;
+}
+
+.carousel .item .left {
+	max-width: 100%;
+	
+}
+.carousel .item .right {
+	max-width: 100%;
+}
+}
+
+*/
 /* 
 *		Global header
 */
@@ -396,8 +619,13 @@ a {
   display: block;
   margin-right: 2.35765%;
   width: 74.41059%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   -webkit-justify-content: flex-end; }
   /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
@@ -407,6 +635,8 @@ a {
   #topNav > li {
     background-image: none;
     border-left: 1px solid #C2CDC9;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
     line-height: 1.2em;
@@ -526,7 +756,6 @@ a {
       border-radius: 0 5px 5px 0; }
     /* line 100, ../../sass/_header.scss */
     #mainNav > li > a, #mainNav > li span {
-      background-image: -moz-linear-gradient(top, #f4f1e6, white);
       background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
       color: #cb9001;
       cursor: pointer;
@@ -547,7 +776,6 @@ a {
         background: #296FA3;
         background-color: #5585a2;
         background-repeat: repeat-x;
-        background-image: -moz-linear-gradient(top, #296fa3, #5992bd);
         background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#296fa3), to(#5992bd));
         background-position: top left;
         -moz-text-shadow: none;
@@ -586,24 +814,50 @@ a {
 #footer {
   border-top: 1px solid #dcdcdb;
   padding-top: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-content: baseline;
+  -ms-flex-line-pack: baseline;
   align-content: baseline; }
   /* line 8, ../../sass/_footer.scss */
   #footer .address {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+    -ms-flex: 2;
     flex: 2;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
     order: 1;
     text-transform: uppercase;
     font-size: 9.88875px;
     line-height: 16px; }
   /* line 14, ../../sass/_footer.scss */
   #footer .links {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
     order: 2;
     text-align: right; }
   /* line 20, ../../sass/_footer.scss */
   #footer .social-media {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
     order: 3;
     text-align: right; }
     /* line 24, ../../sass/_footer.scss */
@@ -622,6 +876,8 @@ a {
   @media screen and (max-width: 40em) {
     /* line 1, ../../sass/_footer.scss */
     #footer {
+      -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
       flex-flow: column nowrap; }
       /* line 48, ../../sass/_footer.scss */
       #footer .address, #footer .links, #footer .social-media {
