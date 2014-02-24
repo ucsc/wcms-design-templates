@@ -2,64 +2,19 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Set viewport for mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page information -->
     <title>University of California, Santa Cruz</title>
     <meta content="Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California&apos;s Monterey Bay." name="description">
     <meta content="university Santa Cruz California UC redwoods UC Santa Cruz UCSC banana slugs" name="keywords">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!--[if lte IE 7]>
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-<![endif]-->
-<link href="css/ucsc.css" rel="stylesheet" type="text/css"><!-- jQuery and Modernizr  -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript">
-</script>
-<!-- Enjoy the View, Lightbox, default value, and custom JS functions -->
-<script src="http://static.ucsc.edu/js/jquery.tabSlideOut.v1.3.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/jquery.defaultvalue.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/ucsc_base_noLB.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/enjoy_the_view.js" type="text/javascript">
-</script>
-<!--[if lte IE 7]>
-<link rel="stylesheet" type="text/css" href="http://static.ucsc.edu/css/fixie.css" />
-<![endif]-->
-    <!-- jQuery Carousel --><script src="http://static.ucsc.edu/js/jquery.cycle.min.js" type="text/javascript">
-// <![CDATA[
-
-// ]]>
-</script>
-<script src="http://static.ucsc.edu/js/jquery.tools.min.js" type="text/javascript">
-// <![CDATA[
-
-// ]]>
-</script>
-<script type="text/javascript">
-// <![CDATA[
-function trackEvent() {
-  // NOTE: We are adding event tracking to the home page for a short time to see how many slides load on the page.
-  if (this.href.substr(-1, 1) >= 3) {
-      var message = this.href.substr(-7, 7) + " has loaded.";
-      _gaq.push(['_trackEvent', 'Billboards', 'Homepage slideshow', message]);
-  };
-};
-
-$(function(){
-  // Tooltip initilization
-  $('.handle[title]').tooltip({ effect: "slide", position: "top center", offset: [-6, 0], opacity: 1});
-  // Billboard scroller
-
-  if ($('#billboard').hasClass('random')) {
-    $('#billboard.random').cycle({fx:'fade',random:1,timeout:8000,pager:'#bbnav',after:trackEvent, pagerClick: function(){$('#billboard').cycle('pause');} });
-  } else {
-        $('#billboard').cycle({ fx:'fade',timeout:8000,pager:'#bbnav',after:trackEvent, pagerClick: function(){$('#billboard').cycle('pause');} });
-  };
-
-});
-// ]]>
-</script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    
+    <!-- Styles and head scripts -->
+    <link href="css/ucsc.css" rel="stylesheet" type="text/css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 </head>
 
@@ -125,8 +80,7 @@ $(function(){
 
     <div class="row">
       
- <!-- Carousel
-    ================================================== -->
+ <!-- =================== Carousel ==================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -265,12 +219,6 @@ $(function(){
  <a href="https://secure.imodules.com/s/1069/index-2-column.aspx?sid=1069&amp;gid=1&amp;pgid=761&amp;cid=1722&amp;utm_source=homepage&amp;utm_medium=button&amp;utm_campaign=giving"><img alt="Make a gift" height="52" src="http://www.ucsc.edu/images/banners/makeagift_red.png" width="216"></a>
 </div>
 
-<!--<script language="JavaScript">
-var today = new Date();
-var number = today.getDate() + 1;
-document.write('<a href="http://giving.ucsc.edu/opportunities/ways-to-give/year_end.html?utm_source=homepage&amp;utm_medium=button&amp;utm_campaign=year-end""><img src="images/year-end/' + number + '.jpg" alt="Make a year-end gift!" title="Make a year-end gift!"></a>');
-</script> -->
-
 </div>
 </div>
       </div>
@@ -340,8 +288,6 @@ document.write('<a href="http://giving.ucsc.edu/opportunities/ways-to-give/year_
   </div><!-- /container -->
 </div><!-- /wrap -->
 
-<script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -359,22 +305,14 @@ document.write('<a href="http://giving.ucsc.edu/opportunities/ways-to-give/year_
 
 
 
-<script type="text/javascript">
 
-var code = "utm_source=homepage&amp;utm_campaign=carousel&amp;utm_medium=slide";
-var board = document.getElementById("billboard");
-var slides = board.getElementsByTagName("a");
-for(var i=0;i<slides.length;i++) {
-	var url = slides[i].getAttribute("href");
-	var separator = "?";
-	if (url.indexOf('?') !=-1) {
-		separator = "&amp;";
-	}
-	slides[i].setAttribute("href", url + separator + code + "-" + i);
-}
+<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
 
+<script>
+  $('.carousel').carousel({
+  interval: 2000
+});
 </script>
-
 
 </body>
 </html>
