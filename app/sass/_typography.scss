@@ -1,0 +1,44 @@
+// Primary typography 
+body {
+	padding: 0 1em;
+	color: $primary-gray;
+	background-color: $primary-sand;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base;
+	line-height: $line-height-computed;
+	margin: 0;
+	@include media($mobile) {
+		@include show-media("Mobile", green);
+  }
+	@include media($tablet) {
+    @include show-media("Tablet: Portrait", orange);
+  }
+	@include media($desktop) {
+    @include show-media("Desktop", blue);
+  }  
+}
+
+a {
+	color: $primary-blue;
+	text-decoration: none;
+	&:focus,
+	&:hover,
+	&:active {
+		text-decoration: underline;
+	}
+}
+
+h1, .h1 {
+
+	#pageTitle & a {
+		text-decoration: none;
+		font-weight: normal;
+		margin: 0;
+		font-size: 42px;
+		line-height: 42px;
+		padding: 0;	
+		text-transform: uppercase;
+		letter-spacing: -1px;
+		color: #F1B521;
+	}
+}

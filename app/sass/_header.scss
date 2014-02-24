@@ -1,0 +1,159 @@
+/* 
+*		Global header
+*/
+
+// Top nav current
+#topNav {
+	@include span-columns(9);
+	display:flex;
+	display: -webkit-flex;
+	justify-content:flex-end;
+	-webkit-justify-content:flex-end;
+	> li {
+		background-image: none;
+		border-left: 1px solid #C2CDC9;
+		display:flex;
+		display: -webkit-flex;
+		line-height: 1.2em;
+		list-style-type: none;
+		padding: 25px 10px 1px 10px;
+	}
+}
+
+#logo {
+	@include hide-text();
+	background-position: left center;
+	background-repeat: no-repeat;
+	@include omega();
+	padding:10em 0;
+
+	.dept & {
+		@include span-columns(2 of 12);
+		@include size(144px 45px);
+		background-size: contain;
+		max-width: 144px;
+		@include retina-image('../images/logos/ucsc-logo-small', 144px 45px);
+	}
+
+	.homeEnv & {
+		@include span-columns(4 of 12);
+		background-size: contain;
+		max-width: 261px;
+		height:72px;
+		@include retina-image('../images/logos/ucsc-logo-large', 261px 72px);
+		padding: 0;
+		@include media($mobile) {
+			@include span-columns(12 of 12);
+			margin-bottom: $base-font-size;
+		}
+	}
+
+}
+
+.search {
+	@include span-columns(3);
+	margin-top: -0.4em;
+	label {
+		@include hide-text();
+	}
+
+	.query {
+		color: $primary-gray;
+		border: 1px solid lighten($primary-gray, 50%);
+		box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+		border-radius: $border-radius-base;
+		line-height: 140%;
+		font-size: $base-font-size - 2;
+		padding:0.4em;
+		vertical-align: top;
+		width: 100%;
+		&:focus,
+		&:active {
+			box-shadow:0 0 8px rgba(0,0,0,0.2);
+		}
+	}
+
+}
+
+
+#mainNav {
+	display: table;
+	border-radius: $border-radius-base;
+	@include module-box-shadow();
+	width: 100%;
+	table-layout: fixed;
+	padding-left:0 !important;
+	border-collapse: separate;
+	> li {
+		float: none;
+		display: table-cell;
+		width: 1%;
+		position: relative;
+		&:first-child a {
+			// border:1px solid red;
+			border-radius: 5px 0 0 5px;
+		}
+		&:last-child a,
+		&:last-child span {
+			// border:1px solid purple;
+			border-radius: 0 5px 5px 0;
+		}
+		> a, span {
+			background-image: -moz-linear-gradient(top,#f4f1e6,#ffffff);
+			background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#F4F1E6),to(#FFF));
+			color: $primary-gold;
+			cursor: pointer;
+			display:block;
+			width: 100%;
+			font-size: .8em;
+			font-weight: bold;
+			padding: 0.4em 0.2em;
+			text-transform: uppercase;
+			text-decoration: none;
+			-moz-text-shadow: 1px 1px 0px #ffffff;
+			text-shadow: 1px 1px 0px #FFF;
+			text-align: center;
+			&:focus,
+			&:hover,
+			&:active {
+				color: $primary-gold;
+				text-decoration: none;
+				background: #296FA3;
+				background-color: $primary-blue;
+				background-repeat: repeat-x;
+				background-image: -moz-linear-gradient(top,#296fa3,#5992bd);
+				background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#296FA3),to(#5992BD));
+				background-position: top left;
+				-moz-text-shadow: none;
+				text-shadow: none;
+			}
+		}
+		ul {
+			position: absolute;
+			left: -900em;
+		}
+	}
+	@include media($mobile) {
+		border-radius:0;
+		background-image: none;
+		background-color: $primary-gray;
+		display:none;
+		width:60%;
+		.toggle & {
+			z-index: 1000;
+			right:40%;
+		}
+		li {
+			display: block;
+			width:auto;
+			border-radius:0;
+			a, span {
+				border-radius:0;
+				background-image: none;
+				text-align: left;
+				display: block;	
+			}
+			
+		}
+	}
+}

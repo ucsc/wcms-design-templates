@@ -1,0 +1,31 @@
+#events,
+.events {
+
+	dt {
+		color: $primary-gray;
+		float: left;
+		font-size: $font-size-base;
+		letter-spacing: 1px;
+		margin:0 0.4em 1em 0;
+		text-align: center;
+		text-transform: uppercase;
+		min-width:14%;
+		clear: left;
+		strong,
+		span {
+			color: #6E6D68;
+			font-size: 1.4rem;
+			letter-spacing: -1px;
+			line-height: 1em;
+			display: block;
+		}
+	}
+	dd {
+		border-left: 1px solid #DEDCD1;
+		float: left;
+		margin:0 0 1em 0;
+		padding: 0.2em 0.2em 0.2em 4%;
+		font-size: $font-size-base;
+		width:82%;
+	}
+}
