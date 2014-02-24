@@ -8,10 +8,6 @@ var pkg 				= require('./package.json'),
 		refresh 		= require('gulp-livereload'),
 		lr 					= require('tiny-lr'),
 		server 			= lr();
-var	awspublish = require('gulp-awspublish'),
-    publisher = awspublish.create({ key: 'AKIAIPBYQFIQEBMBAFTA', secret: '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', bucket: 'ucscwebtemplates'}),
-    headers = { 'Cache-Control': 'max-age=315360000, no-transform, public' };
-
 
 // Create a server to preview our built pages
 gulp.task('lr-server', function() {  
@@ -44,11 +40,6 @@ gulp.task('styles', function() {
 gulp.task('html', function(){  
     gulp.src('./app/*.html')
     .pipe(refresh(server));
-});
-
-gulp.task('release', function() {
-		gulp.src('./app/**/*.{html,css,jpg,png,js}')
-		.pipe(publisher.publish(headers));
 });
 
 // The default task (called when you run `gulp`)
