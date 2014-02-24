@@ -4,7 +4,7 @@
   "authors": [
     "Rob Knight <raknight@ucsc.edu>"
   ],
-  "description": "UCSC Adaptive templates",
+  "description": "UCSC adaptive templates",
   "main": "./app/index.html",
   "keywords": [
     "responsive"
@@ -20,11 +20,11 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "~3.0.0"
+    "jquery": "~2.1.0",
+    "normalize-css": "~3.0.0",
+    "modernizr": "~2.7.1",
+    "swipe": "~2.0.0"
   },
   "devDependencies": {
-    "bootstrap-sass-official": "~3.1.1",
-    "jquery": "~2.1.0",
-    "normalize-css": "~3.0.0"
   }
 }
