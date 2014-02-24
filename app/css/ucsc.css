@@ -201,13 +201,13 @@ a {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch; }
-  /* line 15, ../sass/_modules.scss */
-  .three .wrap {
+  /* line 12, ../sass/_modules.scss */
+  .three > .wrap {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
-  /* line 18, ../sass/_modules.scss */
+  /* line 15, ../sass/_modules.scss */
   .three .inner {
     height: 100%; }
   @media screen and (max-width: 40em) {
@@ -224,7 +224,7 @@ a {
       .three:after {
         clear: both; } }
 
-/* line 29, ../sass/_modules.scss */
+/* line 25, ../sass/_modules.scss */
 .four {
   width: 100%;
   display: -webkit-box;
@@ -238,7 +238,7 @@ a {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch; }
-  /* line 38, ../sass/_modules.scss */
+  /* line 31, ../sass/_modules.scss */
   .four > .wrap {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -246,22 +246,22 @@ a {
     flex: 1;
     margin: 0;
     padding: 1em 1.8em; }
-  /* line 44, ../sass/_modules.scss */
+  /* line 36, ../sass/_modules.scss */
   .four h4, .four .header {
     margin: 0 0 1em 0;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: normal; }
-    /* line 49, ../sass/_modules.scss */
+    /* line 41, ../sass/_modules.scss */
     .four h4 span, .four .header span {
       font-weight: bold;
-      color: #585755; }
+      color: #74726e; }
   @media screen and (max-width: 40em) {
-    /* line 29, ../sass/_modules.scss */
+    /* line 25, ../sass/_modules.scss */
     .four {
       display: block; } }
 
-/* line 63, ../sass/_modules.scss */
+/* line 55, ../sass/_modules.scss */
 .combined {
   border-radius: 5px;
   background-color: white;
@@ -269,13 +269,13 @@ a {
   border-bottom: solid 1px #DFDED2;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
   margin-right: 0; }
-  /* line 70, ../sass/_modules.scss */
+  /* line 62, ../sass/_modules.scss */
   .combined .wrap {
     border-right: 1px solid white;
     border-left: 1px solid #f6f4ec;
     margin-right: 0;
     padding: 2.35765%; }
-  /* line 77, ../sass/_modules.scss */
+  /* line 69, ../sass/_modules.scss */
   .combined h2, .combined .header {
     border-bottom: #E5E4DE 1px solid;
     color: #8E8C87;
@@ -286,10 +286,10 @@ a {
     clear: both;
     padding-bottom: 0.4em;
     text-transform: uppercase; }
-    /* line 87, ../sass/_modules.scss */
+    /* line 79, ../sass/_modules.scss */
     .combined h2 span, .combined .header span {
       color: #585755; }
-    /* line 90, ../sass/_modules.scss */
+    /* line 82, ../sass/_modules.scss */
     .combined h2 .more, .combined .header .more {
       position: absolute;
       right: 0;
@@ -298,10 +298,10 @@ a {
       line-height: 3.4em;
       text-transform: uppercase; }
 
-/* line 104, ../sass/_modules.scss */
+/* line 96, ../sass/_modules.scss */
 .separate .wrap {
   padding: 2.35765%; }
-/* line 108, ../sass/_modules.scss */
+/* line 100, ../sass/_modules.scss */
 .separate .inner {
   padding: 1em;
   background-color: #ECE9D8;
@@ -310,7 +310,7 @@ a {
   border-bottom: solid 1px #DAD8C8;
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05); }
-/* line 118, ../sass/_modules.scss */
+/* line 110, ../sass/_modules.scss */
 .separate h3, .separate .header {
   border: 1px solid #E5E4DE;
   color: #8E8C87;
@@ -319,7 +319,7 @@ a {
   margin: 0 0 10px 0;
   padding: 4px 6px;
   text-transform: uppercase; }
-  /* line 126, ../sass/_modules.scss */
+  /* line 118, ../sass/_modules.scss */
   .separate h3 span, .separate .header span {
     font-weight: bold;
     color: #585755; }
@@ -363,14 +363,25 @@ a {
 .showcase img {
   display: block;
   width: 100%;
-  height: auto; }
-  /* line 10, ../sass/_module-showcase.scss */
+  height: auto;
+  margin-bottom: 0.875em; }
+  /* line 11, ../sass/_module-showcase.scss */
   #profile img.play_btn,
   #know img.play_btn,
   #video img.play_btn,
   .showcase img.play_btn {
     width: auto;
     position: absolute; }
+/* line 18, ../sass/_module-showcase.scss */
+#profile .title,
+#profile .uptitle,
+#know .title,
+#know .uptitle,
+#video .title,
+#video .uptitle,
+.showcase .title,
+.showcase .uptitle {
+  text-transform: uppercase !important; }
 
 /* line 3, ../sass/_module-news.scss */
 #news ul,
