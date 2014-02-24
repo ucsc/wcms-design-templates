@@ -7,10 +7,16 @@
 		display:block;
 		width:100%;
 		height:auto;
+		margin-bottom: em(14);
 		&.play_btn {
 			width:auto;
 			position:absolute;
 		}
+	}
+
+	.title,
+	.uptitle {
+		text-transform: uppercase !important;
 	}
 
 }

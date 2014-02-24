@@ -6,13 +6,10 @@
 // Module row with three columns
 .three {
 	width:100%;
-	
 	display: flex;
-	
 	align-content: center;
-	
 	align-items: stretch;
-	.wrap {
+	> .wrap {
 		flex:1;
 	}
 	.inner {
@@ -22,22 +19,17 @@
 		display: block;
 		@include row(block);
 	}
-
 }
 
 // Module row with four columns
 .four {
 	@include reset-display();
 	width:100%;
-	
 	display: flex;
-	
 	align-content: center;
-	
 	align-items: stretch;
 	> .wrap {
 		flex:1;
-	
 		margin:0;
 		padding:1em 1.8em;
 	}
@@ -48,7 +40,7 @@
 		font-weight: normal;
 		span {
 			font-weight: bold;
-			color: #585755;
+			color: $primary-gray-dark;
 		}
 	}
 
