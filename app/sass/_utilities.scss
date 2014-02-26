@@ -18,6 +18,12 @@
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}
+
 @mixin navigation-list {
     list-style-type:none;
     width:100%;

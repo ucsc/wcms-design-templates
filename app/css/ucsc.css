@@ -13,7 +13,7 @@ body {
   line-height: 20px;
   margin: 0; }
   @media screen and (max-width: 40em) {
-    /* line 45, ../sass/_utilities.scss */
+    /* line 51, ../sass/_utilities.scss */
     body:before {
       content: "Mobile";
       display: block;
@@ -25,7 +25,7 @@ body {
       position: relative;
       left: -14px; } }
   @media screen and (min-width: 40.0625em) {
-    /* line 45, ../sass/_utilities.scss */
+    /* line 51, ../sass/_utilities.scss */
     body:before {
       content: "Tablet: Portrait";
       display: block;
@@ -37,7 +37,7 @@ body {
       position: relative;
       left: -14px; } }
   @media screen and (min-width: 60em) {
-    /* line 45, ../sass/_utilities.scss */
+    /* line 51, ../sass/_utilities.scss */
     body:before {
       content: "Desktop";
       display: block;
@@ -85,9 +85,16 @@ a {
 
 /* line 11, ../sass/_layouts.scss */
 .row {
+  border: 1px solid red;
   *zoom: 1;
-  display: block;
-  margin-right: 0; }
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px; }
   /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
   .row:before, .row:after {
     content: " ";
@@ -95,97 +102,70 @@ a {
   /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
   .row:after {
     clear: both; }
+  @media screen and (max-width: 40em) {
+    /* line 11, ../sass/_layouts.scss */
+    .row {
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column; } }
 
-/* line 19, ../sass/_layouts.scss */
-#topNav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-right: 0;
-  margin: 0; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #topNav:last-child {
-    margin-right: 0; }
+@media screen and (min-width: 40.0625em) {
+  /* line 26, ../sass/_layouts.scss */
+  #topNav,
+  .global-nav {
+    -webkit-box-flex: 4;
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    flex: 4; } }
 
-/* line 28, ../sass/_layouts.scss */
-.search {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  margin-right: 0; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  .search:last-child {
-    margin-right: 0; }
+@media screen and (min-width: 40.0625em) {
+  /* line 37, ../sass/_layouts.scss */
+  .search {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; } }
+/* line 44, ../sass/_layouts.scss */
+.search .query {
+  width: 100%;
+  margin-top: 5%; }
 
-/* line 35, ../sass/_layouts.scss */
-#pageTitle {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  *zoom: 1;
-  display: block; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #pageTitle:last-child {
-    margin-right: 0; }
-  /* line 18, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #pageTitle:before, #pageTitle:after {
-    content: " ";
-    display: table; }
-  /* line 23, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  #pageTitle:after {
-    clear: both; }
-  /* line 39, ../sass/_layouts.scss */
-  #pageTitle h1 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 6.17215%;
-    margin-right: 0; }
-    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #pageTitle h1:last-child {
-      margin-right: 0; }
+/* line 57, ../sass/_layouts.scss */
+header h1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
 
-/* line 46, ../sass/_layouts.scss */
+/* line 63, ../sass/_layouts.scss */
+#slider {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+/* line 67, ../sass/_layouts.scss */
 #sprflt {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #sprflt:last-child {
-    margin-right: 0; }
-  /* line 48, ../sass/_layouts.scss */
+  display: table-cell;
+  padding-right: 2.16118%;
+  width: 102.16118%; }
+  /* line 69, ../sass/_layouts.scss */
   #sprflt #mainContent {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
+    display: table-cell;
+    padding-right: 2.09569%;
+    width: 76.50628%;
     margin-left: 8.5298%;
     margin-right: 0; }
-    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #sprflt #mainContent:last-child {
-      margin-right: 0; }
-  /* line 53, ../sass/_layouts.scss */
+  /* line 74, ../sass/_layouts.scss */
   #sprflt #subNav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%; }
-    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #sprflt #subNav:last-child {
-      margin-right: 0; }
-  /* line 56, ../sass/_layouts.scss */
+    display: table-cell;
+    padding-right: 1.17883%;
+    width: 15.88078%; }
+  /* line 77, ../sass/_layouts.scss */
   #sprflt #footer {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-    #sprflt #footer:last-child {
-      margin-right: 0; }
+    display: table-cell;
+    padding-right: 2.16118%;
+    width: 102.16118%; }
 
 /* line 7, ../sass/_modules.scss */
 .three {
@@ -543,38 +523,88 @@ a {
 
 /* 
 *		Global header
+*		=============
+*
+*		beginning with the top of the page,
+*		this includes the global links, search box, logo,
+*		site title (on interior pages), and site navigation. 
 */
-/* line 6, ../sass/_header.scss */
-#topNav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-justify-content: flex-end; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  #topNav:last-child {
-    margin-right: 0; }
-  /* line 12, ../sass/_header.scss */
-  #topNav > li {
-    background-image: none;
-    border-left: 1px solid #C2CDC9;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: -webkit-flex;
-    line-height: 1.2em;
-    list-style-type: none;
-    padding: 25px 10px 1px 10px; }
+/* line 11, ../sass/_header.scss */
+#topNav,
+.global-nav {
+  padding: 0;
+  list-style: none;
+  margin: 0; }
+  /* line 18, ../sass/_header.scss */
+  #topNav a,
+  .global-nav a {
+    display: block;
+    padding: 16px;
+    border-top: 1px solid #d5cca7;
+    border-bottom: 1px solid white;
+    background-color: white; }
+  @media screen and (min-width: 40.0625em) {
+    /* line 11, ../sass/_header.scss */
+    #topNav,
+    .global-nav {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      /* line 32, ../sass/_header.scss */
+      #topNav > li,
+      .global-nav > li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        background-image: none;
+        border-left: 1px solid #C2CDC9;
+        line-height: 1.2em;
+        list-style-type: none; }
+      /* line 40, ../sass/_header.scss */
+      #topNav a,
+      .global-nav a {
+        padding: 3em 1.4em 0.4em;
+        border: none;
+        background-color: transparent; }
+        /* line 22, ../sass/_utilities.scss */
+        #topNav a:hover, #topNav a:active, #topNav a:focus,
+        .global-nav a:hover,
+        .global-nav a:active,
+        .global-nav a:focus {
+          background-color: #d8d8d6; } }
 
-/* line 23, ../sass/_header.scss */
+/*
+*		Search box styles
+*/
+/* line 60, ../sass/_header.scss */
+.search .query {
+  color: #8e8c87;
+  border: 1px solid white;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  line-height: 140%;
+  font-size: 14px;
+  padding: 8px; }
+  /* line 70, ../sass/_header.scss */
+  .search .query:focus, .search .query:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
+/* line 75, ../sass/_header.scss */
+.search label {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none; }
+@media screen and (min-width: 40.0625em) {
+  /* line 82, ../sass/_header.scss */
+  .search .query {
+    padding: 8px; } }
+
+/* line 91, ../sass/_header.scss */
 #logo {
   color: transparent;
   font: 0/0 a;
@@ -583,7 +613,7 @@ a {
   background-repeat: no-repeat;
   margin-right: 0;
   padding: 10em 0; }
-  /* line 30, ../sass/_header.scss */
+  /* line 98, ../sass/_header.scss */
   .dept #logo {
     float: left;
     display: block;
@@ -598,11 +628,11 @@ a {
     .dept #logo:last-child {
       margin-right: 0; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-      /* line 30, ../sass/_header.scss */
+      /* line 98, ../sass/_header.scss */
       .dept #logo {
         background-image: url("../images/logos/ucsc-logo-small@2x.png");
         background-size: 144px 45px; } }
-  /* line 38, ../sass/_header.scss */
+  /* line 106, ../sass/_header.scss */
   .homeEnv #logo {
     float: left;
     display: block;
@@ -617,12 +647,12 @@ a {
     .homeEnv #logo:last-child {
       margin-right: 0; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-      /* line 38, ../sass/_header.scss */
+      /* line 106, ../sass/_header.scss */
       .homeEnv #logo {
         background-image: url("../images/logos/ucsc-logo-large@2x.png");
         background-size: 261px 72px; } }
     @media screen and (max-width: 40em) {
-      /* line 38, ../sass/_header.scss */
+      /* line 106, ../sass/_header.scss */
       .homeEnv #logo {
         float: left;
         display: block;
@@ -633,112 +663,79 @@ a {
         .homeEnv #logo:last-child {
           margin-right: 0; } }
 
-/* line 53, ../sass/_header.scss */
-.search {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  margin-top: -0.4em; }
-  /* line 40, ../../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
-  .search:last-child {
-    margin-right: 0; }
-  /* line 56, ../sass/_header.scss */
-  .search label {
-    color: transparent;
-    font: 0/0 a;
-    text-shadow: none; }
-  /* line 60, ../sass/_header.scss */
-  .search .query {
-    color: #8e8c87;
-    border: 1px solid white;
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    line-height: 140%;
-    font-size: 14px;
-    padding: 0.4em;
-    vertical-align: top;
-    width: 100%; }
-    /* line 71, ../sass/_header.scss */
-    .search .query:focus, .search .query:active {
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
-
-/* line 79, ../sass/_header.scss */
+/* line 122, ../sass/_header.scss */
 #mainNav {
-  display: table;
-  border-radius: 5px;
-  border: 1px solid #E7E5DE;
-  border-bottom: solid 1px #DFDED2;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  margin: 0;
   width: 100%;
-  table-layout: fixed;
-  padding-left: 0 !important;
-  border-collapse: separate; }
-  /* line 87, ../sass/_header.scss */
-  #mainNav > li {
-    float: none;
-    display: table-cell;
-    width: 1%;
-    position: relative; }
-    /* line 92, ../sass/_header.scss */
-    #mainNav > li:first-child a {
-      border-radius: 5px 0 0 5px; }
-    /* line 97, ../sass/_header.scss */
-    #mainNav > li:last-child a, #mainNav > li:last-child span {
-      border-radius: 0 5px 5px 0; }
-    /* line 101, ../sass/_header.scss */
-    #mainNav > li > a, #mainNav > li span {
-      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
-      color: #cb9001;
-      cursor: pointer;
-      display: block;
-      width: 100%;
-      font-size: .8em;
-      font-weight: bold;
-      padding: 0.4em 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      -moz-text-shadow: 1px 1px 0px #ffffff;
-      text-shadow: 1px 1px 0px #FFF;
-      text-align: center; }
-      /* line 118, ../sass/_header.scss */
-      #mainNav > li > a:focus, #mainNav > li > a:hover, #mainNav > li > a:active, #mainNav > li span:focus, #mainNav > li span:hover, #mainNav > li span:active {
-        color: #cb9001;
-        text-decoration: none;
-        background: #296FA3;
-        background-color: #5585a2;
-        background-repeat: repeat-x;
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#296fa3), to(#5992bd));
-        background-position: top left;
-        -moz-text-shadow: none;
-        text-shadow: none; }
-    /* line 131, ../sass/_header.scss */
-    #mainNav > li ul {
-      position: absolute;
-      left: -900em; }
-  @media screen and (max-width: 40em) {
-    /* line 79, ../sass/_header.scss */
+  list-style: none;
+  border-radius: 0;
+  background-image: none;
+  border-radius: 0;
+  width: 100%;
+  display: block; }
+  /* line 135, ../sass/_header.scss */
+  #mainNav a, #mainNav span {
+    border-radius: 0;
+    background-image: none;
+    display: block;
+    padding: 16px;
+    border-top: 1px solid #d5cca7;
+    border-bottom: 1px solid white;
+    background-color: white; }
+  @media screen and (min-width: 40.0625em) {
+    /* line 122, ../sass/_header.scss */
     #mainNav {
-      border-radius: 0;
-      background-image: none;
-      background-color: #8e8c87;
-      display: none;
-      width: 60%; }
-      /* line 142, ../sass/_header.scss */
-      .toggle #mainNav {
-        z-index: 1000;
-        right: 40%; }
-      /* line 146, ../sass/_header.scss */
-      #mainNav li {
-        display: block;
-        width: auto;
-        border-radius: 0; }
-        /* line 150, ../sass/_header.scss */
-        #mainNav li a, #mainNav li span {
-          border-radius: 0;
-          background-image: none;
-          text-align: left;
-          display: block; } }
+      display: table;
+      border-radius: 5px;
+      border: 1px solid #E7E5DE;
+      border-bottom: solid 1px #DFDED2;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      table-layout: fixed;
+      padding-left: 0 !important;
+      border-collapse: separate; }
+      /* line 156, ../sass/_header.scss */
+      #mainNav > li {
+        float: none;
+        display: table-cell;
+        width: 1%;
+        position: relative; }
+        /* line 162, ../sass/_header.scss */
+        #mainNav > li:first-child a {
+          border-radius: 5px 0 0 5px; }
+        /* line 168, ../sass/_header.scss */
+        #mainNav > li:last-child a, #mainNav > li:last-child span {
+          border-radius: 0 5px 5px 0; }
+        /* line 173, ../sass/_header.scss */
+        #mainNav > li > a, #mainNav > li span {
+          border: none;
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
+          color: #cb9001;
+          cursor: pointer;
+          display: block;
+          width: 100%;
+          font-size: .8em;
+          font-weight: bold;
+          padding: 0.4em 0.2em;
+          text-transform: uppercase;
+          text-decoration: none;
+          text-shadow: 1px 1px 0px #FFF;
+          text-align: center; }
+          /* line 191, ../sass/_header.scss */
+          #mainNav > li > a:focus, #mainNav > li > a:hover, #mainNav > li > a:active, #mainNav > li span:focus, #mainNav > li span:hover, #mainNav > li span:active {
+            color: #cb9001;
+            text-decoration: none;
+            background: #296FA3;
+            background-color: #5585a2;
+            background-repeat: repeat-x;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#296fa3), to(#5992bd));
+            background-position: top left;
+            -moz-text-shadow: none;
+            text-shadow: none; }
+      /* line 208, ../sass/_header.scss */
+      #mainNav > li ul {
+        display: none; } }
 
 /* line 1, ../sass/_footer.scss */
 #footer {

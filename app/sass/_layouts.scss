@@ -9,39 +9,60 @@
 	}
 
 	.row {
-		// border: 1px solid red;
-		// @include span-columns(12);
-		@include row(block);
-		@include omega();
+		border: 1px solid red;
+		@include row(table);
+		display: flex;
+		margin-bottom: $base-font-size/2;
+
+		@include media($mobile) {
+			flex-flow: column;
+		}
+
 	}
 
-	// Top row: global-nav and search
-	#topNav {
-		@include span-columns(5 of 12);
-		@include omega();
-		@include reset-display();
-		margin:0;
-		//border:2px solid blue;
 
+	// Top row: global-nav and search
+	#topNav,
+	.global-nav {
+		// border:2px solid blue;
+		
+
+		@include media($tablet) {
+			flex:4;
+		}
+
+		
 	}
 
 	.search {
-		@include span-columns(3 of 12);
 		//border:2px solid purple;
-		@include omega();
+
+		@include media($tablet) {
+			flex:1;
+		}
+
+		.query {
+			width: 100%;
+			margin-top: 5%;
+		}
+
+
 	}
 
 	// Second row: logo and site title
-	#pageTitle {
-		@include span-columns(4);
-		@include row(block);
+
+		
+		header {
 
 		h1 {
-			@include span-columns(1 of 12);
-			@include omega();
+			flex:1;
 		}
-	}
 		
+		}
+
+#slider {
+	flex:1;
+}
 
 	#sprflt {
 		@include span-columns(12);
