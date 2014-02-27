@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>_config.scss</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+
+      <div class="header">
+        
+          <h1>_config.scss</h1>
+        
+
+        
+          <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+              
+                
+                <li>
+                  <a class="source" href="_config.html">
+                    _config.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_footer.html">
+                    _footer.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_header.html">
+                    _header.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_homeless.html">
+                    _homeless.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_layouts.html">
+                    _layouts.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-carousel.html">
+                    _module-carousel.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-events.html">
+                    _module-events.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-news.html">
+                    _module-news.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-showcase.html">
+                    _module-showcase.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_modules.html">
+                    _modules.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_typography.html">
+                    _typography.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_utilities.html">
+                    _utilities.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="ucsc.html">
+                    ucsc.scss
+                  </a>
+                </li>
+              
+            </ol>
+          </div>
+        
+      </div>
+
+      
+        
+        <p>Layout debugging</p>
+
+        
+          <div class='highlight'><pre>$visual-grid<span class="hljs-value">: true;</span>
+$visual-grid-index<span class="hljs-value">: front;</span></pre></div>
+        
+      
+        
+        <p>Layout variables for Bourbon Neat</p>
+
+        
+          <div class='highlight'><pre>$<span class="hljs-attribute">border</span>-<span class="hljs-attribute">box-sizing</span><span class="hljs-value">: true;</span>
+$<span class="hljs-attribute">max-width</span><span class="hljs-value">: em(<span class="hljs-number">1280</span>);</span>
+$<span class="hljs-value">default</span>-feature<span class="hljs-value">: min-width;</span>
+$grids-<span class="hljs-attribute">columns</span><span class="hljs-value">: <span class="hljs-number">12</span>;</span>
+$column<span class="hljs-value">: golden-ratio(<span class="hljs-number">1</span>em, <span class="hljs-number">3</span>);</span>
+$gutter<span class="hljs-value">: golden-ratio(<span class="hljs-number">1</span>em, <span class="hljs-number">1</span>);</span></pre></div>
+        
+      
+        
+        <p>Set breakpoint variables</p>
+
+        
+          <div class='highlight'><pre>$desktop<span class="hljs-value">: new-breakpoint(min-width em(<span class="hljs-number">960</span>) <span class="hljs-number">6</span>);</span>
+$tablet<span class="hljs-value">: 	new-breakpoint(min-width em(<span class="hljs-number">641</span>) <span class="hljs-number">6</span>);</span>
+$mobile<span class="hljs-value">: 	new-breakpoint(max-width em(<span class="hljs-number">640</span>) <span class="hljs-number">6</span>);</span></pre></div>
+        
+      
+        
+        <p>Set color variables</p>
+
+        
+          <div class='highlight'><pre>$primary-blue<span class="hljs-value">: <span class="hljs-hexcolor">#5585a2</span>;</span>
+$primary-gold<span class="hljs-value">: <span class="hljs-hexcolor">#cb9001</span>;</span>
+$primary-sand<span class="hljs-value">: <span class="hljs-hexcolor">#F6F4EC</span>;</span>
+$primary-gray<span class="hljs-value">: <span class="hljs-hexcolor">#8E8C87</span>;</span>
+$primary-gray-dark<span class="hljs-value">: darken($primary-gray, <span class="hljs-number">10</span>%);</span>
+
+$ucsc-blue<span class="hljs-value">: <span class="hljs-hexcolor">#1B4084</span>;</span>
+$ucsc-gold<span class="hljs-value">: <span class="hljs-hexcolor">#F1B523</span>;</span>
+
+$<span class="hljs-attribute">font-family</span>-sans-serif<span class="hljs-value">:  <span class="hljs-string">"Lucida Grande"</span>, <span class="hljs-string">"Lucida Sans Unicode"</span>, sans-serif !default;</span>
+$<span class="hljs-attribute">font-family</span>-serif<span class="hljs-value">:       Georgia, <span class="hljs-string">"Times New Roman"</span>, Times, serif !default;</span>
+$<span class="hljs-attribute">font-family</span>-monospace<span class="hljs-value">:   Monaco, Menlo, Consolas, <span class="hljs-string">"Courier New"</span>, monospace !default;</span>
+$<span class="hljs-attribute">font-family</span>-headlines<span class="hljs-value">:   <span class="hljs-string">"Franklin Gothic Medium"</span>, <span class="hljs-string">"Franklin Gothic"</span>, <span class="hljs-string">"ITC Franklin Gothic"</span>, Arial, sans-serif;</span>
+$<span class="hljs-attribute">font-family</span>-<span class="hljs-tag">base</span><span class="hljs-value">:        $font-family-sans-serif !default;</span>
+
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">base</span><span class="hljs-value">:          <span class="hljs-number">14</span>px !default;</span>
+$<span class="hljs-attribute">font-size</span>-large<span class="hljs-value">:         ceil($font-size-base * <span class="hljs-number">1.25</span>) !default;</span> <span class="hljs-comment">// ~18px</span>
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">small</span><span class="hljs-value">:         ceil($font-size-base * <span class="hljs-number">0.85</span>) !default;</span> <span class="hljs-comment">// ~12px</span>
+
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">h1</span><span class="hljs-value">:            floor($font-size-base * <span class="hljs-number">2.6</span>) !default;</span> <span class="hljs-comment">// ~36px</span>
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">h2</span><span class="hljs-value">:            floor($font-size-base * <span class="hljs-number">2.15</span>) !default;</span> <span class="hljs-comment">// ~30px</span>
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">h3</span><span class="hljs-value">:            ceil($font-size-base * <span class="hljs-number">1.7</span>) !default;</span> <span class="hljs-comment">// ~24px</span>
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">h4</span><span class="hljs-value">:            ceil($font-size-base * <span class="hljs-number">1.25</span>) !default;</span> <span class="hljs-comment">// ~18px</span>
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">h5</span><span class="hljs-value">:            $font-size-base !default;</span>
+$<span class="hljs-attribute">font-size</span>-<span class="hljs-tag">h6</span><span class="hljs-value">:            ceil($font-size-base * <span class="hljs-number">0.85</span>) !default;</span> <span class="hljs-comment">// ~12px</span>
+
+$<span class="hljs-attribute">line-height</span>-<span class="hljs-tag">base</span><span class="hljs-value">:        <span class="hljs-number">1.428571429</span> !default;</span> <span class="hljs-comment">// 20/14</span>
+$<span class="hljs-attribute">line-height</span>-computed<span class="hljs-value">:    floor($font-size-base * $line-height-base) !default;</span> <span class="hljs-comment">// ~20px</span>
+
+$headings-<span class="hljs-attribute">font-family</span><span class="hljs-value">:    $font-family-base !default;</span>
+$headings-<span class="hljs-attribute">font-weight</span><span class="hljs-value">:    <span class="hljs-number">500</span> !default;</span>
+$headings-<span class="hljs-attribute">line-height</span><span class="hljs-value">:    <span class="hljs-number">1.1</span> !default;</span>
+$headings-<span class="hljs-attribute">color</span><span class="hljs-value">:          inherit !default;</span>
+
+$<span class="hljs-attribute">border-radius</span>-<span class="hljs-tag">base</span><span class="hljs-value">: 			<span class="hljs-number">5</span>px;</span></pre></div>
+        
+      
+      <div class="fleur">h</div>
+    </div>
+  </div>
+</body>
+</html>

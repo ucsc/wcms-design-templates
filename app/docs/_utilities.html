@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>_utilities.scss</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+
+      <div class="header">
+        
+          <h1>_utilities.scss</h1>
+        
+
+        
+          <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+              
+                
+                <li>
+                  <a class="source" href="_config.html">
+                    _config.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_footer.html">
+                    _footer.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_header.html">
+                    _header.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_homeless.html">
+                    _homeless.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_layouts.html">
+                    _layouts.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-carousel.html">
+                    _module-carousel.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-events.html">
+                    _module-events.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-news.html">
+                    _module-news.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-showcase.html">
+                    _module-showcase.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_modules.html">
+                    _modules.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_typography.html">
+                    _typography.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_utilities.html">
+                    _utilities.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="ucsc.html">
+                    ucsc.scss
+                  </a>
+                </li>
+              
+            </ol>
+          </div>
+        
+      </div>
+
+      
+        
+        <p>Custom mixins for UCSC.</p>
+<p>Compatibility untested.</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-at_rule">@function<span class="hljs-preprocessor"> calculateRem</span>($size) {</span>
+  $remSize<span class="hljs-value">: $size / <span class="hljs-number">16</span>px;</span>
+  <span class="hljs-at_rule">@return #{</span>$remSize}rem;
+}
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> fontSize</span>($size) {</span>
+  <span class="hljs-attribute">font-size</span><span class="hljs-value">: $size;</span> <span class="hljs-comment">//Fallback in px</span>
+  <span class="hljs-attribute">font-size</span><span class="hljs-value">: calculateRem($size);</span>
+}
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> module-box-shadow</span>() {</span>
+  <span class="hljs-attribute">border</span><span class="hljs-value">: <span class="hljs-number">1</span>px solid <span class="hljs-hexcolor">#E7E5DE</span>;</span>
+  <span class="hljs-attribute">border-bottom</span><span class="hljs-value">: solid <span class="hljs-number">1</span>px <span class="hljs-hexcolor">#DFDED2</span>;</span>
+  <span class="hljs-attribute">box-shadow</span><span class="hljs-value">: <span class="hljs-number">1</span>px <span class="hljs-number">1</span>px <span class="hljs-number">4</span>px rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.05</span>);</span>
+}
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> hoverActiveFocus</span>($property, $value) {</span>
+    &amp;<span class="hljs-pseudo">:hover</span>, &amp;<span class="hljs-pseudo">:active</span>, &amp;<span class="hljs-pseudo">:focus</span> {
+        #{$property}<span class="hljs-value">: $value;</span>
+    }
+}
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> navigation-list</span> {</span>
+    <span class="hljs-attribute">list-style-type</span><span class="hljs-value">:none;</span>
+    <span class="hljs-attribute">width</span><span class="hljs-value">:<span class="hljs-number">100</span>%;</span>
+    <span class="hljs-attribute">margin</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+    <span class="hljs-attribute">padding</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+    &gt; <span class="hljs-tag">li</span> {  
+        <span class="hljs-attribute">width</span><span class="hljs-value">:auto;</span>
+        -webkit-<span class="hljs-attribute">flex</span><span class="hljs-value">: <span class="hljs-number">1</span>;</span>
+        <span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">1</span>;</span>
+        <span class="hljs-tag">a</span> {     
+          <span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-number">2</span>em <span class="hljs-number">2</span>em;</span>
+        }
+    }
+}
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> meta-small</span>($scale) {</span>
+  <span class="hljs-attribute">text-transform</span><span class="hljs-value">: uppercase;</span>
+  <span class="hljs-attribute">font-size</span><span class="hljs-value">: golden-ratio($base-font-size, $scale);</span>
+  <span class="hljs-attribute">line-height</span><span class="hljs-value">: golden-ratio($base-font-size, <span class="hljs-number">0</span>);</span>
+}</pre></div>
+        
+      
+        
+        <p>Debugging mixins</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> show-media</span>($text, $bgcolor) {</span>
+  &amp;<span class="hljs-pseudo">:before</span> {
+    <span class="hljs-attribute">content</span><span class="hljs-value">: $text;</span>
+    <span class="hljs-attribute">display</span><span class="hljs-value">:block;</span>
+    <span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100</span>%;</span>
+    <span class="hljs-attribute">padding</span><span class="hljs-value">:<span class="hljs-number">0.5</span>em <span class="hljs-number">1</span>em;</span>
+    <span class="hljs-attribute">text-align</span><span class="hljs-value">:center;</span>
+    <span class="hljs-attribute">background-color</span><span class="hljs-value">:$bgcolor;</span>
+    <span class="hljs-attribute">color</span><span class="hljs-value">:white;</span>
+    <span class="hljs-attribute">position</span><span class="hljs-value">: relative;</span>
+    <span class="hljs-attribute">left</span><span class="hljs-value">: -<span class="hljs-number">14</span>px;</span>
+  }    
+}</pre></div>
+        
+      
+      <div class="fleur">h</div>
+    </div>
+  </div>
+</body>
+</html>

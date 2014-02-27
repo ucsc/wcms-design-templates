@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>_header.scss</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+
+      <div class="header">
+        
+          <h1>_header.scss</h1>
+        
+
+        
+          <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+              
+                
+                <li>
+                  <a class="source" href="_config.html">
+                    _config.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_footer.html">
+                    _footer.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_header.html">
+                    _header.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_homeless.html">
+                    _homeless.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_layouts.html">
+                    _layouts.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-carousel.html">
+                    _module-carousel.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-events.html">
+                    _module-events.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-news.html">
+                    _module-news.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-showcase.html">
+                    _module-showcase.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_modules.html">
+                    _modules.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_typography.html">
+                    _typography.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_utilities.html">
+                    _utilities.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="ucsc.html">
+                    ucsc.scss
+                  </a>
+                </li>
+              
+            </ol>
+          </div>
+        
+      </div>
+
+      
+        
+        
+        
+          <div class='highlight'><pre><span class="hljs-comment">/* 
+*		Global header
+*		=============
+*
+*		beginning with the top of the page,
+*		this includes the global links, search box, logo,
+*		site title (on interior pages), and site navigation. 
+*/</span>
+
+<span class="hljs-id">#topNav</span>,
+<span class="hljs-class">.global-nav</span> {</pre></div>
+        
+      
+        
+        <p>Mobile first defaults</p>
+
+        
+          <div class='highlight'><pre>	<span class="hljs-attribute">padding</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+	<span class="hljs-attribute">list-style</span><span class="hljs-value">:none;</span>
+	<span class="hljs-attribute">margin</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+	
+	<span class="hljs-tag">a</span> {
+		<span class="hljs-attribute">display</span><span class="hljs-value">: block;</span>
+		<span class="hljs-attribute">padding</span><span class="hljs-value">:$base-font-size;</span>
+		<span class="hljs-attribute">border-top</span><span class="hljs-value">:<span class="hljs-number">1</span>px solid darken($primary-sand, <span class="hljs-number">20</span>%);</span>
+		<span class="hljs-attribute">border-bottom</span><span class="hljs-value">:<span class="hljs-number">1</span>px solid lighten($primary-sand, <span class="hljs-number">10</span>%);</span>
+		<span class="hljs-attribute">background-color</span><span class="hljs-value">: lighten($primary-sand, <span class="hljs-number">20</span>%);</span>
+	}</pre></div>
+        
+      
+        
+        <p>Tablet and up</p>
+
+        
+          <div class='highlight'><pre>	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($tablet) {</span></pre></div>
+        
+      
+        
+        <p>Use flexbox to layout list items</p>
+
+        
+          <div class='highlight'><pre>		<span class="hljs-attribute">display</span><span class="hljs-value">:flex;</span>
+		<span class="hljs-attribute">justify-content</span><span class="hljs-value">:flex-end;</span>
+
+		&gt; <span class="hljs-tag">li</span> {
+			<span class="hljs-attribute">display</span><span class="hljs-value">:flex;</span>
+			<span class="hljs-attribute">background-image</span><span class="hljs-value">: none;</span>
+			<span class="hljs-attribute">border-left</span><span class="hljs-value">: <span class="hljs-number">1</span>px solid <span class="hljs-hexcolor">#C2CDC9</span>;</span>
+			<span class="hljs-attribute">line-height</span><span class="hljs-value">: <span class="hljs-number">1.2</span>em;</span>
+			<span class="hljs-attribute">list-style-type</span><span class="hljs-value">: none;</span>
+		}
+
+		<span class="hljs-tag">a</span> {
+			<span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-number">3</span>em <span class="hljs-number">1.4</span>em <span class="hljs-number">0.4</span>em;</span>
+			<span class="hljs-attribute">border</span><span class="hljs-value">:none;</span>
+			<span class="hljs-attribute">background-color</span><span class="hljs-value">: transparent;</span>
+			<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hoverActiveFocus</span>(background-color,<span class="hljs-preprocessor"> lighten</span>($primary-gray,<span class="hljs-preprocessor"> 30</span>%));</span>
+		}
+	
+	} <span class="hljs-comment">// END: $tablet</span>
+
+} <span class="hljs-comment">// END: #topNav</span>
+
+
+<span class="hljs-comment">/*
+*		Search box styles
+*/</span>
+<span class="hljs-class">.search</span> {</pre></div>
+        
+      
+        
+        <p>Mobile first</p>
+
+        
+          <div class='highlight'><pre>	
+
+	<span class="hljs-class">.query</span> {
+		<span class="hljs-attribute">color</span><span class="hljs-value">: $primary-gray;</span>
+		<span class="hljs-attribute">border</span><span class="hljs-value">: <span class="hljs-number">1</span>px solid lighten($primary-gray, <span class="hljs-number">50</span>%);</span>
+		<span class="hljs-attribute">box-shadow</span><span class="hljs-value">: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">4</span>px rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.2</span>);</span>
+		<span class="hljs-attribute">border-radius</span><span class="hljs-value">: $border-radius-base;</span>
+		<span class="hljs-attribute">line-height</span><span class="hljs-value">: <span class="hljs-number">140</span>%;</span>
+		<span class="hljs-attribute">font-size</span><span class="hljs-value">: $base-font-size - <span class="hljs-number">2</span>;</span>
+		<span class="hljs-attribute">padding</span><span class="hljs-value">:$base-font-size/<span class="hljs-number">2</span>;</span>
+
+		&amp;<span class="hljs-pseudo">:focus</span>,
+		&amp;<span class="hljs-pseudo">:active</span> {
+			<span class="hljs-attribute">box-shadow</span><span class="hljs-value">:<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8</span>px rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.2</span>);</span>
+		}
+	}
+
+	<span class="hljs-tag">label</span> {
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide-text</span>();</span>
+	}</pre></div>
+        
+      
+        
+        <p>Tablet and up</p>
+
+        
+          <div class='highlight'><pre>	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($tablet) {</span>
+
+		<span class="hljs-class">.query</span> {
+			<span class="hljs-attribute">padding</span><span class="hljs-value">:$base-font-size/<span class="hljs-number">2</span>;</span>
+		}
+
+	}
+
+}
+
+
+<span class="hljs-id">#logo</span> {
+	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide-text</span>();</span>
+	<span class="hljs-attribute">background-position</span><span class="hljs-value">: left center;</span>
+	<span class="hljs-attribute">background-repeat</span><span class="hljs-value">: no-repeat;</span>
+	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> omega</span>();</span>
+	<span class="hljs-attribute">padding</span><span class="hljs-value">:<span class="hljs-number">10</span>em <span class="hljs-number">0</span>;</span>
+
+	<span class="hljs-class">.dept</span> &amp; {
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> span-columns</span>(<span class="hljs-number">2</span><span class="hljs-preprocessor"> of</span><span class="hljs-preprocessor"> 12</span>);</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> size</span>(<span class="hljs-number">144</span>px<span class="hljs-preprocessor"> 45px</span>);</span>
+		<span class="hljs-attribute">background-size</span><span class="hljs-value">: contain;</span>
+		<span class="hljs-attribute">max-width</span><span class="hljs-value">: <span class="hljs-number">144</span>px;</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> retina-image</span>(<span class="hljs-string">'../images/logos/ucsc-logo-small'</span>,<span class="hljs-preprocessor"> 144px</span><span class="hljs-preprocessor"> 45px</span>);</span>
+	}
+
+	<span class="hljs-class">.homeEnv</span> &amp; {
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> span-columns</span>(<span class="hljs-number">4</span><span class="hljs-preprocessor"> of</span><span class="hljs-preprocessor"> 12</span>);</span>
+		<span class="hljs-attribute">background-size</span><span class="hljs-value">: contain;</span>
+		<span class="hljs-attribute">max-width</span><span class="hljs-value">: <span class="hljs-number">261</span>px;</span>
+		<span class="hljs-attribute">height</span><span class="hljs-value">:<span class="hljs-number">72</span>px;</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> retina-image</span>(<span class="hljs-string">'../images/logos/ucsc-logo-large'</span>,<span class="hljs-preprocessor"> 261px</span><span class="hljs-preprocessor"> 72px</span>);</span>
+		<span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-number">0</span>;</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($mobile) {</span>
+			<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> span-columns</span>(<span class="hljs-number">12</span><span class="hljs-preprocessor"> of</span><span class="hljs-preprocessor"> 12</span>);</span>
+			<span class="hljs-attribute">margin-bottom</span><span class="hljs-value">: $base-font-size;</span>
+		}
+	}
+
+}
+
+
+<span class="hljs-id">#mainNav</span> {</pre></div>
+        
+      
+        
+        <p>Mobile-first defaults</p>
+
+        
+          <div class='highlight'><pre>	<span class="hljs-attribute">padding</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+	<span class="hljs-attribute">margin</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+	<span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100</span>%;</span>
+	<span class="hljs-attribute">list-style</span><span class="hljs-value">:none;</span>
+	<span class="hljs-attribute">border-radius</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+	<span class="hljs-attribute">background-image</span><span class="hljs-value">: none;</span>
+	<span class="hljs-attribute">border-radius</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+	<span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100</span>%;</span>
+	<span class="hljs-attribute">display</span><span class="hljs-value">: block;</span>
+
+	<span class="hljs-tag">a</span>, <span class="hljs-tag">span</span> {
+		<span class="hljs-attribute">border-radius</span><span class="hljs-value">:<span class="hljs-number">0</span>;</span>
+		<span class="hljs-attribute">background-image</span><span class="hljs-value">: none;</span>
+		<span class="hljs-attribute">display</span><span class="hljs-value">: block;</span>
+		<span class="hljs-attribute">padding</span><span class="hljs-value">:$base-font-size;</span>
+		<span class="hljs-attribute">border-top</span><span class="hljs-value">:<span class="hljs-number">1</span>px solid darken($primary-sand, <span class="hljs-number">20</span>%);</span>
+		<span class="hljs-attribute">border-bottom</span><span class="hljs-value">:<span class="hljs-number">1</span>px solid lighten($primary-sand, <span class="hljs-number">10</span>%);</span>
+		<span class="hljs-attribute">background-color</span><span class="hljs-value">: lighten($primary-sand, <span class="hljs-number">20</span>%);</span>
+	}
+	
+	
+	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($tablet) {</span>
+
+		<span class="hljs-attribute">display</span><span class="hljs-value">: table;</span>
+		<span class="hljs-attribute">border-radius</span><span class="hljs-value">: $border-radius-base;</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> module-box-shadow</span>();</span>
+		<span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100</span>%;</span>
+		<span class="hljs-tag">table</span>-layout<span class="hljs-value">: fixed;</span>
+		<span class="hljs-attribute">padding-left</span><span class="hljs-value">:<span class="hljs-number">0</span> <span class="hljs-important">!important</span>;</span>
+		<span class="hljs-attribute">border-collapse</span><span class="hljs-value">: separate;</span>
+	
+		&gt; <span class="hljs-tag">li</span> {
+			<span class="hljs-attribute">float</span><span class="hljs-value">: none;</span>
+			<span class="hljs-attribute">display</span><span class="hljs-value">: table-cell;</span>
+			<span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">1</span>%;</span>
+			<span class="hljs-attribute">position</span><span class="hljs-value">: relative;</span>
+			
+			&amp;<span class="hljs-pseudo">:first-child</span> <span class="hljs-tag">a</span> {</pre></div>
+        
+      
+        
+        <p>border:1px solid red;</p>
+
+        
+          <div class='highlight'><pre>				<span class="hljs-attribute">border-radius</span><span class="hljs-value">: <span class="hljs-number">5</span>px <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5</span>px;</span>
+			}
+		
+			&amp;<span class="hljs-pseudo">:last-child</span> <span class="hljs-tag">a</span>,
+			&amp;<span class="hljs-pseudo">:last-child</span> <span class="hljs-tag">span</span> {</pre></div>
+        
+      
+        
+        <p>border:1px solid purple;</p>
+
+        
+          <div class='highlight'><pre>				<span class="hljs-attribute">border-radius</span><span class="hljs-value">: <span class="hljs-number">0</span> <span class="hljs-number">5</span>px <span class="hljs-number">5</span>px <span class="hljs-number">0</span>;</span>
+			}
+		
+			&gt; <span class="hljs-tag">a</span>, <span class="hljs-tag">span</span> {
+				<span class="hljs-attribute">border</span><span class="hljs-value">: none;</span>
+				<span class="hljs-attribute">background-image</span><span class="hljs-value">: -moz-linear-gradient(top,<span class="hljs-hexcolor">#f4f1e6</span>,<span class="hljs-hexcolor">#ffffff</span>);</span>
+				<span class="hljs-attribute">background-image</span><span class="hljs-value">: -webkit-gradient(linear,<span class="hljs-number">0</span>% <span class="hljs-number">0</span>%,<span class="hljs-number">0</span>% <span class="hljs-number">100</span>%,from(<span class="hljs-hexcolor">#F4F1E6</span>),to(<span class="hljs-hexcolor">#FFF</span>));</span>
+				<span class="hljs-attribute">color</span><span class="hljs-value">: $primary-gold;</span>
+				<span class="hljs-attribute">cursor</span><span class="hljs-value">: pointer;</span>
+				<span class="hljs-attribute">display</span><span class="hljs-value">:block;</span>
+				<span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100</span>%;</span>
+				<span class="hljs-attribute">font-size</span><span class="hljs-value">: .<span class="hljs-number">8</span>em;</span>
+				<span class="hljs-attribute">font-weight</span><span class="hljs-value">: bold;</span>
+				<span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-number">0.4</span>em <span class="hljs-number">0.2</span>em;</span>
+				<span class="hljs-attribute">text-transform</span><span class="hljs-value">: uppercase;</span>
+				<span class="hljs-attribute">text-decoration</span><span class="hljs-value">: none;</span>
+				<span class="hljs-attribute">text-shadow</span><span class="hljs-value">: <span class="hljs-number">1</span>px <span class="hljs-number">1</span>px <span class="hljs-number">0</span>px <span class="hljs-hexcolor">#FFF</span>;</span>
+				<span class="hljs-attribute">text-align</span><span class="hljs-value">: center;</span>
+	
+				&amp;<span class="hljs-pseudo">:focus</span>,
+				&amp;<span class="hljs-pseudo">:hover</span>,
+				&amp;<span class="hljs-pseudo">:active</span> {
+					<span class="hljs-attribute">color</span><span class="hljs-value">: $primary-gold;</span>
+					<span class="hljs-attribute">text-decoration</span><span class="hljs-value">: none;</span>
+					<span class="hljs-attribute">background</span><span class="hljs-value">: <span class="hljs-hexcolor">#296FA3</span>;</span>
+					<span class="hljs-attribute">background-color</span><span class="hljs-value">: $primary-blue;</span>
+					<span class="hljs-attribute">background-repeat</span><span class="hljs-value">: repeat-x;</span>
+					<span class="hljs-attribute">background-image</span><span class="hljs-value">: -moz-linear-gradient(top,<span class="hljs-hexcolor">#296fa3</span>,<span class="hljs-hexcolor">#5992bd</span>);</span>
+					<span class="hljs-attribute">background-image</span><span class="hljs-value">: -webkit-gradient(linear,<span class="hljs-number">0</span>% <span class="hljs-number">0</span>%,<span class="hljs-number">0</span>% <span class="hljs-number">100</span>%,from(<span class="hljs-hexcolor">#296FA3</span>),to(<span class="hljs-hexcolor">#5992BD</span>));</span>
+					<span class="hljs-attribute">background-position</span><span class="hljs-value">: top left;</span>
+					-moz-<span class="hljs-attribute">text-shadow</span><span class="hljs-value">: none;</span>
+					<span class="hljs-attribute">text-shadow</span><span class="hljs-value">: none;</span>
+				}
+
+			}
+
+		} <span class="hljs-comment">// END: &gt; li</span>
+
+		&gt; <span class="hljs-tag">li</span> <span class="hljs-tag">ul</span> {
+			<span class="hljs-attribute">display</span><span class="hljs-value">: none;</span>
+		}
+
+	} <span class="hljs-comment">// END: @media $tablet</span>
+
+}	<span class="hljs-comment">// END: #mainNav</span></pre></div>
+        
+      
+      <div class="fleur">h</div>
+    </div>
+  </div>
+</body>
+</html>

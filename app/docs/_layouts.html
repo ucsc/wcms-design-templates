@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Primary layout styles</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+
+      <div class="header">
+        
+          
+          <h1 id="primary-layout-styles">Primary layout styles</h1>
+<p>Styles for page structure.</p>
+
+          
+        
+
+        
+          <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+              
+                
+                <li>
+                  <a class="source" href="_config.html">
+                    _config.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_footer.html">
+                    _footer.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_header.html">
+                    _header.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_homeless.html">
+                    _homeless.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_layouts.html">
+                    _layouts.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-carousel.html">
+                    _module-carousel.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-events.html">
+                    _module-events.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-news.html">
+                    _module-news.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_module-showcase.html">
+                    _module-showcase.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_modules.html">
+                    _modules.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_typography.html">
+                    _typography.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="_utilities.html">
+                    _utilities.scss
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a class="source" href="ucsc.html">
+                    ucsc.scss
+                  </a>
+                </li>
+              
+            </ol>
+          </div>
+        
+      </div>
+
+      
+        
+        <h2 id="the-layout-container">The layout container</h2>
+<p>Wraps the layout. The only HTML elements outside
+of this element are the accessibility links.</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-id">#container</span> {
+	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> outer-container</span>();</span>
+}</pre></div>
+        
+      
+        
+        <h2 id="the-layout-row">The layout row</h2>
+<p>The row does as it says. Each ‘row’ of content is
+cleared and and sets the <code>flex</code> property so it’s direct
+descendants will flex in the right direction.</p>
+
+        
+      
+        
+        <p><strong>@todo</strong> - Switch to mobile-first styles</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-class">.row</span> {
+	<span class="hljs-attribute">border</span><span class="hljs-value">: <span class="hljs-number">1</span>px solid red;</span>
+	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> row</span>(table);</span>
+	<span class="hljs-attribute">display</span><span class="hljs-value">: flex;</span>
+	<span class="hljs-attribute">margin-bottom</span><span class="hljs-value">: $base-font-size/<span class="hljs-number">2</span>;</span>
+
+	<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($mobile) {</span>
+		<span class="hljs-attribute">flex-flow</span><span class="hljs-value">: column;</span>
+	}
+
+}</pre></div>
+        
+      
+        
+        <h2 id="global-navigation">Global navigation</h2>
+
+        
+          <div class='highlight'><pre>	<span class="hljs-id">#topNav</span>,
+	<span class="hljs-class">.global-nav</span> {
+		<span class="hljs-comment">/* border:2px solid purple; */</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($tablet) {</span>
+			<span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">4</span>;</span>
+		}
+
+		
+	}
+
+	<span class="hljs-class">.search</span> {
+		<span class="hljs-comment">/* border:2px solid purple; */</span>
+		<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> media</span>($tablet) {</span>
+			<span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">1</span>;</span>
+		}
+
+		<span class="hljs-class">.query</span> {
+			<span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100</span>%;</span>
+			<span class="hljs-attribute">margin-top</span><span class="hljs-value">: <span class="hljs-number">5</span>%;</span>
+		}
+
+
+	}</pre></div>
+        
+      
+        
+        <h3 id="ucsc-logo-and-site-title">UCSC logo and site title</h3>
+
+        
+          <div class='highlight'><pre><span class="hljs-tag">header</span> {
+
+	<span class="hljs-tag">h1</span> {
+		<span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">1</span>;</span>
+	}
+
+}</pre></div>
+        
+      
+        
+        <h3 id="carousel-of-sliding-billboards">Carousel of sliding billboards</h3>
+
+        
+          <div class='highlight'><pre><span class="hljs-id">#slider</span> {
+	<span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">1</span>;</span>
+}</pre></div>
+        
+      
+        
+        <h3 id="left-column-page">Left column page</h3>
+
+        
+          <div class='highlight'><pre><span class="hljs-id">#sprflt</span> {
+	<span class="hljs-attribute">display</span><span class="hljs-value">: flex;</span>
+	<span class="hljs-id">#mainContent</span> {
+		<span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">2</span>;</span>
+	}
+	<span class="hljs-id">#subNav</span> {
+		<span class="hljs-attribute">flex</span><span class="hljs-value">:<span class="hljs-number">1</span>;</span>
+	}
+	<span class="hljs-id">#footer</span> {
+		<span class="hljs-attribute">display</span><span class="hljs-value">:block;</span>
+	}
+}</pre></div>
+        
+      
+      <div class="fleur">h</div>
+    </div>
+  </div>
+</body>
+</html>
