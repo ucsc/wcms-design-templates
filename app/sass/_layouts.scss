@@ -1,32 +1,37 @@
-// Primary layout styles
+// # Primary layout styles
+// Styles for page structure.
 
-#wrap {
+// ## The layout container
+// Wraps the layout. The only HTML elements outside
+// of this element are the accessibility links.
+
+#container {
+	@include outer-container();
+}
+
+// ## The layout row
+// The row does as it says. Each 'row' of content is
+// cleared and and sets the `flex` property so it's direct
+// descendants will flex in the right direction.
+
+// **@todo** - Switch to mobile-first styles
+
+.row {
+	border: 1px solid red;
+	@include row(table);
+	display: flex;
+	margin-bottom: $base-font-size/2;
+
+	@include media($mobile) {
+		flex-flow: column;
+	}
 
 }
-	
-	#container {
-		@include outer-container();
-	}
 
-	.row {
-		border: 1px solid red;
-		@include row(table);
-		display: flex;
-		margin-bottom: $base-font-size/2;
-
-		@include media($mobile) {
-			flex-flow: column;
-		}
-
-	}
-
-
-	// Top row: global-nav and search
+// ## Global navigation
 	#topNav,
 	.global-nav {
-		// border:2px solid blue;
-		
-
+		/* border:2px solid purple; */
 		@include media($tablet) {
 			flex:4;
 		}
@@ -34,9 +39,9 @@
 		
 	}
 
+// ## Site search
 	.search {
-		//border:2px solid purple;
-
+		/* border:2px solid purple; */
 		@include media($tablet) {
 			flex:1;
 		}
@@ -49,32 +54,32 @@
 
 	}
 
-	// Second row: logo and site title
 
-		
-		header {
 
-		h1 {
-			flex:1;
-		}
-		
-		}
+// ## UCSC logo and site title
+header {
 
+	h1 {
+		flex:1;
+	}
+
+}
+
+// ### Carousel of sliding billboards
 #slider {
 	flex:1;
 }
 
-	#sprflt {
-		@include span-columns(12);
-		#mainContent {
-			@include span-columns(9 of 12);
-			@include shift(1);
-			@include omega();
-		}
-		#subNav {
-			@include span-columns(2 of 12);
-		}
-		#footer {
-			@include span-columns(12 of 12);	
-		}
+// ### Left column page
+#sprflt {
+	display: flex;
+	#mainContent {
+		flex:2;
 	}
+	#subNav {
+		flex:1;
+	}
+	#footer {
+		flex:3;
+	}
+}

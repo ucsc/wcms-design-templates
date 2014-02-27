@@ -1,11 +1,9 @@
-/* 
-*		Global header
-*		=============
-*
-*		beginning with the top of the page,
-*		this includes the global links, search box, logo,
-*		site title (on interior pages), and site navigation. 
-*/
+//	# Global header
+//
+//	beginning with the top of the page,
+//	this includes the global links, search box, logo,
+//	site title (on interior pages), and site navigation. 
+
 
 #topNav,
 .global-nav {
@@ -14,6 +12,8 @@
 	padding:0;
 	list-style:none;
 	margin:0;
+	@include toggle-menu();
+	@include transition (all 2.0s ease-in-out);
 	
 	a {
 		display: block;
@@ -118,6 +118,10 @@
 
 }
 
+.toggle-nav {
+	@include button();
+	text-align:center;
+}
 
 #mainNav {	
 
@@ -131,6 +135,8 @@
 	border-radius:0;
 	width: 100%;
 	display: block;
+	@include toggle-menu();
+	@include transition (all 2.0s ease-in-out);
 
 	a, span {
 		border-radius:0;

@@ -39,6 +39,15 @@
     }
 }
 
+@mixin toggle-menu() {
+  position:absolute;
+  top:-150%;
+  &.expanded {
+    position:relative;
+  }
+
+}
+
 @mixin meta-small($scale) {
   text-transform: uppercase;
   font-size: golden-ratio($base-font-size, $scale);

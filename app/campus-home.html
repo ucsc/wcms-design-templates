@@ -15,8 +15,23 @@
 <script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript">
 </script>
 
+<script>
+  $(document).ready(function(){
 
+ //  $(".menu").click(function() {
+ //   $( "#nav" ).slideToggle(300);
+ //   event.preventDefault();
+  // });
+  
+  $('.toggle-nav').bind('click focus', function(){
+    event.preventDefault();
+    $('#mainNav').toggleClass('expanded');
+    $('#topNav').toggleClass('expanded');
+  });
+    
 
+});
+</script>
 
 </head>
 
@@ -30,6 +45,7 @@
     
     <header role="banner">
     <div class="row">
+      <a href="#" class="toggle-nav">Menu &amp; Search</a>
         <ul id="topNav">
 <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
 <li><a href="tools/people.html" title="Find People - UCSC People Search">People</a></li>
@@ -57,7 +73,7 @@
 
     <div class="row">
 
-        <ul id="mainNav">
+<ul id="mainNav">
 <li class="first"><a href="about/index.html">About</a></li>
 <li><a href="admissions/index.html">Admissions</a></li>
 <li><a href="academics/index.html">Academics</a></li>
