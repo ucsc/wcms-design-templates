@@ -5,13 +5,13 @@
 @import "bourbon";
 @import "neat";
 
-// Basic configuration and style variables
-@import "base/config";
-@import "base/typography";
-
 // @mixins, @extends and homeless stuff
 @import "helpers/utilities";
 @import "helpers/homeless";
+
+// Basic configuration and style variables
+@import "base/config";
+@import "base/typography";
 
 // Page layouts
 @import "layout/layouts";
