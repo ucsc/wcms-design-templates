@@ -1,15 +1,26 @@
+// # Sass partials
+
+// Include Ruby gem-based styles
 @import "compass/typography";
 @import "bourbon";
 @import "neat";
-@import "config";
-@import "utilities";
-@import "typography";
-@import "layouts";
-@import "modules";
-@import "module-events";
-@import "module-showcase";
-@import "module-news";
-@import "module-carousel";
-@import "header";
-@import "footer";
-@import "homeless";
+
+// Basic configuration and style variables
+@import "base/config";
+@import "base/typography";
+
+// @mixins, @extends and homeless stuff
+@import "helpers/utilities";
+@import "helpers/homeless";
+
+// Page layouts
+@import "layout/layouts";
+@import "layout/header";
+@import "layout/footer";
+
+// Atomic components
+@import "components/modules";
+@import "components/module-events";
+@import "components/module-showcase";
+@import "components/module-news";
+@import "components/module-carousel";
