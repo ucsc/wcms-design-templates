@@ -5,98 +5,19 @@
 //	site title (on interior pages), and site navigation. 
 
 
-#topNav,
-.global-nav {
-	
-	// Mobile first defaults
-	padding:0;
-	list-style:none;
-	margin:0;
-	@include toggle-menu();
-	@include transition (all 2.0s ease-in-out);
-	
-	a {
-		display: block;
-		padding:$base-font-size;
-		border-top:1px solid darken($primary-sand, 20%);
-		border-bottom:1px solid lighten($primary-sand, 10%);
-		background-color: lighten($primary-sand, 20%);
-	}
-
-	// Tablet and up
-	@include media($tablet) {
-		// Use flexbox to layout list items
-		display:flex;
-		justify-content:flex-end;
-
-		> li {
-			display:flex;
-			background-image: none;
-			border-left: 1px solid #C2CDC9;
-			line-height: 1.2em;
-			list-style-type: none;
-		}
-
-		a {
-			padding: 3em 1.4em 0.4em;
-			border:none;
-			background-color: transparent;
-			@include hoverActiveFocus(background-color, lighten($primary-gray, 30%));
-		}
-	
-	} // END: $tablet
-
-} // END: #topNav
 
 
-/*
-*		Search box styles
-*/
-.search {
 
-	// Mobile first
-	
-
-	.query {
-		color: $primary-gray;
-		border: 1px solid lighten($primary-gray, 50%);
-		box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
-		border-radius: $border-radius-base;
-		line-height: 140%;
-		font-size: $base-font-size - 2;
-		padding:$base-font-size/2;
-
-		&:focus,
-		&:active {
-			box-shadow:0 0 8px rgba(0,0,0,0.2);
-		}
-	}
-
-	label {
-		@include hide-text();
-	}
-
-	// Tablet and up
-	@include media($tablet) {
-
-		.query {
-			padding:$base-font-size/2;
-		}
-
-	}
-
-}
 
 
 #logo {
 	@include hide-text();
 	background-position: left center;
 	background-repeat: no-repeat;
+	display: block; 
 	@include omega();
-	padding:10em 0;
 
 	.dept & {
-		@include span-columns(2 of 12);
 		@include size(144px 45px);
 		background-size: contain;
 		max-width: 144px;
@@ -104,23 +25,21 @@
 	}
 
 	.homeEnv & {
-		@include span-columns(4 of 12);
 		background-size: contain;
 		max-width: 261px;
 		height:72px;
 		@include retina-image('../images/logos/ucsc-logo-large', 261px 72px);
 		padding: 0;
-		@include media($mobile) {
-			@include span-columns(12 of 12);
-			margin-bottom: $base-font-size;
-		}
 	}
 
 }
 
 .toggle-nav {
 	@include button();
-	text-align:center;
+	text-align:center;	
+	@include media($tablet) {
+		display:none;
+	}
 }
 
 #mainNav {	
@@ -150,7 +69,7 @@
 	
 	
 	@include media($tablet) {
-
+  	position:relative;
 		display: table;
 		border-radius: $border-radius-base;
 		@include module-box-shadow();
@@ -159,6 +78,7 @@
 		padding-left:0 !important;
 		border-collapse: separate;
 	
+
 		> li {
 			float: none;
 			display: table-cell;

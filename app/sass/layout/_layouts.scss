@@ -17,7 +17,7 @@
 // **@todo** - Switch to mobile-first styles
 
 .row {
-	border: 1px solid red;
+	//border: 1px solid red;
 	@include row(table);
 	display: flex;
 	margin-bottom: $base-font-size/2;

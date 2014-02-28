@@ -1,0 +1,36 @@
+/*
+*		Search box styles
+*/
+.search {
+
+	// Mobile first
+	.query {
+		color: $primary-gray;
+		border: 1px solid lighten($primary-gray, 50%);
+		box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+		border-radius: $border-radius-base;
+		line-height: 140%;
+		font-size: $base-font-size - 2;
+		padding:$base-font-size/2;
+
+		&:focus,
+		&:active {
+			box-shadow:0 0 8px rgba(0,0,0,0.2);
+		}
+	}
+
+	label {
+		@include hide-text();
+	}
+
+	// Tablet and up
+	@include media($tablet) {
+
+		.query {
+			
+			padding:$base-font-size/2;
+		}
+
+	}
+
+}

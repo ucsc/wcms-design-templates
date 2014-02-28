@@ -6,25 +6,35 @@
 		list-style: none;
 		li {
 			clear: both;
-			margin: 0;
+			margin: 0 0 $base-font-size;
 			padding: 0;
 			background-image: none;
 			list-style-type: none;
 			a {
 
 			}
-			img {
+
+			.thumbnail {
 				@include module-box-shadow();
 				float: left;
 				display: block;
 				margin: 0 0.5em 0.5em 0;	
+				img {
+					width:72px;
+					height:72px;
+				}
 			}
+
 			.date {
 				color: #929290;
 				font-size: golden-ratio($base-font-size, -1);
 				letter-spacing: 1px;
 				display: block;
-				margin:-2px 0 0 0;
+				margin:0;
+			}
+
+			.headline {
+				
 			}
 
 		}
