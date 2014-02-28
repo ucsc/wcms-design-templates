@@ -23,9 +23,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('styles', function() {
-	gulp.src([
-		'./app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_carousel.scss',
-		'./app/sass/*.scss'])
+	gulp.src(['./app/sass/*.scss'])
 		.pipe(compass({
 			css: './app/css',
 			sass: './app/sass',
@@ -45,7 +43,7 @@ gulp.task('html', function(){
 // The default task (called when you run `gulp`)
 gulp.task('default', ['clean', 'styles', 'lr-server'], function() {
 
-		gulp.watch('app/sass/*.scss', ['styles']);
+		gulp.watch('app/sass/**/*.scss', ['styles']);
 		gulp.watch('app/*.html', ['html']);
 
 });
