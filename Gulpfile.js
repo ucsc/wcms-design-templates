@@ -3,6 +3,7 @@ var pkg 				= require('./package.json'),
 		autoprefix 	= require('gulp-autoprefixer'),
 		compass 		= require('gulp-compass'),
 		concat			= require('gulp-concat'),
+		minifycss		= require('gulp-minify-css'),
 		clean 			= require('gulp-clean'),
 		notify 			= require('gulp-notify'),
 		refresh 		= require('gulp-livereload'),
@@ -28,8 +29,13 @@ gulp.task('styles', function() {
 			css: './app/css',
 			sass: './app/sass',
 			image: 'app/images',
+			add_import_path: './app/vendor',
 			require: ['bourbon', 'neat']}))
+		 .on('error', function(err) {
+        console.log(err);
+     })
 		.pipe(autoprefix('last 2 versions'))
+		.pipe(minifycss())
     .pipe(gulp.dest('./app/css/'))
 		.pipe(refresh(server));
 		// .pipe(notify("Compass task was run."));
