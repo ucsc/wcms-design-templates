@@ -7,15 +7,7 @@ body {
 	font-size: $font-size-base;
 	line-height: $line-height-computed;
 	margin: 0;
-	@include media($mobile) {
-		@include show-media("Mobile", green);
-  }
-	@include media($tablet) {
-    @include show-media("Tablet: Portrait", orange);
-  }
-	@include media($desktop) {
-    @include show-media("Desktop", blue);
-  }  
+	@include breakpoints();
 }
 
 a {

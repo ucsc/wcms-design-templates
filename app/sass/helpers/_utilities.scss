@@ -1,7 +1,31 @@
-// Custom mixins for UCSC.
-//
-// Compatibility untested.
+// # Custom mixins for UCSC theme.
 
+// ## @mixin: breakpoints
+//
+// Shows breakpoint debugging information on rendered pages.
+//
+@mixin breakpoints() {
+    
+  @include media($mobile) {
+    @include show-media("Mobile", green);
+  }
+  @include media($tablet) {
+    @include show-media("Tablet: Portrait", orange);
+  }
+  @include media($desktop) {
+    @include show-media("Desktop", blue);
+  }  
+}
+
+// ## @mixin: rowborders
+//
+// Show borders around `.row` elements.
+@mixin rowborders($color:#80C108) {  
+  border: 2px solid $color;
+}
+
+
+// Calculate rems from pixels 
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;

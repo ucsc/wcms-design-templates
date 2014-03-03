@@ -17,13 +17,14 @@
 // **@todo** - Switch to mobile-first styles
 
 .row {
-	//border: 1px solid red;
+	//@include rowborders(red);
 	@include row(table);
 	display: flex;
+	flex-flow: column;
 	margin-bottom: $base-font-size/2;
-
-	@include media($mobile) {
-		flex-flow: column;
+	// Switch to layout row when screen is wider.
+	@include media($tablet) {
+		flex-flow: row;
 	}
 
 }
@@ -31,7 +32,7 @@
 // ## Global navigation
 	#topNav,
 	.global-nav {
-		/* border:2px solid purple; */
+		
 		@include media($tablet) {
 			flex:4;
 		}
@@ -41,7 +42,6 @@
 
 // ## Site search
 	.search {
-		/* border:2px solid purple; */
 		@include media($tablet) {
 			flex:1;
 		}
