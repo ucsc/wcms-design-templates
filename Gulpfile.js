@@ -46,10 +46,11 @@ gulp.task('html', function(){
     .pipe(refresh(server));
 });
 
-// The default task (called when you run `gulp`)
-gulp.task('default', ['clean', 'styles', 'lr-server'], function() {
-
+// Rerun the task when a file changes
+gulp.task('watch', function () {
 		gulp.watch('app/sass/**/*.scss', ['styles']);
 		gulp.watch('app/*.html', ['html']);
-
 });
+
+// The default task (called when you run `gulp`)
+gulp.task('default', ['clean', 'styles', 'lr-server', 'watch']);
