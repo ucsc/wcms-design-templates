@@ -29,19 +29,33 @@
 
 }
 
-// ## Global navigation
+
+// ## Global Navigation
+// The global navigation at the top of the page.
+// Collapsed by default on smaller screens.
 	#topNav,
 	.global-nav {
 		
-		@include media($tablet) {
-			flex:4;
+		display:flex;
+		flex-flow: row wrap;
+
+		> li {
+			min-width: 50%;
 		}
 
-		
+		@include media($tablet) {
+			flex:4;
+			> li {
+				min-width: inherit;
+			}
+		}
+
 	}
 
-// ## Site search
+// ## Site Search
+// Search box for searching the site.
 	.search {
+		
 		@include media($tablet) {
 			flex:1;
 		}
@@ -51,24 +65,43 @@
 			margin-top: 5%;
 		}
 
-
 	}
 
 
+// ## UCSC logo and Site Title
+// At minimum, contains the UCSC logo.
+// On division/department sites, it contains the site title too.
+.site-header {
 
-// ## UCSC logo and site title
-header {
+	.logo {
+		display: flex;
+		flex-flow: row;
+	}
 
 	h1 {
-		flex:1;
+		flex:4;
+		align-self: flex-end;
+		margin:0;
+		// @include rowborders();
+	}
+
+	.nav-toggle {
+		flex: 1;
+		@include media($tablet) {
+			display: none;
+		}
 	}
 
 }
 
-// ### Carousel of sliding billboards
+
+// ## Carousel of sliding billboards
 #slider {
 	flex:1;
 }
+
+
+
 
 // ### Left column page
 #sprflt {

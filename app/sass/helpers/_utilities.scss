@@ -64,10 +64,13 @@
 }
 
 @mixin toggle-menu() {
-  position:absolute;
-  top:-150%;
-  &.expanded {
-    position:relative;
+  
+  @include transition (all 2.0s ease-in-out);
+  max-height:auto;
+
+  &.collapsed {
+    overflow: hidden;
+    max-height:0;
   }
 
 }

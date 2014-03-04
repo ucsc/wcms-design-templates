@@ -5,6 +5,6 @@ $(document).ready(function(){
  //  	event.preventDefault();
 	// });
 	
-	$('.toggle-nav').bind('click focus', function(){event.preventDefault();$('#mainNav').toggleClass('collapsed')});
+	$('.nav-toggle').bind('click focus', function(){event.preventDefault();$('#mainNav').toggleClass('collapsed')});
 
 });
