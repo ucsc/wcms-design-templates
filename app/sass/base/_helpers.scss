@@ -1,28 +1,48 @@
 // # Custom mixins for UCSC theme.
 
-// ## @mixin: breakpoints
+
+// ## Debugging: `breakpoints`
 //
 // Shows breakpoint debugging information on rendered pages.
-//
 @mixin breakpoints() {
     
   @include media($mobile) {
-    @include show-media("Mobile", green);
+    @include display-text("Mobile", green);
   }
   @include media($tablet) {
-    @include show-media("Tablet: Portrait", orange);
+    @include display-text("Tablet: Portrait", orange);
   }
   @include media($desktop) {
-    @include show-media("Desktop", blue);
+    @include display-text("Desktop", blue);
   }  
 }
 
-// ## @mixin: rowborders
+
+// ## Debugging: `display-text`
+//
+// Display text before an element.
+// Primarily used for showing which media queries are active.
+@mixin display-text($text, $bgcolor) {
+  &:before {
+    content: $text;
+    display:block;
+    width: 100%;
+    padding:0.5em 1em;
+    text-align:center;
+    background-color:$bgcolor;
+    color:white;
+    position: relative;
+    left: -14px;
+  }    
+}
+
+// ## Debugging: `rowborders`
 //
 // Show borders around `.row` elements.
 @mixin rowborders($color:#80C108) {  
   border: 2px solid $color;
 }
+
 
 
 // Calculate rems from pixels 
@@ -36,12 +56,17 @@
   font-size: calculateRem($size);
 }
 
+
+// # Box Shadow
+// Add box-shadow to modules.
 @mixin module-box-shadow() {
   border: 1px solid #E7E5DE;
   border-bottom: solid 1px #DFDED2;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
+// # Hover, active, focus
+// Set hover, active, and focus for elements.
 @mixin hoverActiveFocus($property, $value) {
     &:hover, &:active, &:focus {
         #{$property}: $value;
@@ -63,11 +88,11 @@
     }
 }
 
+// # Toggle function for mobile menus
+// Collapse global and site menus on mobile screens.
 @mixin toggle-menu() {
-  
-  @include transition (all 2.0s ease-in-out);
   max-height:auto;
-
+  // Collapsed mobile menu has a 0 height.
   &.collapsed {
     overflow: hidden;
     max-height:0;
@@ -81,18 +106,3 @@
   line-height: golden-ratio($base-font-size, 0);
 }
 
-// Debugging mixins
-
-@mixin show-media($text, $bgcolor) {
-  &:before {
-    content: $text;
-    display:block;
-    width: 100%;
-    padding:0.5em 1em;
-    text-align:center;
-    background-color:$bgcolor;
-    color:white;
-    position: relative;
-    left: -14px;
-  }    
-}

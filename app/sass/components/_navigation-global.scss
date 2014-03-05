@@ -6,7 +6,7 @@
 	list-style:none;
 	margin:8px 0 0 0;
 	@include toggle-menu();
-	
+
 	a {
 		display: block;
 		text-align: center;
@@ -21,6 +21,7 @@
 	@include media($tablet) {
 		// Use flexbox to layout list items
 		position: relative;
+		margin:0;
 		display:flex;
 		justify-content:flex-end;
 
@@ -33,10 +34,10 @@
 		}
 
 		a {
-			padding: 3em 1.4em 0.4em;
+			padding: 4em 1.4em 0em;
 			border:none;
 			background-color: transparent;
-			@include hoverActiveFocus(background-color, lighten($primary-gray, 30%));
+			color: $primary-blue;
 		}
 	
 	} // END: $tablet

@@ -21,7 +21,7 @@
 	@include row(table);
 	display: flex;
 	flex-flow: column;
-	margin-bottom: $base-font-size/2;
+	margin-bottom: $base-font-size*1.25;
 	// Switch to layout row when screen is wider.
 	@include media($tablet) {
 		flex-flow: row;
@@ -36,16 +36,18 @@
 	#topNav,
 	.global-nav {
 		
-		display:flex;
-		flex-flow: row wrap;
+		width:100%;
 
 		> li {
-			min-width: 50%;
+			display: inline-block;
+			width: 46%;
+			margin:1% 1% 0 0; 
 		}
 
 		@include media($tablet) {
 			flex:4;
 			> li {
+				display: block;
 				min-width: inherit;
 			}
 		}

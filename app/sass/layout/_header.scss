@@ -30,5 +30,14 @@
 	align-self:flex-end;
 	margin-left:$base-font-size*2;
 	text-align:center;
-	@include button(simple, $ucsc-gold);
+	font-size:$base-font-size*1.2;
+
+
+	display:block;
+	width:100%;
+	background-color:$ucsc-blue;
+	color:$ucsc-gold;
+	padding:0.5em;
+	@include module-box-shadow;
+	border-radius: $border-radius-base;
 }

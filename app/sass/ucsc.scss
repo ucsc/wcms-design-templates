@@ -6,8 +6,8 @@
 @import "neat";
 
 // @mixins, @extends and homeless stuff
-@import "helpers/utilities";
-@import "helpers/homeless";
+@import "base/helpers";
+@import "base/homeless";
 
 // Basic configuration and style variables
 @import "base/config";
@@ -19,9 +19,9 @@
 @import "layout/footer";
 
 // Atomic components
-@import "components/global-navigation";
+@import "components/navigation-global";
 @import "components/site-search";
-@import "components/site-navigation";
+@import "components/navigation-site";
 @import "components/modules";
 @import "components/module-events";
 @import "components/module-showcase";
