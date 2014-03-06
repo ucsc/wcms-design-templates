@@ -12,7 +12,9 @@
 	padding:0;
 	list-style:none;
 	margin:$base-font-size/2 0 0 0;
-	@include toggle-menu();		
+	.js & {
+		@include toggle-menu();		
+	}
 	
 	> li {
 		display: inline-block;
@@ -36,13 +38,11 @@
 		margin:0;
 		display:flex;
 		justify-content:flex-end;
-
 		> li {
 			display: block;
-			width: auto !important;
+			width: auto;
 			margin:0;
 			background-image: none;
-			border-left: 1px solid #C2CDC9;
 			line-height: 1.2em;
 			list-style-type: none;
 		}
@@ -50,6 +50,7 @@
 		a {
 			padding: 3em 1.4em 0em;
 			border:none;
+			border-left: 1px solid #C2CDC9;
 			background-color: transparent;
 			color: $primary-blue;
 		}

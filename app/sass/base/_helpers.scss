@@ -45,7 +45,9 @@
 
 
 
-// Calculate rems from pixels 
+// ## Calculate rems from pixels
+// 
+// Function and mixin to return rem units from px.
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
@@ -90,14 +92,18 @@
 
 // # Toggle function for mobile menus
 // Collapse global and site menus on mobile screens.
-@mixin toggle-menu() {
-  max-height:auto;
-  // Collapsed mobile menu has a 0 height.
-  &.collapsed {
-    overflow: hidden;
-    max-height:0;
+@mixin toggle-menu() {  
+  overflow: hidden;
+  max-height:0;  
+  // Active mobile menu removes min-height of 0.
+  &.active {
+    max-height:auto;
+    max-height:none;
   }
-
+  @include media($tablet) {
+    max-height:auto;
+    max-height:none;
+  }
 }
 
 @mixin meta-small($scale) {

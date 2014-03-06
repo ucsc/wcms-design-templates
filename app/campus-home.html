@@ -9,30 +9,35 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!--[if lte IE 7]>
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <![endif]-->
-<link href="css/ucsc.css" rel="stylesheet" type="text/css"><!-- jQuery and Modernizr  -->
+
+<!-- jQuery and Modernizr  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.js" type="text/javascript">
 </script>
 <script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript">
 </script>
 
 <script>
-  $(document).ready(function(){
 
- //  $(".menu").click(function() {
- //   $( "#nav" ).slideToggle(300);
- //   event.preventDefault();
-  // });
-  
-  $('.nav-toggle').bind('click focus', function(){
-    event.preventDefault();
-    $('#mainNav').toggleClass('collapsed');
-    $('#topNav').toggleClass('collapsed');
+  $(document).ready(function() {
+    
+    $('body').addClass('js');
+      
+    var $globalmenu = $('#topNav'),
+        $mainmenu = $('#mainNav'),
+        $menulink = $('.menu-toggle');
+
+    $menulink.click(function() {
+      // $menulink.toggleClass('active');
+      $globalmenu.toggleClass('active');
+      $mainmenu.toggleClass('active');
+      return false;
+    });
+
   });
     
-
-});
 </script>
 
+<link href="css/ucsc.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="home homeEnv">
@@ -67,7 +72,7 @@
 
   <div class="row logo">
     <h1><a href="index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a></h1>
-    <a href="#mainNav" class="nav-toggle">Menu</a>
+    <a href="#mainNav" class="menu-toggle">Menu</a>
   </div>
     
 

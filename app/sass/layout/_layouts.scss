@@ -17,8 +17,8 @@
 // **@todo** - Switch to mobile-first styles
 
 .row {
-	// @include rowborders(red);
-	// @include row(table);
+	//@include rowborders(red);
+	@include row(table);
 	display: flex;
 	flex-wrap: no-wrap;
 	flex-direction:column;

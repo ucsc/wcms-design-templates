@@ -5,12 +5,13 @@
 //	site title (on interior pages), and site navigation. 
 
 
-.nav-toggle {
+.menu-toggle {
+	
+	flex:1;
 	align-self:flex-end;
 	margin-left:$base-font-size*2;
 	text-align:center;
 	font-size:$base-font-size*1.2;
-
 
 	display:block;
 	width:100%;
@@ -19,4 +20,9 @@
 	padding:0.5em;
 	@include module-box-shadow;
 	border-radius: $border-radius-base;
+
+	@include media($tablet) {
+		display:none;
+	}
+
 }

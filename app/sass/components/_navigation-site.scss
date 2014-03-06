@@ -1,4 +1,5 @@
-#mainNav {	
+#mainNav,
+.site-nav {	
 
 	// Mobile-first defaults
 	padding:0;
@@ -47,13 +48,11 @@
 			position: relative;
 			
 			&:first-child a {
-				// border:1px solid red;
 				border-radius: 5px 0 0 5px;
 			}
 		
 			&:last-child a,
 			&:last-child span {
-				// border:1px solid purple;
 				border-radius: 0 5px 5px 0;
 			}
 		
@@ -65,7 +64,6 @@
 				cursor: pointer;
 				display:block;
 				width: 100%;
-				font-size: .8em;
 				font-weight: bold;
 				padding: 0.4em 0.2em;
 				text-transform: uppercase;
