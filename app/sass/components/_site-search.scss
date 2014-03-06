@@ -1,17 +1,22 @@
 /*
 *		Search box styles
 */
+
+// ## Site Search
+// Search box for searching each site.
+
 .search {
+
+	flex: 1;
 
 	// Mobile first
 	.query {
 		color: $primary-gray;
 		border: 1px solid lighten($primary-gray, 30%);
-		//box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
 		border-radius: $border-radius-base;
 		line-height: 140%;
-		font-size: $base-font-size - 2;
 		padding:$base-font-size/2;
+		width: 100%;		
 		&:focus,
 		&:active {
 			box-shadow:0 0 8px rgba(0,0,0,0.2);
@@ -25,12 +30,12 @@
 
 	// Tablet and up
 	@include media($tablet) {
-
+		flex: 1;
+		align-self: flex-end;
 		.query {
-			
 			padding:$base-font-size/2;
+			margin-top: $base-font-size*1.6;
 		}
-
 	}
 
 }

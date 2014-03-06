@@ -3,28 +3,7 @@
 //	beginning with the top of the page,
 //	this includes the global links, search box, logo,
 //	site title (on interior pages), and site navigation. 
-#logo {
-	@include hide-text();
-	background-position: left bottom;
-	background-repeat: no-repeat;
-	display: block; 
-	
-	.dept & {
-		@include size(144px 45px);
-		background-size: contain;
-		max-width: 144px;
-		@include retina-image('../images/logos/ucsc-logo-small', 100% auto);
-	}
 
-	.homeEnv & {
-		background-size: contain;
-		max-width: 261px;
-		height:72px;
-		padding: 0;
-		@include retina-image('../images/logos/ucsc-logo-large', 100% auto);
-	}
-
-}
 
 .nav-toggle {
 	align-self:flex-end;

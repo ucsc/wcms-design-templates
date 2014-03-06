@@ -17,57 +17,18 @@
 // **@todo** - Switch to mobile-first styles
 
 .row {
-	//@include rowborders(red);
-	@include row(table);
+	// @include rowborders(red);
+	// @include row(table);
 	display: flex;
-	flex-flow: column;
+	flex-wrap: no-wrap;
+	flex-direction:column;
 	margin-bottom: $base-font-size*1.25;
 	// Switch to layout row when screen is wider.
 	@include media($tablet) {
-		flex-flow: row;
+		flex-wrap: no-wrap;
+		flex-direction:row;	
 	}
-
 }
-
-
-// ## Global Navigation
-// The global navigation at the top of the page.
-// Collapsed by default on smaller screens.
-	#topNav,
-	.global-nav {
-		
-		width:100%;
-
-		> li {
-			display: inline-block;
-			width: 46%;
-			margin:1% 1% 0 0; 
-		}
-
-		@include media($tablet) {
-			flex:4;
-			> li {
-				display: block;
-				min-width: inherit;
-			}
-		}
-
-	}
-
-// ## Site Search
-// Search box for searching the site.
-	.search {
-		
-		@include media($tablet) {
-			flex:1;
-		}
-
-		.query {
-			width: 100%;
-			margin-top: 5%;
-		}
-
-	}
 
 
 // ## UCSC logo and Site Title
@@ -77,7 +38,7 @@
 
 	.logo {
 		display: flex;
-		flex-flow: row;
+		flex-direction: row;
 	}
 
 	h1 {
