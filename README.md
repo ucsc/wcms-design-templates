@@ -23,8 +23,8 @@ Responsive reboot of UCSC web templates originally created in 2009-10. These wil
 
 ## Development
 
-1. Run `gulp` to compile CSS and javascript.
-2. You can now preview files in the browser of by using a development server (we're using Pow via Anvil).
+1. Run `gulp` in the project root to build the stylesheets and javascript and run the livereload server [^1].
+2. You can preview files in the browser or by using a development server (we're using [Pow](http://pow.cx) via [Anvil](http://anvilformac.com)).
 3. Typing CTRL-C in the Terminal window will stop the `gulp` process.
 
-Note that you need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever a file is modified during development.
+[^1]: Note that you need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever a file is modified during development.
