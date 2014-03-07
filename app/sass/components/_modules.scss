@@ -64,6 +64,9 @@
 		border-left:1px solid $primary-sand;
 		@include omega();
 		@include pad();
+		h2 {
+			padding-top: 1em;
+		}
 	}
 
 	h2, .header {
