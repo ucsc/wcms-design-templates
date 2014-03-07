@@ -6,15 +6,16 @@ $visual-grid-index: front;
 $border-box-sizing: true;
 $max-width: em(1280);
 $default-feature: min-width;
-$grids-columns: 12;
+$grids-columns: 16;
 $column: golden-ratio(1em, 3);
 $gutter: golden-ratio(1em, 1);
 
 
 // Set breakpoint variables
-$desktop: new-breakpoint(min-width em(960) 6);
-$tablet: 	new-breakpoint(min-width em(641) 6);
-$mobile: 	new-breakpoint(max-width em(640) 6);
+$desktop: 	new-breakpoint(min-width em(960) 8);
+$tablet-p: 	new-breakpoint(min-width em(720) 8);
+$tablet: 		new-breakpoint(min-width em(641) 8);
+$mobile: 		new-breakpoint(max-width em(640) 8);
 
 // Set color variables
 $primary-blue: #5585a2;
