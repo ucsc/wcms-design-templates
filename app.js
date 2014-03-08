@@ -4,7 +4,7 @@ var request     = require('request');
 var cheerio     = require('cheerio');
 var fs          = require('fs');
 var pages       = require('./pages.js').pages;
-var appPath     = "./app/";
+var appPath     = "./app/html/";
 
 // We create a new index file each time we fetch
 // the sample pages, just in we've added more to the list.
