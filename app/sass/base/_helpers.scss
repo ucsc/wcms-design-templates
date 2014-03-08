@@ -92,7 +92,8 @@
 
 // # Toggle function for mobile menus
 // Collapse global and site menus on mobile screens.
-@mixin toggle-menu() {  
+@mixin toggle-menu() {
+  transition: all 1s ease-in-out;
   overflow: hidden;
   max-height:0;  
   // Active mobile menu removes min-height of 0.

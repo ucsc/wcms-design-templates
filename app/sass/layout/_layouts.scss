@@ -42,13 +42,12 @@
 	}
 
 	h1 {
-		flex:4;
+		flex:2;
 		align-self: flex-end;
 		margin:0;
-		// @include rowborders();
 	}
 
-	.nav-toggle {
+	.menu-toggle {
 		flex: 1;
 		@include media($tablet) {
 			display: none;

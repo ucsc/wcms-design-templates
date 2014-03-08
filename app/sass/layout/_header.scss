@@ -9,17 +9,16 @@
 	
 	flex:1;
 	align-self:flex-end;
-	margin-left:$base-font-size*2;
+	margin-left:$base-font-size;
 	text-align:center;
-	font-size:$base-font-size*1.2;
+	font-size:$base-font-size;
+	text-transform:uppercase;
 
 	display:block;
-	width:100%;
-	background-color:$ucsc-blue;
-	color:$ucsc-gold;
-	padding:0.5em;
-	@include module-box-shadow;
-	border-radius: $border-radius-base;
+	width:auto;
+	background-color:$gold-light;
+	color:$sand-light;
+	padding:$base-font-size/2 0;
 
 	@include media($tablet) {
 		display:none;

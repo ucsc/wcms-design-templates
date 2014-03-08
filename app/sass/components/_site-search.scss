@@ -11,9 +11,9 @@
 
 	// Mobile first
 	.query {
-		color: $primary-gray;
+		color: $gray;
 		font-size: $base-font-size*0.95;
-		border: 1px solid lighten($primary-gray, 30%);
+		border: 1px solid $sand-dark;
 		border-radius: $border-radius-base;
 		line-height: 140%;
 		padding:$base-font-size/2;

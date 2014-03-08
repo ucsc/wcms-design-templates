@@ -11,18 +11,34 @@ $column: golden-ratio(1em, 3);
 $gutter: golden-ratio(1em, 1);
 
 
-// Set breakpoint variables
+// Breakpoint variables
 $desktop: 	new-breakpoint(min-width em(960) 8);
 $tablet-p: 	new-breakpoint(min-width em(720) 8);
 $tablet: 		new-breakpoint(min-width em(641) 8);
 $mobile: 		new-breakpoint(max-width em(640) 8);
 
-// Set color variables
-$primary-blue: #5585a2;
-$primary-gold: #cb9001;
-$primary-sand: #F6F4EC;
-$primary-gray: #8E8C87;
-$primary-gray-dark: darken($primary-gray, 10%);
+
+// Site color variables
+$sand: #F2F0E4;
+$sand-light: lighten($sand, 8%);
+$sand-med: darken($sand, 2%);
+$sand-dark: darken($sand, 4%);
+
+$blue: #5585a2;
+$blue-light: lighten($blue, 8%);
+$blue-med: darken($blue, 2%);
+$blue-dark: darken($blue, 4%);
+
+$gold: #cb9001;
+$gold-light: lighten($gold, 8%);
+$gold-med: darken($gold, 2%);
+$gold-dark: darken($gold, 4%);
+
+$gray: #8E8C87;
+$gray-light: lighten($gray, 8%);
+$gray-med: darken($gray, 2%);
+$gray-dark: darken($gray, 4%);
+
 
 $ucsc-blue: #1B4084;
 $ucsc-gold: #F1B523;

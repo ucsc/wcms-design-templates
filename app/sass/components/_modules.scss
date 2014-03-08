@@ -40,7 +40,7 @@
 		font-weight: normal;
 		span {
 			font-weight: bold;
-			color: $primary-gray-dark;
+			color: $gray-dark;
 		}
 	}
 
@@ -55,13 +55,13 @@
 .combined {
 	@include reset-display();
 	border-radius: $border-radius-base;
-	background-color: lighten($primary-sand, 10%);
+	background-color: $sand-light;
 	@include module-box-shadow();
 	@include omega();
 	
 	.wrap {
-		border-right:1px solid lighten($primary-sand, 20%);
-		border-left:1px solid $primary-sand;
+		border-right:1px solid $sand-light;
+		border-left:1px solid $sand;
 		@include omega();
 		@include pad();
 		h2 {
