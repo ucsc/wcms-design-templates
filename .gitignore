@@ -1,7 +1,6 @@
-node_modules
-.sass-cache
-vendor
 .grunt
-/app/css
-
-/app/current-html/
+.sass-cache
+node_modules
+app/css
+app/current-html
+vendor
