@@ -9,7 +9,6 @@ body {
 	font-size: $font-size-base;
 	line-height: $line-height-computed;
 	margin: 0;
-	@include transition (all 0.2s ease-in-out);
 }
 
 a {
