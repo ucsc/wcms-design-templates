@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             options: {
                 base: 'app'
             },
-            src: ['*.html', 'css/*.css', 'js/*.js', 'images/**', 'vendor/**']
+            src: ['*.html', 'css/*.css', 'js/*.js', 'images/**', 'fonts/*', 'vendor/**']
         }
 
     });
