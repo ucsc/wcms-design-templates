@@ -5,9 +5,7 @@
 // Wraps the layout. The only HTML elements outside
 // of this element are the accessibility links.
 
-#container {
-	@include outer-container();
-}
+#container {}
 
 // ## The layout row
 // The row does as it says. Each 'row' of content is
@@ -17,64 +15,85 @@
 // **@todo** - Switch to mobile-first styles
 
 .row {
-	//@include rowborders(red);
-	@include row(table);
-	display: flex;
-	flex-wrap: no-wrap;
-	flex-direction:column;
-	margin-bottom: $base-font-size*1.25;
-	// Switch to layout row when screen is wider.
-	@include media($tablet) {
-		flex-wrap: no-wrap;
-		flex-direction:row;	
-	}
+    @include outer-container;
+    margin-bottom: $font-size-base * 1.25;
+    // Debug
+    //@include rowborders(red);
 }
 
+
+.page-top {
+
+    .global-nav {
+      @include span-columns(12);
+      @include media($tablet) {
+        @include span-columns(10 of 12);
+        @include omega();
+      }
+    }
+
+    .search {
+      @include span-columns(12);
+      @include omega();
+      @include media($tablet) {
+        @include span-columns(2 of 12);
+      }
+    }
+
+}
 
 // ## UCSC logo and Site Title
 // At minimum, contains the UCSC logo.
 // On division/department sites, it contains the site title too.
 .site-header {
+  
+    h1 {
+     @include span-columns(9);
+    }
 
-	.logo {
-		display: flex;
-		flex-direction: row;
-	}
-
-	h1 {
-		flex:2;
-		align-self: flex-end;
-		margin:0;
-	}
-
-	.menu-toggle {
-		flex: 1;
-		@include media($tablet) {
-			display: none;
-		}
-	}
-
+    .menu-toggle {
+      @include span-columns(3);
+      @include omega();
+      @include media($tablet) {
+        display:none;
+      }
+    }
+    
 }
+
+.five > div {
+  
+  @include media($tablet) {
+    @include span-columns(2);
+  }  
+}
+
 
 
 // ## Carousel of sliding billboards
 #slider {
-	flex:1;
+    flex: 1;
 }
-
-
-
 
 // ### Left column page
 #sprflt {
-	display: flex;
-	#mainContent {
-		flex:2;
-	}
-	#subNav {
-		flex:1;
-	}
-	#footer {
-		flex:3;
-	}
+    @include outer-container();
+    
+    #mainContent {
+      @include span-columns(12);
+      @include media($tablet) {
+        @include span-columns(9 of 12);
+        @include omega();
+      }
+    }
+    #subNav {
+      @include span-columns(12);
+      @include media($tablet) {
+        @include span-columns(3 of 12);
+      }
+    }
+    #footer {
+      @include reset-display();
+      @include row(table);
+    }
 }

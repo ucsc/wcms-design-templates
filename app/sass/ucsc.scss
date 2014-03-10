@@ -9,11 +9,11 @@
 @import "base/fonts";
 
 // @mixins, @extends and homeless stuff
+@import "base/config";
 @import "base/helpers";
 @import "base/homeless";
 
 // Basic configuration and style variables
-@import "base/config";
 @import "base/typography";
 
 // Page layouts

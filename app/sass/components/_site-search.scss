@@ -12,11 +12,11 @@
 	// Mobile first
 	.query {
 		color: $gray;
-		font-size: $base-font-size*0.95;
+		font-size: $font-size-base*0.95;
 		border: 1px solid $sand-dark;
 		border-radius: $border-radius-base;
 		line-height: 140%;
-		padding:$base-font-size/2;
+		padding:$font-size-base/2;
 		width: 100%;		
 		&:focus,
 		&:active {
@@ -37,8 +37,8 @@
 		.query {
 			width: 100%;
 			display: block;
-			padding:$base-font-size/2.5;
-			margin-top: $base-font-size*1.6;
+			padding:$font-size-base/2.5;
+			margin-top: $font-size-base*1.6;
 		}
 	}
 

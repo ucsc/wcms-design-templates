@@ -6,7 +6,7 @@
 		list-style: none;
 		li {
 			clear: both;
-			margin: 0 0 $base-font-size;
+			margin: 0 0 $font-size-base;
 			padding: 0;
 			background-image: none;
 			list-style-type: none;
@@ -27,7 +27,7 @@
 
 			.date {
 				color: #929290;
-				font-size: golden-ratio($base-font-size, -1);
+				font-size: golden-ratio($font-size-base, -1);
 				letter-spacing: 1px;
 				display: block;
 				margin:0;

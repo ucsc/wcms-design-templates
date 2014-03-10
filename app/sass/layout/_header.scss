@@ -2,26 +2,18 @@
 //
 //	beginning with the top of the page,
 //	this includes the global links, search box, logo,
-//	site title (on interior pages), and site navigation. 
-
+//	site title (on interior pages), and site navigation.
 
 .menu-toggle {
-	
-	flex:1;
-	align-self:flex-end;
-	margin-left:$base-font-size;
-	text-align:center;
-	font-size:$base-font-size;
-	text-transform:uppercase;
-
-	display:block;
-	width:auto;
-	background-color:$gold-light;
-	color:$sand-light;
-	padding:$base-font-size/2 0;
-
-	@include media($tablet) {
-		display:none;
-	}
-
+    text-align: center;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    display: block;
+    width: auto;
+    background-color: $gold-light;
+    color: $sand-light;
+    padding: $font-size-base / 2 0;
+    @include media($tablet) {
+        display: none;
+    }
 }

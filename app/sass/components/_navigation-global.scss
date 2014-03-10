@@ -6,29 +6,35 @@
 #topNav,
 .global-nav {
 	
-	flex:4;
+	@include outer-container;
+	
 
 	// Mobile first defaults
+	margin:$font-size-base 0 0 0;
 	padding:0;
 	list-style:none;
-	margin:$base-font-size 0 0 0;
+
 	.js & {
 		@include toggle-menu();		
 	}
 	
-	> li {
-		display: inline-block;
-		width:50%;
-		float:left;
+	li {
+		@include reset-display;
+		@include span-columns(6);
+		@include omega(2n);
+		margin-bottom: $font-size-base/2;
 	}
 
 	a {
-		display: block;
+		display:block;
 		text-align: center;
-		padding:$base-font-size/2;
-		background-color: $sand-dark;
-		color: $blue;
+		padding:$font-size-base/2;
+		background-color: $blue-dark;
+		color: $gold-light;
+		border-radius: $border-radius-base;
 	}
+
+
 
 	// Tablet and up
 	@include media($tablet) {
@@ -55,5 +61,8 @@
 		}
 	
 	} // END: $tablet
+
+
+
 
 } // END: #topNav

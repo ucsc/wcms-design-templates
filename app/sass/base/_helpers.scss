@@ -58,7 +58,6 @@
   font-size: calculateRem($size);
 }
 
-
 // # Box Shadow
 // Add box-shadow to modules.
 @mixin module-box-shadow() {
@@ -109,7 +108,7 @@
 
 @mixin meta-small($scale) {
   text-transform: uppercase;
-  font-size: golden-ratio($base-font-size, $scale);
-  line-height: golden-ratio($base-font-size, 0);
+  font-size: golden-ratio($font-size-base, $scale);
+  line-height: golden-ratio($font-size-base, 0);
 }
 
