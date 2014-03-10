@@ -89,6 +89,24 @@
     }
 }
 
+@mixin mobile-button($inverted: false) {
+
+  display: block;
+  border-radius: $border-radius-base;
+  padding: $font-size-base / 2;
+  text-align: center;
+  text-decoration: none;
+  color: $gold-light;
+  background-color: $blue-dark;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sand-light;
+    background-color: $gray-dark;
+    text-decoration: none;
+  }
+}
+
 // # Toggle function for mobile menus
 // Collapse global and site menus on mobile screens.
 @mixin toggle-menu() {

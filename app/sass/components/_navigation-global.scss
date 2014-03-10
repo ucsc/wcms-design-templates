@@ -1,63 +1,55 @@
 // ## Global Navigation
 // The global navigation at the top of the page.
 // Collapsed by default on smaller screens.
-
-
 #topNav,
 .global-nav {
-	
-	@include outer-container;
-	
-	// Mobile first defaults
-	margin:$font-size-base 0 0 0;
-	padding:0;
-	list-style:none;
-	
-	li {
-		@include reset-display;
-		@include span-columns(6);
-		@include omega(2n);
-		margin-bottom: $font-size-base/2;
-	}
+    @include outer-container;
+    // Mobile first defaults
+    margin: $font-size-base 0 0 0;
+    padding: 0;
+    list-style: none;
+    li {
+        @include reset-display;
+        @include span-columns(6);
+        @include omega(2n);
+        margin-bottom: $font-size-base / 2;
+    }
+    a {
+      @include mobile-button();
+    }
 
-	a {
-		display:block;
-		text-align: center;
-		padding:$font-size-base/2;
-		background-color: $blue-dark;
-		color: $gold-light;
-		border-radius: $border-radius-base;
-	}
-
-
-
-	// Tablet and up
-	@include media($tablet) {
-		// Use flexbox to layout list items
-		position: relative;
-		margin:0;
-		display:flex;
-		justify-content:flex-end;
-		> li {
-			display: block;
-			width: auto;
-			margin:0;
-			background-image: none;
-			line-height: 1.2em;
-			list-style-type: none;
-		}
-
-		a {
-			padding: 3em 1.4em 0em;
-			border:none;
-			border-left: 1px solid #C2CDC9;
-			background-color: transparent;
-			color: $blue;
-		}
-	
-	} // END: $tablet
-
-
-
-
+    // Tablet and up
+    @include media($tablet) {
+        // Use flexbox to layout list items
+        position: relative;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        > li {
+            display: block;
+            width: auto;
+            margin: 0;
+            background-image: none;
+            line-height: 1.2em;
+            list-style-type: none;
+        }
+        a {
+            padding: 3em 1.4em 0em;
+            border: none;
+            border-left: 1px solid #C2CDC9;
+            background-color: transparent;
+            color: $blue;
+        }
+    } // END: $tablet
 } // END: #topNav
+
+
+// ## Toggle button
+// The toggle button for small screens.
+// Reveals/hides the top nav, site search, and main nav.
+.menu-toggle {
+    @include mobile-button(false);
+    @include media($tablet) {
+        display: none;
+    }
+}

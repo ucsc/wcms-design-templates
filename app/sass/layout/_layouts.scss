@@ -56,11 +56,11 @@
 .site-header {
   
     h1 {
-     @include span-columns(9);
+     @include span-columns(8);
     }
 
     .menu-toggle {
-      @include span-columns(3);
+      @include span-columns(4);
       @include omega();
       @include media($tablet) {
         display:none;
