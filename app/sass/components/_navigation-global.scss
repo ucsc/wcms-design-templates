@@ -8,15 +8,10 @@
 	
 	@include outer-container;
 	
-
 	// Mobile first defaults
 	margin:$font-size-base 0 0 0;
 	padding:0;
 	list-style:none;
-
-	.js & {
-		@include toggle-menu();		
-	}
 	
 	li {
 		@include reset-display;

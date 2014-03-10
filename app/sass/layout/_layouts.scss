@@ -21,8 +21,16 @@
     //@include rowborders(red);
 }
 
-
+// ## Global navigation and site search
+// Contains the 4 global links for all UCSC sites
+// and the site search function.
 .page-top {
+
+  // When javascript is enabled,
+  // this row is toggle-able. 
+  .js & {
+    @include toggle-menu();   
+  }
 
     .global-nav {
       @include span-columns(12);
