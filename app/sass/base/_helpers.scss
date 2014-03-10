@@ -68,9 +68,11 @@
 
 // # Hover, active, focus
 // Set hover, active, and focus for elements.
-@mixin hoverActiveFocus($property, $value) {
+@mixin hoverActiveFocus($background, $color, $decoration) {
     &:hover, &:active, &:focus {
-        #{$property}: $value;
+        color: $color;
+        background-color: $background;
+        text-decoration: $decoration;
     }
 }
 

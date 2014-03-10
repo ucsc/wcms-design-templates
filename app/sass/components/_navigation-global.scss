@@ -38,7 +38,9 @@
             border: none;
             border-left: 1px solid #C2CDC9;
             background-color: transparent;
+            border-radius:0;
             color: $blue;
+            @include hoverActiveFocus(transparent, $blue, underline);
         }
     } // END: $tablet
 } // END: #topNav
