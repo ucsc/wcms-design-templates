@@ -28,3 +28,9 @@ Responsive reboot of UCSC web templates originally created in 2009-10. These wil
 3. Typing CTRL-C in the Terminal window will stop the `gulp` process.
 
 [^1]: Note that you need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever a file is modified during development.
+
+## Comparing to current live.
+
+1. If you want to see the differences between our development HTML changes and the current live site, run `npm run fetch` in the command line.
+    - The script fetches the files listed in `pages.json` and places them in the directory `app/current-html`.
+    - You can now use a diff tool to see the differences between the live site and the development work in this repository. To see a diff, run this from the Terminal: `opendiff ./app/current-html/campus-home.html ./app/campus-home.html` 
