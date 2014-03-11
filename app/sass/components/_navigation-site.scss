@@ -64,9 +64,9 @@
 				cursor: pointer;
 				display:block;
 				width: 100%;
-				font-weight: bold;
+				font-weight: normal;
 				padding: 0.4em 0.2em;
-				text-transform: uppercase;
+				//text-transform: uppercase;
 				text-decoration: none;
 				text-shadow: 1px 1px 0px #FFF;
 				text-align: center;
@@ -74,7 +74,7 @@
 				&:focus,
 				&:hover,
 				&:active {
-					color: $gold;
+					color: $gold-light;
 					text-decoration: none;
 					background: #296FA3;
 					background-color: $blue;

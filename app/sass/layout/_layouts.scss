@@ -10,9 +10,9 @@
 
 .row {
     @include outer-container;
-    margin-bottom: $font-size-base * 1.25;
+    margin-bottom: $font-size-base;
     // Debug
-    //@include rowborders(red);
+    // @include rowborders(red);
 }
 
 // ## Global navigation and site search
