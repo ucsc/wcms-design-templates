@@ -131,3 +131,15 @@
   line-height: golden-ratio($font-size-base, 0);
 }
 
+@mixin image-display($bgcolor, $padding, $radius:false) {
+    img {
+      width: 100%;
+      height: auto;
+      background-color: $bgcolor;
+      padding: $padding;
+      @if $radius {
+        border-radius: $border-radius-base;
+      }
+    }
+}
+
