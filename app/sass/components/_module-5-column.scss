@@ -1,0 +1,21 @@
+.five {
+
+	> div {
+		@include pad(1em);
+
+		@include image-display($sand-med, 0.5em, true);
+		img {
+			margin-bottom: $font-size-large;
+		}
+
+		h2 {
+			text-transform: none;
+			border-bottom: none;
+			margin-bottom: $font-size-base;
+		}
+
+	}
+
+
+
+}

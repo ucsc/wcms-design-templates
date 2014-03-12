@@ -63,13 +63,16 @@
     
 }
 
-.five > div {
-  
-  @include media($tablet) {
-    @include span-columns(2);
-  }  
-}
+.five { 
 
+  > div {
+    @include media($tablet) {
+      //@include rowborders(blue);
+      @include span-columns(4 of 20); 
+    }  
+  }
+
+}
 
 
 // ## Carousel of sliding billboards
