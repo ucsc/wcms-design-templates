@@ -10,34 +10,37 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <![endif]-->
 
-<!-- jQuery and Modernizr  -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript">
-</script>
 
-<script>
+  <!-- GLOBAL HEAD SCRIPTS  -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.js" type="text/javascript">
+  </script>
+  <script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript">
+  </script>
+  <script>
 
-  $(document).ready(function() {
-    
-    $('body').addClass('js');
+    $(document).ready(function() {
       
-    var $globalmenu = $('.page-top'),
-        $mainmenu = $('#mainNav'),
-        $menulink = $('.menu-toggle');
+      $('body').addClass('js');
+        
+      var $globalmenu = $('.page-top'),
+          $mainmenu = $('#mainNav'),
+          $menulink = $('.menu-toggle');
 
-    $menulink.click(function() {
-      $menulink.toggleClass('active');
-      $globalmenu.toggleClass('active');
-      $mainmenu.toggleClass('active');
-      return false;
+      $menulink.click(function() {
+        $menulink.toggleClass('active');
+        $globalmenu.toggleClass('active');
+        $mainmenu.toggleClass('active');
+        return false;
+      });
+
     });
-
-  });
+      
+  </script>
     
-</script>
-<link href="css/ucsc.css" rel="stylesheet" type="text/css">
+  <link href="css/ucsc.css" rel="stylesheet" type="text/css">
+
 </head>
+
 
 <body class="home homeEnv">
 
@@ -171,9 +174,10 @@
             <ul>
               <li>
                 <a href="http://news.ucsc.edu/2014/02/climate-science-conference.html">
-                  <span class="thumbnail"><img alt="" class="fltlft" height="52px" src="http://news.ucsc.edu/2014/02/images/hands-on-globe-80.jpg"></span>
-                  <span class="date">February 7, 2014</span>
-                  <span class="headline">UCSC climate conference draws distinguished scientists, policymakers</span>
+                  <span class="thumbnail">
+                    <img alt="" class="fltlft" height="52px" src="http://news.ucsc.edu/2014/02/images/hands-on-globe-80.jpg"></span>
+                    <span class="date">February 7, 2014</span>
+                    <span class="headline">UCSC climate conference draws distinguished scientists, policymakers</span>
                 </a>
               </li>
               <li>
@@ -260,44 +264,56 @@ document.write('<a href="http://giving.ucsc.edu/opportunities/ways-to-give/year_
       </div>
       
       <div class="row four clear">
-        <div class="wrap"><h4>About <span>UCSC</span></h4>
-        <p>UC Santa Cruz is a public university like no other in California, combining the intimacy of a small, liberal arts college with the depth and rigor of a major research university.</p>
-<ul>
-<li><a href="about/facts-figures.html">Facts &amp; Figures</a></li>
-<li><a href="about/achievements/index.html">Achievements</a></li>
-<li><a href="http://news.ucsc.edu/">University News</a></li>
-<li><a href="about/administration.html">Administration</a></li>
-<li><a href="http://library.ucsc.edu/">UCSC Libraries</a></li>
-<li><a href="http://www1.ucsc.edu/about/employment.asp">Employment</a></li>
-<li><a href="fees-cost/index.html">Cost of Attending</a></li>
-<li><a href="http://diversity.ucsc.edu">Diversity</a></li>
-<li><a href="about/crime-stats/index.html">Crime Awareness Reports</a></li>
-</ul></div>
-        <div class="wrap"><h4>Academic <span>Divisions</span></h4>
-<p>Looking for a specific division, undergraduate major, or graduate program?</p>
-<ul>
-<li><a href="http://arts.ucsc.edu">Arts</a></li>
-<li><a href="http://soe.ucsc.edu/">Engineering</a></li>
-<li><a href="http://humanities.ucsc.edu/">Humanities</a></li>
-<li><a href="http://pbsci.ucsc.edu/">Physical &amp; Biological Sciences</a></li>
-<li><a href="http://socialsciences.ucsc.edu/">Social Sciences</a></li>
-<li><a href="https://admissions.sa.ucsc.edu/discover/majors/index.cfm">Undergraduate Majors</a></li>
-<li><a href="http://graddiv.ucsc.edu/">Graduate Programs</a></li>
-<li><a href="http://www.ucsc-extension.edu/">UCSC Extension</a></li>
-</ul></div>
-        <div class="wrap"><h4>The <span>Colleges</span></h4>
-<p>UCSC residential learning colleges provide students with academic support, activities, and events that enhance the intellectual and social life of the campus.</p>
-<ul>
-<li><a href="campus/colleges.html">UCSC's Colleges</a></li>
-<li><a href="http://registrar.ucsc.edu/catalog/campus-life/index.html">Compare the Colleges</a></li>
-<li><a href="http://admissions.ucsc.edu/publications/Communities-of-Learning-2013-14-web.pdf">Communities of Learning</a></li>
-</ul></div>
-        <div class="wrap last"><h4>Support <span>UCSC</span></h4>
-<p>Gifts to UCSC support solutions to everyday challenges. Learn more or give today.</p>
-<ul>
-<li><a href="https://secure.imodules.com/s/1069/index-2-column.aspx?sid=1069&amp;gid=1&amp;pgid=761&amp;cid=1722">Give Today</a></li>
-<li><a href="http://giving.ucsc.edu/index.html">Learn More</a></li>
-</ul></div>
+        <div class="wrap">
+          <h4>About <span>UCSC</span></h4>
+          <p>UC Santa Cruz is a public university like no other in California, combining the intimacy of a small, liberal arts college with the depth and rigor of a major research university.</p>
+          <ul>
+            <li><a href="about/facts-figures.html">Facts &amp; Figures</a></li>
+            <li><a href="about/achievements/index.html">Achievements</a></li>
+            <li><a href="http://news.ucsc.edu/">University News</a></li>
+            <li><a href="about/administration.html">Administration</a></li>
+            <li><a href="http://library.ucsc.edu/">UCSC Libraries</a></li>
+            <li><a href="http://www1.ucsc.edu/about/employment.asp">Employment</a></li>
+            <li><a href="fees-cost/index.html">Cost of Attending</a></li>
+            <li><a href="http://diversity.ucsc.edu">Diversity</a></li>
+            <li><a href="about/crime-stats/index.html">Crime Awareness Reports</a></li>
+          </ul>
+        </div>
+        
+        <div class="wrap">
+          <h4>Academic <span>Divisions</span></h4>
+          <p>Looking for a specific division, undergraduate major, or graduate program?</p>
+          <ul>
+            <li><a href="http://arts.ucsc.edu">Arts</a></li>
+            <li><a href="http://soe.ucsc.edu/">Engineering</a></li>
+            <li><a href="http://humanities.ucsc.edu/">Humanities</a></li>
+            <li><a href="http://pbsci.ucsc.edu/">Physical &amp; Biological Sciences</a></li>
+            <li><a href="http://socialsciences.ucsc.edu/">Social Sciences</a></li>
+            <li><a href="https://admissions.sa.ucsc.edu/discover/majors/index.cfm">Undergraduate Majors</a></li>
+            <li><a href="http://graddiv.ucsc.edu/">Graduate Programs</a></li>
+            <li><a href="http://www.ucsc-extension.edu/">UCSC Extension</a></li>
+          </ul>
+        </div>
+        
+        <div class="wrap">
+          <h4>The <span>Colleges</span></h4>
+          <p>UCSC residential learning colleges provide students with academic support, activities, and events that enhance the intellectual and social life of the campus.</p>
+          <ul>
+          <li><a href="campus/colleges.html">UCSC's Colleges</a></li>
+          <li><a href="http://registrar.ucsc.edu/catalog/campus-life/index.html">Compare the Colleges</a></li>
+          <li><a href="http://admissions.ucsc.edu/publications/Communities-of-Learning-2013-14-web.pdf">Communities of Learning</a></li>
+          </ul>
+        </div>
+        
+        <div class="wrap last">
+          <h4>Support <span>UCSC</span></h4>
+          <p>Gifts to UCSC support solutions to everyday challenges. Learn more or give today.</p>
+          <ul>
+          <li><a href="https://secure.imodules.com/s/1069/index-2-column.aspx?sid=1069&amp;gid=1&amp;pgid=761&amp;cid=1722">Give Today</a></li>
+          <li><a href="http://giving.ucsc.edu/index.html">Learn More</a></li>
+          </ul>
+        </div>
+      
       </div>
 
     </main>
