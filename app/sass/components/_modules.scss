@@ -36,17 +36,17 @@
     @include pad;
   }  
 
-    // h4,
-    // .header {
-    //     margin: 0 0 1em 0;
-    //     text-transform: uppercase;
-    //     font-size: $font-size-base;
-    //     font-weight: normal;
-    //     span {
-    //         font-weight: bold;
-    //         color: $gray-dark;
-    //     }
-    // }
+    h4,
+    .header {
+        margin: 0 0 1em 0;
+        text-transform: uppercase;
+        font-size: $font-size-base;
+        font-weight: normal;
+        span {
+            font-weight: bold;
+            color: $gray-dark;
+        }
+    }
 
 }
 
@@ -80,7 +80,7 @@
         font-weight: normal;
         margin: 0 0 1em 0;
         padding-bottom: 0.4em;
-        // text-transform: uppercase;
+        text-transform: uppercase;
         span {
             color: darken($gray, 20%);
         }
@@ -121,7 +121,7 @@
         font-weight: normal;
         margin: 0 0 10px 0;
         padding: 4px 6px;
-        //text-transform: uppercase;
+        text-transform: uppercase;
         span {
             font-weight: bold;
             color: #585755;

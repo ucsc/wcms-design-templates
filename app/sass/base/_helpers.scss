@@ -92,7 +92,6 @@
 }
 
 @mixin mobile-button($inverted: false) {
-
   display: block;
   border-radius: $border-radius-base;
   padding: $font-size-base / 2;
@@ -104,7 +103,7 @@
   &:active,
   &:focus {
     color: $sand-light;
-    background-color: $gray-dark;
+    background-color: $gold-light;
     text-decoration: none;
   }
 }
