@@ -32,3 +32,13 @@
 	}
 }
 
+
+// ## Old stuff
+// 
+// Hide some things that currently exist in every site.
+// Will we be able to remove these elements before launch?
+// For now, we will hide them.
+.srchBtn,
+#mainNav .last span img {
+	display:none;
+}

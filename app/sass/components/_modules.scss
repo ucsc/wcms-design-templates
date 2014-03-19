@@ -95,6 +95,7 @@
         //     text-transform: uppercase;
         // }
     }
+
 }
 
 .separate {
@@ -125,6 +126,16 @@
         span {
             font-weight: bold;
             color: #585755;
+        }
+    }
+}
+
+.list {
+
+    ul {
+        li {
+           @include span-columns(4);
+           @include image-display($sand-dark, 0.2em, false);
         }
     }
 }
