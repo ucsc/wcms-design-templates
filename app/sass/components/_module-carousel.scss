@@ -12,17 +12,17 @@
   	float:left;
   	width:100%;
   	position: relative;
-  	max-height: 320px;
+  	max-height: 360px;
   	img {
 			width:100%;
 			height: auto;
 		}
 
 		@include media($tablet) {
-			max-height: 270px;
+			max-height: 360px;
   	}
   	@include media($mobile) { 
-			min-height: 320px;
+			min-height: 360px;
 			img {
 				width:auto;
 				height: auto;
