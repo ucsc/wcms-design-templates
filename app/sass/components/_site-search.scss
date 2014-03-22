@@ -33,7 +33,9 @@
 	@include media($tablet) {
 		flex: 1;
 		align-self: flex-end;
-		padding-top: 0.5em;
+		padding-top: 0em;
+		margin-top: -0.2em;
+		margin-left: .65em;
 		.query {
 			width: 100%;
 			display: block;
