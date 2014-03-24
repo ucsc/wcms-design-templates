@@ -34,12 +34,12 @@
             list-style-type: none;
         }
         a {
-            padding: 3em 1.4em 0em;
+            padding: 2em 1.4em 0em;
             border: none;
-            border-left: 1px solid #C2CDC9;
+            border-left: 1px solid #D8DDD5;
             background-color: transparent;
             border-radius:0;
-            color: $blue;
+            color: #84827c;
             @include hoverActiveFocus(transparent, $blue, underline);
         }
     } // END: $tablet
@@ -51,7 +51,8 @@
 // Reveals/hides the top nav, site search, and main nav.
 .menu-toggle {
     @include mobile-button(false);
-    @include media($tablet) {
-        display: none;
-    }
+    
+	//@include media($tablet) {
+    //    display: none;
+    //}
 }

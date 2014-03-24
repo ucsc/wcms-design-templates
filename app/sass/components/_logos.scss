@@ -2,7 +2,12 @@
 	@include hide-text();
 	background-position: left bottom;
 	background-repeat: no-repeat;
-	display: block; 
+	display: block;
+	margin-top:-30px;
+	
+	@include media($mobile) {
+		margin-top:0px;
+	}
 	
 	.dept & {
 		@include size(144px 45px);

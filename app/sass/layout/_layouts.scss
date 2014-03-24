@@ -54,7 +54,10 @@
     }
 
     .menu-toggle {
-      @include span-columns(4);
+      //@include span-columns(2 of 12);
+	  margin-top: 1.20em;
+	  width: 7em;
+	  float:right;
       @include omega();
       @include media($tablet) {
         display:none;
