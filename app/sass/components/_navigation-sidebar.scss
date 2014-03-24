@@ -1,0 +1,45 @@
+.sidebar nav {
+
+  ul {
+    border-top: 1px solid darken($sand-dark, 10%);
+    list-style: none;
+    margin:0;
+    padding:0;
+
+        // First-order list-item and link.
+        li {
+          padding:0;
+          margin:0;
+          a {
+            border-bottom: 1px solid darken($sand-dark, 10%);
+            display: block;
+            padding:0.5em 0 0.5em 0.2em;
+            @include hoverActiveFocus($sand-dark, $blue, none);
+            &.current {
+              background-color: $sand-dark;
+            }
+          }
+        }
+        
+        // Second order list-item and link.
+        ul { 
+          background-color: $sand-dark;
+          border-top: none;
+          border-bottom: 1px solid darken($sand-dark, 10%);
+          padding:0.8em 0;
+          li {
+            list-style: disc;
+            margin-left:1.6em;
+            padding-left:0;
+            a {
+              border-bottom: none;
+              display: inline;
+              padding:0;
+              @include hoverActiveFocus($sand-dark, $blue, underline);  
+            }
+          }
+        }
+
+      }
+
+    }
