@@ -69,67 +69,78 @@
 
   <div class="row">
   
-    <ul id="mainNav" class="site-nav">
-      <li class="first"><a href="about/index.html">About</a></li>
-      <li><a href="admissions/index.html">Admissions</a></li>
-      <li><a href="academics/index.html">Academics</a></li>
-      <li><a href="research/index.html">Research</a></li>
-      <li><a href="campus/index.html">Campus Life</a></li>
-      <li><a href="visit/index.html">Visit UCSC</a></li>
-      <li class="last qsg" data-dropdown="#dropdown-1"><span>Information <i class="icon-arrow-down-md"></i></span></li>
-    </ul>
+    
 	
-	<div id="dropdown-1" class="dropdown dropdown-tip dropdown-anchor-right">
-		<ul class="dropdown-menu">
-            <li><a href="http://studentservices.ucsc.edu">Current Students</a></li>
-            <li><a href="quickstart/faculty-staff/index.html">Faculty &amp; Staff</a></li>
-            <li><a href="http://alumni.ucsc.edu">Alumni</a></li>
-            <li><a href="quickstart/prospective-students/index.html">Prospective Students</a></li>
-            <li><a href="quickstart/family/index_v2.html">Parents &amp; Family</a></li>
-            <li><a href="quickstart/community/index.html">Community</a></li>
-		</ul>
-	</div>
+	<ul id="mainNav">
+		<li class="first hov" style="z-index: 1000;"><a href="about/index.html">About</a></li>
+		<li class="" style="z-index: 0;"><a href="admissions/index.html">Admissions</a></li>
+		<li class="" style="z-index: 0;"><a href="academics/index.html">Academics</a></li>
+		<li class="" style="z-index: 0;"><a href="research/index.html">Research</a></li>
+		<li class="" style="z-index: 0;"><a href="campus/index.html">Campus Life</a></li>
+		<li class="" style="z-index: 0;"><a href="visit/index.html">Visit UCSC</a></li>
+		<li class="last qsg" style="z-index: 0;"><span>Quick Start Guides <img alt="more items when you click" src="http://static.ucsc.edu/images/drop_down_button.gif"></span> 
+			<ul>
+				<li class="" style="z-index: 0;"><a href="http://studentservices.ucsc.edu">Current Students</a></li>
+				<li class="" style="z-index: 0;"><a href="quickstart/faculty-staff/index.html">Faculty &amp; Staff</a></li>
+				<li class="" style="z-index: 0;"><a href="http://alumni.ucsc.edu">Alumni</a></li>
+				<li class="" style="z-index: 0;"><a href="quickstart/prospective-students/index.html">Prospective Students</a></li>
+				<li class="" style="z-index: 0;"><a href="quickstart/family/index_v2.html">Parents &amp; Family</a></li>
+				<li class="" style="z-index: 0;"><a href="quickstart/community/index.html">Community</a></li>
+			</ul>
+		</li>
+	</ul>
 
   </div>
     
 </header>    
 
     
-
+<div class="row">
 <!-- =================== Carousel ==================== -->
 		
-	    <div class="swiper-container">
-	    	<div class="swiper-wrapper">
-	        	<div class="swiper-slide">
-	          		<img alt="UCSC grad student’s book on Tibet earning acclaim from press in India" src="images/billboards/1.jpg">
-		            <div class="slide-body left">
-		              <h1>Literary success!</h1>
-		              <p>Grad student's first full-length book earns acclaim from press in India.</p>
-		              <a href="http://news.ucsc.edu/2014/01/tibet-grad-student.html">Read me</a>
-		            </div>
-				</div>
-	        	<div class="swiper-slide">
-	          		<img alt="Far out" src="images/billboards/2.jpg">
-		            <div class="slide-body right">
-		              <h1>Far out</h1>
-		              <p>Distant galaxy explorer Professor Garth Illingsworth presents new findings.</p>
-		              <a href="http://news.ucsc.edu/2014/01/tibet-grad-student.html">Ultra-cool</a>
-		            </div>
-				</div>
-	        	<div class="swiper-slide">
-	          		<img alt="Marine scientists track spread of sea star wasting disease" src="images/billboards/3.jpg">
-		            <div class="slide-body bottom">
-		              <h1>Leading the mission</h1>
-		              <p>Searching for the cause of the disease that is devastating sea star populations ion the U.S. west coast.</p>
-		              <a href="http://news.ucsc.edu/2013/11/sea-star-disease.html">You can help</a>  
-		            </div>
-				</div>
-	        </div>
-			<div class="pagination"></div>
+	    <div id="slides" class="owl-carousel">
+        	<div class="slide">
+          		<img alt="UCSC grad student’s book on Tibet earning acclaim from press in India" src="images/billboards/1.jpg">
+	            <div class="slide-body left">
+	              <h1>Literary success!</h1>
+	              <p>Grad student's first full-length book earns acclaim from press in India. <a href="http://news.ucsc.edu/2014/01/tibet-grad-student.html">Read me</a></p>
+	            </div>
+			</div>
+        	<div class="slide">
+          		<img alt="Far out" src="images/billboards/2.jpg">
+	            <div class="slide-body right">
+	              <h1>Far out</h1>
+	              <p>Distant galaxy explorer Professor Garth Illingsworth presents new findings. <a href="http://news.ucsc.edu/2014/01/tibet-grad-student.html">Ultra-cool</a></p>
+	            </div>
+			</div>
+        	<div class="slide">
+          		<img alt="Marine scientists track spread of sea star wasting disease" src="images/billboards/3.jpg">
+	            <div class="slide-body bottom">
+	              <h1>Leading the mission</h1>
+	              <p>Searching for the cause of the disease that is devastating sea star populations ion the U.S. west coast. <a href="http://news.ucsc.edu/2013/11/sea-star-disease.html">You can help</a> 
+				  </p> 
+	            </div>
+			</div>
+        	<div class="slide">
+          		<img alt="Far out" src="images/billboards/2.jpg">
+				<h1 class="left-title">Far out</h1>
+	            <div class="slide-body thin">
+	              <p>Distant galaxy explorer Professor Garth Illingsworth presents new findings. <a href="http://news.ucsc.edu/2014/01/tibet-grad-student.html">Ultra-cool</a></p>
+	              
+	            </div>
+			</div>
+        	<div class="slide">
+          		<img alt="Marine scientists track spread of sea star wasting disease" src="images/billboards/3.jpg">
+	            <h1 class="center-title">Leading <span>the</span> <span>mission</span></h1>
+				<div class="slide-body thin">
+	              <p>Searching for the cause of the disease that is devastating sea star populations ion the U.S. west coast. <a href="http://news.ucsc.edu/2013/11/sea-star-disease.html">You can help</a> 
+				  </p> 
+	            </div>
+			</div>
 		</div>
 
 <!-- =================== END Carousel ==================== -->
-
+</div>
    
     
     <main>
@@ -320,15 +331,22 @@
 <script src="js/respond.js"></script>
 <script src="js/main.js"></script>
 <script src="js/responsive.js"></script>
-<script src="js/swiper.js"></script>
+<script src="js/banner.js"></script>
 <script>
-	var mySwiper = new Swiper('.swiper-container',{
-	  pagination: '.pagination',
-	  paginationClickable: true,
-	  slidesPerView: 1,
-	  loop: true,
-	  speed: 300,
-	  autoplay: 5000
+	$(document).ready(function() {
+		var owl = $("#slides");
+		owl.owlCarousel({
+			autoPlay : 5000,
+			stopOnHover : true,
+			navigation:true,
+			paginationSpeed : 1000,
+			goToFirstSpeed : 2000,
+			singleItem : true,
+			autoHeight : true,
+			lazyLoad : true,
+			transitionStyle:"fade"
+		});
+		
 	});
 </script>
 
