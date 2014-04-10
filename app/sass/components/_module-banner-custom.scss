@@ -1,0 +1,162 @@
+/* ===============================================================
+Slide Styles
+================================================================*/
+.slide {
+	position:relative;
+	max-width: 100%;
+	margin-bottom: -5px;
+	font-size: $font-size-small;
+	z-index:1;
+	
+	img{
+		width:100%;
+		z-index:1;
+	}
+	
+	h1 {
+		font-size: $font-size-h5;
+		font-weight: bold;
+		line-height: 1em;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	
+	h1.left-title, h1.center-title{
+		position: relative;
+		background-color: $ucsc-blue;	
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		margin-top: -1em;
+		color: #fff;
+		padding: 10px 50px 17px 20px;
+		
+	}
+	
+	p{
+		padding: 0;
+		margin:0;
+	}
+	
+	a{
+		color:$ucsc-gold;
+	}
+	
+	@include media($tablet){
+		font-size: $font-size-base;
+		h1 {
+			font-size: $font-size-h3;
+			line-height: 1em;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		h1.left-title{
+			position: absolute;
+			font-size: $font-size-h1;
+			top: 15%;
+			left: 6%;
+			background-color: $ucsc-gold;
+			background-color: rgba($ucsc-gold, 0.8);
+			display: inline-block;
+			margin-top:0;
+			padding:0;
+			width: auto;
+			
+			span{
+				display: block;
+			}
+			
+		}
+		h1.center-title{
+			position: absolute;
+			font-size: $font-size-h1;
+			//text-align: center;
+			top: 20%;
+			left: 40%;
+			background-color: $ucsc-gold;
+			background-color: rgba($ucsc-gold, 0.8);
+			display: inline-block;
+			margin-top:0;
+			padding:0;
+			width: auto;
+			
+			span{
+				display: block;
+			}
+			
+		}
+	}
+	
+}
+.slide-body {
+	position: relative;
+	background-color: $ucsc-blue;	
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	margin-top: -1.65em;
+	color: #fff;
+	padding: 1px 20px 20px 20px;
+	z-index:1;
+	
+	&.center{
+		margin-top: -.75em;
+	}
+	
+	@include media($tablet){
+		background-color: rgba($ucsc-blue, 0.8);
+		position: absolute;
+		margin-top: 0;
+		&.left{
+			top: 0px;
+			left: 0px;
+			width: 30%;
+			padding: 0 20px;
+			margin-bottom: -10px;
+		}
+		&.right{
+			top: 0px;
+			right: 0px;
+			left: auto;
+			width: 30%;
+			padding: 0 20px;
+		}
+		&.bottom{
+			bottom: 0px;
+			left: 0px;
+			height: auto;
+			padding: 0 20px 20px 20px;
+			h1{
+				margin:15px 0 7px 0;
+			}
+			p{
+				padding:0 50px 10px 0;
+				margin:0;
+				
+			}
+		}
+		&.thin{
+			bottom: 0px;
+			left: 0px;
+			height: auto;
+			padding: 0 20px 20px 20px;
+			p{
+				padding:13px 0 1px 0;
+				margin:0;
+			}
+		}
+	}
+}
+
+/* ===============================================================
+Pagination Styles
+================================================================*/
+.owl-buttons {
+	display: none;
+}
+.owl-theme .owl-controls{
+	position: absolute;
+	bottom:0;
+	right:0;
+	padding: 5px 10px;
+}

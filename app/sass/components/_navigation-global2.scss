@@ -1,0 +1,59 @@
+// ## Global Navigation
+// The global navigation at the top of the page.
+// Collapsed by default on smaller screens.
+#topNav,
+.global-nav {
+    padding: 0;
+    margin: 0;
+
+    // Tablet and up
+    @include media($tablet) {
+		margin: 0;
+		list-style: none;
+		
+	    li{
+	    	display: inline-block;
+		
+		
+		
+		
+		}
+		
+		/*
+        // Use flexbox to layout list items
+        position: relative;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        > li {
+            display: block;
+            width: auto;
+            margin: 0;
+            background-image: none;
+            line-height: 1.2em;
+            list-style-type: none;
+        }
+        a {
+            padding: 2em 1.4em 0em;
+            border: none;
+            border-left: 1px solid #D8DDD5;
+            background-color: transparent;
+            border-radius:0;
+            color: #84827c;
+            @include hoverActiveFocus(transparent, $blue, underline);
+        }
+		*/
+    } // END: $tablet
+} // END: #topNav
+
+
+// ## Toggle button
+// The toggle button for small screens.
+// Reveals/hides the top nav, site search, and main nav.
+.menu-toggle {
+    @include mobile-button(false);
+    
+	//@include media($tablet) {
+    //    display: none;
+    //}
+}

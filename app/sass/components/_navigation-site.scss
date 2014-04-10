@@ -61,14 +61,15 @@
                 background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f1e6), to(white));
                 color: $gold;
                 cursor: pointer;
-                display: block;
-                width: 100%;
+                //display: block;
+                //width: 100%;
                 font-weight: bold;
                 padding: 0.4em 0.2em;
                 text-transform: uppercase;
                 text-decoration: none;
                 text-shadow: 1px 1px 0px #FFF;
                 text-align: center;
+				white-space: nowrap;
                 
                 &:focus,
                 &:hover,
@@ -87,12 +88,15 @@
                     text-shadow: none;
                 }
             }
+			
+	        > ul {
+	            display: none;
+				color: #000;
+	        }
 
         } // END: > li
         
-        > li ul {
-            display: none;
-        }
+        
     
     } // END: @media $tablet
 

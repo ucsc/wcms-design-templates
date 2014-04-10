@@ -53,6 +53,13 @@ $(document).ready(function(){
  		return false;
 	});
 	*/
+	
+	$('ul#mainNav li').click(function(e){
+	  $(this).children('ul').slideToggle();
+	  e.stopPropagation();
+	});
+	
+	
 });
 
 /*

@@ -30,10 +30,12 @@ $campaign-red: #F1B523;
 
 
 // Typography variable
-$font-family-sans-serif:  "Lucida Grande", "Lucida Sans Unicode", sans-serif !default;
+//$font-family-sans-serif:  "Lucida Grande", "Lucida Sans Unicode", sans-serif !default;
+$font-family-sans-serif:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-headlines:   "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+//$font-family-headlines:   "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+$font-family-headlines:   "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          16px !default;
@@ -63,7 +65,7 @@ $visual-grid-index: front;
 
 // Layout variables for Bourbon Neat
 $border-box-sizing: true;
-$max-width: em(1280);
+$max-width: em(1080);
 $default-feature: min-width;
 $grids-columns: 16;
 $column: golden-ratio(1em, 3);
