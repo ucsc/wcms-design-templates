@@ -11,6 +11,8 @@
 	//display: -ms-flexbox;      /* TWEENER - IE 10 */
 	//display: -webkit-flex;     /* NEW - Chrome */
 	//display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	//overflow: visible;
+	//z-index: 9999;
 	
 	@include media($tablet){
 		margin: -.4em -.95em;
@@ -23,6 +25,8 @@
 			//zoom: 1;
 			//*display: inline;
 			padding: .3em 0.95em;
+			//float:left;
+			//position: relative;
 			
             &:first-child {
 				//padding-left:0;
@@ -60,9 +64,51 @@
 			}
 			
 			ul {
-				display: none;
-			}
+				  position: absolute;
+				  top: 100%;
+				  left: -4px; /* move content -4px because of container left border */
+				  width: 266px;
+				  padding: 5px 0px;
+				  display: none;
+				  border-left: 4px solid #8e9196;
+				  background: #fff;
+				  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+				  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+				  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+				  display:none;
+				  
+				  li a { 
+				    text-decoration: none;
+				    display: block;
+				    color: #447dd3;
+				    padding: 7px 15px;
+				  }
+				  li a:hover {
+				    color: #6fa0e9;
+				    background: #e7f0f7;
+				  }
+			  }
+			  ul[style] {
+				  z-index: 999999999 !important;
+			  }
+			  
+			  ul li[style] {
+				  z-index: 99999999999999 !important;
+			  }
+			  
+			  ul.open {
+  				background: #5a90e0;
+  			  	color: #fff;
+  				border-left-color: #6c6d70;
+				}
+				
+			  
+
 	    }
+		
+		li:hover ul {
+		    display: block;   
+		}
 		
 	}
 		

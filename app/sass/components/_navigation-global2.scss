@@ -3,23 +3,23 @@
 // Collapsed by default on smaller screens.
 #topNav,
 .global-nav {
-    @include outer-container;
-    // Mobile first defaults
-    margin: $font-size-base 0 0 0;
     padding: 0;
-    list-style: none;
-    li {
-        @include reset-display;
-        @include span-columns(6);
-        @include omega(2n);
-        margin-bottom: $font-size-base / 2;
-    }
-    a {
-      @include mobile-button();
-    }
+    margin: 0;
 
     // Tablet and up
     @include media($tablet) {
+		margin: 0;
+		list-style: none;
+		
+	    li{
+	    	display: inline-block;
+		
+		
+		
+		
+		}
+		
+		/*
         // Use flexbox to layout list items
         position: relative;
         margin: 0;
@@ -42,6 +42,7 @@
             color: #84827c;
             @include hoverActiveFocus(transparent, $blue, underline);
         }
+		*/
     } // END: $tablet
 } // END: #topNav
 
