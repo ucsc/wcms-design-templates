@@ -36,7 +36,7 @@ $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !def
 $font-family-headlines:   "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          16px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
 
@@ -71,7 +71,7 @@ $gutter: golden-ratio(1em, 1);
 
 
 // Breakpoint variables
-$desktop:   new-breakpoint(min-width em(960) 8);
+$desktop:   new-breakpoint(min-width em(960) 12);
 //$tablet-p:  new-breakpoint(min-width em(720) 8);
-$tablet:    new-breakpoint(min-width em(803) 8);
-$mobile:    new-breakpoint(max-width em(802) 8);
+$tablet:    new-breakpoint(min-width em(803) 12);
+$mobile:    new-breakpoint(max-width em(802) 12);
