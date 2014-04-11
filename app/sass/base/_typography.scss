@@ -1,6 +1,5 @@
 // Primary typography 
 body {
-	// @include breakpoints();
 	min-width:em(320);
 	padding: 0 1em;
 	color: $gray;
@@ -9,7 +8,10 @@ body {
 	font-size: $font-size-base;
 	line-height: $line-height-computed;
 	margin: 0;
+	// @include breakpoints();
 }
+
+
 
 a {
 	color: $blue;

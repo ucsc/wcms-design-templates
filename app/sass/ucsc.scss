@@ -1,41 +1,40 @@
-// # Sass partials
-
 // Include Ruby gem-based styles
 @import "compass/typography";
 @import "bourbon";
 @import "neat";
 
-// Icon fonts
-@import "base/fonts";
+// # Sass partials
 
-// @mixins, @extends and homeless stuff
-@import "base/config";
-@import "base/helpers";
-@import "base/homeless";
+// Configuration
+@import "config/colors";
+@import "config/layout-variables";
+@import "config/typography-variables";
+@import "config/homeless";
+@import "config/helpers";
 
-// Basic configuration and style variables
+// Vendor Libraries
+@import "config/icon-font";
+
+// Basic styles and skeletal page layout
 @import "base/typography";
+@import "base/layout";
 
-// Page layouts
-@import "layout/layouts";
-@import "layout/footer";
+// Individual page and partial layouts
+@import "layouts/landing";
+@import "layouts/footer";
 
-// Pages
-@import "pages/landing";
-
-
+// Homepage (www, dept, division) block styles
+@import "blocks/blocks";
+@import "blocks/banner-custom";
+@import "blocks/banner-default";
+@import "blocks/carousel";
+@import "blocks/events";
+@import "blocks/news";
+@import "blocks/showcase";
 
 // Atomic components
 @import "components/navigation-global";
-@import "components/site-search";
+@import "components/search";
 @import "components/logos";
 @import "components/navigation-site3";
 @import "components/navigation-sidebar";
-//@import "components/dropdown";
-@import "components/modules";
-@import "components/module-events";
-@import "components/module-showcase";
-@import "components/module-news";
-@import "components/module-5-column";
-@import "components/module-banner-default";
-@import "components/module-banner-custom";

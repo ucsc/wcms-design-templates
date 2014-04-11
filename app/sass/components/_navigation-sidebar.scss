@@ -1,6 +1,8 @@
-.sidebar nav {
+.sidebar {
 
-  h1 {
+  
+  h1,
+  .header {
     border-bottom: 1px solid lighten($gray-light, 20%);
     color: $gray;
     font-size: $font-size-base*1.2;
@@ -48,4 +50,4 @@
 
       }
 
-    }
+  }
