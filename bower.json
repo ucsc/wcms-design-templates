@@ -22,7 +22,8 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "modernizr": "~2.7.1",
-    "owlcarousel": "~1.3.2"
+    "owlcarousel": "~1.3.2",
+    "respond": "~1.4.2"
   },
   "devDependencies": {},
   "overrides": {
@@ -31,6 +32,9 @@
     },
     "owlcarousel": {
       "main": "owl-carousel/**"
+    },
+    "respond": {
+      "main": "dest/respond.min.js"
     }
   }
 }

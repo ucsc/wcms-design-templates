@@ -1,6 +1,7 @@
 .grunt
 .sass-cache
 node_modules
-app/css
+bower_components
 app/current-html
+app/build
 vendor
