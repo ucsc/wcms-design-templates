@@ -20,9 +20,9 @@ module.exports = function (grunt) {
         // [UCSC] Add the built site to the gh-pages branch
         'gh-pages': {
             options: {
-                base: 'app'
+                base: 'app/build'
             },
-            src: ['*.html', 'css/*.css', 'js/*.js', 'images/**', 'fonts/*', 'vendor/**']
+            src: ['**/**.**']
         }
 
     });
