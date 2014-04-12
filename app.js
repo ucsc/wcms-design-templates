@@ -38,7 +38,7 @@ pages.forEach(function (i) {
       var $ = cheerio.load(body);
       
       // Rewrite the CSS to use local files
-      $('link').first().attr("href","css/ucsc.css");
+      // $('link').first().attr("href","css/ucsc.css");
       
       // Iterate over <img> tags to look for relative 'src' paths 
       $('img').map(function(i, el) {
@@ -50,9 +50,6 @@ pages.forEach(function (i) {
           $(this).attr('src', site + path + imgsrc);
         };
       });
-
-      // Add .row elements (we'll need to change this in the WCMS later)
-        var topRow = $('#topNav').html() + $('.search').html();
 
       var html = $.html();
 
