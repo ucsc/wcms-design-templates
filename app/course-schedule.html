@@ -16,24 +16,8 @@
 <link href="http://static.ucsc.edu/css/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" type="text/css"><!--[if IE]>
 <link rel="stylesheet" type="text/css" href="http://static.ucsc.edu/css/fixie.css" />
 <![endif]-->
-<!-- Google Analytics -->
-<script type="text/javascript">
-// If we are in the wcms tool, do not track pageviews
-if (document.domain != 'wcms.ucsc.edu') {
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4301164-1']);
-  _gaq.push(['_setDomainName', '.ucsc.edu']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-};
-</script>
-        <link href="http://static.ucsc.edu/css/soc.css" media="all" rel="stylesheet" type="text/css">  
+<link href="http://static.ucsc.edu/css/soc.css" media="all" rel="stylesheet" type="text/css">  
     </head>
     <body class="contentLeftNav dept">
     
@@ -46,58 +30,16 @@ if (document.domain != 'wcms.ucsc.edu') {
         <div id="wrap">
             <div id="container">
                 <div id="content">
-                    <ul id="topNav">
-<li class="ucscHome"><a href="http://www.ucsc.edu">University Home</a></li>
-<li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
-<li><a href="http://www.ucsc.edu/tools/people.html" title="Find People - UCSC People Search">People</a></li>
-<li><a href="http://www.ucsc.edu/tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
-<li><a href="http://www.ucsc.edu/tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
-</ul> 
-                    <div class="search">
-                        <!-- Google Custom Search --><form action="http://history.ucsc.edu/search.html" id="cse-search-box-site">
-<div><input name="cx" type="hidden" value="009891836300427205563:qsl0lllpvy8"> <input name="cof" type="hidden" value="FORID:10"> <input name="ie" type="hidden" value="UTF-8"> <label class="hide" for="search-site">Search</label> <input class="query" id="search-site" name="q" type="text" value="Search History..."> <input alt="Search button" class="srchBtn" src="http://static.ucsc.edu/images/search_button.gif" type="image"></div>
-</form><!-- end Google Custom Search -->
-                    </div>
-                    <div id="pageTitle">
-                        <a href="http://www.ucsc.edu/index.html" id="logo">UC Santa Cruz home</a>
-                        <h1><a href="../index.html" title="History Department Home">History</a></h1>
-                    </div>
-                    <ul id="mainNav">
-<li class="first"><a href="../about/index.html">About</a></li>
-<li><a href="../undergraduate/index.html">Undergraduate</a> 
-<ul>
-<li><a href="../undergraduate/history-major/index.html" title="History Major">History Major</a></li>
-<li><a href="../undergraduate/history-minor/index.html" title="History Minor">History Minor</a></li>
-<li><a href="../undergraduate/undergraduate-advising/index.html" title="Advising">Advising</a></li>
-</ul>
-</li>
-<li><a href="../graduate/index.html">Graduate</a></li>
-<li><a href="../faculty/profiles/index.php">Faculty</a></li>
-<li><a href="class-schedule-view.php">Courses</a></li>
-<li><a href="../news-events/news/index.html">News &amp; Events</a></li>
-</ul> 
-                    <div id="breadcrumbs">
-                        <p><a href="../index.html">
-		Home</a> »
-			Courses » History Class Schedule</p>
-                    </div>
+
+   
+                @@include('./app/html-partials/header-dept.html')
+
+                <div id="breadcrumbs">
+                  <p><a href="../index.html">Home</a> » Courses » History Class Schedule</p>
+                </div>
+
                     <div id="sprflt">
-                        <div id="subNav">
-                            
-                            <ul><li><a class="current" href="class-schedule-view.php">History Class Schedule</a></li><li><a href="catalog-view.php">History Course Catalog</a></li><li><a href="courses-at-a-glance.html">History Courses at a Glance</a></li><li><a href="full-his-courses.html">Enrolling in Full History Courses</a></li><li><a class="external" href="https://ecommons.ucsc.edu/xsl-portal">UCSC eCommons</a></li><li><a class="external" href="http://library.ucsc.edu/">University Library</a></li></ul>
-                            
-                            <ul>
-<li>General Course Information&#160;
-<ul>
-<li><a href="http://registrar.ucsc.edu/catalog/" title="UCSC Course Catalog">UCSC General Catalog</a></li>
-<li><a href="https://pisa.ucsc.edu/class_search/" title="UCSC Online Class Search">UCSC Class Search</a></li>
-<li><a href="http://registrar.ucsc.edu/navigator/index.html" title="The UCSC Navigator">UCSC Navigator<br></a></li>
-<li><a href="http://summer.ucsc.edu/courses/preliminary/index.html">Summer Session</a></li>
-</ul>
-</li>
-</ul>
-                            <ul class="block global"><li></li></ul>
-                        </div>
+                        
                     <div id="mainContent">
                         <h1 id="title">History Class Schedule</h1><div class="contentBox"><p><img align="left" alt="2013 -2014 course list button" height="80" src="http://history.ucsc.edu/courses/YrButtons1314.gif" width="80"></p>
 <p>To view the complete list of History courses offered in the 2013 - 2014 academic year, download the PDF appropriate for your career of study:</p>
@@ -105,6 +47,7 @@ if (document.domain != 'wcms.ucsc.edu') {
 <p><a href="HIS_GRAD_2013-2014.pdf" title="HIS Grad 13-14">Graduate Curriculum</a> (Last updated: 5/21/13)&#160; <em><br></em></p>
 &#160;<br>
 <p><em>These lists are subject to change.</em></p></div>
+                       
                         <div id="php">
                                                         <div class="contentBox">
                                 								<div class="detail_page_box PSTEXT">
@@ -261,6 +204,30 @@ if (document.domain != 'wcms.ucsc.edu') {
 	                            </div>
                         </div>
                         </div>
+
+                        <div id="subNav" class="sidebar">
+                            
+                            <nav>
+                              <h1 class="header">Sidebar headline</h1>
+                            <ul><li><a class="current" href="class-schedule-view.php">History Class Schedule</a></li><li><a href="catalog-view.php">History Course Catalog</a></li><li><a href="courses-at-a-glance.html">History Courses at a Glance</a></li><li><a href="full-his-courses.html">Enrolling in Full History Courses</a></li><li><a class="external" href="https://ecommons.ucsc.edu/xsl-portal">UCSC eCommons</a></li><li><a class="external" href="http://library.ucsc.edu/">University Library</a></li>
+                            </ul>
+                            </nav>
+
+                            <h2 class="header">Second sidebar headline</h2>
+                            <ul>
+<li><a href="http://registrar.ucsc.edu/catalog/" title="UCSC Course Catalog">UCSC General Catalog</a></li>
+<li><a href="https://pisa.ucsc.edu/class_search/" title="UCSC Online Class Search">UCSC Class Search</a></li>
+<li><a href="http://registrar.ucsc.edu/navigator/index.html" title="The UCSC Navigator">UCSC Navigator<br></a></li>
+<li><a href="http://summer.ucsc.edu/courses/preliminary/index.html">Summer Session</a></li>
+
+</li>
+<ul>
+                            <ul class="block global"><li></li></ul>
+                        </div>
+
+
+
+
                         <div id="footer">
                             <p class="links"><a href="../about/contact.html">Contact</a></p>
 <p class="links"><a href="../department-use-only.html">Internal</a></p>

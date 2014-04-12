@@ -8,34 +8,9 @@
 <link href="css/ucsc.css" rel="stylesheet" type="text/css"><!-- Main jQuery Import -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://static.ucsc.edu/js/modernizr-1.5.min.js" type="text/javascript"></script>
-<!-- Slide Import and Function -->
-<script src="http://static.ucsc.edu/js/jquery.tabSlideOut.v1.3.dept-wideview.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/jquery.lightbox-0.5.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/jquery.defaultvalue.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/ucsc_base.js" type="text/javascript"></script>
-<link href="http://static.ucsc.edu/css/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" type="text/css"><!--[if IE]>
-<link rel="stylesheet" type="text/css" href="http://static.ucsc.edu/css/fixie.css" />
-<![endif]-->
-<!-- Google Analytics -->
-<script type="text/javascript">
-// If we are in the wcms tool, do not track pageviews
-if (document.domain != 'wcms.ucsc.edu') {
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4301164-1']);
-  _gaq.push(['_setDomainName', '.ucsc.edu']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-};
-</script>
-        <link href="http://static.ucsc.edu/css/soc.css" media="all" rel="stylesheet" type="text/css">  
-    </head>
-    <body class="contentLeftNav dept">
+</head>
+    <body class="contentLeftNav dept left-column">
     
     <!-- Accessibility links. Hidden until they receive :focus -->
     <ul id="access-links">
@@ -81,8 +56,11 @@ if (document.domain != 'wcms.ucsc.edu') {
 		Home</a> »
 			Courses » History Class Schedule</p>
                     </div>
-                    <div id="sprflt">
-                        <div id="subNav">
+                   
+                    <div id="sprflt" class="row">
+                        
+
+                        <div id="subNav" class="sidebar">
                             
                             <ul><li><a class="current" href="class-schedule-view.php">History Class Schedule</a></li><li><a href="catalog-view.php">History Course Catalog</a></li><li><a href="courses-at-a-glance.html">History Courses at a Glance</a></li><li><a href="full-his-courses.html">Enrolling in Full History Courses</a></li><li><a class="external" href="https://ecommons.ucsc.edu/xsl-portal">UCSC eCommons</a></li><li><a class="external" href="http://library.ucsc.edu/">University Library</a></li></ul>
                             
@@ -98,8 +76,11 @@ if (document.domain != 'wcms.ucsc.edu') {
 </ul>
                             <ul class="block global"><li></li></ul>
                         </div>
-                    <div id="mainContent">
-                        <h1 id="title">History Class Schedule</h1><div class="contentBox"><p><img align="left" alt="2013 -2014 course list button" height="80" src="http://history.ucsc.edu/courses/YrButtons1314.gif" width="80"></p>
+
+
+                    <div id="mainContent" class="main-content">
+                        <h1 id="title">History Class Schedule</h1>
+                        <div class="contentBox"><p><img align="left" alt="2013 -2014 course list button" height="80" src="http://history.ucsc.edu/courses/YrButtons1314.gif" width="80"></p>
 <p>To view the complete list of History courses offered in the 2013 - 2014 academic year, download the PDF appropriate for your career of study:</p>
 <p><a href="HIS_courses_2013-2014.pdf" title="HIS 2013-2014 History Courses">Undergraduate Curriculum</a> (Last updated: 1/8/14)</p>
 <p><a href="HIS_GRAD_2013-2014.pdf" title="HIS Grad 13-14">Graduate Curriculum</a> (Last updated: 5/21/13)&#160; <em><br></em></p>

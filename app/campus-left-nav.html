@@ -37,61 +37,8 @@
    <div id="container">
      <div id="content">
        
-         <header role="banner" class="site-header">
       
-      <div class="row page-top">
-        
-        <ul id="topNav" class="global-nav">
-          <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
-          <li><a href="tools/people.html" title="Find People - UCSC People Search">People</a></li>
-          <li><a href="tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
-          <li><a href="tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
-        </ul>
-        
-        <div class="search">
-            <!-- Google Custom Search -->
-            <div>
-              <form action="http://www.ucsc.edu/search" id="cse-search-box"><input name="cx" type="hidden" value="012090462228956765947:d0ywvq7bxee">
-                <input name="cof" type="hidden" value="FORID:9">
-                <input name="ie" type="hidden" value="UTF-8">
-                <label class="hide" for="q">Search</label>
-                <input class="query" id="q" placeholder="Search UCSC" name="q" type="text">
-              </form>
-            </div><!-- end GCS -->
-        </div>
-
-    </div>  
-
-  <div class="row logo">
-    <h1><a href="index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a></h1>
-    <a href="#mainNav" class="menu-toggle">Menu <i class="icon-arrow-down-md"></i></a>
-  </div>
-    
-
-  <div class="row">
-  
-    <ul id="mainNav" class="site-nav">
-      <li class="first"><a href="about/index.html">About</a></li>
-      <li><a href="admissions/index.html">Admissions</a></li>
-      <li><a href="academics/index.html">Academics</a></li>
-      <li><a href="research/index.html">Research</a></li>
-      <li><a href="campus/index.html">Campus Life</a></li>
-      <li><a href="visit/index.html">Visit UCSC</a></li>
-      <li class="last qsg"><span>Information <i class="icon-arrow-down-md"></i></span> 
-        <ul>
-          <li><a href="http://studentservices.ucsc.edu">Current Students</a></li>
-          <li><a href="quickstart/faculty-staff/index.html">Faculty &amp; Staff</a></li>
-          <li><a href="http://alumni.ucsc.edu">Alumni</a></li>
-          <li><a href="quickstart/prospective-students/index.html">Prospective Students</a></li>
-          <li><a href="quickstart/family/index_v2.html">Parents &amp; Family</a></li>
-          <li><a href="quickstart/community/index.html">Community</a></li>
-        </ul>
-      </li>
-    </ul>
-
-  </div>
-    
-</header> 
+      @@include('./app/html-partials/header-www.html')
 
         <div class="row" id="breadcrumbs">
             <p><a href="../index.html">Home</a> » Research » In the Divisions</p>
@@ -99,13 +46,6 @@
 
         <div class="row" id="sprflt">
             
-            <div id="subNav" class="sidebar">
-              <nav>
-                <h1>In this section</h1>
-<ul><li><a href="../index.html">Undergraduate Program</a></li><li><a class="current" href="index.html">History Major</a><ul><li><a href="declaring-major.html">Major Declaration</a></li><li><a href="senior-graduation.html">Senior Year and Graduation</a></li></ul></li><li><a href="../history-minor/index.html">History Minor</a></li><li><a href="../undergraduate-advising/index.html">Undergraduate Advising</a></li><li><a href="../study-abroad/index.html">Study Abroad</a></li><li><a href="../undergraduate-research/index.html">Undergraduate Research</a></li></ul>
-              </nav>
-            </div>
-
             <div id="mainContent">
                 
                 <h1 id="title">Research in the Divisions</h1><div id="bannerBox"><img alt="" id="banner" src="http://www.ucsc.edu/research/images/res-in-divisions-550.jpg"></div><div class="contentBox"><p>UC Santa Cruz faculty and students have made significant contributions to the body of research that has earned the University of California the ranking as the foremost public research institution in the world.</p>
@@ -118,6 +58,13 @@
 <li><a href="http://www.ce.ucsc.edu/research">Baskin School of Engineering</a></li>
 </ul></div>
                 
+            </div>
+
+            <div id="subNav" class="sidebar">
+              <nav>
+                <h1>In this section</h1>
+<ul><li><a href="../index.html">Undergraduate Program</a></li><li><a class="current" href="index.html">History Major</a><ul><li><a href="declaring-major.html">Major Declaration</a></li><li><a href="senior-graduation.html">Senior Year and Graduation</a></li></ul></li><li><a href="../history-minor/index.html">History Minor</a></li><li><a href="../undergraduate-advising/index.html">Undergraduate Advising</a></li><li><a href="../study-abroad/index.html">Study Abroad</a></li><li><a href="../undergraduate-research/index.html">Undergraduate Research</a></li></ul>
+              </nav>
             </div>
         
             <div id="footer">

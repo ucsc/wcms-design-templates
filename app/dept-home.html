@@ -2,75 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<title>History Home Page</title>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-<![endif]--><link href="css/ucsc.css" rel="stylesheet" type="text/css"><!-- jQuery and Modernizr  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/libs/modernizr-2.0.6.min.js" type="text/javascript">
-</script>
-<!-- Enjoy the View, Lightbox, default value, and custom JS functions -->
-<script src="http://static.ucsc.edu/js/jquery.tabSlideOut.v1.3.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/jquery.lightbox-0.5.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/jquery.defaultvalue.js" type="text/javascript">
-</script>
-<script src="http://static.ucsc.edu/js/ucsc_base.js" type="text/javascript">
-</script>
-<!-- Lightbox CSS --><link href="http://static.ucsc.edu/css/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" type="text/css"><!--[if IE]>
-<link rel="stylesheet" type="text/css" href="http://static.ucsc.edu/css/fixie.css" />
-<![endif]--><!-- Google Analytics -->
-<script type="text/javascript">
-// <![CDATA[
-// If we are in the wcms tool, do not track pageviews
-if (document.domain != 'wcms.ucsc.edu') {
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4301164-1']);
-  _gaq.push(['_setDomainName', '.ucsc.edu']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-};
-// ]]>
-</script>
-	<!-- jQuery Carousel --><script src="http://static.ucsc.edu/js/jquery.cycle.min.js" type="text/javascript"></script>
-<script src="http://static.ucsc.edu/js/jquery.tools.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-  $(function(){
-        // Tooltip initilization
-        $('.handle[title]').tooltip({ effect: "slide", position: "top center", offset: [-6, 0], opacity: 1});
-  		// Billboard scroller
-        if ($('#billboard').hasClass('random') == false) {
-			$('#billboard').cycle({ fx:'fade',timeout:8000,pager:'#bbnav', pagerClick: function(){$('#billboard').cycle('pause');} });
-			};	
-		$('#billboard.random').cycle({fx:'fade',random:1,timeout:8000,pager:'#bbnav', pagerClick: function(){$('#billboard').cycle('pause');} });	
+<!-- GLOBAL HEAD -->
+  <meta name="google-site-verification" content="" />
+  <meta property="twitter:site" content="@ucsc" />
+  <meta property="og:site_name" content="UC Santa Cruz"/>
+  <meta property="og:type" content="website"/>
+  <meta property="fb:admins" content="ucsantacruz"/>
+    
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+  <link href="css/ucsc.css" rel="stylesheet" type="text/css">
+  <link href="css/print.css" rel="stylesheet" media="print">
+  
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/analytics.js" type="text/javascript"></script>
+  <script src="js/imagecache.js" type="text/javascript"></script>
 
-        // Lightbox of images
-        $('#view .inner a').lightBox({fixedNavigation:false});
-  });
-</script>
-<!-- Fancy Box -->
-<script charset="utf-8" src="http://static.ucsc.edu/js/fancybox/jquery.fancybox-pack.js" type="text/javascript"></script>
-<link href="http://static.ucsc.edu/js/fancybox/jquery.fancybox.css" media="screen" rel="stylesheet" type="text/css"><script type="text/javascript">
-    $(document).ready(function() {	
-    	$("#video a.fb").each(function()
-           { 
-               $(this).fancybox({
-               	'titleShow'     : false,
-               	'overlayOpacity': '0.8',
-               	'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-               	'type'	        : 'swf',
-               	'swf'	        : {'wmode':'transparent','allowfullscreen':'true'}
-               });  
-           });
-    });
-</script>
 </head>
 
 <body class="dept home">
@@ -80,39 +32,69 @@ if (document.domain != 'wcms.ucsc.edu') {
     <!--start header-->
     <div id="content">
       
-      <ul id="topNav">
-<li class="ucscHome"><a href="http://www.ucsc.edu">University Home</a></li>
-<li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
-<li><a href="http://www.ucsc.edu/tools/people.html" title="Find People - UCSC People Search">People</a></li>
-<li><a href="http://www.ucsc.edu/tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
-<li><a href="http://www.ucsc.edu/tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
-</ul>
+
+    <header role="banner" class="site-header">
       
-      <div class="search">
-        <!-- Google Custom Search --><form action="http://history.ucsc.edu/search.html" id="cse-search-box-site">
-<div><input name="cx" type="hidden" value="009891836300427205563:qsl0lllpvy8"> <input name="cof" type="hidden" value="FORID:10"> <input name="ie" type="hidden" value="UTF-8"> <label class="hide" for="search-site">Search</label> <input class="query" id="search-site" name="q" type="text" value="Search History..."> <input alt="Search button" class="srchBtn" src="http://static.ucsc.edu/images/search_button.gif" type="image"></div>
-</form><!-- end Google Custom Search -->
-      </div>
+      <div class="row page-top">
+        
+        <ul id="topNav" class="global-nav">
+          <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
+          <li><a href="tools/people.html" title="Find People - UCSC People Search">People</a></li>
+          <li><a href="tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
+          <li><a href="tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
+        </ul>
+        
+        <div class="search">
+            <!-- Google Custom Search -->
+            <div>
+              <form action="http://www.ucsc.edu/search" id="cse-search-box"><input name="cx" type="hidden" value="012090462228956765947:d0ywvq7bxee">
+                <input name="cof" type="hidden" value="FORID:9">
+                <input name="ie" type="hidden" value="UTF-8">
+                <label class="hide" for="q">Search</label>
+                <input class="query" id="q" placeholder="Search UCSC" name="q" type="text">
+              </form>
+            </div><!-- end GCS -->
+        </div>
+
+    </div>  
+
+  
+    <div class="row">
       
-	<div id="pageTitle">
-	<a href="http://www.ucsc.edu/index.html" id="logo">UC Santa Cruz home</a>
-	<h1><a href="index.html" title="History Department Home">History</a></h1>
-	</div>
+      <h1 class="site-title">
+        <a href="index.html" title="History Department Home">History</a>
+      </h1>
+      <a href="http://www.ucsc.edu/index.html" class="ucsc-logo">UC Santa Cruz home</a>
+      <a href="#mainNav" class="menu-toggle">MENU <span><i class="icon-arrow-down-md"></i></span></a>
+    
+    </div>
+    
+
+    <div class="row">
       
-      <ul id="mainNav">
-<li class="first"><a href="about/index.html">About</a></li>
-<li><a href="undergraduate/index.html">Undergraduate</a> 
-<ul>
-<li><a href="undergraduate/history-major/index.html" title="History Major">History Major</a></li>
-<li><a href="undergraduate/history-minor/index.html" title="History Minor">History Minor</a></li>
-<li><a href="undergraduate/undergraduate-advising/index.html" title="Advising">Advising</a></li>
-</ul>
-</li>
-<li><a href="graduate/index.html">Graduate</a></li>
-<li><a href="faculty/profiles/index.php">Faculty</a></li>
-<li><a href="courses/class-schedule-view.php">Courses</a></li>
-<li><a href="news-events/news/index.html">News &amp; Events</a></li>
-</ul>
+       <ul id="mainNav" class="site-nav">
+        <li class="first"><a href="about/index.html">About</a></li>
+        <li><a href="undergraduate/index.html">Undergraduate</a> 
+          <ul>
+            <li><a href="undergraduate/history-major/index.html" title="History Major">History Major</a></li>
+            <li><a href="undergraduate/history-minor/index.html" title="History Minor">History Minor</a></li>
+            <li><a href="undergraduate/undergraduate-advising/index.html" title="Advising">Advising</a></li>
+          </ul>
+        </li>
+        <li><a href="graduate/index.html">Graduate</a></li>
+        <li><a href="faculty/profiles/index.php">Faculty</a></li>
+        <li><a href="courses/class-schedule-view.php">Courses</a></li>
+        <li><a href="news-events/news/index.html">News &amp; Events</a></li>
+       </ul>
+
+    </div>
+    
+</header>    
+
+      
+	
+      
+
       
       <div id="carousel">
       	<div id="billboard"><a href=""><img alt="Mexico - Puebla dancing children" height="250" src="http://history.ucsc.edu/images/mexico-puebla-dancing-children_780w.jpg" title="Mexico - Puebla dancing children" width="780"></a><a href=""><img alt="Notredame" height="250" src="http://history.ucsc.edu/images/notredame_hershatter_780w.jpg" title="Notredame" width="780"></a><a href=""><img alt="Naxos Street" height="250" src="http://history.ucsc.edu/images/naxos_street_780w.jpg" title="Naxos Street" width="780"></a></div>

@@ -20,8 +20,8 @@
   <link href="css/ucsc.css" rel="stylesheet" type="text/css">
   <link href="css/print.css" rel="stylesheet" media="print">
   
-  <script src="js/modernizr.js" type="text/javascript"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
+  <script src="lib/modernizr/modernizr.js" type="text/javascript"></script>
+  <script src="lib/jquery/dist/jquery.js" type="text/javascript"></script>
   <script src="js/analytics.js" type="text/javascript"></script>
   <script src="js/imagecache.js" type="text/javascript"></script>
 
@@ -36,63 +36,8 @@
   <div id="container">
     <div id="content">
     
-    <header role="banner" class="site-header">
-      
-      <div class="row page-top">
-        
-        <ul id="topNav" class="global-nav">
-          <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
-          <li><a href="tools/people.html" title="Find People - UCSC People Search">People</a></li>
-          <li><a href="tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
-          <li><a href="tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
-        </ul>
-        
-        <div class="search">
-            <!-- Google Custom Search -->
-            <div>
-              <form action="http://www.ucsc.edu/search" id="cse-search-box"><input name="cx" type="hidden" value="012090462228956765947:d0ywvq7bxee">
-                <input name="cof" type="hidden" value="FORID:9">
-                <input name="ie" type="hidden" value="UTF-8">
-                <label class="hide" for="q">Search</label>
-                <input class="query" id="q" placeholder="Search UCSC" name="q" type="text">
-              </form>
-            </div><!-- end GCS -->
-        </div>
-
-    </div>  
-
-  <div class="row logo">
-    <h1><a href="index.html" id="logo" title="Return the UCSC home page">UC Santa Cruz home</a></h1>
-    <a href="#mainNav" class="menu-toggle">MENU <span><i class="icon-arrow-down-md"></i></span></a>
-  </div>
-    
-
-  <div class="row">
-  
-    
-  
-  <ul id="mainNav">
-    <li class="first hov" style="z-index: 1000;"><a href="about/index.html">About</a></li>
-    <li class="" style="z-index: 0;"><a href="admissions/index.html">Admissions</a></li>
-    <li class="" style="z-index: 0;"><a href="academics/index.html">Academics</a></li>
-    <li class="" style="z-index: 0;"><a href="research/index.html">Research</a></li>
-    <li class="" style="z-index: 0;"><a href="campus/index.html">Campus Life</a></li>
-    <li class="" style="z-index: 0;"><a href="visit/index.html">Visit UCSC</a></li>
-    <li class="last qsg" style="z-index: 0;"><span>Quick Start Guides <img alt="more items when you click" src="http://static.ucsc.edu/images/drop_down_button.gif"></span> 
-      <ul>
-        <li class="" style="z-index: 0;"><a href="http://studentservices.ucsc.edu">Current Students</a></li>
-        <li class="" style="z-index: 0;"><a href="quickstart/faculty-staff/index.html">Faculty &amp; Staff</a></li>
-        <li class="" style="z-index: 0;"><a href="http://alumni.ucsc.edu">Alumni</a></li>
-        <li class="" style="z-index: 0;"><a href="quickstart/prospective-students/index.html">Prospective Students</a></li>
-        <li class="" style="z-index: 0;"><a href="quickstart/family/index_v2.html">Parents &amp; Family</a></li>
-        <li class="" style="z-index: 0;"><a href="quickstart/community/index.html">Community</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  </div>
-    
-</header>    
+     
+     @@include('./app/html-partials/header-www.html')
 
     
 <div class="row">
@@ -328,10 +273,10 @@
 
 
 <!-- PAGE BOTTOM SCRIPTS -->
-<script src="js/respond.js"></script>
+<script src="lib/respond/dest/respond.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/responsive.js"></script>
-<script src="js/banner.js"></script>
+<script src="lib/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
 <script>
   $(document).ready(function() {
     var owl = $("#slides");
