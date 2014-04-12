@@ -4,7 +4,7 @@ var request     = require('request');
 var cheerio     = require('cheerio');
 var fs          = require('fs');
 var pages       = require('./pages.js').pages;
-var appPath     = "./app/html/";
+var appPath     = "./app/current-html/";
 
 // We create a new index file each time we fetch
 // the sample pages, just in we've added more to the list.
@@ -39,9 +39,6 @@ pages.forEach(function (i) {
       
       // Rewrite the CSS to use local files
       $('link').first().attr("href","css/ucsc.css");
-
-      // Add Hammer.app reload code to the <head>
-      // $('head').prepend('<!-- @reload -->');
       
       // Iterate over <img> tags to look for relative 'src' paths 
       $('img').map(function(i, el) {
