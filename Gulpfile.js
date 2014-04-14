@@ -28,7 +28,7 @@ gulp.task('clean', function() {
   .pipe(clean());
 });
 
-// Run Sass, compile, prefix, and compress styles with Compass
+// Run Sass with Compass to compile, prefix, and compress styles
 // then copy to the build folder. 
 gulp.task('styles', function() {
   gulp.src(['./app/sass/*.scss'])
