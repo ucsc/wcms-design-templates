@@ -1,0 +1,110 @@
+// # The top row
+// The top row of the page, containing the global UCSC
+// navigation and the site search form.
+
+
+// ## Layout
+// They occupy the same row on large screens
+// and the separate rows on smaller screens.
+.page-top {
+
+  .global-nav {
+    @include reset-display();
+    @include span-columns(12);
+    @include media($tablet) {
+      @include span-columns(5);
+      @include shift(4);
+      // @include rowborders(purple);
+    }
+  }
+
+  .search {
+    @include span-columns(12);
+    @include media($tablet) {
+      @include reset-display;
+      @include span-columns(3);
+      // @include rowborders(green);
+    }
+  }
+
+}
+
+// ## Global Navigation
+// The global navigation at the top of the page.
+// Collapsed (with toggle) on smaller screens.
+.global-nav {
+    
+    // Mobile first defaults
+    padding:0;
+    list-style: none;
+    li {
+        display: inline-block;
+        width: 48%;
+        margin:0;
+        margin-bottom: $font-size-base / 1.5;
+        list-style: none;
+    }
+    a {
+      @include mobile-button();
+    }
+
+    // Tablet and up
+    @include media($tablet) {
+        margin: 0;
+        > li {
+          float: right;
+          width: auto;
+        }
+
+        a {
+          padding:$font-size-base/2 $font-size-base;
+          border: none;
+          background-color: transparent;
+          border-radius:0;
+          color: #84827c;
+          @include hoverActiveFocus(transparent, $blue, underline);
+        }
+    } 
+}
+
+
+// ## Site Search
+// Search box for searching each site.
+.search {
+
+  // Mobile first defaults
+  .query {
+    width: 100%;    
+    &:focus,
+    &:active {
+      box-shadow:0 0 8px rgba(0,0,0,0.3);
+    }
+
+  }
+
+  label {
+    display: block;
+    @include hide-text();
+  }
+
+  // Tablet and up
+  @include media($tablet) {
+    .query {
+      display: block;
+      //margin-top: $font-size-base*1.2;
+    }
+  }
+
+}
+
+
+// ## Toggle button
+// The toggle button for small screens.
+// Reveals/hides the top nav, site search, and main nav.
+.menu-toggle {
+    @include mobile-button(false);
+    
+  //@include media($tablet) {
+    //    display: none;
+    //}
+}
