@@ -9,74 +9,10 @@
 // **@todo** - Switch to mobile-first styles
 
 .row {
-    @include outer-container;
+    @include outer-container();
     margin-bottom: $font-size-base*1.5;
     // Debug
-    //@include rowborders(red);
-}
-
-// ## Global navigation and site search
-// Contains the 4 global links for all UCSC sites
-// and the site search function.
-.page-top {
-
-  // When javascript is enabled,
-  // this row is toggle-able. 
-  .js & {
-    @include toggle-menu();   
-  }
-
-    .global-nav {
-      @include span-columns(12);
-      @include media($tablet) {
-        @include span-columns(10 of 12);
-        @include omega();
-      }
-    }
-
-    .search {
-      @include span-columns(12);
-      @include omega();
-      @include media($tablet) {
-        @include span-columns(2 of 12);
-      }
-    }
-
-}
-
-// ## UCSC logo and Site Title
-// At minimum, contains the UCSC logo.
-// On division/department sites, it contains the site title too.
-.site-header {
-  
-    #logo {
-     @include span-columns(12);
-     .dept & {
-       @include span-columns(2);
-       //border:1px solid red;
-     }
-    }
-
-    h1 {
-     @include span-columns(8);
-     .dept & {
-       @include span-columns(8);
-       @include shift(3);
-       border:1px solid red;
-     }
-    }
-
-    .menu-toggle {
-      //@include span-columns(2 of 12);
-	  margin-top: 1.20em;
-	  width: 7em;
-	  float:right;
-      @include omega();
-      @include media($tablet) {
-        display:none;
-      }
-    }
-    
+    // @include rowborders(red);
 }
 
 .five { 
