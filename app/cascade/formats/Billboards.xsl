@@ -3,7 +3,7 @@
 <xsl:output indent="yes" method="xml" omit-xml-declaration="yes"/>
 
   <xsl:template match="/system-index-block">
-    <div id="slider" class="swipe">
+    <div class="swipe" id="slider">
       <div class="swipe-wrap">
         <xsl:apply-templates select="calling-page/system-page/system-data-structure/billboards"/>
       </div>
@@ -34,23 +34,23 @@
           </xsl:choose>
         </xsl:if>
       </div>
-      <img src="{image/path}" alt="{alt-text}" width="780"/>
+      <img alt="{alt-text}" src="{image/path}" width="780"/>
     </xsl:if>
     
     <!-- If the headline and teaser are absent, we use the old style. [DEPRECATE] -->
     <xsl:if test="headline = '' and teaser = ''">
       <xsl:choose>
         <xsl:when test="page/path != '/'">
-          <a href="{page/link}"><img src="{image/path}" alt="{alt-text}" width="780"/></a>
+          <a href="{page/link}"><img alt="{alt-text}" src="{image/path}" width="780"/></a>
         </xsl:when>
         <xsl:when test="symlink/path != '/'">
-          <a href="{symlink/path}"><img src="{image/path}" alt="{alt-text}" width="780"/></a>
+          <a href="{symlink/path}"><img alt="{alt-text}" src="{image/path}" width="780"/></a>
         </xsl:when>
         <xsl:when test="url != ''">  
-          <a href="{url}"><img src="{image/path}" alt="{alt-text}" width="780"/></a>
+          <a href="{url}"><img alt="{alt-text}" src="{image/path}" width="780"/></a>
         </xsl:when>        
         <xsl:otherwise>  
-          <img src="{image/path}" alt="{alt-text}" width="780"/>
+          <img alt="{alt-text}" src="{image/path}" width="780"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:if>
