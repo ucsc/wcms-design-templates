@@ -1,7 +1,7 @@
 // Primary typography 
 body {
 	min-width:em(320);
-	padding: 0 1em;
+	padding: $font-size-base;
 	color: $gray;
 	background-color: $sand;
 	font-family: $font-family-sans-serif;
@@ -10,7 +10,6 @@ body {
 	margin: 0;
 	// @include breakpoints();
 }
-
 
 
 a {
@@ -43,4 +42,17 @@ h1, .h1 {
 		letter-spacing: -1px;
 		color: #F1B521;
 	}
+}
+
+//
+// ## Forms
+// Default styles for forms.
+//
+input[type="text"] {
+	color: $gray;
+  font-size: $font-size-base*0.75;
+  border: 1px solid $sand-dark;
+  border-radius: $border-radius-base;
+  line-height: 140%;
+  padding:$font-size-base/2;
 }
