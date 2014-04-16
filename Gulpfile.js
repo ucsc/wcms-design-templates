@@ -36,7 +36,7 @@ gulp.task('styles', function() {
    css: './app/build/css', 
    sass: './app/sass',
    images: './app/build/images/',
-   require: ['bourbon', 'neat', 'modular-scale']
+   require: ['bourbon', 'neat', 'modular-scale', 'scut']
    }))
   .on('error', function(err) { console.log(err); })
   .pipe(autoprefix('last 4 versions'))
