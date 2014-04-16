@@ -11,6 +11,7 @@ Responsive reboot of UCSC web templates originally created in 2009-10. These wil
 - [Bourbon](http://bourbon.io/) for helpful Sass mixin tools.
 - [Neat](http://neat.bourbon.io/) for grid layout.
 - [Modular Scale](https://github.com/Team-Sass/modular-scale) for consistent typography.
+- [Scut](http://davidtheclark.github.io/scut/) a Batman utility belt for Sass.
 
 ### Node and npm
 
@@ -26,6 +27,7 @@ Responsive reboot of UCSC web templates originally created in 2009-10. These wil
     - `gem install bourbon`
     - `gem install neat`
     - `gem install modular-scale`
+    - `gem install scut`
 4. Install `node` and `npm` by downloading the installer from [nodejs.com](http://nodejs.org).
 5. Install gulp, grunt, and bower globally: `npm install -g gulp grunt grunt-cli bower`
 6. `cd` into the project  directory and run `npm install` in the project root to install all node dependencies.
