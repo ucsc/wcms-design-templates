@@ -33,7 +33,7 @@
 // The global navigation at the top of the page.
 // Collapsed (with toggle) on smaller screens.
 .global-nav {
-    
+
     // Mobile first defaults
     padding:0;
     list-style: none;
@@ -50,14 +50,12 @@
 
     // Tablet and up
     @include media($tablet) {
-        margin: 0;
+        @include scut-list-floated($font-size-base/2, right);
         > li {
-          float: right;
           width: auto;
         }
 
         a {
-          padding:$font-size-base/2 $font-size-base;
           border: none;
           background-color: transparent;
           border-radius:0;
@@ -91,7 +89,7 @@
   @include media($tablet) {
     .query {
       display: block;
-      //margin-top: $font-size-base*1.2;
+      margin-top: 0;
     }
   }
 
