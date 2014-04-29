@@ -4,18 +4,33 @@
 .logo {
   
     #logo {
+     
+     // Mobile only
      @include span-columns(12);
-     .dept & {
-       @include span-columns(2);
+     
+     // Tablet and up
+     @include media($tablet) {
+       .dept & {
+         @include span-columns(2);
+         @include shift(-12);
+       }
      }
+
     }
 
     h1 {
-     @include span-columns(8);
-     .dept & {
-       @include span-columns(8);
-       @include shift(3);
+     
+     // Mobile only
+     @include span-columns(12);
+     
+     // Tablet and up
+     @include media($tablet) {
+       .dept & {
+         @include span-columns(10);
+         @include shift(2);
+       }
      }
+    
     }
 
     .menu-toggle {
@@ -27,5 +42,25 @@
           display:none;
         }
     }
-    
+
+
+// # Typography
+// Set the font-size and other attributes of
+// the site title.
+
+h1 { 
+  
+  
+  display: table;
+
+  a {
+
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #F1B521;
+    text-decoration:none;
+  }    
+
+}
+
 }

@@ -16,7 +16,7 @@
     @include span-columns(12);
     @include media($tablet) {
       @include span-columns(9);
-      // @include rowborders(purple);
+      //@include rowborders(purple);
     }
   }
 
@@ -53,9 +53,15 @@
 
     // Tablet and up
     @include media($tablet) {
-        @include scut-list-floated($font-size-base/2, right);
+        text-align: right;
+        margin:0;
+
         > li {
           width: auto;
+        }
+
+        :first-child {
+          float: left;
         }
 
         a {
