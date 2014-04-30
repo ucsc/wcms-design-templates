@@ -91,31 +91,6 @@
           border-right: none;
         }
     }
-    
-    h2,
-    .header {
-        border-bottom: #E5E4DE 1px solid;
-        color: $gray-dark;
-        font-size: $font-size-large;
-        font-weight: normal;
-        margin: 0 0 1em 0;
-        padding-bottom: 0.4em;
-        text-transform: uppercase;
-        span {
-            color: darken($gray, 20%);
-        }
-        
-        // @todo: Move this to the bottom of the module.
-        // .more {
-        //     position: absolute;
-        //     right: 0;
-        //     font-size: 9px;
-        //     letter-spacing: .5px;
-        //     line-height: 3.4em;
-        //     text-transform: uppercase;
-        // }
-    }
-
 }
 
 .separate {
@@ -134,8 +109,32 @@
         border-radius: 5px;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
     }
-    h3,
-    .header {
+    
+}
+
+
+
+
+
+.list {
+
+    ul {
+        li {
+           @include span-columns(4);
+           @include image-display($sand-dark, 0.2em, false);
+        }
+    }
+}
+
+
+
+
+// ## Header styles for each home page row style.
+// @todo: we should make this more standardized.
+// A mixin, perhaps?
+
+.separate h3,
+.separate .header {
         border: 1px solid #E5E4DE;
         color: #8E8C87;
         font-size: $font-size-base*1.2;
@@ -148,14 +147,33 @@
             color: #585755;
         }
     }
+
+
+.combined h2,
+.combined .header {
+    border-bottom: #E5E4DE 1px solid;
+    color: $gray-dark;
+    font-size: $font-size-large;
+    font-weight: normal;
+    margin: 0 0 1em 0;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+    span {
+        color: darken($gray, 20%);
+    }
 }
 
-.list {
-
-    ul {
-        li {
-           @include span-columns(4);
-           @include image-display($sand-dark, 0.2em, false);
-        }
+.combined h4,
+.combined .header {
+    border: 1px solid #A7BECA;
+    color: #A7BECA;
+    font-size: $font-size-base*1.2;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    padding: 4px 6px;
+    text-transform: uppercase;
+    span {
+        font-weight: bold;
+        color: #5585A2;
     }
 }
