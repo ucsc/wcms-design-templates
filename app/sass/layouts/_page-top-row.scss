@@ -60,7 +60,7 @@
           width: auto;
         }
 
-        :first-child {
+        .dept & :nth-child(1) {
           float: left;
         }
 
