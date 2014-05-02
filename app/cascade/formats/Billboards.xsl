@@ -3,15 +3,13 @@
 <xsl:output indent="yes" method="xml" omit-xml-declaration="yes"/>
 
   <xsl:template match="/system-index-block">
-    <div class="swipe" id="slider">
-      <div class="swipe-wrap">
-        <xsl:apply-templates select="calling-page/system-page/system-data-structure/billboards"/>
-      </div>
+    <div class="owl-carousel" id="slides">
+      <xsl:apply-templates select="calling-page/system-page/system-data-structure/billboards"/>
     </div>
   </xsl:template>
 
   <xsl:template match="billboards">
-  <div>
+  <div class="slide">
     <!-- If there is a headline and teaser, we use the new style -->
     <xsl:if test="headline != '' and teaser != ''">
       <!-- <xsl:variable name="layout-class" select="layout"></xsl:variable> -->
