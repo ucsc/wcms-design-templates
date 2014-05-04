@@ -8,17 +8,18 @@ var pkg = require('./package.json'),
     notify = require('gulp-notify'),
     uglify = require('gulp-uglify'),
     refresh = require('gulp-livereload'),
-    lr = require('tiny-lr'),
     fileinclude = require('gulp-file-include'),
     prettify = require('gulp-html-prettify'),
     imagemin = require('gulp-imagemin'),
     gulpBowerFiles = require('gulp-bower-files'),
-    server = lr();
+    connect = require('gulp-connect');
 
-// Create a server to preview our built pages
-gulp.task('lr-server', function() {  
-  server.listen(35729, function(err) {
-    if(err) return console.log(err);
+
+// Static webserver with livereload via connect
+gulp.task('webserver', function() {
+  connect.server({
+    livereload: true,
+    root: ['./app/build']
   });
 });
 
@@ -29,11 +30,11 @@ gulp.task('clean', function() {
 });
 
 // Run Sass with Compass to compile, prefix, and compress styles
-// then copy to the build folder. 
+// then copy to the build folder.
 gulp.task('styles', function() {
   gulp.src(['./app/sass/*.scss'])
   .pipe(compass({
-   css: './app/build/css', 
+   css: './app/build/css',
    sass: './app/sass',
    images: './app/build/images/',
    require: ['bourbon', 'neat', 'modular-scale', 'scut']
@@ -42,7 +43,7 @@ gulp.task('styles', function() {
   .pipe(autoprefix('last 4 versions'))
   .pipe(minifycss())
   .pipe(gulp.dest('./app/build/css/'))
-  .pipe(refresh(server));
+  .pipe(connect.reload());
   });
 
 // Uglify scripts into the build folder.
@@ -67,7 +68,7 @@ gulp.task('templates', function() {
   .pipe(fileinclude())
   .pipe(prettify({indent_char: ' ', indent_size: 2}))
   .pipe(gulp.dest('./app/build/'))
-  .pipe(refresh(server));
+  .pipe(connect.reload());
 });
 
 // Add partials to HTML, then prettify and copy into the build folder.
@@ -89,4 +90,4 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp`)
-gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'fonts', 'templates', 'lr-server', 'watch']);
+gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'fonts', 'templates', 'webserver', 'watch']);
