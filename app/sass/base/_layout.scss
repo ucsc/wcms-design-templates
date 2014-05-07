@@ -29,25 +29,27 @@
 
 // ### Multi-column pages
 #sprflt {
+    
     @include outer-container();
     
     #mainContent,
     .main-content {
       @include span-columns(12);
       @include media($tablet) {
-        @include span-columns(9 of 12);
+        @include span-columns(9);
         @include shift(3);
-        
       }
     }
-    #subNav,
+    
+    #sideBar,
     .sidebar {
       @include span-columns(12);
-      @include media($tablet) {
-        @include span-columns(3 of 12);
+      @include media($tablet) { 
+        @include span-columns(3);      
         @include shift(-12);
       }
     }
+
     #footer {
       @include reset-display();
       @include row(table);
