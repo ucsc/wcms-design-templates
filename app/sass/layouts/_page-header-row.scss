@@ -10,7 +10,8 @@
      
      // Tablet and up
      @include media($tablet) {
-       .dept & {
+       .dept &,
+       .division & {
          @include span-columns(2);
          @include shift(-12);
        }
@@ -25,7 +26,8 @@
      
      // Tablet and up
      @include media($tablet) {
-       .dept & {
+       .dept &,
+       .division & {
          @include span-columns(10);
          @include shift(2);
        }
