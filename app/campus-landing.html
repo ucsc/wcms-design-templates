@@ -13,14 +13,19 @@
 </head>
 
 <body class="landing homeEnv">
+
 <div id="wrap">
   <div id="container">
-    
-    <!--start header-->
     <div id="content">
-            
-     @@include('./app/html-partials/header-www.html')
-        
+
+        <header role="banner" class="site-header">
+
+           @@include('./app/html-partials/global-header.html')
+           @@include('./app/html-partials/header-www.html')
+
+        </header>            
+
+
         <div class="row title" id="titles">
 			<h1>About UCSC</h1><p>About: This is a place like no other -- a place that inspires, a place that evokes passion and imagination -- all with a view to a limitless horizon.</p><img alt="About UCSC - About: This is a place like no other -- a place that inspires, a place that evokes passion and imagination -- all with a view to a limitless horizon." src="http://www.ucsc.edu/about/images/about_banner.png">
 		</div>
