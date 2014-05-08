@@ -64,7 +64,7 @@ gulp.task('images', function() {
 
 // Add partials to HTML, then prettify and copy into the build folder.
 gulp.task('templates', function() {
-  gulp.src(['./app/*.html', './app/html-partials/*.*'])
+  gulp.src(['./app/*.html'])
   .pipe(fileinclude())
   .pipe(prettify({indent_char: ' ', indent_size: 2}))
   .pipe(gulp.dest('./app/build/'))
