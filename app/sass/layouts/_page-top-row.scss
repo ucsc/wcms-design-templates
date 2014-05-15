@@ -91,7 +91,9 @@
 
   label {
     display: block;
-    @include hide-text();
+    position:absolute;
+    left:-900em;
+    overflow: hidden;
   }
 
   // Tablet and up
