@@ -1,0 +1,18 @@
+#bannerBox,
+.banner-box {
+  background-color: lighten($sand, 5%);
+  padding: 0.8em;
+  border-radius: $border-radius-base;
+
+  img {
+    width: 100%;
+    height:auto;
+  }
+
+  .caption {
+    margin:$font-size-base/4;
+    font-size:90%;
+    color: $gray;
+  }
+
+}

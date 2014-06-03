@@ -7,9 +7,7 @@
 // They occupy the same row on large screens
 // and the separate rows on smaller screens.
 .page-top {
-
-  margin-bottom: 0;
-  
+ 
   #topNav,
   .global-nav {
     @include reset-display();
@@ -68,7 +66,8 @@
           border: none;
           background-color: transparent;
           border-radius:0;
-          color: #84827c;
+          color: $blue;
+          font-weight:400;
           @include hoverActiveFocus(transparent, $blue, underline);
         }
     } 
