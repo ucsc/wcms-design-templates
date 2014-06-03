@@ -1,7 +1,9 @@
 <div class="row page-top">
   
   <ul id="topNav" class="global-nav">
-    <!-- <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">University Home</a></li> -->
+    {{#if dept}}
+    <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">University Home</a></li>
+    {{/if}}
     <li><a href="http://my.ucsc.edu" title="Go to the MyUCSC portal">MyUCSC</a></li>
     <li><a href="tools/people.html" title="Find People - UCSC People Search">People</a></li>
     <li><a href="tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
