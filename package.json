@@ -1,7 +1,7 @@
 {
   "name": "ucsc-responsive-pages",
   "version": "0.5.0",
-  "description": "Responsive evolution of current UCSC web templates.",
+  "description": "Responsive reboot of the 2010 UCSC web templates.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,12 +18,9 @@
     "gulp-clean": "~0.2.4",
     "gulp-compass": "~1.1.2",
     "gulp-autoprefixer": "0.0.6",
-    "gulp-notify": "~0.4.1",
     "gulp-concat": "~2.1.7",
     "gulp-minify-css": "^0.3.0",
     "gulp-html-prettify": "0.0.1",
-    "gulp-inject": "^0.4.1",
-    "gulp-file-include": "^0.2.1",
     "gulp-imagemin": "^0.1.5",
     "gulp-uglify": "^0.2.1",
     "grunt": "^0.4.2",
@@ -31,6 +28,13 @@
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.2.10",
     "gulp-bower-files": "^0.2.1",
-    "gulp-connect": "~2.0.5"
+    "gulp-connect": "~2.0.5",
+    "assemble": "^0.4.37",
+    "gulp-assemble": "git://github.com/assemble/gulp-assemble",
+    "handlebars-helpers": "git://github.com/assemble/handlebars-helpers#v0.6.0",
+    "gulp-changed": "^0.3.0",
+    "gulp-replace": "^0.3.0",
+    "moment": "^2.6.0",
+    "gulp-svgmin": "^0.4.5"
   }
 }

@@ -1,110 +1,111 @@
-exports.pages=[
+{ "links": [
+
 	{
+		"title": "Campus Home",
 		"name": "campus-home",
 		"site": "http://www.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
-	{		
+	{
+		"title": "Campus Landing",		
 		"name": "campus-landing",
 		"site": "http://www.ucsc.edu",
 		"path": "/about/",
 		"file": "index.html"
 	},
-	{		
-		"name": "campus-left-column",
+	{
+		"title": "Campus Left Navigation",		
+		"name": "campus-left-nav",
 		"site": "http://www.ucsc.edu",
 		"path": "/research/",
 		"file": "divisions.html"
 	},
-	{		
-		"name": "campus-single-column",
+	{
+		"title": "Campus Single Column",
+		"name": "campus-single-col",
 		"site": "http://www.ucsc.edu",
 		"path": "/mobile/",
 		"file": "mobile_apps.html"
 	},
 	{		
-		"name": "campus-news-home",
+		"title": "News Home",
+		"name": "news-home",
 		"site": "http://news.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
 	{		
-		"name": "campus-news-article",
+		"title": "News Article",
+		"name": "news-article",
 		"site": "http://news.ucsc.edu",
 		"path": "/2014/02/",
 		"file": "friends-foundation-international.html"
 	},	
 	{		
-		"name": "division-home",
+		"title": "Division Home",
+		"name": "div-home",
 		"site": "http://humanities.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
 	{		
-		"name": "department-home",
+		"title": "Department Home",
+		"name": "dept-home",
 		"site": "http://history.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},	
 	{		
+		"title": "Simplified Home",
 		"name": "simplified-home",
 		"site": "http://audit.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
 	{		
+		"title": "Google Calendar Page",
 		"name": "google-calendar-page",
 		"site": "http://history.ucsc.edu",
 		"path": "/news-events/events/",
 		"file": "index.html"
 	},
 	{		
+		"title": "Featured Profile",
 		"name": "featured-profile",
 		"site": "http://history.ucsc.edu",
 		"path": "/news-events/profiles/",
 		"file": "lia-winfield.html"
 	},
 	{		
+		"title": "Course Catalog",
 		"name": "course-catalog",
 		"site": "http://history.ucsc.edu",
 		"path": "/courses/",
 		"file": "class-schedule-view.php"
 	},
 	{		
+		"title": "Course Schedule",
 		"name": "course-schedule",
 		"site": "http://history.ucsc.edu",
 		"path": "/courses/",
 		"file": "class-schedule-view.php?detail=y&strm=2140&class_nbr=42298"
 	},	
 	{		
+		"title": "Directory List Page",
 		"name": "directory-list",
 		"site": "http://history.ucsc.edu",
 		"path": "/about/",
 		"file": "staff.php"
 	},
-	{		
+	{
+		"title": "Directory Entry Page",
 		"name": "directory-item",
 		"site": "http://history.ucsc.edu",
 		"path": "/about/",
 		"file": "singleton.php?&singleton=true&cruz_id=sshinkle"
-	},
-	{
-		"name": "department-left-column",
-		"site": "http://www.astro.ucsc.edu",
-		"path": "/about_department/",
-		"file": "index.html"		
-	},
-	{
-		"name": "department-news-article",
-		"site": "http://www.astro.ucsc.edu",
-		"path": "/news-events/recent/",
-		"file": "index.html"		
-	},
-	{
-		"name": "department-gallery-page",
-		"site": "http://www.astro.ucsc.edu",
-		"path": "/about_department/image_gallery/",
-		"file": "gallery-page_people.html"		
 	}
 ]
+
+}
+
