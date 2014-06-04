@@ -35,6 +35,6 @@
     "gulp-changed": "^0.3.0",
     "gulp-replace": "^0.3.0",
     "moment": "^2.6.0",
-    "gulp-svgmin": "^0.4.5"
+    "gulp-livereload": "^2.0.0"
   }
 }
