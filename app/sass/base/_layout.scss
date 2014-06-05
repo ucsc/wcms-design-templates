@@ -27,7 +27,7 @@
 }
 
 
-// ### Multi-column pages
+// ### Left-column and single-column pages
 #sprflt {
     
     @include outer-container();
@@ -38,6 +38,12 @@
       @include media($tablet) {
         @include span-columns(9);
         @include shift(3);
+
+        .single-column & {
+          @include span-columns(12);
+          @include shift(0);
+        }
+
       }
     }
     
