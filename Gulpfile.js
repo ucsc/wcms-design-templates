@@ -12,7 +12,6 @@ var pkg = require('./package.json'),
     prettify = require('gulp-html-prettify'),
     replace = require('gulp-replace'),
     imagemin = require('gulp-imagemin'),
-    svgmin = require('gulp-svgmin'),
     moment = require('moment'),
     gulpBowerFiles = require('gulp-bower-files'),
     connect = require('gulp-connect');
@@ -66,7 +65,6 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
  return gulp.src('./app/images/**/**')
     .pipe(changed('./app/build/images/'))
-    .pipe(svgmin())
     .pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('./app/build/images/'));
 });
