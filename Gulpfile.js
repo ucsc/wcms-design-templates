@@ -32,7 +32,6 @@ gulp.task('clean', function() {
   .pipe(clean());
 });
 
-
 // Run Sass with Compass to compile, prefix, 
 // and compress styles then copy to the build folder.
 gulp.task('styles', function() {
@@ -108,7 +107,7 @@ gulp.task('bower-files', function(){
 gulp.task('watch', function () {
   gulp.watch('app/js/**/**', ['scripts']);
   gulp.watch('app/sass/**/*.scss', ['styles']);
-  gulp.watch('app/images/*.*', ['images']);
+  gulp.watch('app/images/**/.**', ['images']);
   gulp.watch(['app/layouts/*.hbs', 'app/partials/*.hbs', 'app/pages/*.hbs'], ['assemble']);
 });
 
