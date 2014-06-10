@@ -16,42 +16,42 @@
 	},
 	{
 		"title": "Campus Left Navigation",		
-		"name": "campus-left-nav",
+		"name": "campus-left-column",
 		"site": "http://www.ucsc.edu",
 		"path": "/research/",
 		"file": "divisions.html"
 	},
 	{
 		"title": "Campus Single Column",
-		"name": "campus-single-col",
+		"name": "campus-single-column",
 		"site": "http://www.ucsc.edu",
 		"path": "/mobile/",
 		"file": "mobile_apps.html"
 	},
 	{		
 		"title": "News Home",
-		"name": "news-home",
+		"name": "campus-news-home",
 		"site": "http://news.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
 	{		
 		"title": "News Article",
-		"name": "news-article",
+		"name": "campus-news-article",
 		"site": "http://news.ucsc.edu",
 		"path": "/2014/02/",
 		"file": "friends-foundation-international.html"
 	},	
 	{		
 		"title": "Division Home",
-		"name": "div-home",
+		"name": "division-home",
 		"site": "http://humanities.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
 	},
 	{		
 		"title": "Department Home",
-		"name": "dept-home",
+		"name": "department-home",
 		"site": "http://history.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
@@ -104,6 +104,27 @@
 		"site": "http://history.ucsc.edu",
 		"path": "/about/",
 		"file": "singleton.php?&singleton=true&cruz_id=sshinkle"
+	},
+	{
+		"title": "Department Left Column Page",
+		"name": "department-left-column",
+		"site": "http://www.astro.ucsc.edu",
+		"path": "/about_department/",
+		"file": "index.html"		
+	},
+	{
+		"title": "Department News Article",		
+		"name": "department-news-article",
+		"site": "http://www.astro.ucsc.edu",
+		"path": "/news-events/recent/",
+		"file": "index.html"		
+	},
+	{
+		"title": "Department Gallery Page",		
+		"name": "department-gallery-page",
+		"site": "http://www.astro.ucsc.edu",
+		"path": "/about_department/image_gallery/",
+		"file": "gallery-page_people.html"		
 	}
 ]
 
