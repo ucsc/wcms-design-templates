@@ -1,0 +1,27 @@
+.thumb-grid {
+
+  list-style: none;
+  margin:0;
+  padding:0;
+  // Flexbox layout
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-end;
+  align-items: flex-start; 
+
+  li {
+    list-style: none;
+    margin: $font-size-base/8;
+    padding: 0;
+    a {
+      display: block;
+      margin-bottom: 0;
+      padding: $font-size-base/2;
+      @include hoverActiveFocus($blue-light, $blue-light, none);
+    }
+
+  }
+
+}
