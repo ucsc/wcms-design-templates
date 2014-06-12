@@ -3,6 +3,6 @@
   background-color: lighten($sand, 5%);
   padding: 0.8em;
   border-radius: $border-radius-base;
-  margin: $font-size-base 0;
+  margin:0;
   @include clearfix;
 }

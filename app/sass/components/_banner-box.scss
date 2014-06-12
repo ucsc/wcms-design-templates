@@ -2,6 +2,7 @@
 .banner-box {
   background-color: lighten($sand, 5%);
   padding: 0.8em;
+  margin-bottom: $font-size-base;
   border-radius: $border-radius-base;
 
   img {
