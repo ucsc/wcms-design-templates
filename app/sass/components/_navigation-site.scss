@@ -15,7 +15,6 @@
 	  list-style: none;
 	  overflow: visible;
 	  z-index: 9999;
-    
     border: 1px solid lighten($gray-light, 26%);
     border-width: 1px 0;
 
@@ -23,7 +22,6 @@
     li span {
       @include mobile-button();
     }
-	
 
   // At the tablet size, we expand to the wide navigation.
 	@include media($tablet){
