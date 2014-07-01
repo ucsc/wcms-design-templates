@@ -1,0 +1,16 @@
+#seeAlso {
+  padding:0.8em 0.8em 0.3em 0.8em;
+  @include clearfix;
+  background-color:transparent;
+  border-radius: 5px;
+  margin-top:2em;
+  margin:0;
+  -webkit-column-count:3;
+  ul {
+    margin:0;
+    padding-left:1.4em;
+    li {
+      margin-bottom:0.4em;
+    }
+  }
+}
