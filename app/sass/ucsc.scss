@@ -1,8 +1,6 @@
 // Include Ruby gem-based styles
-@import "compass/typography";
 @import "bourbon";
 @import "neat";
-@import "scut";
 
 // # Sass partials
 
@@ -42,4 +40,5 @@
 @import "components/navigation-site";
 @import "components/navigation-sidebar";
 @import "layouts/page-top-row";
-@import "components/gallery"
+@import "components/see-also";
+@import "components/gallery";
