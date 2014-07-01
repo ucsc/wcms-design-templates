@@ -43,27 +43,25 @@
             <system-region name="MAIN NAV" />
           </div>
 
+          <div id="breadcrumbs" class="row breadcrumbs">
+            <system-region name="BREADCRUMBS" />
+          </div>
+
         </header>
 
-        <div id="breadcrumbs" class="row">
-          <system-region name="BREADCRUMBS" />
-        </div>
-
         <div id="sprflt" class="row">
-          
-          <main role="main" id="main">
-            <div id="mainContent" class="main-content">
-              <system-region name="DEFAULT" />
-              <div id="php">
-                <system-region name="LOCAL PHP" />
-                <div class="phpContent">
-                  <system-region name="PHP" />
-                </div>
+                  
+          <div id="mainContent" class="main-content" role="main">
+            <system-region name="DEFAULT" />
+            <div id="php">
+              <system-region name="LOCAL PHP" />
+              <div class="phpContent">
+                <system-region name="PHP" />
               </div>
-              <system-region name="CONTENT BOTTOM" />
             </div>
-          </main>
-          
+            <system-region name="CONTENT BOTTOM" />
+          </div>
+                  
           <div id="subNav" class="sidebar">
             <system-region name="LEFT NAV TOP" />
             <system-region name="LEFT NAV" />
