@@ -3,6 +3,7 @@ var pkg = require('./package.json'),
     changed = require('gulp-changed'),
     autoprefix = require('gulp-autoprefixer'),
     compass = require('gulp-compass'),
+    sass = require('gulp-ruby-sass'),
     concat = require('gulp-concat'),
     minifycss	= require('gulp-minify-css'),
     clean = require('gulp-clean'),
@@ -34,21 +35,32 @@ gulp.task('clean', function() {
 
 // Run Sass with Compass to compile, prefix, 
 // and compress styles then copy to the build folder.
-gulp.task('styles', function() {
-  gulp.src(['./app/sass/*.scss'])
-  .pipe(changed('./app/build/css/'))
-  .pipe(compass({
-   css: './app/build/css',
-   sass: './app/sass',
-   images: './app/build/images/',
-   require: ['bourbon', 'neat', 'modular-scale', 'scut']
-   }))
-  .on('error', function(err) { console.log(err); })
-  .pipe(autoprefix('last 4 versions'))
-  .pipe(minifycss())
-  .pipe(gulp.dest('./app/build/css/'))
-  .pipe(connect.reload());
-  });
+// gulp.task('styles', function() {
+//   gulp.src(['./app/sass/*.scss'])
+//   .pipe(changed('./app/build/css/'))
+//   .pipe(compass({
+//    css: './app/build/css',
+//    sass: './app/sass',
+//    images: './app/build/images/',
+//    require: ['bourbon', 'neat', 'modular-scale', 'scut']
+//    }))
+//   .on('error', function(err) { console.log(err); })
+//   .pipe(autoprefix('last 4 versions'))
+//   .pipe(minifycss())
+//   .pipe(gulp.dest('./app/build/css/'))
+//   .pipe(connect.reload());
+//   });
+
+// DEV: Compile sass into CSS.
+gulp.task('sass', function () {
+  return gulp.src('./app/sass/*.scss')
+    .pipe(changed('./app/build/css/'))
+    .pipe(sass({sourcemap: true, require: ['bourbon', 'neat']}))
+    .pipe(autoprefix('last 4 versions'))
+    .pipe(minifycss())
+    .pipe(gulp.dest('./app/build/css/'))
+    .pipe(connect.reload());
+});
 
 
 // Uglify scripts into the build folder.
@@ -106,10 +118,10 @@ gulp.task('bower-files', function(){
 // Watchers
 gulp.task('watch', function () {
   gulp.watch('app/js/**/**', ['scripts']);
-  gulp.watch('app/sass/**/*.scss', ['styles']);
+  gulp.watch('app/sass/**/*.scss', ['sass']);
   gulp.watch('app/images/**/.**', ['images']);
   gulp.watch(['app/layouts/*.hbs', 'app/partials/*.hbs', 'app/pages/*.hbs'], ['assemble']);
 });
 
 // The default task (called when you run `gulp`)
-gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'fonts', 'assemble', 'webserver', 'watch']);
+gulp.task('default', ['clean', 'bower-files', 'sass', 'scripts', 'images', 'fonts', 'assemble', 'webserver', 'watch']);
