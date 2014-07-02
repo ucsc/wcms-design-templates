@@ -9,19 +9,10 @@
 		margin-top:0px;
 	}
 	 
-	@include size(144px 45px);
+	@include size(261px);
 	background-size: contain;
-	max-width: 144px;
-	@include retina-image('../images/logos/ucsc-logo-small', 100% auto);
-	
-
-	.homeEnv & {
-		@include size(261px);
-		background-size: contain;
-		max-width: 261px;
-		height:72px;
-		padding: 0;
-		@include retina-image('../images/logos/ucsc-logo-large', 100% auto);
-	}
-
+	max-width: 261px;
+	height:72px;
+	padding: 0;
+	@include retina-image('../images/logos/ucsc-logo-large', 100% auto);
 }

@@ -12,7 +12,7 @@
      @include media($tablet) {
        .dept &,
        .division & {
-         @include span-columns(2);
+         @include span-columns(3);
          @include shift(-12);
        }
      }
@@ -28,8 +28,8 @@
      @include media($tablet) {
        .dept &,
        .division & {
-         @include span-columns(10);
-         @include shift(2);
+         @include span-columns(9);
+         @include shift(3);
        }
      }
     
@@ -51,7 +51,6 @@
 // the site title.
 
 h1 { 
-  
   
   display: table;
 
