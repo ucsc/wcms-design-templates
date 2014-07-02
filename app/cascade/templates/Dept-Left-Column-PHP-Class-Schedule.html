@@ -11,7 +11,7 @@
   <system-region name="PAGE HTML HEAD" />
 </head>
 
-<body class="contentLeftNav dept left-column">
+<body class="contentLeftNav dept left-column php-content">
 
   <!-- Accessibility links. Hidden until they receive :focus -->
   <ul id="access-links">
@@ -26,40 +26,49 @@
         <header role="banner" class="site-header"> 
 
           <div class="row page-top">
+
             <system-region name="UNIFORM CAMPUS LINKS" />
+
             <div class="search">
               <system-region name="SEARCH" />
             </div>
+
           </div>
 
           <div class="row logo">                       
+
             <div id="pageTitle">
               <system-region name="DEPARTMENT NAME" />
               <system-region name="UNIFORM CAMPUS LOGO" />
             </div>
+
           </div>
           
           <div class="row">
             <system-region name="MAIN NAV" />
           </div>
 
-          <div id="breadcrumbs" class="row breadcrumbs">
-            <system-region name="BREADCRUMBS" />
-          </div>
-
         </header>
+
+        <div id="breadcrumbs" class="row breadcrumbs">
+          <system-region name="BREADCRUMBS" />
+        </div>
 
         <div id="sprflt" class="row">
                   
           <div id="mainContent" class="main-content" role="main">
+
             <system-region name="DEFAULT" />
+
             <div id="php">
               <system-region name="LOCAL PHP" />
               <div class="phpContent">
                 <system-region name="PHP" />
               </div>
             </div>
+
             <system-region name="CONTENT BOTTOM" />
+
           </div>
                   
           <div id="subNav" class="sidebar">
@@ -70,18 +79,18 @@
             <system-region name="LEFT NAV BOTTOM GLOBAL" />
           </div>
 
+        </div><!-- /sprflt -->
+
+        
+        <div id="footer" class="row" role="footer">
+          <system-region name="FOOTER LINKS" />
+          <system-region name="UNIFORM CAMPUS FOOTER" />
         </div>
 
-        <footer role="footer">
-          <div id="footer" class="row">
-            <system-region name="FOOTER LINKS" />
-            <system-region name="UNIFORM CAMPUS FOOTER" />
-          </div>
-
-          <div id="page_bottom" class="row">
-            <system-region name="UNIFORM DISCLAIMERS" />
-          </div>
-        </footer>
+        <div id="page_bottom" class="row">
+          <system-region name="UNIFORM DISCLAIMERS" />
+        </div>
+     
         
       </div><!-- /content -->
     </div><!-- /container -->
