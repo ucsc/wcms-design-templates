@@ -45,18 +45,18 @@
 
         </header>
 
-        <div id="breadcrumbs" class="row">
+        <div id="breadcrumbs" class="row breadcrumbs">
           <system-region name="BREADCRUMBS" />
         </div>
 
         <div id="sprflt" class="row">
-          
-          <main id="main" role="main">
-            <div id="mainContent" class="main-content">
+
+          <div id="mainContent" class="main-content" role="main">
+            <div class="contentBox">              
               <system-region name="DEFAULT" />
               <system-region name="CONTENT BOTTOM" />
             </div>
-          </main>
+          </div>
           
           <div id="subNav" class="sidebar">
             <system-region name="LEFT NAV TOP" />
@@ -66,17 +66,15 @@
           </div>
 
         </div>
+        
+        <div id="footer" class="row" role="footer">
+          <system-region name="FOOTER LINKS" />
+          <system-region name="UNIFORM CAMPUS FOOTER" />
+        </div>
 
-        <footer role="footer">
-          <div id="footer" class="row">
-            <system-region name="FOOTER LINKS" />
-            <system-region name="UNIFORM CAMPUS FOOTER" />
-          </div>
-
-          <div id="page_bottom" class="row">
-            <system-region name="UNIFORM DISCLAIMERS" />
-          </div>
-        </footer>
+        <div id="page_bottom" class="row">
+          <system-region name="UNIFORM DISCLAIMERS" />
+        </div>
         
       </div><!-- /content -->
     </div><!-- /container -->
