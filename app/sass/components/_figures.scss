@@ -1,0 +1,29 @@
+.imageHolder {
+  
+}
+
+
+figure {
+  display:block;
+  clear:both;
+  max-width:380px;
+  float:right;
+  background-color: #f9f8f2;
+  padding: 0.75em;
+  border-radius:5px;
+  border-bottom: solid 1px #dad8c8;
+  margin:0 0 1em 1em;
+  @include media($mobile) {
+    width:100%;
+    max-width:100%;
+  }
+  img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:0.5em;
+  }
+  figcaption {
+    font-size:16px;
+  }
+}
