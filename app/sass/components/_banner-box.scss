@@ -1,6 +1,6 @@
 #bannerBox,
 .banner-box {
-  background-color: lighten($sand, 5%);
+  background-color: $sand-light;
   padding: 0.8em;
   margin-bottom: $font-size-base;
   border-radius: $border-radius-base;
