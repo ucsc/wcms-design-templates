@@ -52,11 +52,14 @@ h1, .h1 {
 // ## Forms
 // Default styles for forms.
 //
+form {
+	font-family: $font-family-sans-serif;
+}
+
+
 input[type="text"] {
+	font-family: $font-family-sans-serif;
 	color: $gray;
-  font-size: $font-size-base*0.75;
   border: 1px solid $sand-dark;
   border-radius: $border-radius-base;
-  line-height: 140%;
-  padding:$font-size-base/2;
 }
