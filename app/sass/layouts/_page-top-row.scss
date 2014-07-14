@@ -36,13 +36,11 @@
 .global-nav {
 
     // Mobile first defaults
-    padding:0;
-    list-style: none;
+    @include reset(list);    
     li {
         display: inline-block;
         width: 48%;
-        margin:0;
-        margin-bottom: $font-size-base / 1.5;
+        margin:0 0.25em 0.55em 0;
         list-style: none;
     }
     a {
@@ -68,6 +66,7 @@
           border-radius:0;
           color: $blue;
           font-weight:400;
+          padding:$font-size-base/2 $font-size-base/2;
           @include hoverActiveFocus(transparent, $blue, underline);
         }
     } 
@@ -80,6 +79,9 @@
 
   // Mobile first defaults
   .query {
+    font-size: $font-size-small;
+    line-height: 160%;
+    padding:$font-size-base/3 $font-size-base/2;
     width: 100%;    
     &:focus,
     &:active {

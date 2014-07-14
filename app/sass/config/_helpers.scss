@@ -44,6 +44,22 @@
 }
 
 
+@mixin reset($element:div) {
+  
+    border:none;
+    margin:0;
+    padding:0;
+  
+  @if $element == list {  
+    list-style: none;
+    li {
+      margin:0;
+      padding:0;
+    }
+  }  
+}
+
+
 
 // ## Calculate rems from pixels
 // 
@@ -93,25 +109,17 @@
 
 @mixin mobile-button($inverted: false) {
   display: block;
-  border-radius: 1px;
-  border: 1px solid #9B9A91;
-  padding: 5px 4px 5px 10px;
+  border-radius: $border-radius-base;
+  padding: 0.7em 1em;
   text-align: left;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 13px;
-  color: #FFF;
-  background-color: #A9A89F;
-  span{
-	  text-align: right;
-	  float: right;
-	  padding-top: 2px;
-  }
+  font-size: $font-size-small;
+  color: $sand-light;
+  background-color: $gray-dark;
   &:hover,
   &:active,
   &:focus {
-    //color: $sand-light;
-    //background-color: $gold-light;
+    background-color: $blue;
     text-decoration: none;
   }
 }
