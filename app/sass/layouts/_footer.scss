@@ -2,7 +2,7 @@
 	border-top: 1px solid $sand-med;
 	padding-top:$line-height-base/2;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-content: baseline;
 
 	.address {
@@ -12,13 +12,13 @@
 	}
 
 	.links {
-		flex: 1;
 		order: 2;
 		text-align:right;
+		margin-left: 1em;
 	}
 
 	.social-media {
-		flex: 1;
+		margin-left: 1em;
 		order: 3;
 		text-align:right;
 		a { 
