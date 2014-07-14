@@ -15,6 +15,7 @@ var pkg = require('./package.json'),
     imagemin = require('gulp-imagemin'),
     moment = require('moment'),
     gulpBowerFiles = require('gulp-bower-files'),
+    zip = require('gulp-zip'),
     connect = require('gulp-connect');
 
 
@@ -115,6 +116,20 @@ gulp.task('bower-files', function(){
 });
 
 
+// Create zip archive of static file assets
+gulp.task('build', function () {
+    return gulp.src([
+      './app/build/css/**.**',
+      './app/build/fonts/**.**',
+      './app/build/images/**.**',
+      './app/build/js/**.**',
+      './app/build/lib/**/**.**'
+      ],{base: "./app/build"})
+      .pipe(zip('_responsive.zip'))
+      .pipe(gulp.dest('./static'));
+});
+
+
 // Watchers
 gulp.task('watch', function () {
   gulp.watch('app/js/**/**', ['scripts']);
@@ -125,3 +140,4 @@ gulp.task('watch', function () {
 
 // The default task (called when you run `gulp`)
 gulp.task('default', ['clean', 'bower-files', 'sass', 'scripts', 'images', 'fonts', 'assemble', 'webserver', 'watch']);
+
