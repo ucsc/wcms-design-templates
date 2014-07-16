@@ -11,7 +11,8 @@
 		@include meta-small(-1);
 	}
 
-	.links {
+	.links,
+	> a {
 		order: 2;
 		text-align:right;
 		margin-left: 1em;
