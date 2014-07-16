@@ -2,47 +2,42 @@
 @import "bourbon";
 @import "neat";
 
-// # Sass partials
 
 // Configuration
-@import "config/colors";
-@import "config/layout-variables";
-@import "config/typography-variables";
-@import "config/homeless";
-@import "config/helpers";
+@import "base/colors";
+@import "base/layout-variables";
+@import "base/typography-variables";
+@import "base/helpers";
+@import "base/layout";
+@import "base/typography";
+
 
 // Vendor Libraries
-@import "config/icon-font";
+@import "vendor/icon-font";
+@import "vendor/billboards-default";
 
-// Basic styles and skeletal page layout
-@import "base/typography";
-@import "base/layout";
 
 // Individual page and partial layouts
-@import "layouts/page-top-row";
-@import "layouts/page-header-row";
-@import "layouts/landing";
-@import "layouts/footer";
-@import "layouts/php-pages";
+@import "regions/page-top-row";
+@import "regions/page-header-row";
+@import "regions/landing";
+@import "regions/footer";
+@import "regions/php-pages";
 
-// Homepage (www, dept, division) block styles
-@import "blocks/blocks";
-@import "blocks/billboards-default";
-@import "blocks/billboards-custom";
-@import "blocks/events";
-@import "blocks/news";
-@import "blocks/showcase";
 
-// Atomic components
+// Drop-in content components
+@import "components/blocks";
+@import "components/banners";
+@import "components/billboards";
+@import "components/block-events";
+@import "components/block-news";
+@import "components/block-showcase";
 @import "components/logos";
 @import "components/breadcrumbs";
 @import "components/figures";
-@import "components/banner-box";
 @import "components/content-box";
 @import "components/navigation-site";
 @import "components/navigation-sidebar";
-@import "layouts/page-top-row";
-
 @import "components/featured-story";
 @import "components/archive-list";
 @import "components/see-also";
