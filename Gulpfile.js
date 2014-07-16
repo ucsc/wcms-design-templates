@@ -121,7 +121,7 @@ gulp.task('build', function () {
     return gulp.src([
       './app/build/css/**.**',
       './app/build/fonts/**.**',
-      './app/build/images/**.**',
+      './app/build/images/**/**.**',
       './app/build/js/**.**',
       './app/build/lib/**/**.**'
       ],{base: "./app/build"})
