@@ -1,4 +1,4 @@
-// Include Ruby gem-based styles
+// Include Ruby gems
 @import "bourbon";
 @import "neat";
 
@@ -42,5 +42,8 @@
 @import "components/navigation-site";
 @import "components/navigation-sidebar";
 @import "layouts/page-top-row";
+
+@import "components/featured-story";
+@import "components/archive-list";
 @import "components/see-also";
 @import "components/gallery";
