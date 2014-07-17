@@ -19,7 +19,7 @@
 
     }
 
-    h1 {
+    h1, p {
      
      // Mobile only
      @include span-columns(12);
@@ -50,13 +50,12 @@
 // Set the font-size and other attributes of
 // the site title.
 
-h1 { 
+h1, p { 
   
   display: table;
 
   a {
-
-    font-size: 1.4em;
+    font-size: 3rem;
     text-transform: uppercase;
     color: #F1B521;
     text-decoration:none;
