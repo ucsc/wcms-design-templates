@@ -1,59 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><system-page-title /></title>
+  <system-page-meta-description/>
+  <system-page-meta-keywords/>
   <system-region name="UNIFORM HTML HEAD" />
   <system-region name="LOCAL HTML HEAD" />
+  <system-region name="PAGE HTML HEAD" />
 </head>
 
 <body class="division home">
-<div id="wrap">
-  <div id="container">
-    <div id="content">
-      
-  <system-region name="UNIFORM CAMPUS LINKS" />
 
-      <div class="search">
-        <system-region name="SEARCH" />
-      </div>
+  <!-- Accessibility links. Hidden until they receive :focus -->
+  <ul id="access-links">
+    <li><a href="#main">Skip to main content</a></li>
+    <li><a href="#nav">Skip to main navigation</a></li>
+  </ul>
 
-  <div id="pageTitle">
-  <system-region name="UNIFORM CAMPUS LOGO" />
-  <system-region name="DIVISION NAME" />
-  </div>
-      
-      <system-region name="MAIN NAV" />
-      
-      <div id="carousel">
-  <system-region name="BANNER IMAGE" />
-      </div>
-      <div id="bbnav" ></div>
-      
-      <div class="three separate dark">
-  <div class="wrap"><system-region name="MIDDLE ROW LEFT" /></div>
-  <div class="wrap"><system-region name="MIDDLE ROW CENTER" /></div>
-        <div class="wrap last"><system-region name="MIDDLE ROW RIGHT" /></div>
-      </div>
+  <div id="wrap">
+    <div id="container">
+      <div id="content">
 
-      <div class="four clear">
-        <div class="wrap"><system-region name="BOTTOM ROW 1" /></div>
-        <div class="wrap"><system-region name="BOTTOM ROW 2" /></div>
-        <div class="wrap"><system-region name="BOTTOM ROW 3" /></div>
-        <div class="wrap last"><system-region name="BOTTOM ROW 4" /></div>
-      </div>
+        <div role="banner" class="site-header"> 
 
-      <div id="footer">
-  <system-region name="FOOTER LINKS" />
-  <system-region name="UNIFORM CAMPUS FOOTER" />
-      </div>
-      
-      <div id="page_bottom"><system-region name="UNIFORM DISCLAIMERS" /></div>
+          <div class="row page-top">
+            <system-region name="UNIFORM CAMPUS LINKS" />
+            <div class="search">
+              <system-region name="SEARCH" />
+            </div>
+          </div>
 
-    </div><!-- /content -->
+          <div class="row logo">                       
+            <system-region name="DIVISION NAME" />
+            <system-region name="UNIFORM CAMPUS LOGO" />
+          </div>
 
-    <system-region name="BACKGROUND" />
+          <div class="row">
+            <system-region name="MAIN NAV" />
+          </div>
 
-  </div><!-- /container -->
-</div><!-- /wrap -->
+        </div> 
+
+        <div role="main" id="main">
+
+        <div class="row">
+          <div id="carousel">
+            <system-region name="BANNER IMAGE"/>
+          </div>   
+        </div>
+
+        <div class="row three separate dark">
+          <div class="wrap"><system-region name="MIDDLE ROW LEFT" /></div>
+          <div class="wrap"><system-region name="MIDDLE ROW CENTER" /></div>
+          <div class="wrap last"><system-region name="MIDDLE ROW RIGHT" /></div>
+        </div>
+
+        <div class="row four clear">
+          <div class="wrap"><system-region name="BOTTOM ROW 1" /></div>
+          <div class="wrap"><system-region name="BOTTOM ROW 2" /></div>
+          <div class="wrap"><system-region name="BOTTOM ROW 3" /></div>
+          <div class="wrap last"><system-region name="BOTTOM ROW 4" /></div>
+        </div>
+
+        </div>
+
+        <div role="footer">
+          <div id="footer" class="row">
+            <system-region name="FOOTER LINKS" />
+            <system-region name="UNIFORM CAMPUS FOOTER" />
+          </div>
+
+          <div id="page_bottom" class="row">
+            <system-region name="UNIFORM DISCLAIMERS" />
+          </div>
+        </div>
+
+
+      </div><!-- /content -->
+    </div><!-- /container -->
+  </div><!-- /wrap -->
+
+  <system-region name="BOTTOM SCRIPTS"/>
+  <system-region name="UNIFORM BOTTOM SCRIPTS"/>
+  <system-region name="LOCAL BOTTOM SCRIPTS"/>
+  <system-region name="PAGE BOTTOM SCRIPTS"/>
+
+
 </body>
 </html>
