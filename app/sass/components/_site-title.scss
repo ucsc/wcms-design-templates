@@ -1,0 +1,72 @@
+/**
+*   The following style rules were created in collaboration with the
+*   Drupal theming project to add more granular controls to font sizes
+*   in the site titles.
+*
+*   The #site-title id should go on the <h1> and then a class
+*   on the same <h1> to set font-size and alignment.
+* 
+*   -raknight@ucsc.edu - 11 October 2011
+*/
+    // #site-title,
+    // #site-title a { float:none; line-height:1.1em; margin-left:0px; margin-top:0px; margin-bottom:0; padding:0; }
+    // #site-title { margin-left:10px; float:left; }
+    
+$titles: (
+  standard: (
+    size: 38px,
+    margin-top: 2px,
+    width: inherit
+  ),
+  short: (
+    size: 32px,
+    margin-top: 4px,
+    width: inherit
+  ),
+  medium: (
+    size: 30px,
+    margin-top: 4px,
+    width: inherit
+  ),
+  long: (
+    size: 28px,
+    margin-top: 4px,
+    width: inherit
+  ),
+  extra-long: (
+    size: 26px,
+    margin-top: -6px,
+    width: 66%
+  ),
+  super-long: (
+    size: 24px,
+    margin-top: -6px,
+    width: 59%
+  ),
+  mega-long: (
+    size: 22px,
+    margin-top: -4px,
+    width: 52%
+  )
+);
+
+
+// #site-title a { 
+//     margin:0;
+//     font-size:42px;
+//     padding:0 0 0 0;
+//     text-transform:uppercase;
+//     letter-spacing:-1px;
+//     color:#F1B521;
+//     text-decoration:none;
+// }
+        
+// #site-title { line-height:1.1em; margin:0 0 0 10px; color:#F1B521; }
+
+@each $title, $i in $titles {
+    .title-#{nth($title, 1)} {
+        font-size: #{map-get($i, size)};
+        margin-top: #{map-get($i, margin-top)};
+        width: #{map-get($i, width)};
+    }
+}
