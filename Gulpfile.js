@@ -2,7 +2,6 @@ var pkg = require('./package.json'),
     gulp = require('gulp'),
     changed = require('gulp-changed'),
     autoprefix = require('gulp-autoprefixer'),
-    compass = require('gulp-compass'),
     sass = require('gulp-ruby-sass'),
     concat = require('gulp-concat'),
     minifycss	= require('gulp-minify-css'),
@@ -34,29 +33,11 @@ gulp.task('clean', function() {
   .pipe(clean());
 });
 
-// Run Sass with Compass to compile, prefix, 
-// and compress styles then copy to the build folder.
-// gulp.task('styles', function() {
-//   gulp.src(['./app/sass/*.scss'])
-//   .pipe(changed('./app/build/css/'))
-//   .pipe(compass({
-//    css: './app/build/css',
-//    sass: './app/sass',
-//    images: './app/build/images/',
-//    require: ['bourbon', 'neat', 'modular-scale', 'scut']
-//    }))
-//   .on('error', function(err) { console.log(err); })
-//   .pipe(autoprefix('last 4 versions'))
-//   .pipe(minifycss())
-//   .pipe(gulp.dest('./app/build/css/'))
-//   .pipe(connect.reload());
-//   });
-
-// DEV: Compile sass into CSS.
+// Compile sass into CSS with sourcemap.
 gulp.task('sass', function () {
-  return gulp.src('./app/sass/*.scss')
+  return gulp.src(['./app/sass/*.scss', './app/sass/**/**.**'])
     .pipe(changed('./app/build/css/'))
-    .pipe(sass({sourcemap: true, require: ['bourbon', 'neat']}))
+    .pipe(sass({sourcemap: true, sourcemapPath: '.', require: ['bourbon', 'neat']}))
     .pipe(autoprefix('last 4 versions'))
     .pipe(minifycss())
     .pipe(gulp.dest('./app/build/css/'))
