@@ -22,7 +22,7 @@
     <div id="content">
     
      
-      <header role="banner" class="site-header">
+      <div role="banner" class="site-header">
 
         {{> global-header}}
 
@@ -33,24 +33,25 @@
           {{> header-dept }}
         {{/www}}
 
-      </header>
+        {{^front}}
+            <div class="row breadcrumbs">
+                <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
+            </div>
+        {{/front}}
+
+      </div>
 
       {{#front}}
           <div class="row">
             {{> carousel }}
           </div>
       {{/front}}
-      {{^front}}
-          <div class="row breadcrumbs">
-              <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
-          </div>
-      {{/front}}
     
-    <main id ="main">
+    <div id="main" role="main">
 
       {{ body }}
 
-    </main>
+    </div>
 
     <footer>  
       <div class="row" id="footer">
