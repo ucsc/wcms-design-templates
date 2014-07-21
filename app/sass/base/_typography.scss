@@ -1,13 +1,6 @@
+
 // Primary typography
 body {
-	min-width:em(320);
-	padding: $font-size-base;
-	color: darken($gray, 15%);
-	background-color: lighten($sand, 2%);
-	font-family: $font-family-sans-serif;
-	font-size: $font-size-base;
-	line-height: $line-height-base;
-	margin: 0;
 	// @include breakpoints();
 }
 

@@ -1,0 +1,99 @@
+/*
+*  Colors
+*  
+*/
+
+// 2010 template defaults
+$sand: #F2F0E4;
+$sand-light: lighten($sand, 8%);
+$sand-med: darken($sand, 2%);
+$sand-dark: darken($sand, 4%);
+
+$gray: #8E8C87;
+$gray-light: lighten($gray, 8%);
+$gray-med: darken($gray, 2%);
+$gray-dark: darken($gray, 4%);
+
+$blue: #5585a2;
+$blue-light: lighten($blue, 8%);
+$blue-med: darken($blue, 2%);
+$blue-dark: darken($blue, 4%);
+
+$gold: #cb9001;
+$gold-light: lighten($gold, 8%);
+$gold-med: darken($gold, 2%);
+$gold-dark: darken($gold, 4%);
+
+// 2014 template default colors, derived from above
+$body-text: darken($gray, 15%);
+$body-bg: lighten($sand, 2%);
+
+// Official identity colors, converted from print
+$ucsc-blue: #1B4084;
+$ucsc-gold: #F1B523;
+
+// Campaign identity colors
+$campaign-blue: #1B4084;
+$campaign-gold: #F1B523;
+$campaign-red: #F1B523;
+
+
+
+
+
+/*
+*  Typography
+*  
+*/
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-family-headlines: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 16px !default;
+$font-size-large: ceil($font-size-base * 1.25) !default; // ~18px
+$font-size-small: ceil($font-size-base * 0.85) !default; // ~12px
+
+$font-size-h1: floor($font-size-base * 2.6) !default; // ~36px
+$font-size-h2: floor($font-size-base * 2.15) !default; // ~30px
+$font-size-h3: ceil($font-size-base * 1.7) !default; // ~24px
+$font-size-h4: ceil($font-size-base * 1.25) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil($font-size-base * 0.85) !default; // ~12px
+
+$line-height-base: 1.428571429 !default; // 20/14
+// $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
+
+$headings-font-family: $font-family-base !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+
+$border-radius-base: 5px;
+
+
+
+/*
+*  Layout
+*  
+*/
+
+$visual-grid: true;
+$visual-grid-color: #336699;
+$visual-grid-opacity: 1.0;
+$visual-grid-index: front;
+
+// Layout variables for Bourbon Neat
+$border-box-sizing: true;
+$max-width: em(1080);
+$default-feature: min-width;
+$grids-columns: 12;
+$column: golden-ratio(1em, 3);
+$gutter: golden-ratio(1em, 1);
+
+// Breakpoint variables
+$desktop:   new-breakpoint(min-width em(960) 12);
+$tablet:    new-breakpoint(min-width em(803) 12);
+$mobile:    new-breakpoint(max-width em(802) 12);
