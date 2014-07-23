@@ -1,18 +1,17 @@
 #news,
 .news {
+
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+
 		li {
 			clear: both;
 			margin: 0 0 $font-size-base;
 			padding: 0;
 			background-image: none;
 			list-style-type: none;
-			a {
-
-			}
 
 			.thumbnail {
 				@include module-box-shadow();
@@ -32,10 +31,6 @@
 				text-transform: uppercase;
 				display: block;
 				margin:0;
-			}
-
-			.headline {
-				
 			}
 
 		}
