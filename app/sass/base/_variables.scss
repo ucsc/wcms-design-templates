@@ -14,15 +14,15 @@ $gray-light: lighten($gray, 8%);
 $gray-med: darken($gray, 2%);
 $gray-dark: darken($gray, 4%);
 
-$blue: #5585a2;
+$blue: #00458c;
 $blue-light: lighten($blue, 8%);
 $blue-med: darken($blue, 2%);
 $blue-dark: darken($blue, 4%);
 
-$gold: #cb9001;
+$gold: #F1B521;
 $gold-light: lighten($gold, 8%);
 $gold-med: darken($gold, 2%);
-$gold-dark: darken($gold, 4%);
+$gold-dark: darken($gold, 10%);
 
 // 2014 template default colors, derived from above
 $body-text: darken($gray, 15%);
@@ -36,9 +36,6 @@ $ucsc-gold: #F1B523;
 $campaign-blue: #1B4084;
 $campaign-gold: #F1B523;
 $campaign-red: #F1B523;
-
-
-
 
 
 /*
