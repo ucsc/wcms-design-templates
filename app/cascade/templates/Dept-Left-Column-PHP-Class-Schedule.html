@@ -13,17 +13,19 @@
 
 <body class="contentLeftNav dept left-column php-content">
 
-  <!-- Accessibility links. Hidden until they receive :focus -->
-  <ul id="access-links">
-    <li><a href="#main">Skip to main content</a></li>
-    <li><a href="#mainNav">Skip to primary navigation</a></li>
-  </ul>
+<!-- Accessibility links. Hidden until they receive :focus -->
+<ul id="access-links">
+  <li><a href="#main">Skip to main content</a></li>
+  <li><a href="#mainNav">Skip to primary navigation</a></li>
+</ul>
   
+<system-region name="ALERT AREA" />
+
   <div id="wrap">
     <div id="container">
       <div id="content">
 
-        <header role="banner" class="site-header"> 
+        <div role="banner" class="site-header"> 
 
           <div class="row page-top">
 
@@ -44,19 +46,17 @@
 
           </div>
           
-          <div class="row">
+          <div class="row main-navigation">
             <system-region name="MAIN NAV" />
           </div>
 
-        </header>
-
-        <div id="breadcrumbs" class="row breadcrumbs">
-          <system-region name="BREADCRUMBS" />
         </div>
 
+        <system-region name="BREADCRUMBS" />
+        
         <div id="sprflt" class="row">
                   
-          <div id="mainContent" class="main-content" role="main">
+          <div id="main" class="main-content" role="main">
 
             <system-region name="DEFAULT" />
 
@@ -82,13 +82,13 @@
         </div><!-- /sprflt -->
 
         
-        <div id="footer" class="row" role="footer">
+        <div class="row" id="footer" role="footer">
           <system-region name="FOOTER LINKS" />
           <system-region name="UNIFORM CAMPUS FOOTER" />
         </div>
-
-        <div id="page_bottom" class="row">
-          <system-region name="UNIFORM DISCLAIMERS" />
+        
+        <div class="row" id="page_bottom">
+          <system-region name="PAGE BOTTOM" />
         </div>
      
         
@@ -96,9 +96,9 @@
     </div><!-- /container -->
   </div><!-- /wrap -->
 
-  <system-region name="UNIFORM BOTTOM SCRIPTS"/>
-  <system-region name="LOCAL BOTTOM SCRIPTS"/>
-  <system-region name="PAGE BOTTOM SCRIPTS"/>
+  <system-region name="UNIFORM BOTTOM SCRIPTS" />
+  <system-region name="LOCAL BOTTOM SCRIPTS" />
+  <system-region name="PAGE BOTTOM SCRIPTS" />
 
 </body>
 </html>
