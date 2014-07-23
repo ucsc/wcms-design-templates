@@ -31,15 +31,16 @@
     a, span {
       cursor:pointer;
       display:block;
-      color:#cb9001;
+      color:$gold-dark;
       text-decoration:none;
       text-transform:uppercase;
+      letter-spacing:0.05em;
       padding:0.5em 0.8em;
       &:focus,
       &:hover,
       &:active {
-        color: lighten(#cb9001, 20%);
-        background-color:#296fa3;
+        color: $gold-light;
+        background-color:$blue;
       }
     }
   }
