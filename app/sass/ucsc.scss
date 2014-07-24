@@ -2,19 +2,17 @@
 @import "bourbon";
 @import "neat";
 
-
 // Configuration
 @import "base/variables";
+@import "base/mixins";
 @import "base/reset";
-@import "base/helpers";
+@import "base/modifiers";
 @import "base/layout";
 @import "base/typography";
-
 
 // Vendor Libraries
 @import "lib/icon-font";
 @import "lib/billboards-default";
-
 
 // Individual page and partial layouts
 @import "regions/page-top-row";
@@ -22,7 +20,6 @@
 @import "regions/landing";
 @import "regions/footer";
 @import "regions/php-pages";
-
 
 // Drop-in content components
 @import "components/accessibility-links";
