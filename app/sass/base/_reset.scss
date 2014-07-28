@@ -149,7 +149,7 @@ hr {
 	display: block;
 	}
 	hr::after {
-		content: "···";
+		content: "...";
 		color: #bbb;
 		letter-spacing: 1em;
 		padding-left: 1em;
@@ -326,6 +326,17 @@ img {
 	max-width: 100%;
 }
 
+[align="left"] {
+  @extend img;
+  float:left;
+  margin-right: 1em;
+}
+
+[align="right"] {
+  @extend img;
+  float:right;
+  margin-left: 1em;
+}
 
 /* ============================================================
 	Tabular data
