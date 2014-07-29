@@ -18,6 +18,14 @@ var pkg = require('./package.json'),
     connect = require('gulp-connect');
 
 
+// Set default file path variables for tasks
+var paths = {
+  styles: ['./app/sass/*.scss', './app/sass/**/**.**'],
+  scripts: './app/js/**/**',
+  images: './app/images/**/**',
+  fonts: './app/fonts/*'
+};
+
 // Static webserver with livereload via connect
 gulp.task('webserver', function() {
   connect.server({
@@ -33,9 +41,10 @@ gulp.task('clean', function() {
   .pipe(clean());
 });
 
+
 // Compile sass into CSS with sourcemap.
-gulp.task('sass', function () {
-  return gulp.src(['./app/sass/*.scss', './app/sass/**/**.**'])
+gulp.task('styles', function () {
+  return gulp.src(paths.styles)
     .pipe(changed('./app/build/css/'))
     .pipe(sass({sourcemap: true, sourcemapPath: '.', require: ['bourbon', 'neat']}))
     .pipe(autoprefix('last 4 versions'))
@@ -47,7 +56,7 @@ gulp.task('sass', function () {
 
 // Uglify scripts into the build folder.
 gulp.task('scripts', function() {
- return gulp.src('./app/js/**/**')
+ return gulp.src(paths.scripts)
     // Pass in options to the task
     .pipe(uglify())
     .pipe(gulp.dest('./app/build/js/'));
@@ -56,7 +65,7 @@ gulp.task('scripts', function() {
 
 // Optimize and copy images into the build folder.
 gulp.task('images', function() {
- return gulp.src('./app/images/**/**')
+ return gulp.src(paths.images)
     .pipe(changed('./app/build/images/'))
     .pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('./app/build/images/'));
@@ -86,7 +95,7 @@ gulp.task('assemble', function () {
 
 // Copy font files into the build folder.
 gulp.task('fonts', function() {
-  gulp.src('./app/fonts/*')
+  gulp.src(paths.fonts)
   .pipe(gulp.dest('./app/build/fonts/'));
 });
 
@@ -114,11 +123,11 @@ gulp.task('build', function () {
 // Watchers
 gulp.task('watch', function () {
   gulp.watch('app/js/**/**', ['scripts']);
-  gulp.watch('app/sass/**/*.scss', ['sass']);
+  gulp.watch('app/sass/**/*.scss', ['styles']);
   gulp.watch('app/images/**/.**', ['images']);
   gulp.watch(['app/layouts/*.hbs', 'app/partials/*.hbs', 'app/pages/*.hbs'], ['assemble']);
 });
 
 // The default task (called when you run `gulp`)
-gulp.task('default', ['clean', 'bower-files', 'sass', 'scripts', 'images', 'fonts', 'assemble', 'webserver', 'watch']);
+gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'fonts', 'assemble', 'webserver', 'watch']);
 
