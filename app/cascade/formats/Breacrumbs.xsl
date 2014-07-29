@@ -21,16 +21,15 @@ Breadcrumbs: the entire `div.row` is contained within this document, meaning we 
   <!-- Do not modify below this point -->
   <xsl:template match="/system-index-block">
     <div class="row breadcrumbs">
+      <p>
       <a>
         <xsl:attribute name="href">
           <xsl:value-of select="concat(path,'/',$defaultPage)"/>
         </xsl:attribute>
-      Home</a> /
-        <xsl:apply-templates select="descendant::system-folder[descendant::system-page[@current and not(@reference)] and not(ancestor::system-data-structure)] | descendant::system-page[@current and not(@reference) and not(name = $defaultPage) and not(ancestor::system-data-structure)]"/>
+        Home</a> / <xsl:apply-templates select="descendant::system-folder[descendant::system-page[@current and not(@reference)] and not(ancestor::system-data-structure)] | descendant::system-page[@current and not(@reference) and not(name = $defaultPage) and not(ancestor::system-data-structure)]"/>
+      </p>
     </div>
   </xsl:template>
-
-  
 
   <xsl:template match="system-folder">
 
