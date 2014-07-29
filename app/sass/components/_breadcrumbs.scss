@@ -1,8 +1,8 @@
 .breadcrumbs {
   
   p {
-    font-size: $font-size-small;
-    margin: 0.5em 0;  
+    font-size: em(12);
+    margin: 0.75em 0 0.75em $font-size-base/2;  
   }
   
 }
