@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:func="http://exslt.org/functions" xmlns:hh="http://www.hannonhill.com/XSL/Functions" xmlns:ucsc="http://ucsc.edu/xslt/functions">
-     <!-- 
-
-      @location: _library/dept-division/formats/news/News Index Page Combined
-
-     This format creates an index page that combines content from a specific local folder with content from an index of the most recent 200 articles from another site (the main campus news source). The block is a structured data block that combines the the two types of index blocks.
+     <!-- This format creates an index page that combines content from a specific local folder with content from an index of the most recent 200 articles from another site (the main campus news source). The block is a structured data block that combines the the two types of index blocks.
      The local folder can contain two different content types: one is a regular news article and the other is a news article shortcut. They share basic metadata and thumbnail but the shortcut otherwise is just a page, URL, or file chooser. -->   
      
         <xsl:output indent="yes" method="xml"/> 
@@ -50,7 +46,7 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                 <xsl:value-of select="$current-page/title"/> 
             </h1>
 
-            <div>
+            <div class="contentBox">
                 <xsl:comment>
                     Filtering to campus categories:
                     <xsl:for-each select="$news-categories">
@@ -78,26 +74,22 @@ To accomplish standardization of the two different formats, an EXSLT function ha
         <xsl:template match="system-page">
            <!-- alt tag variable conditions -->
            <xsl:variable name="alt-tag">
-              <xsl:choose>
-                <!-- used in News Article when UR News Lead Image Thumbnail alt tag is provided -->
-                <xsl:when test="system-data-structure/lead-image/image-thumb-alt !=''">
-                  <xsl:value-of select="system-data-structure/lead-image/image-thumb-alt"/>
-                </xsl:when>
-                
-                <!-- could not find any instances when this condition is used -->
-                <xsl:when test="system-data-structure/page/content/system-data-structure/lead-image/image-thumb-alt !=''">
-                  <xsl:value-of select="system-data-structure/page/content/system-data-structure/lead-image/image-thumb-alt"/>
-                </xsl:when>
-                
-                <!-- Used in News Article Page, File, External Page (URL), Internal Page w/thumbnail, etc. -->
-                <xsl:when test="system-data-structure/lead-image/image-alt !=''">
-                  <xsl:value-of select="system-data-structure/lead-image/image-alt"/>
-                </xsl:when>
-                
-                <xsl:otherwise>No Image Alternative Tag Provided</xsl:otherwise>
-              
-              </xsl:choose>
-            </xsl:variable>
+    <xsl:choose>
+      <!-- used in News Article when UR News Lead Image Thumbnail alt tag is provided -->
+      <xsl:when test="system-data-structure/lead-image/image-thumb-alt !=''">
+                                  <xsl:value-of select="system-data-structure/lead-image/image-thumb-alt"/>
+                         </xsl:when>
+      <!-- could not find any instances when this condition is used -->
+      <xsl:when test="system-data-structure/page/content/system-data-structure/lead-image/image-thumb-alt !=''">
+                                  <xsl:value-of select="system-data-structure/page/content/system-data-structure/lead-image/image-thumb-alt"/>
+                         </xsl:when>
+      <!-- used in News Article Page, File, External Page (URL), Internal Page w/thumbnail, etc. -->
+      <xsl:when test="system-data-structure/lead-image/image-alt !=''">
+        <xsl:value-of select="system-data-structure/lead-image/image-alt"/>
+      </xsl:when>
+      <xsl:otherwise>No Image Alternative Tag Provided</xsl:otherwise>
+    </xsl:choose>
+    </xsl:variable>
         
             <li>
                 <span class="date">
