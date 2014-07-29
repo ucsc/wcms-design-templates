@@ -30,22 +30,22 @@
 
           <system-region name="UNIFORM CAMPUS LINKS" />
 
-          <div class="search">
+          <div class="search" role="search">
             <system-region name="SEARCH" />
           </div>
 
         </div>
 
-        <div class="row logo">
-
-          <div id="pageTitle">
+        <div class="row names">
+          <div class="site-name">
             <system-region name="DEPARTMENT NAME" />
-            <system-region name="UNIFORM CAMPUS LOGO" />
           </div>
-
+          <div class="campus-name">
+            <system-region name="UNIFORM CAMPUS LOGO" />
+          </div>  
         </div>
 
-        <div class="row main-navigation">
+        <div class="row main-navigation" role="navigation">
           <system-region name="MAIN NAV" />
         </div>
       
@@ -55,14 +55,12 @@
       
       <div class="row" id="sprflt">
       
-        <div class="main-content" id="main" role="main">              
-          <div class="contentBox">
-            <div class="phpContent">
-              <system-region name="DEFAULT" />
-              <system-region name="LOCAL PHP" />
-              <system-region name="PHP" />
-            </div>
-          </div>              
+        <div class="main-content" id="main" role="main">                       
+          <div class="phpContent">
+            <system-region name="DEFAULT" />
+            <system-region name="LOCAL PHP" />
+            <system-region name="PHP" />
+          </div>       
           <system-region name="CONTENT BOTTOM" />
         </div>
         
@@ -77,7 +75,7 @@
       </div><!-- /sprflt -->
 
       
-    <div class="row" id="footer" role="footer">
+    <div class="row" id="footer">
       <system-region name="FOOTER LINKS" />
       <system-region name="UNIFORM CAMPUS FOOTER" />
     </div>

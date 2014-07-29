@@ -28,19 +28,21 @@
 
           <div class="row page-top">
             <system-region name="UNIFORM CAMPUS LINKS" />
-            <div class="search">
+            <div class="search" role="search">
               <system-region name="SEARCH" />
             </div>
           </div>
 
-          <div class="row logo">                       
-            <div id="pageTitle">
+          <div class="row names">
+            <div class="site-name">
               <system-region name="DEPARTMENT NAME" />
-              <system-region name="UNIFORM CAMPUS LOGO" />
             </div>
+            <div class="campus-name">
+              <system-region name="UNIFORM CAMPUS LOGO" />
+            </div>  
           </div>
           
-          <div class="row main-navigation">
+          <div class="row main-navigation" role="navigation">
              <system-region name="MAIN NAV" />
           </div>
 
@@ -51,10 +53,8 @@
         <div id="sprflt" class="row">
 
           <div id="main" class="main-content" role="main">
-            <div class="contentBox">              
-              <system-region name="DEFAULT" />
-              <system-region name="CONTENT BOTTOM" />
-            </div>
+            <system-region name="DEFAULT" />
+            <system-region name="CONTENT BOTTOM" />
           </div>
           
           <div id="subNav" class="sidebar">
@@ -66,7 +66,7 @@
 
         </div>
         
-        <div id="footer" class="row" role="footer">
+        <div id="footer" class="row">
           <system-region name="FOOTER LINKS" />
           <system-region name="UNIFORM CAMPUS FOOTER" />
         </div>
