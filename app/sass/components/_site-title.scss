@@ -70,7 +70,6 @@ $titles: (
 // and output a rule for each one.
 @each $title, $i in $titles {
     .title-#{nth($title, 1)} a {
-        @extend .site-name;
         font-size: #{map-get($i, size)};
         margin-top: #{map-get($i, margin-top)};
         width: #{map-get($i, width)};
