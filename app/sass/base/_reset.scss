@@ -326,13 +326,13 @@ img {
 	max-width: 100%;
 }
 
-[align="left"] {
+img[align="left"] {
   @extend img;
   float:left;
   margin-right: 1em;
 }
 
-[align="right"] {
+img[align="right"] {
   @extend img;
   float:right;
   margin-left: 1em;
