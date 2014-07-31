@@ -7,3 +7,9 @@
 .borderless {
   border:none;
 }
+
+.hide {
+  position: absolute;
+  left: -900em;
+  outline: none;
+}
