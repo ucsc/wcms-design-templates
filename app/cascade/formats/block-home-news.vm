@@ -1,0 +1,57 @@
+## Get articles for an index block
+#set ($articlesLimit = 3)
+#set ($articles = $_XPathTool.selectNodes($contentRoot,"//system-page[not(contains(path,'_internal'))][not(@current)][not(system-data-structure/page-type = 'Category Index')][dynamic-metadata[starts-with(name,'category-')]/value = ancestor::system-index-block/calling-page/system-page/dynamic-metadata[starts-with(name,'category-')]/value]"))
+
+#if (!$articles.isEmpty())
+## Sort articles by start-date, then article-date
+$_SortTool.addSortCriterion("dynamic-metadata[name='type']/value","","text","descending","upper-first")
+$_SortTool.addSortCriterion("start-date","","number","descending","upper-first")
+$_SortTool.sort($articles)
+
+<div id="news" class="news">
+  <h2><a class="headline" href="http://news.ucsc.edu">University <span>News</span></a></h2>
+  <ul>
+
+#if ($articles.size() <= $articlesLimit )
+    #set ($articlesToList = $articles)
+#else
+    #set ($articlesToList = $articles.subList(0,$articlesLimit) )
+#end    
+#foreach($page in $articlesToList)
+
+    ## Get/set vars
+    #set ($title = $_SerializerTool.serialize($page.getChild("title"),true).replaceAll('"', '&#34;'))
+    #set ($path = $page.getChild("link").value)
+    ## Check for image thumbnails and set variable if it doesn't show.
+    #if($page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb").getChild("link"))
+      #set ($imgLink = $page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb").getChild("link").text)
+    #end
+    ## Get alt text if it is there
+    #if($page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb-alt"))
+      #set ($imgAlt = $page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb-alt").text)
+    #end
+    #set ($dateNode = $page.getChild("start-date"))
+    #set ($pageDate = $_DateTool.getDate($dateNode.value))
+    #set ($pageDateText = $_DateTool.format('MMMM d, yyyy',$pageDate))
+    
+    <li>
+      <a href="${path}">
+      #if($imgLink && $imgLink != "")
+        <span class="thumbnail">
+          <img alt="${_EscapeTool.xml($imgAlt)}" class="fltlft" src="${imgLink}" />
+        </span>
+      #end
+        <span class="date">${pageDateText}</span>
+        <span class="headline">${title}</span>
+      </a>
+    </li>
+    
+    ## Reset img path for next article
+    #set ($imgLink = "")
+
+#end
+  </ul>
+    <p class="more"><a class="more" href="http://news.ucsc.edu">News center &#187;</a></p>
+</div>
+
+#end
