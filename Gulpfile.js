@@ -49,7 +49,7 @@ gulp.task('styles', function() {
     return gulp.src(paths.styles)
         .pipe(changed('./app/build/css/'))
         .pipe(sass({
-            sourcemap: true,
+            sourcemap: false,
             sourcemapPath: '.',
             require: ['bourbon', 'neat']
         }))
