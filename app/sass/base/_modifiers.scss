@@ -6,6 +6,9 @@
 
 .borderless {
   border:none;
+  td {
+    border-bottom:none; 
+  }
 }
 
 .hide {
