@@ -1,0 +1,22 @@
+.main-content {
+
+  img {
+    background-color: $sand;
+    padding: $font-size-base/3;
+    border-radius: $border-radius-base;
+    
+    &[align="left"] {
+      float:left;
+      margin: $font-size-base $font-size-base $font-size-base 0;
+    }
+
+    &[align="right"] {
+      float:right;
+      margin: $font-size-base 0 $font-size-base $font-size-base;
+    }
+  }
+
+}
+
+
+
