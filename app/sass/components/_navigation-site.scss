@@ -29,12 +29,13 @@
     }
     
     a, span {
+      @include fontSize(14px);
       cursor:pointer;
       display:block;
-      color:$gold-dark;
+      color:$blue;
       text-decoration:none;
       text-transform:uppercase;
-      letter-spacing:0.05em;
+      letter-spacing:0.02em;
       padding:0.5em 0.8em;
       &:focus,
       &:hover,
