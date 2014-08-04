@@ -326,18 +326,6 @@ img {
 	max-width: 100%;
 }
 
-img[align="left"] {
-  @extend img;
-  float:left;
-  margin-right: 1em;
-}
-
-img[align="right"] {
-  @extend img;
-  float:right;
-  margin-left: 1em;
-}
-
 /* ============================================================
 	Tabular data
 ============================================================ */
