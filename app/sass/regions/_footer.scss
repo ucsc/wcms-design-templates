@@ -8,7 +8,11 @@
 	.address {
 		flex:2;
 		order: 1;
-		@include meta-small(-1);
+		text-transform: uppercase;
+  	font-size: $font-size-base/1.25;
+  	line-height: 1.5;
+  	letter-spacing: 0.01em;
+		font-weight:normal;
 	}
 
 	.links,
