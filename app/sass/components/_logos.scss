@@ -9,10 +9,12 @@
 		margin-top:0px;
 	}
 	 
-	@include size(261px);
+	//@include size(261px);
+	background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left bottom;
 	background-size: contain;
 	max-width: 261px;
 	height:72px;
 	padding: 0;
-	@include retina-image('../images/logos/ucsc-logo-large', 100% auto);
+	
+	//@include retina-image('../images/logos/ucsc-logo-large', 100% auto);
 }
