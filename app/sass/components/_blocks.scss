@@ -107,6 +107,7 @@
     }
 
     .inner {
+        @include clearfix;
         @include pad(1em);
         background-color: #ECE9D8;
         min-height: 226px;
