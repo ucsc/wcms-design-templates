@@ -1,0 +1,122 @@
+.callout {
+    border: 1px solid #ccc;
+    text-align: left;
+    min-width: 220px;
+    float: right;
+    margin-left: 1.5em;
+
+    td {
+      padding: $font-size-base;
+    }
+
+
+}
+
+
+.callout-right blockquote,
+.callout-left blockquote {
+    margin: 14px;
+    padding: 0;
+    border: none;
+}
+
+
+.callout-full,
+.callout-left,
+.callout-right {
+    background-color: #F9F8F2;
+    border-bottom: 1px solid #DAD8C8;
+    display: table;
+    width: 80px;
+    padding: 8px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.callout-full {
+    width: 98%;
+}
+
+.callout-right,
+.right {
+    float: right;
+    margin: 0 0 10px 14px;
+}
+
+.callout-left,
+.left {
+    float: left;
+    margin: 0 14px 10px 0;
+}
+
+.callout-left img,
+.callout-right img {
+    margin: 0;
+    padding: 0;
+}
+
+.narrow {
+    width: 38%;
+}
+
+.wide {
+    width: 62%;
+}
+
+.fixed-300 {
+    width: 300px;
+}
+
+/* added by jnw */
+.fixed-200 {
+    width: 200px;
+}
+
+/* added by jnw */
+.fixed-240 {
+    width: 240px;
+}
+
+/* added by jnw */
+.fixed-250 {
+    width: 250px;
+}
+
+/* added by jnw */
+.fixed-290 {
+    width: 290px;
+}
+
+.fixed-540 {
+    width: 540px;
+    padding: 0px;
+}
+
+.callout-full h3,
+.callout-left h3,
+.callout-right h3 {
+    margin: 0;
+}
+
+.callout-full h4,
+.callout-left h4,
+.callout-right h4 {
+    margin: 0;
+    border-bottom: 1px solid #DAD8C8;
+    background-color: #f2f0e4;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.callout-left textarea,
+.callout-right textarea {
+    font-family: Monaco;
+    border: 1px solid #ccc;
+    width: 70%;
+    height: 80px;
+    padding: 4px;
+    overflow: hidden;
+    font-size: 10px;
+}
