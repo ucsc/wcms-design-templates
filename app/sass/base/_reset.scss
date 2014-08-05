@@ -136,33 +136,29 @@ p, pre, blockquote, ul, ol, dl, figure, figcaption, table, fieldset, details {
 	line-height: 1.5; /* 24px */
 	margin: 0.5em 0; /* 8px 0 */
 }
+
 hr {
-	font-weight: 700;
-	font-size: 2em; /* 32px */
-	line-height: 1; /* 32px */
+	@include fontSize(32px);
+	line-height: 1;
 	text-align: center;
-	margin: 1em 0 2em; /* 0 0 32px */
+	margin: 1em 0 1.5em; /* 0 0 32px */
 	border: 0;
+	border-bottom:1px dotted $gray-dark;
 	padding: 0;
-	height: 0;
+	height: 1px;
 	clear: both;
 	display: block;
 	}
-	hr::after {
-		content: "...";
-		color: #bbb;
-		letter-spacing: 1em;
-		padding-left: 1em;
-		height: 0;
-	}
+
 pre {
 	margin-left: 1.5em; /* 24px */
-	white-space:  pre-wrap;
-	}
-	pre code,
-	pre samp {
+	white-space: pre-wrap;	
+	code,
+	samp {
 		line-height: 1.5;
 	}
+}
+
 blockquote {
 	color: #666;
 	font-size: 1em; /* 16px */
