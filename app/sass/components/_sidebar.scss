@@ -1,6 +1,5 @@
 .sidebar {
 
-  
   h1,
   .header {
     border-bottom: 1px solid lighten($gray-light, 20%);
@@ -29,7 +28,7 @@
         @include hoverActiveFocus($sand-dark, $blue, none);
         &.current {
           display:block;
-          background-color: $sand-dark;
+          background:$sand-dark url(http://static.ucsc.edu/images/nav_arrow.gif) no-repeat 98% center;
         }
       }
       &:first-child a {
@@ -59,4 +58,37 @@
 
     }    
   }
+  
+  
+  .block {
+    
+    .block-header {
+        font-weight:bold;
+        margin:2em 0 0.25em 0;
+    } 
+    
+    @include clearfix;
+    border:none;
+       
+    li, li a {
+      border:none !important;
+      @include clearfix;
+      padding:0.25em 0;
+    }
+    
+    img {
+      float:left;
+      padding:0.25em;
+      margin:0 0.5em 0.5em 0;
+      background-color:$sand-dark;
+    }
+    
+    .floatLeftText {
+      display:block;
+    }
+    
+  }
+  
+  
+  
 }
