@@ -10,7 +10,7 @@
 
 .row {
     @include outer-container();
-    margin-bottom: $font-size-base*1.5;
+    margin-bottom: $font-size-base;
     // Debug
     // @include rowborders(red);
 }
