@@ -47,7 +47,7 @@ body {
 	line-height: $line-height-base; /* 16px */	
 	text-rendering: optimizeLegibility;
 	margin: 0 auto;
-	padding: $font-size-base;
+	padding: 0 $font-size-base $font-size-base $font-size-base;
 	min-width:em(320);
 }
 

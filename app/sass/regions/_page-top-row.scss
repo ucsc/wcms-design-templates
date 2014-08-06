@@ -14,6 +14,9 @@
     @include span-columns(12);
     @include media($tablet) {
       @include span-columns(9);
+      // Resetting the width and margin a smidgen for spacing. 
+      margin-right: 0;
+      width:76.41059%;
       //@include rowborders(purple);
     }
   }
@@ -36,7 +39,8 @@
 .global-nav {
 
     // Mobile first defaults
-    @include reset(list);    
+    @include reset(list);   
+
     li {
         display: inline-block;
         width: 46%;
@@ -54,9 +58,15 @@
 
         > li {
           width: auto;
+          background-image: none;
+          border-left: 1px solid lighten($gray-light, 12%);
+          line-height: 1.2em;
+          list-style-type: none;
+          padding: 1.25em 0.25em 0 0.25em;
         }
 
-        .dept & :nth-child(1) {
+        .dept & :nth-child(1),
+        .division & :nth-child(1) {
           float: left;
         }
 
@@ -66,7 +76,8 @@
           border-radius:0;
           color: $blue;
           font-weight:400;
-          padding:$font-size-base/2 $font-size-base/2;
+
+          padding:$font-size-base/4 $font-size-base/2 0 $font-size-base/2;
           @include hoverActiveFocus(transparent, $blue, underline);
         }
     } 
@@ -99,6 +110,8 @@
 
   // Tablet and up
   @include media($tablet) {
+
+    margin-top: 1em;
     .query {
       display: block;
       margin-top: 0;
