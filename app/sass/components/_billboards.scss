@@ -132,8 +132,19 @@ Pagination Styles
 
 // The control dots under each set of billboards.
 .owl-controls .owl-pagination {
+	
 	.owl-page span {
-		background-color:$campaign-blue;
+		background-color:$gray-light;
 		opacity:0.25;
+		border-radius: $border-radius-base;
+		color: #ECE9D8;
+		font-size: $font-size-base;
+		padding: 0.5em 1.5em;
+		margin: 0 0.25em;
 	}
+
+	.owl-page.active span {
+		background-color:$gray-light;
+	}
+
 }
