@@ -1,0 +1,21 @@
+.right-column .sidebar {
+
+  .inner {
+    @include module-box-shadow();
+    border-radius: $border-radius-base;
+    padding: 0.75em 1em;
+    margin-bottom: 1em;
+    background-color: $sand;
+  }
+
+   h4, .header {
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 2px solid $sand-light;
+    padding-bottom: 0.4em;
+    margin-top: 0;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+   }
+  
+  
+}
