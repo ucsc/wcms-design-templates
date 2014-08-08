@@ -71,6 +71,7 @@
      border-top:2px solid #f4f1e6;
      margin:0;
      width:100%;
+     min-width: 14em;
      padding:0;     
      display:none;
      position:absolute;
@@ -79,6 +80,7 @@
        text-align:left;
        border-bottom:2px solid #f4f1e6;
        a {
+         text-transform: none;
          border-radius:0px;
        }
      }
