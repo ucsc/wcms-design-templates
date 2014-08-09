@@ -6,6 +6,7 @@
   padding:0;
   @include fontSize(38px);
   text-transform:uppercase;
+  display: block;
   color:$gold;
   text-decoration:none;
   line-height:110%;
@@ -51,7 +52,7 @@ $titles: (
   extra-long: (
     size: 32px,
     margin-top: -6px,
-    width: 66%
+    width: 76%
   ),
   super-long: (
     size: 30px,
@@ -61,7 +62,7 @@ $titles: (
   mega-long: (
     size: 28px,
     margin-top: -4px,
-    width: 52%
+    width: 62%
   )
 );
 
