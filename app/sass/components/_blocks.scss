@@ -109,12 +109,10 @@
     .inner {
         @include clearfix;
         @include pad(1em);
+        @include module-box-shadow(dark);
         background-color: #ECE9D8;
         min-height: 226px;
         margin: 0;
-        border-bottom: solid 1px #DAD8C8;
-        border-radius: 5px;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
     }
     
 }

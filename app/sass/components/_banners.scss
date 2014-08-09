@@ -1,5 +1,6 @@
 #bannerBox,
 .banner-box {
+  @include module-box-shadow(light);
   background-color: $sand-light;
   padding: 0.8em;
   margin-bottom: $font-size-base;
@@ -11,7 +12,7 @@
   }
 
   .caption {
-    margin:$font-size-base/4;
+    margin:$font-size-base/4 $font-size-base/4 0 $font-size-base/4;
     font-size:90%;
     color: $gray;
   }

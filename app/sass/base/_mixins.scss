@@ -76,10 +76,15 @@
 
 // # Box Shadow
 // Add box-shadow to modules.
-@mixin module-box-shadow() {
-  border: 1px solid #E7E5DE;
-  border-bottom: solid 1px #DFDED2;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+@mixin module-box-shadow($bgcolor:light) {
+  @if $bgcolor == light {
+    border-bottom: solid 1px lighten($gray-light, 20%);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);    
+  } @else if $bgcolor == dark {
+    border-bottom: solid 1px lighten($gray-light, 10%);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);  
+  }
+  border-radius:$border-radius-base;
 }
 
 // # Hover, active, focus

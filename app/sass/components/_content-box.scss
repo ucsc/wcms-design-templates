@@ -1,5 +1,6 @@
 .contentBox,
 .content-box {
+  @include module-box-shadow;
   background-color: $sand-light;
   padding: 1.2em;
   border-radius: $border-radius-base;
