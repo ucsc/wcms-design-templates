@@ -13,10 +13,12 @@
 			list-style-type: none;
 
 			.thumbnail {
-				@include module-box-shadow();
 				float: left;
 				display: block;
 				margin: 0 0.5em 0.5em 0;	
+				padding:0.25em;
+				background-color: $sand;
+				border-radius: $border-radius-base;
 				img {
 					width:72px;
 					height:72px;
@@ -25,9 +27,8 @@
 
 			.date {
 				color: #929290;
-				font-size: golden-ratio($font-size-base, -1);
+				font-size: 0.75em;
 				letter-spacing: 1px;
-				text-transform: uppercase;
 				display: block;
 				margin:0;
 			}
