@@ -106,5 +106,11 @@ exports.pages=[
 		"site": "http://www.astro.ucsc.edu",
 		"path": "/about_department/image_gallery/",
 		"file": "gallery-page_people.html"		
-	}
+	},
+	{
+		"name": "department-courses-table",
+		"site": "http://history.ucsc.edu",
+		"path": "/courses/",
+		"file": "courses-at-a-glance.html"		
+	}	
 ]
