@@ -1,16 +1,22 @@
 #seeAlso {
   padding:0.8em 0.8em 0.3em 0.8em;
-  @include clearfix;
-  background-color:transparent;
+  background-color:$sand-light;
   border-radius: 5px;
   margin-top:2em;
   margin:0;
-  -webkit-column-count:3;
+  @include module-box-shadow(light);
+  @include clearfix;
+
   ul {
     margin:0;
-    padding-left:1.4em;
+    padding-left:0;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
     li {
-      margin-bottom:0.4em;
+      flex:40%;
+      padding:0 1em 0.2em 0;
+      margin:0.4em 0.5em 0.4em 1.5em;
     }
   }
 }
