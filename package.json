@@ -24,7 +24,7 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-imagemin": "^0.1.5",
     "gulp-uglify": "^0.2.1",
-    "grunt": "^0.4.2",
+    "grunt": "^0.4.5",
     "grunt-gh-pages": "^0.9.1",
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.2.10",
@@ -37,6 +37,7 @@
     "gulp-livereload": "^2.0.0",
     "gulp-ruby-sass": "^0.6.0",
     "gulp-zip": "^0.4.0",
-    "main-bower-files": "^1.0.2"
+    "main-bower-files": "^1.0.2",
+    "grunt-cascade-deploy": "^0.2.3"
   }
 }
