@@ -1,25 +1,18 @@
 #seeAlso {
-  padding:0.8em 0.8em 0.3em 0.8em;
+  padding:0.8em;
   background-color:$sand-light;
   border-radius: 5px;
-  margin-top:2em;
-  margin:0;
+  margin:0 0 1em;
   @include module-box-shadow(light);
   @include clearfix;
 
   ul {
     margin:0;
     padding-left:0;
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:row;
     li {
-      flex:0 0 28%;
-      padding:0 0 0.2em 0;
-      margin:0 0 0 1.5em;
-      @include media($mobile) {
-        flex:0 0 95%;
-      }
+      padding:0;
+      line-height: 1.3;
+      margin:0.25em 0.5em 0.25em 1.5em;
     }
   }
 }
