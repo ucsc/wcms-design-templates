@@ -1,5 +1,5 @@
 #footer {
-	border-top: 1px solid $sand-med;
+	border-top: 1px solid lighten($gray-light, 10%);
 	padding-top:$line-height-base/2;
 	display: flex;
 	justify-content: flex-end;
