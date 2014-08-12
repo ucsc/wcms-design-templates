@@ -14,9 +14,12 @@
     flex-wrap:wrap;
     flex-direction:row;
     li {
-      flex:40%;
-      padding:0 1em 0.2em 0;
-      margin:0.4em 0.5em 0.4em 1.5em;
+      flex:0 0 28%;
+      padding:0 0 0.2em 0;
+      margin:0 0 0 1.5em;
+      @include media($mobile) {
+        flex:0 0 95%;
+      }
     }
   }
 }
