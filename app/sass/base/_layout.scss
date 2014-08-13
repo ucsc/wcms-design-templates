@@ -10,9 +10,17 @@
 
 .row {
     @include outer-container();
-    margin-bottom: $font-size-base;
+    margin-bottom: $font-size-base*1.5;
     // Debug
     // @include rowborders(red);
+}
+
+.news-home {
+ 
+  .site-header {
+    margin-bottom: 2em;
+  }
+
 }
 
 .five { 
