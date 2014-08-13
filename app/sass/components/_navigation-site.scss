@@ -30,7 +30,7 @@
     }
     
     a, span {
-      @include fontSize(14px);
+      @include fontSize(14);
       cursor:pointer;
       display:block;
       color:$ucsc-gold;
