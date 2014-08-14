@@ -44,8 +44,8 @@
     .main-content {
       @include span-columns(12);
       @include media($tablet) {
-        @include span-columns(9);
-        @include shift(3);
+        @include span-columns(8);
+        @include shift(4);
 
         .single-column & {
           @include span-columns(12);
@@ -53,7 +53,7 @@
         }
 
         .right-column & {
-          @include span-columns(9);
+          @include span-columns(8);
           @include shift(0); 
         }
 
@@ -64,11 +64,11 @@
     .sidebar {
       @include span-columns(12);
       @include media($tablet) { 
-        @include span-columns(3);      
+        @include span-columns(4);      
         @include shift(-12);
 
         .right-column & {
-          @include span-columns(3);
+          @include span-columns(4);
           @include shift(0); 
         }
 
