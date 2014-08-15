@@ -4,18 +4,6 @@ body {
 	// @include breakpoints();
 }
 
-
-a {
-	color: $blue;
-	text-decoration: none;
-	&:focus,
-	&:hover,
-	&:active {
-		text-decoration: underline;
-	}
-}
-
-
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -24,17 +12,6 @@ h5, .h5,
 h6, .h6 {
 	font-weight:normal;
 }
-
-@for $i from 1 through 6 {
-  h#{$i}, .h#{$i} {
-    margin:0.5em 0;
-	}
-}
-
-
-
-
-
 
 h1, .h1 {
 
