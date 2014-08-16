@@ -1,0 +1,53 @@
+// ## UCSC logo and Site Title
+// At minimum, contains the UCSC logo.
+// On division/department sites, it contains the site title too.
+.names {
+  
+    .campus-name {
+
+     // Mobile only
+     @include span-columns(2);
+     
+     // Tablet and up
+     @include media($tablet) {
+       .dept &,
+       .division & {
+         @include span-columns(3);
+         @include shift(-12);
+       }
+     }
+
+    }
+
+    .site-name {
+    
+      // Mobile only
+      @include span-columns(8);
+     
+      // Tablet and up
+      @include media($tablet) {
+        .dept &,
+        .division & {
+          @include span-columns(9);
+          @include shift(3);
+          padding-left:2%;
+        }
+      }
+
+    }
+
+    .menu-toggle {
+     
+      // Mobile only
+      @include span-columns(2);
+
+      margin-top: 1.20em;
+      width: 7em;
+      float:right;
+      @include omega();
+      @include media($tablet) {
+        display:none;
+      }
+    }
+
+}
