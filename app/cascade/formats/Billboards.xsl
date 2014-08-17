@@ -3,18 +3,21 @@
 <xsl:output indent="yes" method="xml" omit-xml-declaration="yes"/>
 
   <xsl:template match="/system-index-block">
-    <div class="owl-carousel" id="slides">
+    <div id="slides" class="owl-carousel">
+      <xsl:if test="calling-page/system-page/system-data-structure/billboards-random/value = 'Yes'">
+        <xsl:attribute name="class">random</xsl:attribute>
+      </xsl:if>
       <xsl:apply-templates select="calling-page/system-page/system-data-structure/billboards"/>
     </div>
   </xsl:template>
 
   <xsl:template match="billboards">
+  
   <div class="slide">
     <!-- If there is a headline and teaser, we use the new style -->
     <xsl:if test="headline != '' and teaser != ''">
-      <!-- <xsl:variable name="layout-class" select="layout"></xsl:variable> -->
-      <div class="slide-body">
-        <xsl:attribute name="class">slide-body <xsl:value-of select="layout"/></xsl:attribute>
+      <div>
+        <xsl:attribute name="class">slide-body layout-<xsl:value-of select="layout"/> color-<xsl:value-of select="color"/></xsl:attribute>
         <h1><xsl:value-of select="headline"/></h1>
         <p><xsl:value-of select="teaser"/></p>
         <!-- Depending on the URL (internal, symlink, or external), we change the href. -->
