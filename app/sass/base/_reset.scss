@@ -327,6 +327,7 @@ table {
 	border-spacing: 0;
 	border:none;
 	width: 100%;
+	margin-bottom:$font-size-base*2;
 }
 caption {
 	caption-side: bottom;
@@ -337,6 +338,7 @@ caption {
 	margin: 1em 0; /* 12px 0 */
 }
 td, th {
+	background-color:transparent;
 	text-align: left;
 	border:none;
 	border-bottom: 1px solid lighten($gray-light, 20%);
