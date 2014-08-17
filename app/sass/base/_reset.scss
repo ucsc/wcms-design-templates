@@ -314,6 +314,9 @@ del, s {
 img {
 	border: 0;
 	max-width: 100%;
+	table & {
+		max-width: inherit;
+	}
 }
 
 /* ============================================================
@@ -323,6 +326,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	border:none;
+	width: 100%;
 }
 caption {
 	caption-side: bottom;
