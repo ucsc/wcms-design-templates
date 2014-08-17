@@ -11,7 +11,10 @@ their functionality would need to be replaced on a site-by-site basis.
 */ 
 
 /* Hide anything with this class (some Registrar FAQ pages use this) */
-.sleed {
+.sleed,
+.srchBtn,
+#mainNav li img,
+ {
   display: none;
 }
 
@@ -26,3 +29,19 @@ their functionality would need to be replaced on a site-by-site basis.
 .allborders td,
 .allborders tr { border:1px solid $gray-light; border-radius: 0px; }
 .allborders td { padding:0.4em 0.6em; }
+
+/* 
+  There were a few experimental column styles
+  in version 1 of the templates. Turns out, a
+  few people found and used them. 
+*/
+.columns-2 { 
+  padding:0.55em;
+  background-color:$sand-dark;
+  border-bottom:1px solid $gray-light;
+  padding:1em;
+  border-radius:$border-radius-base;
+  column-count:2;
+  column-gap:1em;
+}
+.columns-2 :first-child { margin-top:0; }
