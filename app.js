@@ -7,7 +7,7 @@ var pages       = require('./pages.js').pages;
 var appPath     = "./app/current-html/";
 
 // We create a new index file each time we fetch
-// the sample pages, just in we've added more to the list.
+// the sample pages, just in case we've added more to the list.
 fs.exists(appPath + 'index.html', function (exists) {
     if (exists) {
         fs.unlink(appPath + 'index.html', function (err) {
