@@ -113,7 +113,7 @@ h6 {
 
 nav ul {
 	margin: 0;
-	list-style: none;
+	// list-style: none;
 }
 
 
@@ -161,22 +161,27 @@ blockquote {
 	}
 
 /* Grouping > Lists */
+
 ol {
 	list-style-type: decimal;
 	padding: 0;
 }
+
 ul {
 	list-style-type: square;
 	padding: 0;
-	}
-	ul li li {
+}
+
+ul li li {
 		list-style-type: circle;
-	}
+}
+
 dt {
 	font-size: 1em; /* 16px */
 	font-weight: 700;
 	line-height: 1.5; /* 24px */
 }
+
 dd, li {
 	margin-left: 1.5em; /* 24px */
 	}
