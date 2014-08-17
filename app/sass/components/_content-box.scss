@@ -5,7 +5,7 @@
   padding: 1.2em;
   border-radius: $border-radius-base;
   margin:0;
-  overflow-x: scroll;
+  overflow-x: auto;
   @include clearfix;
   
   > :first-child   {
