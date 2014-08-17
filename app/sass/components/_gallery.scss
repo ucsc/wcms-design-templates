@@ -18,8 +18,15 @@
     a {
       display: block;
       margin-bottom: 0;
-      padding: $font-size-base/2;
+      padding: 0;
       @include hoverActiveFocus($blue-light, $blue-light, none);
+      &:focus,
+      &:hover,
+      &:active {
+        img {
+          background-color: $blue-light;  
+        }        
+      }
     }
 
   }
