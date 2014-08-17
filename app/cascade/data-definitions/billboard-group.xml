@@ -1,0 +1,23 @@
+<!--   
+NOTE: this is not the complete data definition. Only the billboard group.
+-->
+<group identifier="billboards" label="Billboard Image" multiple="true">
+    <text identifier="headline" label="Headline"/>
+    <text multi-line="true" identifier="teaser" label="Teaser text" help-text="Limit to 250 characters"/>
+    <asset type="file" identifier="image" label="Image" required="true"/>
+    <text identifier="alt-text" label="Alternate text for image"/>
+    <asset type="page" identifier="page" label="Internal link"/>
+    <asset type="symlink" identifier="symlink" label="External link"/>
+    <text identifier="url" label="Manual URL"/>
+    <text identifier="link-text" label="Link text" help-text="What the user will see."/>
+    <text type="radiobutton" identifier="layout" label="Layout style" default="left" help-text="Choose a layout for your headline, teaser, and link.">
+        <radio-item value="left"/>
+        <radio-item value="right"/>
+        <radio-item value="top"/>
+        <radio-item value="bottom"/>
+    </text>
+    <text type="radiobutton" identifier="color" label="Background color" default="blue" help-text="The slide background will be this color.">
+        <radio-item value="blue"/>
+        <radio-item value="gold"/>
+    </text>
+</group>
