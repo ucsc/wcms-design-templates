@@ -44,7 +44,15 @@
         color: $gold-light;
         background-color:$blue;
       }
+      // The old dropdown style included an image in the HTML.
+      // We'll hide that now and remove it from the XHTML blocks later.
+      img {
+        display: none;
+      }
     }
+    // A span tag inside of an a results in double-padding.
+    // This rule removes it.
+    a span { padding: 0; }
   }
   
   > :last-child {
