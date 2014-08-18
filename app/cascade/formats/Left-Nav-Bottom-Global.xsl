@@ -25,7 +25,7 @@
     <xsl:template match="item">
       <li>
             <xsl:if test="thumbnail/path != '/' or large-thumb/path !='/'">
-                <xsl:attribute name="class">imgLink</xsl:attribute>
+                <xsl:attribute name="class">image-item</xsl:attribute>
             </xsl:if>
             <xsl:choose>
                 <xsl:when test="url != '' or page/path != '/' or file/path != '/'">
@@ -50,31 +50,34 @@
                     <xsl:apply-templates mode="thumbnail-check" select="."/>
                 </xsl:otherwise>
             </xsl:choose>
-            <xsl:if test="thumbnail/path != '/' or large-thumb/path !='/'">
-                <br class="clear-both"/>
-            </xsl:if>
       </li>      
     </xsl:template>
     
     <xsl:template match="item" mode="thumbnail-check">
         <xsl:choose>
+            <!-- When there is a small thumbnail -->
             <xsl:when test="thumbnail/path != '/'">
-                <span class="floatLeftImg">
-                    <img alt="{thumb-alt}" src="{thumbnail/link}" width="76"/>
+                <span class="thumbnail">
+                    <img alt="{thumb-alt}" src="{thumbnail/link}" />
                 </span>
-                <span class="floatLeftText">
+                <span class="description">
                     <xsl:value-of select="text"/>
                 </span>
             </xsl:when>
+            <!-- When there is a wide thumbnail -->
             <xsl:when test="large-thumb/path != '/'">
-                <span class="floatLeftImg">
-                    <img alt="{thumb-alt}" src="{large-thumb/link}" width="180"/>
+                <span class="thumbnail">
+                    <img alt="{thumb-alt}" src="{large-thumb/link}" class="landscape" />
                 </span>
-                <br/>
-                <xsl:value-of select="text"/>
+                <span class="description">
+                    <xsl:value-of select="text"/>
+                </span>
             </xsl:when>
+            <!-- When there is text -->
             <xsl:when test="text !=''">
-                <xsl:value-of select="text"/>
+                <span class="description">
+                    <xsl:value-of select="text"/>
+                </span>
             </xsl:when>
             <xsl:otherwise>
               <xsl:copy-of select="content/node()"/>
