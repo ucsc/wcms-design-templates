@@ -6,8 +6,13 @@
     .campus-name {
 
      // Mobile only
-     @include span-columns(2);
+     @include span-columns(4);
      
+    .www & {
+      @include span-columns(12);
+      margin:0 auto;
+    }
+
      // Tablet and up
      @include media($tablet) {
        .dept &,
