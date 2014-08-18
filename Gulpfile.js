@@ -64,6 +64,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         // Pass in options to the task
+        .pipe(changed('./app/build/js/'))
         .pipe(uglify())
         .pipe(gulp.dest('./app/build/js/'));
 });
