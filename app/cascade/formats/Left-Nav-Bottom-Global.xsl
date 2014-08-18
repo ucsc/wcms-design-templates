@@ -13,7 +13,7 @@
       </xsl:if>
 
       <!-- Test to see if there are items in the block -->
-      <xsl:if test="block-content/item[1]/text != '' or block-content/item[1]/content != ''">
+      <xsl:if test="block-content/item[1]/text != '' or block-content/item[1]/url != '' or block-content/item[1]/content != '' or block-content/item[1]/page/path != '' or block-content/item[1]/file/path != '' or block-content/item[1]/thumbnail/path != '' or block-content/item[1]/large-thumb/path != ''">
         <!-- Unordered list with additional left side content -->
         <ul class="block global">
             <xsl:apply-templates select="block-content/item"/>
