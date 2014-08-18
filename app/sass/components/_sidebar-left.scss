@@ -18,6 +18,7 @@
   ul {
     margin:0;
     padding:0;
+  }
 
     // First-order list-item and link.
     li {
@@ -59,36 +60,5 @@
       }
 
     }    
-  }
-  
-
-
-
-  
-  .block {
-    
-    @include clearfix;
-    border:none;
-       
-    li, li a {
-      border:none !important;
-      @include clearfix;
-      padding:0.25em 0;
-    }
-    
-    img {
-      float:left;
-      padding:0.25em;
-      margin:0 0.5em 0.5em 0;
-      background-color:$sand-dark;
-    }
-    
-    .floatLeftText {
-      display:block;
-    }
-    
-  }
-  
-  
-  
+   
 }
