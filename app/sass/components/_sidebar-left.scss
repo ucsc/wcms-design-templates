@@ -69,8 +69,9 @@
        
     li {
       border: none;
-      padding:0;
-      margin: 0;
+      padding:0 0 1em 0;
+      margin:0 0 1em 0;
+      border-bottom:1px solid lighten($gray-light, 24%);
       &:first-child a {
         border-top:none;
       }
@@ -86,17 +87,23 @@
     }
 
     a {
-      padding:0 0 1em;
+      border: none;
+      padding:0;
       margin:0;
       @include clearfix;
     }
-    
-    .thumbnail img {
-      display:block;
-      width:100%;
+
+    img {
+      display: block;
+      float: none;
       padding:0.25em;
       margin:0 0 0.25em 0;
       background-color:$sand-dark;
+    }
+    
+    .thumbnail img {
+      width:100%;
+      margin:0 0 0.25em 0;
       &.portrait {
         width: 48%;
         float: left;
