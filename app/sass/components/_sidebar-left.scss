@@ -60,5 +60,56 @@
       }
 
     }    
+
+
+  .block {
+ 
+    border: none;
+    margin:1.25em 0;
+       
+    li {
+      border: none;
+      padding:0;
+      margin: 0;
+      &:first-child a {
+        border-top:none;
+      }
+      @include media($mobile) {
+        width:48%;
+        float:left;
+        clear:none;
+        a {
+          margin:0.5em;
+          border:none;
+        }
+      }
+    }
+
+    a {
+      padding:0 0 1em;
+      margin:0;
+      @include clearfix;
+    }
+    
+    .thumbnail img {
+      display:block;
+      width:100%;
+      padding:0.25em;
+      margin:0 0 0.25em 0;
+      background-color:$sand-dark;
+      &.portrait {
+        width: 48%;
+        float: left;
+        margin:0 0.75em 0.25em 0;
+      }
+    }
+    
+    .description {
+      display:block;
+      padding:0.5em 0.5em 0.5em;
+      line-height: 128%;
+    }
+    
+  }
    
 }
