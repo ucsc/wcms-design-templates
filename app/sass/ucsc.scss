@@ -16,13 +16,11 @@
 @import "lib/billboards-default";
 
 // Individual page and partial layouts
-@import "regions/global-top-row";
-@import "regions/site-title-row";
-@import "regions/site-header";
-@import "regions/page-layout-landing";
-@import "regions/page-main-content";
+@import "regions/top-row";
+@import "regions/site-title";
+@import "regions/main-content";
 @import "regions/footer";
-@import "regions/php-pages";
+@import "regions/php-content";
 
 // Drop-in content components
 @import "components/accessibility-links";
