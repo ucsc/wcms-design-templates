@@ -1,30 +1,34 @@
 #events,
 .events {
 
-	@include row(block);
-
 	dt {
-		@include span-columns(2);
+		width:18%; 
+		float: left;
 		clear:both;
 		color: $gray;
+		font-weight:normal;
+		font-size: 1em;
 		letter-spacing: 1px;
-		margin:0 0.4em 1em 0;
+		margin:0 0 1em 0;
+		padding:0;
+		line-height: 1;
 		text-align: center;
 		text-transform: uppercase;
 		strong,
 		span {
-			color: #6E6D68;
-			font-size: 1.5rem;
+			color: $gray-dark;
+			font-size: 1.4em;
 			letter-spacing: 0px;
 			line-height: 1em;
 			display: block;
 		}
 	}
 	dd {
-		@include span-columns(10);
-		border-left: 1px solid #DEDCD1;
-		margin:0 0 1em 0;
+		width:82%;
+		float:left;
+		margin:0;
+		border-left: 2px solid $sand-dark;
 		line-height:128%;
-		padding: 1% 0.15em 1% 5%;
+		padding: 0 0.15em 1% 5%;
 	}
 }
