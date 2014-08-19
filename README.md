@@ -37,6 +37,16 @@ Responsive reboot of UCSC web templates originally created in 2009-10. These wil
 
 **Note**: you need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever you modify a file during development.
 
+## Testing pull requests.
+
+The creator of an issue-fixing branch should submit a pull-request to be tested and merged.
+
+[This comment on stackoverflow.com](http://stackoverflow.com/questions/67699/how-to-clone-all-remote-branches-with-git/72156#72156) explains how to checkout a remote branch to your local machine for testing. For our repo, that would be:
+
+`git checkout github/[BRANCH-NAME]`
+
+Then run `gulp` and load the [development server](http://localhost:8080).
+
 ## Comparing to current live.
 
 1. If you want to see the differences between our development HTML changes and the current live site, run `npm run fetch` in the command line.
