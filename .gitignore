@@ -1,8 +1,8 @@
 .grunt
 .sass-cache
+.idea
 node_modules
 bower_components
 app/current-html
-app/build
 vendor
 static
