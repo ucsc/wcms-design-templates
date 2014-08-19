@@ -1,19 +1,25 @@
 .main-content {
 
   img {
-    background-color: $sand;
+    background-color: darken($sand, 5%);
     padding: $font-size-base/3;
     border-radius: $border-radius-base;
     
     &[align="left"] {
       float:left;
-      margin: $font-size-base $font-size-base $font-size-base 0;
+      margin: $font-size-base/2 $font-size-base/2 $font-size-base/2 0;
     }
 
     &[align="right"] {
       float:right;
-      margin: $font-size-base 0 $font-size-base $font-size-base;
+      margin: $font-size-base/2 0 $font-size-base/2 $font-size-base/2;
     }
+
+    table & {
+      margin-top: 0;
+    }
+
+
   }
 
 }
