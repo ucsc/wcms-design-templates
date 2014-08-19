@@ -13,6 +13,11 @@
   	line-height: 1.5;
   	letter-spacing: 0.01em;
 		font-weight:normal;
+		@include media($mobile) {
+			br {
+				display: none;
+			}
+		}		
 	}
 
 	.links,
@@ -20,6 +25,12 @@
 		order: 2;
 		text-align:right;
 		margin-left: 1em;
+		img {
+			display: inline;
+		}
+		@include media($mobile) {
+			margin: 0.25em 0;
+		}		
 	}
 
 	.social-media {
