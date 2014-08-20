@@ -55,3 +55,7 @@ input[type="text"] {
   border: 1px solid $sand-dark;
   border-radius: $border-radius-base;
 }
+
+iframe {
+  max-width: 100%;
+}
