@@ -99,27 +99,21 @@
 
   <xsl:template match="lead-image | secondary-images">
       
-    <table border="0" cellpadding="0" class="mainImage" valign="top" width="120">
-      <tbody>
-        <tr>
-        <td>
+    <figure>
           <xsl:choose>
                       <xsl:when test="image-alt != ''">
                         <img alt="{image-alt}" src="{image/path}"/>
                       </xsl:when>
                       <xsl:otherwise>
-                        <img alt="No Image Alternative Tag Provided" src="{image/path}"/>
+                        <img alt="Alternative text missing" src="{image/path}"/>
                       </xsl:otherwise>
                     </xsl:choose>
                     <xsl:if test="image-caption">
-                        <div class="prCaption">
+                        <figcaption class="caption">
                         <xsl:copy-of select="image-caption/node()"/>
-                        </div>
+                        </figcaption>
                     </xsl:if>
-           </td>
-         </tr>
-      </tbody>
-    </table>
+           </figure>
   
   </xsl:template>
 
