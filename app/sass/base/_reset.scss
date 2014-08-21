@@ -191,14 +191,9 @@ dd, li {
 
 /* Grouping > Figures */
 figcaption {
-	color: #999;
-	font-size: 0.75em; /* 12px */
-	line-height: 1.3334; /* 16px */
+	font-size: 0.85em;
+	line-height: 1.2;
 	padding: 0.6667em 0; /* 8px 0 */
-	clear: left;
-}
-blockquote + figcaption::before {
-	content: "\2014";
 }
 
 
