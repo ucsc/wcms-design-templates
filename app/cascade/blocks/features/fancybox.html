@@ -1,0 +1,28 @@
+[system-view:internal]
+<link href="site://static/_responsive/lib/fancybox/source/jquery.fancybox.css" media="screen" rel="stylesheet" type="text/css" />
+<script charset="utf-8" src="/render/file.act?path=site://static/_responsive/lib/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+[/system-view:internal]
+
+[system-view:external]
+<link href="http://static-dev.ucsc.edu/_responsive/lib/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+<script charset="utf-8" src="http://static-dev.ucsc.edu/_responsive/lib/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+[/system-view:external]
+<script type="text/javascript">// <![CDATA[
+jQuery(document).ready(function() {  
+      jQuery("#video a.fb").each(function()
+           { 
+               jQuery(this).fancybox({
+                 'titleShow'     : false,
+                 'overlayOpacity': '0.8',
+                 'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+                 'type'          : 'swf',
+                 'swf'          : {'wmode':'transparent','allowfullscreen':'true'}
+               });  
+           });
+
+         jQuery("#view a").fancybox();
+         jQuery(".thumb-grid a").fancybox();
+
+    });
+// ]]></script>
