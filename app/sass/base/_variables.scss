@@ -92,5 +92,6 @@ $gutter: golden-ratio(1em, 1);
 
 // Breakpoint variables
 $desktop:   new-breakpoint(min-width em(960) 12);
-$tablet:    new-breakpoint(min-width em(803) 12);
-$mobile:    new-breakpoint(max-width em(802) 12);
+$tablet:    new-breakpoint(min-width em(768) 12);
+$portrait:  new-breakpoint(min-width em(600) 12);
+$mobile:    new-breakpoint(max-width em(599) 12);
