@@ -4,27 +4,49 @@ Slide Styles
 
 // Custom clearfix
 @mixin slider-clearfix {
-	display: table;
-  overflow: auto;
-  zoom: 1;
+	  display: table;
+	  overflow: auto;
+	  zoom: 1;
 }
 
 // Left and right column layouts
 @mixin layout-left-right {
-	max-width: 40%;
-	padding: 2%;
-	margin: 3% 0 3% 0;
+	@include media ($mobile) {
+		max-width: 100%;
+		text-align: left;
+		padding: 1.5em 1em;
+	}
+
+	@include media ($tablet) {
+		width: 100%;
+		max-width: 475px;
+		margin: 3% 0 3% 0;
+		top: 0;
+	}
 }
 
 // Top and bottom full-width layouts
 @mixin layout-horizontal {
-	height: 30%;
-	margin: 0;
-	width:100%;
-	@include slider-clearfix;
+	@include media ($mobile) {
+		padding:1.5em 1em;
+	}
+	@include media ($tablet) {
+		height: 35%;
+		margin: 0;
+		width:100%;
+		padding: 0;
+	}
 }
 
+@mixin slider-position {
+	@include media ($mobile) {
+		position: none;
+	}
+	@include media ($tablet) {
+		position: absolute;
+	}
 
+}
 
 // COLUMN RULES
 
@@ -58,11 +80,11 @@ Slide Styles
 @mixin billboard-slider-a {
 
 	@include media($mobile) {
-		font-size: 1em;
+		font-size: .9em;
 	}
 	
 	@include media($tablet)  {
-		font-size: 1em;
+		font-size: .9em;
 	}
 }
 
@@ -71,25 +93,26 @@ Slide Styles
 
 @mixin horizontal-h1 {
 	h1 {
-	  display: block;
-	  margin: 0;
-	  width: 40%;
-	  line-height: 1.10em;
-	  text-align: right;
-	  padding-right: 2%;
-	  float: left;
+		  display: block;
+		  margin: 0;
+		  width: 40%;
+		  line-height: 1.10em;
+		  text-align: right;
+		  float: left;
 	  
-	  @include media($tablet) {
-	  	@include billboard-slider-h1;
-	  }
-
 	  @include media($mobile) {
 			width: 100%;
 			max-width:803px;
 			text-align: left;
-			padding:2% 0 0 2%;
 			float: none;
+			padding:0;
+			@include billboard-slider-h1;
 		}
+	  @include media($tablet) {
+	  		@include billboard-slider-h1;
+	  		padding: .20em .5em .20em;
+	  }
+
 	}	
 }
 
@@ -100,20 +123,19 @@ Slide Styles
 	  line-height:1.25em;
 	  width: 60%;
 	  float: left;
-	  @include media($tablet)  {
-	  	@include billboard-slider-p;
-	  	padding: 1.5% 2% .75% 1%;
-	  }
 	  @include media($mobile) {
 			width: 100%;
 			max-width:803px;
 			text-align: left;
-			padding: 0 0 2% 2%;
 			float: none;
 			position: static;
 			margin: 0;
 			@include billboard-slider-p;
 		}
+	  @include media($tablet)  {
+		  	@include billboard-slider-p;
+		  	padding: .80em 0 .20em;
+	  }
 	}
 }
 
@@ -141,61 +163,67 @@ Slide Styles
 .slide-body {
 	// Defaults: if for some reason the theme and
 	// layout classes aren't added, these rules take precedence.
-	position: absolute;
 	width: 100%;
 	bottom: 0;
-	width: 100%;
 	z-index:1;
 	background-color:rgba($ucsc-blue, 0.85);
 	color:$sand-light;
-	padding:1.5em 1em;
-	@include slider-clearfix;
-
+	padding:2em 1em 1em;
+	@include slider-position; /* T */
+	/*@include slider-clearfix;*/
 	h1 {
 		text-transform: uppercase;
 		color:$sand-light;
 		font-weight: bold;
-		margin:0 0 0.25em 0;
+		margin:0 0 .25em 0;
 		line-height: 90%;
 	}
 
 	p {
 		color:$sand-light;
 		padding:0;
-		margin:0 0 0.25em 0;
+		margin:0 0 .25em 0;
 		line-height: 115%;
 	}
 
 	a {
 		color: $gold;
 		text-decoration: none;
-  	&:before {
-    		content: " » ";
-  	}
+		@include billboard-slider-a; 
+  	 &:after {
+    		content: " »";
+  		}
 	}
 
 	&.layout-left{
+		@include billboard-slider-h1; /* T */
+		@include billboard-slider-p; /* T */
 		@include layout-left-right;
 		text-align: right;
+		left:0; /* T */
 	}
 	
 	&.layout-right{
+		@include billboard-slider-h1; /* T */
+		@include billboard-slider-p; /* T */
 		@include layout-left-right;
 		text-align: left;
-		right: 0;
+		right: 0; /* T */
 	}
 	
 	&.layout-top {   	
-   	@include layout-horizontal;
-   	@include horizontal-h1;
-   	@include horizontal-p;
-   	top:5%;
+	   	@include layout-horizontal;
+	   	@include horizontal-h1;
+	   	@include horizontal-p;
+	   	@include slider-clearfix; /* T */
+	   	top:5%;
   }
 
 	&.layout-bottom{
 		@include layout-horizontal;
 		@include horizontal-h1;
 		@include horizontal-p;
+		@include slider-clearfix; /* T */
 		bottom: 5%;
 	}
 
@@ -206,10 +234,10 @@ Color Themes
 ================================================================*/
 
 // A map of color theme settings for these slides.
-$themes: (
+$themes: (	
   blue: (
-    background-color: rgba($ucsc-blue, 0.85),
-    color: $gold
+	 background-color: rgba($ucsc-blue, 0.85),
+	 color: $gold
   ),  
   gold: (
     background-color: rgba($gold, 0.85),
