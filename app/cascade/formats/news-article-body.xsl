@@ -26,11 +26,11 @@
             <div class="campus-message">
                 <!-- Who is it TO? -->
                 <xsl:if test="system-data-structure/admin/audience !=''">
-                    <p>To: <xsl:value-of select="system-data-structure/admin/audience"/></p>    
+                    <p><strong>To:</strong> <xsl:text>&#160;</xsl:text><xsl:value-of select="system-data-structure/admin/audience"/></p>    
                 </xsl:if>
                 <!-- If this is a campus message, who is it FROM? -->
                 <xsl:if test="system-data-structure/admin/admin !=''">
-                    <p>From: <xsl:value-of select="system-data-structure/admin/admin"/></p>
+                    <p><strong>From:</strong> <xsl:text>&#160;</xsl:text><xsl:value-of select="system-data-structure/admin/admin"/></p>
                 </xsl:if>
             </div>
         </xsl:if>
@@ -145,31 +145,23 @@
 
 
   <xsl:template match="lead-image | secondary-images">
-        <div class="imageHolder">
-        <table border="0" cellpadding="0" class="mainImage" summary="Article image" valign="top" width="120">
-          <tbody>
-            <tr>
-            <td>
-            <xsl:if test="image/path !='/'">    
-                <xsl:if test="contains('empty.png',image/name)">
-                    <!-- Empty to print caption --><br/>
-                </xsl:if>
-                <xsl:if test="not(contains('empty.png',image/name))">
-                    <img alt="{image/display-name}" src="{image/path}"/>
-                </xsl:if>       
-            </xsl:if>
-            
-            <xsl:if test="image-caption">
-                <div class="prCaption">
-                     <xsl:copy-of select="image-caption/node()"/>
-                </div>
-            </xsl:if>
-                  </td>
-               </tr>
-          </tbody>
-        </table>
-        </div>
-    
+    <figure>
+      <xsl:if test="image/path !='/'">    
+          <xsl:if test="contains('empty.png',image/name)">
+              <!-- Empty to print caption --><br/>
+          </xsl:if>
+          <xsl:if test="not(contains('empty.png',image/name))">
+              <img alt="{image/display-name}" src="{image/path}"/>
+          </xsl:if>       
+      </xsl:if>
+        
+      <xsl:if test="image-caption">
+        <figcaption class="caption">
+          <xsl:copy-of select="image-caption/node()"/>
+        </figcaption>
+      </xsl:if>
+              
+    </figure>
   </xsl:template>
 
 </xsl:stylesheet>
