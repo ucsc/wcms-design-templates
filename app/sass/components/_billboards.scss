@@ -235,11 +235,11 @@ Color Themes
 
 // A map of color theme settings for these slides.
 $themes: (	
-  blue: (
+  "blue": (
 	 background-color: rgba($ucsc-blue, 0.85),
 	 color: $gold
   ),  
-  gold: (
+  "gold": (
     background-color: rgba($gold, 0.85),
     color: $blue
   )
