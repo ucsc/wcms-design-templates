@@ -16,6 +16,9 @@
 
 .site-header {
   margin-bottom: 2em;
+  @include media($mobile) {
+    margin:2em 0;
+  }
 }
 
 
