@@ -1,58 +1,67 @@
 // ## UCSC logo and Site Title
 // At minimum, contains the UCSC logo.
 // On division/department sites, it contains the site title too.
+
 .names {
-  
-    .campus-name {
 
-     // Mobile only
-     @include span-columns(4);
-     
-    .www & {
-      @include span-columns(12);
-      margin:0 auto;
-    }
-
-     // Tablet and up
-     @include media($tablet) {
-       .dept &,
-       .division & {
-         @include span-columns(3);
-         @include shift(-12);
-       }
-     }
-
-    }
-
-    .site-name {
+  .site-name {
     
-      // Mobile only
-      @include span-columns(8);
-     
-      // Tablet and up
-      @include media($tablet) {
-        .dept &,
-        .division & {
-          @include span-columns(9);
-          @include shift(3);
-          padding-left:2%;
-        }
-      }
-
+    // Mobile
+    @include span-columns(12);
+    margin: $font-size-base 0;
+   
+    // Tablet+
+    @include media($tablet) {      
+      @include span-columns(9);
     }
 
-    .menu-toggle {
-     
-      // Mobile only
-      @include span-columns(2);
+  }
 
-      margin-top: 1.20em;
-      width: 7em;
-      float:right;
-      @include omega();
+  
+  .campus-name {
+
+    @include span-columns(12);
+    border-bottom: 1px solid $gray-light;
+    padding-bottom:0.25em;
+
+    @include media($tablet) {
+      @include span-columns(3);
+      border-bottom: none;
+      padding-bottom:0;
+    }
+
+    .campus-logo {
+      @include span-columns(7);
       @include media($tablet) {
-        display:none;
+        @include span-columns(12);
       }
     }
+
+  }    
+
+  .mobile-menu {
+
+    // Mobile
+    @include span-columns(4);
+    @include shift(1);
+    color:$sand-light;
+    border-radius: $border-radius-base/2;
+    background-color: darken($gray-light, 10%);
+    padding:0.4em 0.25em;
+    margin-top: 0.55em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    max-width: 8em;
+    text-decoration:none;
+
+    @include hoverActiveFocus($ucsc-blue, $sand-light, none);
+
+    
+    // Tablet+
+    @include media($tablet) {
+      display:none;
+    }
+  }
 
 }

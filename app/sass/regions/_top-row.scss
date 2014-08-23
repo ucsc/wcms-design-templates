@@ -40,11 +40,15 @@
 
     // Mobile first defaults
     @include reset(list);   
+    margin:0;
+    padding:0;
+    text-align:right;
 
     li {
         display: inline-block;
-        width: 46%;
-        margin:0 0.25em 0.55em 0;
+        width: 48%;
+        margin:0 0 0.4em 0;
+        padding:0;
         list-style: none;
     }
     a {
@@ -53,10 +57,12 @@
 
     // Tablet and up
     @include media($tablet) {
+        
         text-align: right;
         margin:0;
 
         > li {
+          display: inline-block;
           width: auto;
           background-image: none;
           border-left: 1px solid lighten($gray-light, 12%);
@@ -123,14 +129,3 @@
 
 }
 
-
-// ## Toggle button
-// The toggle button for small screens.
-// Reveals/hides the top nav, site search, and main nav.
-.menu-toggle {
-    @include mobile-button(false);
-    
-  //@include media($tablet) {
-    //    display: none;
-    //}
-}
