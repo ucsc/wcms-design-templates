@@ -42,4 +42,12 @@
 - News
 	+ Create `department-title` block.
 	+ Create search block.
-	+ Assign main-nav, search, top-links regions.
+	+ Assign main-nav, search, top-links regions
+
+## Misc.
+
+- www: 
+	- Features area, remove all but one of `article-list-by-page-metadata` and move it to `_library/campus-home/formats/features-article-list`. 
+	- Add `image-right` to the archive-list ul. Reassign these regions on the features pages.
+	- REMOVE `Right Column Page` template #notused
+	- Rename 960 Right Column to just Right Column Page
