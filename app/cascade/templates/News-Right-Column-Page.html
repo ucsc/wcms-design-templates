@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<system-region name="UNIFORM HTML HEAD" />
+
 <title><system-page-title/></title>
 <system-page-meta-description/>
 <system-page-meta-keywords/>
-<system-region name="UNIFORM HTML HEAD"/>
-<system-region name="LOCAL HTML HEAD"/>
-<system-region name="PAGE HTML HEAD"/>
+
+<system-region name="LOCAL HTML HEAD" />
+<system-region name="PAGE HTML HEAD" />
+
 </head>
 
-<body class="right-column dept news home">
+<body class="right-column dept news">
 
   <!-- Accessibility links. Hidden until they receive :focus -->
   <ul id="access-links">
@@ -34,12 +37,12 @@
           </div>
 
           <div class="row names">
-            <div class="site-name">
-              <system-region name="DEPARTMENT NAME"/>
-            </div>
             <div class="campus-name">
               <system-region name="UNIFORM CAMPUS LOGO"/>
             </div>  
+            <div class="site-name">
+              <system-region name="DEPARTMENT NAME"/>
+            </div>
           </div>
           
           <div class="row main-navigation" role="navigation">
@@ -70,11 +73,11 @@
         
         <div class="row" id="footer">
           <system-region name="FOOTER LINKS"/>
-          <system-region name="UNIFORM CAMPUS FOOTER"/>
+          <system-region name="UNIFORM CAMPUS FOOTER" />
         </div>
 
-        <div class="row" id="page_bottom">
-          <system-region name="UNIFORM DISCLAIMERS"/>
+        <div class="row legal">
+          <system-region name="UNIFORM DISCLAIMERS" />
         </div>
       
         

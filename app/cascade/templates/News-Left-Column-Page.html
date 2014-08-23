@@ -1,59 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <title><system-page-title /></title>
-  <system-region name="UNIFORM HTML HEAD" />
-  <system-region name="LOCAL HTML HEAD" /> 
+
+<system-region name="UNIFORM HTML HEAD" />
+
+<title><system-page-title/></title>
+<system-page-meta-description/>
+<system-page-meta-keywords/>
+
+<system-region name="LOCAL HTML HEAD" />
+<system-region name="PAGE HTML HEAD" />
+
 </head>
 
 <body class="left-column dept news">
 
-<!-- Accessibility links. Hidden until they receive :focus -->
-<ul id="access-links">
-    <li><a href="#mainContent">Skip to main content</a></li>
+  <!-- Accessibility links. Hidden until they receive :focus -->
+  <ul id="access-links">
+    <li><a href="#main">Skip to main content</a></li>
     <li><a href="#mainNav">Skip to primary navigation</a></li>
-</ul>
+  </ul>
 
- <div id="wrap">
-   <div id="container">
-     <div id="content">
+<system-region name="ALERT AREA" />
+
+  <div id="wrap">
+    <div id="container">
+      <div id="content">
+
+        <div role="banner" class="site-header"> 
+
+          <div class="row page-top">
+            <system-region name="UNIFORM CAMPUS LINKS" />
+            <div class="search" role="search">
+              <system-region name="SEARCH" />
+            </div>
+          </div>
+
+          <div class="row names">
+            <div class="campus-name">
+              <system-region name="UNIFORM CAMPUS LOGO" />
+            </div>  
+            <div class="site-name">
+              <system-region name="DEPARTMENT NAME" />
+            </div>
+          </div>
+          
+          <div class="row main-navigation" role="navigation">
+             <system-region name="MAIN NAV" />
+          </div>
+
+          <system-region name="BREADCRUMBS" />  
+
+        </div>
+
        
-      <system-region name="UNIFORM CAMPUS TOP LINKS" />
-      <system-region name="UNIFORM SITE CONFIGURATION" />
+        <div id="sprflt" class="row">
 
-       <div class="row breadcrumbs" id="breadcrumbs">
-         <system-region name="BREADCRUMBS" />
-       </div>
+          <div id="main" class="main-content" role="main">
+            <system-region name="CONTENT TOP" />
+            <system-region name="DEFAULT" />
+            <system-region name="CONTENT BOTTOM" />
+          </div>
+          
+          <div id="subNav" class="sidebar">
+            <system-region name="LEFT NAV TOP" />
+            <system-region name="LEFT NAV" />
+            <system-region name="LEFT NAV BOTTOM" />
+          </div>
 
-       <div id="sprflt">
-         <div id="subNav">
-           <system-region name="LEFT NAV TOP" />
-       <system-region name="LEFT NAV" />
-       <system-region name="LEFT NAV BOTTOM" />
-         </div>
-
-         <div id="mainContent">
-          <system-region name="CONTENT TOP" />
-          <system-region name="DEFAULT" />
-          <system-region name="CONTENT BOTTOM" />
-         </div>
+        </div>
         
-        <div id="footer">
+        <div id="footer" class="row">
           <system-region name="FOOTER LINKS" />
           <system-region name="UNIFORM CAMPUS FOOTER" />
         </div>
-       
-       </div><!-- /sptflt -->
 
-      <div id="page_bottom">
-        <system-region name="PAGE BOTTOM" />
-      </div>
+        <div class="row legal">
+          <system-region name="UNIFORM DISCLAIMERS" />
+        </div>
+        
+      </div><!-- /content -->
+    </div><!-- /container -->
+  </div><!-- /wrap -->
 
-       <system-region name="BACKGROUND" />
+<system-region name="UNIFORM BOTTOM SCRIPTS" />
+<system-region name="LOCAL BOTTOM SCRIPTS" />
+<system-region name="PAGE BOTTOM SCRIPTS" />
 
-    </div><!-- /content -->
-  </div><!-- /container -->
-</div><!-- /wrap -->
-<system-region name="BOTTOM SCRIPTS" />
 </body>
 </html>

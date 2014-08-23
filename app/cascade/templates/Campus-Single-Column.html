@@ -1,12 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <title><system-page-title /></title>
-  <system-region name="UNIFORM HTML HEAD" />
-  <system-region name="LOCAL HTML HEAD" /> 
+
+<system-region name="UNIFORM HTML HEAD" />
+
+<title><system-page-title/></title>
+<system-page-meta-description/>
+<system-page-meta-keywords/>
+
+<system-region name="LOCAL HTML HEAD" />
+<system-region name="PAGE HTML HEAD" />
+
 </head>
 
-<body class="contentSingleCol homeEnv">
+<body class="single-column www">
 
 <!-- Accessibility links. Hidden until they receive :focus -->
 <ul id="access-links">
@@ -14,49 +21,62 @@
     <li><a href="#mainNav">Skip to primary navigation</a></li>
 </ul>
 
+<system-region name="ALERT AREA" />
+
  <div id="wrap">
    <div id="container">
      <div id="content">
        
-        <div class="row">
-            <system-region name="UNIFORM CAMPUS HOME LOGO" />
+        <div role="banner" class="site-header">
+
+          <div class="row page-top">
             <system-region name="UNIFORM CAMPUS HOME LINKS" /> 
-            <div class="search">
-                <system-region name="SEARCH" />
+            <div class="search" role="search">
+              <system-region name="SEARCH" />
             </div>
-        </div>
-        
-        <div class="row">
-            <system-region name="MAIN NAV" /> 
-        </div>
-        
-        <div class="row breadcrumbs" id="breadcrumbs">
-            <system-region name="BREADCRUMBS" />
+          </div>
+          
+          <div class="row names">
+            <div class="campus-name">
+              <system-region name="UNIFORM CAMPUS HOME LOGO" />
+            </div>  
+          </div>
+
+          <div class="row main-navigation" role="navigation">
+            <system-region name="MAIN NAV" />
+          </div>
+
+          <system-region name="BREADCRUMBS" />
+
         </div>
 
         <div class="row" id="sprflt">
          
-            <div id="mainContent">
-                <system-region name="CONTENT TOP" />
-                <system-region name="DEFAULT" />
-                <system-region name="BELOW DEFAULT" />
+          <div id="main" role="main">
+            <div id="mainContent" class="main-content">               
+                <system-region name="DEFAULT" />               
                 <system-region name="CONTENT BOTTOM" />
             </div>
+          </div>    
         
-            <div id="footer">
-                <system-region name="FOOTER LINKS" />
-                <system-region name="UNIFORM CAMPUS FOOTER" />
-            </div>
-       
-        </div><!-- /sprflt -->
+         </div>
 
+        <div class="row" id="footer">
+          <system-region name="FOOTER LINKS" />
+          <system-region name="UNIFORM CAMPUS FOOTER" />
+        </div>
+        
         <div class="row legal">
           <system-region name="UNIFORM DISCLAIMERS" />
         </div>
-      
-    </div><!-- /content -->
-  </div><!-- /container -->
-</div><!-- /wrap -->
-<system-region name="BOTTOM SCRIPTS" />
+        
+      </div><!-- /content -->
+    </div><!-- /container -->
+  </div><!-- /wrap -->
+
+<system-region name="UNIFORM BOTTOM SCRIPTS" />
+<system-region name="LOCAL BOTTOM SCRIPTS" />
+<system-region name="PAGE BOTTOM SCRIPTS" />
+
 </body>
 </html>
