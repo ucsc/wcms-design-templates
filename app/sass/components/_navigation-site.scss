@@ -24,9 +24,9 @@
     border:1px solid lighten($gray-light, 28%);
     border-left:none;
     border-right:1px solid lighten($gray-light, 28%);
-    @media (max-width: 880px) {
+    @include media($mobile) {
        display:block;
-       border-bottom:2px solid lighten($gray-light, 28%);
+       //border-bottom:2px solid lighten($gray-light, 28%);
     }
     
     a, span {
@@ -50,28 +50,31 @@
     a span { padding: 0; }
   }
   
-  > :last-child {
-    border-right:1px solid lighten($gray-light, 28%);
-    border-top-right-radius:5px;
-    border-bottom-right-radius:5px;
-    > a {
-      border-top-right-radius:5px;
-      border-bottom-right-radius:5px;
+  @include media($tablet) {
+    > :last-child {
+      border-right:1px solid lighten($gray-light, 28%);
+      border-top-right-radius:$border-radius-base;
+      border-bottom-right-radius:$border-radius-base;
+      > a {
+        border-top-right-radius:$border-radius-base;
+        border-bottom-right-radius:$border-radius-base;
+      }
+      > span {
+        border-top-right-radius:$border-radius-base;
+      }
     }
-    > span {
-      border-top-right-radius:5px;
+    
+    > :first-child {
+      border-left:1px solid lighten($gray-light, 28%);
+      border-top-left-radius:$border-radius-base;
+      border-bottom-left-radius:$border-radius-base;
+      > a, > span {
+        border-top-left-radius:$border-radius-base;
+        border-bottom-left-radius:$border-radius-base;
+      }
     }
   }
-  > :first-child {
-    border-left:1px solid lighten($gray-light, 28%);
-    border-top-left-radius:5px;
-    border-bottom-left-radius:5px;
-    > a, > span {
-      border-top-left-radius:5px;
-      border-bottom-left-radius:5px;
-    }
-  }
-  
+
   /* Dropdowns */
    li ul {
      z-index:1000;
