@@ -13,7 +13,7 @@
          [end example]
          -->
     <xsl:template match="*[content/system-data-structure/profile]" mode="homepage-block">
-        <div id="profile">
+        <div id="profile" class="profile-block">
             <h3>Uncommon <span>People</span></h3>
             <div class="inner">
                 <!-- Is there a thumbnail assigned in the SD block? -->
@@ -33,7 +33,7 @@
         </div>
     </xsl:template>
     <xsl:template match="*[content/system-data-structure/video_url]" mode="homepage-block">
-        <div id="video">
+        <div id="video" class="video-block">
             <h3>Video <span>Spotlight</span>
             </h3>
             <div class="inner">
@@ -67,7 +67,7 @@
     
 <xsl:template match="*[content/system-data-structure/video-embed]" mode="homepage-block">
   <xsl:variable name="button" select="content/system-data-structure/video-embed/play-btn"/>
-    <div id="video">
+    <div id="video" class="video-block">
         <h3>Video <span>Spotlight</span>
         </h3>
         <div class="inner">
@@ -119,7 +119,7 @@
     
     
     <xsl:template match="*[content/system-data-structure/slide]" mode="homepage-block">
-        <div id="view">
+        <div id="view" class="gallery-view">
             <h3>The <span>View</span>
             </h3>
             <div class="inner">

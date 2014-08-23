@@ -28,7 +28,7 @@ add logic to news article to handle new article shortcut
 
 -->
 <xsl:template match="*[content/system-data-structure/articles]" mode="homepage-block">
-    <div id="news">
+    <div id="news" class="news-block">
     <h3>
       <xsl:value-of select="content/system-data-structure/articles/title1"/>
       <xsl:if test="content/system-data-structure/articles/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/articles/title2"/></span>
@@ -65,7 +65,7 @@ add logic to news article to handle new article shortcut
       <li>
         
         <xsl:choose>
-        <!-- Condition for News Article (URL) - News Article Shortcut - External URL (External URL text contains URL) -->   
+        <!-- News Article (URL) - News Article Shortcut - External URL (External URL text contains URL) -->   
                 <xsl:when test="content/system-data-structure/external-url!=''">
                     <xsl:choose>
                         <xsl:when test="content/system-data-structure/lead-image/image-thumb/link != '/'">
@@ -100,7 +100,7 @@ add logic to news article to handle new article shortcut
                       </xsl:choose>
                   </xsl:when>
         
-        <!-- conditon for News Article (Page) - News Article Shortcut with Link to Local or Campus News Article -->
+        <!-- News Article (Page) - News Article Shortcut with Link to Local or Campus News Article -->
                   
                     <xsl:when test="content/system-data-structure/page/path != '/'">
                         <xsl:choose>
@@ -121,7 +121,7 @@ add logic to news article to handle new article shortcut
                               </a>
                           </xsl:when> 
                             
-                            <!-- conditon for News Article (Page-External) - News Article Shortcut - Link to News Article with no thumbnail, and local/current site Lead Image Thumbnail provided -->
+                            <!-- News Article (Page-External) - News Article Shortcut - Link to News Article with no thumbnail, and local/current site Lead Image Thumbnail provided -->
                             <xsl:when test="content/system-data-structure/lead-image/image-thumb/link != '/'">
                                <a href="{content/system-data-structure/page/link}">
                                    <!-- <img alt="{content/system-data-structure/lead-image/alt}" class="fltlft" src="{content/system-data-structure/lead-image/image-thumb/link}"/> -->
@@ -154,7 +154,7 @@ add logic to news article to handle new article shortcut
                         </xsl:choose>
                     </xsl:when>
         
-        <!-- conditon for News Article (File) - News Article Shortcut - Link to Internal File chosen, i.e. pdf -->           
+        <!-- News Article (File) - News Article Shortcut - Link to Internal File chosen, i.e. pdf -->           
                     
                     <xsl:when test="content/system-data-structure/file/path != '/'">
                       <xsl:choose>
@@ -188,7 +188,7 @@ add logic to news article to handle new article shortcut
                       </xsl:choose>
                     </xsl:when>
                     
-             <!-- conditon for News Article - if it has no External URL, page, or file and is therefore just a regular article -->  
+             <!-- News Article - if it has no External URL, page, or file and is therefore just a regular article -->  
                  
                     <xsl:otherwise>
                         <xsl:choose>
@@ -233,7 +233,7 @@ add logic to news article to handle new article shortcut
 <!-- FEATURED PROFILE -->
 
 <xsl:template match="*[content/system-data-structure/profile]" mode="homepage-block">
-    <div id="profile">
+    <div id="profile" class="profile-block">
     <h3><xsl:value-of select="content/system-data-structure/profile/title1"/><xsl:if test="content/system-data-structure/profile/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/profile/title2"/></span></xsl:if></h3>
     <div class="inner">
 
@@ -264,7 +264,7 @@ add logic to news article to handle new article shortcut
 
 <!--SLIDESHOW BLOCK -->
 <xsl:template match="*[content/system-data-structure/slideshow]" mode="homepage-block">
-    <div id="view">
+    <div id="view" class="gallery-block">
         <h3><xsl:value-of select="content/system-data-structure/slideshow/title1"/><xsl:if test="content/system-data-structure/slideshow/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/slideshow/title2"/></span></xsl:if></h3>
     <div class="inner">
         <xsl:for-each select="content/system-data-structure/slideshow/slide[image[link!='/']]">
@@ -278,7 +278,7 @@ add logic to news article to handle new article shortcut
 
 <!-- TEXT BLOCK -->
 <xsl:template match="*[content/system-data-structure/text-block]" mode="homepage-block">
-    <div id="forstudents">
+    <div id="forstudents" class="text-block">
       <h3><xsl:value-of select="content/system-data-structure/text-block/title1"/><xsl:if test="content/system-data-structure/text-block/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/text-block/title2"/></span></xsl:if></h3>
     <div class="inner">
     
@@ -291,7 +291,7 @@ add logic to news article to handle new article shortcut
 <!-- CALENDAR BLOCK -->
 <xsl:template match="*[content/system-data-structure/calendar]" mode="homepage-block">
 
-    <div id="events">
+    <div id="events" class="events-block">
       <h3><xsl:value-of select="content/system-data-structure/calendar/title1"/><xsl:if test="content/system-data-structure/calendar/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/calendar/title2"/></span></xsl:if></h3>
     <div class="inner">
         <dl>
@@ -330,7 +330,7 @@ add logic to news article to handle new article shortcut
 <!-- YOUTUBE VIDEO BLOCK -->
 <xsl:template match="*[content/system-data-structure/youtube]" mode="homepage-block">
         
-        <div id="video">
+        <div id="video" class="video-block">
             <h3><xsl:value-of select="content/system-data-structure/youtube/title1"/><xsl:if test="content/system-data-structure/youtube/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/youtube/title2"/></span></xsl:if></h3>
     
             <div class="inner">
