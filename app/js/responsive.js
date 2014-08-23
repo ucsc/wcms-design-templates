@@ -8,7 +8,7 @@
   //MOBILE MENUS
   var mobileNavOpen = 0; //mobile nav closed
   
-  $('.menu-toggle').click(function(){
+  $('.mobile-menu').click(function(){
     if (mobileNavOpen == 0){
       $('.page-top').slideDown(300);
       $('#mainNav').slideDown(300);
@@ -34,9 +34,9 @@
     
     //MOBILE NAV CONTROL
     if (bodyResize <= 803) {
-      $(".menu-toggle").show();
+      $(".mobile-menu").show();
     } else {
-      $(".menu-toggle").hide();
+      $(".mobile-menu").hide();
     }
     
     //SHOW OR HIDE NAVS
