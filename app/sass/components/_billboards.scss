@@ -150,7 +150,10 @@ Slide Styles
 	max-width: 100%;
 	margin-bottom: 5px;
 	font-size: $font-size-small;
-	max-height:348px;
+	max-height:362px;
+	padding:0.5em;
+	border-radius: $border-radius-base;
+	background-color: $sand-dark;
 	
 	img{
 		width:100%;
