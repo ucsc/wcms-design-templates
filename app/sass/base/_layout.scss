@@ -11,24 +11,11 @@
 .row {
     @include outer-container();
     margin-bottom: $font-size-base*1.5;
-    // Debug
-    // @include rowborders(red);
+    // @include rowborders(red); // Debug
 }
 
 .site-header {
   margin-bottom: 2em;
-}
-
-
-.five { 
-
-  > div {
-    @include media($tablet) {
-      //@include rowborders(blue);
-      @include span-columns(4 of 20); 
-    }  
-  }
-
 }
 
 
