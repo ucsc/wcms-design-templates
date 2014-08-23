@@ -114,16 +114,17 @@
 
 @mixin mobile-button($inverted: false) {
   display: block;
-  border-radius: $border-radius-base;
-  padding: 0.7em 1em;
-  text-align: left;
+  //border-radius: $border-radius-base;
+  padding: 0.4em 1em;
+  text-align: right;
   text-decoration: none;
   font-size: $font-size-small;
-  color: $sand-light;
-  background-color: $gray-dark;
+  color: $ucsc-gold;
+  background-color: $sand-light;
   &:hover,
   &:active,
   &:focus {
+    color:$gold;
     background-color: $blue;
     text-decoration: none;
   }
