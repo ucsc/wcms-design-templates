@@ -54,8 +54,8 @@
 
     > div {
         @include pad(1em);
-
         @include image-display($sand-med, 0.5em, true);
+
         img {
             margin-bottom: $font-size-large;
         }
@@ -110,7 +110,7 @@
         @include clearfix;
         @include pad(1em);
         @include module-box-shadow(dark);
-        background-color: #ECE9D8;
+        background-color: $sand-dark;
         min-height: 226px;
         margin: 0;
     }
