@@ -43,6 +43,9 @@
 @import "components/see-also";
 @import "components/gallery";
 @import "components/site-title";
-@import "components/articles";
-@import "components/feedback-form";
-@import "components/directory";
+
+// Specialty Pages
+@import "pages/articles";
+@import "pages/landing";
+@import "pages/feedback-form";
+@import "pages/directory";
