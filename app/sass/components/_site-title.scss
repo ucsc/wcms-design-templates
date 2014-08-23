@@ -4,12 +4,12 @@
 
 .site-name a {
   padding:0;
-  @include fontSize(38);
+  @include fontSize(46);
   text-transform:uppercase;
   display: block;
   color:$gold;
   text-decoration:none;
-  line-height:110%;
+  line-height:100%;
 }
     
 
@@ -21,7 +21,7 @@ $titles: (
   ),  
   large: (
     size: 40px,
-    margin-top: 16px,
+    margin-top: -4px,
     width: inherit
   ),
   xlarge: (
@@ -51,17 +51,17 @@ $titles: (
   ),
   extra-long: (
     size: 32px,
-    margin-top: 12px,
+    margin-top: -4px,
     width: 76%
   ),
   super-long: (
     size: 30px,
-    margin-top: 12px,
+    margin-top: -4px,
     width: 59%
   ),
   mega-long: (
     size: 28px,
-    margin-top: 8px,
+    margin-top: -2px,
     width: 62%
   )
 );
