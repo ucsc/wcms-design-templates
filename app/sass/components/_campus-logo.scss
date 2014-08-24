@@ -1,16 +1,20 @@
 .campus-logo {
 	
-	display: block;
-	background-repeat: no-repeat;
 	@include hide-text();
-		
+	display: block;	
 	background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
 	background-size: contain;
 	max-width: 260px;
 	height:72px;
 	padding: 0;
-
+	
 	@include media($mobile) {
-		margin-top:0px;
+		margin-top:0;
+		height: 3.5em;
 	}
+
+	.www & {
+		background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
+	}
+	
 }
