@@ -12,10 +12,15 @@ their functionality would need to be replaced on a site-by-site basis.
 
 /* Hide anything with this class (some Registrar FAQ pages use this) */
 .sleed,
-.srchBtn,
 #mainNav li img,
  {
   display: none;
+}
+
+.srchBtn {
+  position: absolute;
+  left:-900em;
+  outline:none;
 }
 
 /* Special table styles for special people */
