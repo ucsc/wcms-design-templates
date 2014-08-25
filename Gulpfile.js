@@ -24,7 +24,7 @@ var pkg = require('./package.json'),
 var paths = {
     styles: ['./app/sass/*.scss', './app/sass/**/**.**'],
     scripts: './app/js/**/**',
-    images: './app/images/**/**',
+    images: './app/images/**',
     svg: './app/svg/*.svg',
     fonts: './app/fonts/*'
 };
@@ -168,6 +168,9 @@ gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'as
 
 
 //
-// The zip task: compiles everything and cleanly zips it up for Cascade.
+// The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.
 //
-gulp.task('deploy', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'build']);
+gulp.task('fresh', ['clean', 'bower-files', 'styles', 'scripts', 'images']);
+
+
+
