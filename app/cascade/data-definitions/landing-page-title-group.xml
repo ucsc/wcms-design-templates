@@ -1,0 +1,4 @@
+  <group identifier="title-content" label="Title text and tagline">
+    <text identifier="title-text" label="Title text" maxlength="90"/>
+    <text multi-line="true" identifier="title-tagline" label="Title tagline" help-text="This is the tagline appears after the title." rows="6" cols="30"/>
+  </group>
