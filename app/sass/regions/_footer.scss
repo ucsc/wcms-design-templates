@@ -45,7 +45,6 @@
 		text-align:right;
 		a { 
 			display:inline-block;
-			width:24px;
 			overflow:hidden;
 			img {
 				position:relative;
@@ -56,7 +55,6 @@
 			&:active {
 				img {
 					position:relative;
-					left:-24px;
 				}
 			}
 		}
