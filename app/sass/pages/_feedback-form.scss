@@ -7,6 +7,9 @@ form#feedbackform {
     padding: 1em 2em 1em 0;
     vertical-align: middle;
   }
+  td #explain, td #explain2 {
+    display: none !important;
+  }
   th {
     vertical-align:bottom;
     font-weight: 700;
@@ -19,17 +22,17 @@ form#feedbackform {
     color: #676661;
   }
   input[type=text]{
-    margin: 1em 0;
+    margin: 0;
     width:100%;
     padding: 0.5em;
-    border-radius:5px;
+    border-radius:3px;
     border:1px solid #ccc;
   }
   input[type=submit]{
     margin: 0 0 1em 0;
     width:100%;
     padding: 0.5em;
-    border-radius:5px;
+    border-radius:3px;
     border:1px solid #ccc;
     background-color: $blue;
     color: #ffffff;
@@ -38,7 +41,7 @@ form#feedbackform {
     width:100%;
     padding: 0.5em;
     border:1px solid #ccc;
-    border-radius:5px;
+    border-radius:3px;
     resize:none;
   }
   input[type=text]:focus,textarea:focus{
