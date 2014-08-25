@@ -14,7 +14,7 @@
       </xsl:if>
       
       <!-- Test to see if there are items in the block -->
-      <xsl:if test="$nav-block/content/system-data-structure/block-content/item[1]/text != '' or $nav-block/content/system-data-structure/block-content/item[1]/content != ''">
+      <xsl:if test="$nav-block/content/system-data-structure/block-content/item[1]/text != '' or $nav-block/content/system-data-structure/block-content/item[1]/url != '' or $nav-block/content/system-data-structure/block-content/item[1]/content != '' or $nav-block/content/system-data-structure/block-content/item[1]/page/path != '/' or $nav-block/content/system-data-structure/block-content/item[1]/file/path != '/' or $nav-block/content/system-data-structure/block-content/item[1]/thumbnail/path != '/' or $nav-block/content/system-data-structure/block-content/item[1]/large-thumb/path != '/'">
         <!-- Unordered list with additional left side content -->
         <ul class="block page">
           <xsl:apply-templates select="$nav-block/content/system-data-structure/block-content/item"/>
