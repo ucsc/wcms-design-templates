@@ -2,6 +2,12 @@
 *   Page title classes for titles of different lengths
 */
 
+.site-name h1,
+.site-name p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .site-name a {
   padding:0;
   @include fontSize(46);
@@ -11,6 +17,7 @@
   text-decoration:none;
   line-height:100%;
   font-weight: 400;
+  margin-top: 15px;
 }
     
 
@@ -22,12 +29,12 @@ $titles: (
   ),  
   large: (
     size: 40px,
-    margin-top: -4px,
+    margin-top: 18px,
     width: inherit
   ),
   xlarge: (
     size: 44px,
-    margin-top: 0px,
+    margin-top: 15px,
     width: inherit
   ),  
   standard: (
@@ -62,7 +69,7 @@ $titles: (
   ),
   mega-long: (
     size: 28px,
-    margin-top: -2px,
+    margin-top: 12px,
     width: 62%
   )
 );
