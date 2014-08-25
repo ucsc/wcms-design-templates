@@ -16,10 +16,10 @@ img.directoryPhoto {
 div.directoryTextBlock,
 div.directoryPhoto {
   padding: 1em;
-  background-color: $sand-dark;
+  background-color: darken($sand, 8%);
   @include clearfix;
   margin-bottom: 2em;
-  @include module-box-shadow(dark);
+  @include module-box-shadow(light);
 }
 
 div.directoryTextBlock h3 {
