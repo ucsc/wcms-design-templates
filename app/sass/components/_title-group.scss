@@ -1,0 +1,46 @@
+/*doc
+---
+title: Title group
+name: title
+category: Landing Page
+---
+
+A title group is a word or very short phrase, followed by an associated tagline:
+
+```html_example
+<div class="title-group">
+    <h1>About</h1>
+    <p>This is a place like no other -- a place that inspires, a place that evokes passion and imagination -- all with a view to a limitless horizon.</p>
+</div>
+ ```
+
+*/
+
+.title-group {
+    display:flex;
+    flex-direction:row;
+    text-transform: lowercase;
+
+    h1 {
+        font-size:4rem;
+        margin:0;
+        color: $gold;
+        flex:1;
+        font-weight:600;
+        letter-spacing:-2px;
+    }
+
+    p {
+        font-size:1.4em;
+        line-height:1.2;
+        font-weight:300;
+        color:#999;
+        margin:0.4em 0 0 0.6em;
+        word-spacing:-2px;
+        flex:5;
+    }
+
+}
+
+
+
