@@ -241,7 +241,7 @@ add logic to news article to handle new article shortcut
     <xsl:if test="content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link">
         <xsl:choose>
             <xsl:when test="content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt != ''">
-                <img alt="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
+                <img class="full" alt="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
             </xsl:when>
             <xsl:otherwise>
                 <img alt="No Image Alternative Tag Provided" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
