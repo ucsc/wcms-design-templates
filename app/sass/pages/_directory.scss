@@ -4,11 +4,6 @@ table td.rowHeadDirectory{
 
 div.directoryPhoto {
   clear: right;
-  padding: 1em;
-  background-color: $sand-dark;
-  @include clearfix;
-  margin-bottom: 2em;
-  @include module-box-shadow(dark);
 }
 
 img.directoryPhoto {
@@ -16,6 +11,19 @@ img.directoryPhoto {
   padding:0.25em;
   margin: 1em 0 1em 1em; 
   background-color: $sand-light;
+}
+
+div.directoryTextBlock,
+div.directoryPhoto {
+  padding: 1em;
+  background-color: $sand-dark;
+  @include clearfix;
+  margin-bottom: 2em;
+  @include module-box-shadow(dark);
+}
+
+div.directoryTextBlock h3 {
+  margin-top: 0;
 }
 
 .directoryTableInfo {
