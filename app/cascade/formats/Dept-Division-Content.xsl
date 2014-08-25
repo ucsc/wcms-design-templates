@@ -21,16 +21,16 @@
         <xsl:when test="system-data-structure/banner/image-alt != ''">
           <img alt="{system-data-structure/banner/image-alt}" id="banner" src="{system-data-structure/banner/image/path}"/>
         </xsl:when>
+        <xsl:when test="system-data-structure/banner/caption != '' and system-data-structure/banner/image-alt = ''">
+          <img alt="Banner photo, caption follows." id="banner" src="{system-data-structure/banner/image/path}"/>
+          <p class="caption">
+            <xsl:value-of select="system-data-structure/banner/caption"/>
+          </p>
+        </xsl:when>        
         <xsl:otherwise>
-          <img alt="No Image Alternative Tag Provided" id="banner" src="{system-data-structure/banner/image/path}"/>
+          <img alt="Banner photo with no alternative text" id="banner" src="{system-data-structure/banner/image/path}"/>
         </xsl:otherwise>
       </xsl:choose>
-    
-      <xsl:if test="system-data-structure/banner/caption != ''">
-        <p class="caption">
-          <xsl:value-of select="system-data-structure/banner/caption"/>
-        </p>
-      </xsl:if>
     </div>
   </xsl:if>
 
