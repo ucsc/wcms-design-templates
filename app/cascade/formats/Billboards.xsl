@@ -18,8 +18,12 @@
     <xsl:if test="headline != '' and teaser != ''">
       <div>
         <xsl:attribute name="class">slide-body layout-<xsl:value-of select="layout"/> color-<xsl:value-of select="color"/></xsl:attribute>
-        <h1><xsl:value-of select="headline"/></h1>
-        <p><xsl:value-of select="teaser"/></p>
+        <div class="slide-title">
+          <xsl:value-of select="headline"/>
+        </div>
+        <p class="slide-teaser">
+          <xsl:value-of select="teaser"/>
+        </p>
         <!-- Depending on the URL (internal, symlink, or external), we change the href. -->
         <xsl:if test="link-text != ''">
           <xsl:choose>
