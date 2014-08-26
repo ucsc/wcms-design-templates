@@ -84,8 +84,8 @@
      width:100%;
      min-width: 14em;
      padding:0;     
-     display:none;
      position:absolute;
+     left:-900em;
      li {
        display:block;
        text-align:left;
@@ -96,8 +96,10 @@
        }
      }
    }
-    
-   li:hover ul {
-     display:block;
+   
+   li:focus ul, 
+   li:hover ul,
+   li:active ul {
+     left:auto;
    }
 }
