@@ -53,59 +53,50 @@ body {
 h1 {
 	color: darken($body-text, 10%);
 	font-weight: 700;
-	font-size: 2em; /* 32px */
-	line-height: 1; /* 32px */
-	letter-spacing: -0.03125em; /* -1px */
-	margin: 0.5em 0 1em; /* 16px 0 */
-   -webkit-font-smoothing: antialiased;
+	font-size: 2em;
+	line-height: 1;
+	letter-spacing: -0.03125em;
+	margin: 1em 0 0.5em;
 }
 
-h2,
-article > h1,
-section > h1,
-nav > h1 {
+h2 {
 	color: darken($body-text, 5%);
 	font-weight: 700;
-	line-height: 1; /* 24px */
-	margin: 0.5em 0 1em;
-   -webkit-font-smoothing: antialiased;
+	line-height: 1;
+	margin: 1em 0 0.5em;
 }
+
 h3,
-legend,
-article article > h1,
-article section > h1,
-section section > h1,
-section article > h1 {
+legend {
 	color: darken($body-text, 10%);
 	font-weight: 400;
-	font-size: 1.3125em; /* 21px */
-	line-height: 1.1429; /* 24px */
-	margin: 1.1429em 0 0.3810em; /* 24px 0 8px */
-   -webkit-font-smoothing: antialiased;
+	font-size: 1.3125em;
+	line-height: 1.1429;
+	margin: 1.15em 0 0.5em;
 }
 
 h4 {
 	color: darken($body-text, 10%);
 	font-weight: 400;
-	font-size: 1.125em; /* 18px */
-	line-height: 1.3334; /* 24px */
-	margin: 1.3334em 0 0.4444em; /* 24px 0 8px */
+	font-size: 1.125em;
+	line-height: 1.3334;
+	margin: 1.25em 0 0.25em;
    -webkit-font-smoothing: antialiased;
 }
 h5 {
 	color: darken($body-text, 5%);
 	font-weight: 700;
-	font-size: 1em; /* 16px */
-	line-height: 1; /* 16px */
-	margin: 1.5em 0 0.5em; /* 24px 0 8px */
+	font-size: 1em;
+	line-height: 1;
+	margin: 1.5em 0 0.25em;
    -webkit-font-smoothing: antialiased;
 }
 h6 {
 	color: $body-text;
 	font-weight: 700;
-	font-size: 0.875em; /* 14px */
-	line-height: 1.1429; /* 16px */
-	margin: 1.7143em 0 0.5714em; /* 24px 0 8px */
+	font-size: 0.875em;
+	line-height: 1.1429;
+	margin: 1.7em 0 0.15em;
    -webkit-font-smoothing: antialiased;
 }
 
