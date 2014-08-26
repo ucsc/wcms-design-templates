@@ -222,10 +222,10 @@ add logic to news article to handle new article shortcut
                 </xsl:choose>
         </li>
     </xsl:for-each>
-    <xsl:if test="content/system-data-structure/articles/news-index/path !='/'">
-        <li><em><a href="{content/system-data-structure/articles/news-index/link}" title="More">More...</a></em></li>
-    </xsl:if>
     </ul>
+    <xsl:if test="content/system-data-structure/articles/news-index/path !='/'">
+        <p><a class="more" href="{content/system-data-structure/articles/news-index/link}">More news&#187;</a></p>
+    </xsl:if>
     </div>
     </div>
 </xsl:template>
@@ -315,13 +315,10 @@ add logic to news article to handle new article shortcut
             </xsl:choose>
             </dd>
         </xsl:for-each>
-        <div class="clear-both"></div>
-        <xsl:if test="content/system-data-structure/calendar/more/path !='/'">
-        <em><a href="{content/system-data-structure/calendar/more/link}" title="More">More...</a></em>
-        
-        </xsl:if>
-
         </dl>
+        <xsl:if test="content/system-data-structure/calendar/more/path !='/'">
+        <p><a class="more" href="{content/system-data-structure/calendar/more/link}">More events&#187;</a></p>        
+        </xsl:if>
     
     </div>
   </div>
