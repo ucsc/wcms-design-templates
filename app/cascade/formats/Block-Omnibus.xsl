@@ -15,12 +15,9 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
 [end example]
 -->
 
-<!-- March 2011 updates:  
-add youtube video block
-add calendar block
-set slideshow blocks to 72x72
-add logic to news article to handle new article shortcut
--->
+<!-- $image-class: Images inside of blocks get a uniform class. Changing it here changes it across all blocks. -->
+<xsl:variable name="image-class">block-image</xsl:variable>
+
 
 <!-- 
 
@@ -28,8 +25,8 @@ add logic to news article to handle new article shortcut
 
 -->
 <xsl:template match="*[content/system-data-structure/articles]" mode="homepage-block">
-    <div id="news" class="news-block">
-    <h3>
+    <div id="news" class="block news-block">
+    <h3 class="block-header">
       <xsl:value-of select="content/system-data-structure/articles/title1"/>
       <xsl:if test="content/system-data-structure/articles/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/articles/title2"/></span>
       </xsl:if>
@@ -37,7 +34,7 @@ add logic to news article to handle new article shortcut
     <div class="inner">
       <ul class="archive-list">
 
-      <!-- Thumbnail height: Variable test to set image height to 48 pixels if more than 2 news item shown, otherwise set image height to 80. -->
+      <!-- $height: variable test to set image height to 48 pixels if more than 2 news item shown, otherwise set image height to 80. -->
       <xsl:variable name="height">     
         <xsl:choose>
           <xsl:when test="count(content/system-data-structure/articles/article) &gt; 2">48</xsl:when>
@@ -45,6 +42,8 @@ add logic to news article to handle new article shortcut
         </xsl:choose>
       </xsl:variable>
     
+
+      <!-- Print each article -->
       <xsl:for-each select="content/system-data-structure/articles/article">
     
         <xsl:variable name="alt-tag">
@@ -58,7 +57,7 @@ add logic to news article to handle new article shortcut
             <xsl:when test="content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb-alt !=''">
                 <xsl:value-of select="content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb-alt"/>
             </xsl:when>
-            <xsl:otherwise>Image with no description.</xsl:otherwise>
+            <xsl:otherwise>No text description</xsl:otherwise>
           </xsl:choose>
       </xsl:variable>
     
@@ -70,7 +69,7 @@ add logic to news article to handle new article shortcut
                     <xsl:choose>
                         <xsl:when test="content/system-data-structure/lead-image/image-thumb/link != '/'">
                           <a href="{content/system-data-structure/external-url}">
-                            <img alt="{$alt-tag}" class="fltlft" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/>
+                            <img alt="{$alt-tag}" class="{$image-class}" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/>
                           </a>
                           <span class="date">
                             <xsl:call-template name="format-date-string">
@@ -107,8 +106,7 @@ add logic to news article to handle new article shortcut
                             <!-- if the external page has a thumbnail -->
                           <xsl:when test="content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb/path !='/'">
                               <a href="{content/system-data-structure/page/link}">
-                                  <!-- <img alt="{content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb/display-name}" class="fltlft" src="{content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb/link}"/> -->
-                                  <img alt="{$alt-tag}" class="fltlft" height="{$height}" src="{content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb/link}"/>
+                                  <img alt="{$alt-tag}" class="{$image-class}" height="{$height}" src="{content/system-data-structure/page/content/system-data-structure/lead-image/image-thumb/link}"/>
                               </a> 
                         <span class="date">
                             <xsl:call-template name="format-date-string">
@@ -124,8 +122,7 @@ add logic to news article to handle new article shortcut
                             <!-- News Article (Page-External) - News Article Shortcut - Link to News Article with no thumbnail, and local/current site Lead Image Thumbnail provided -->
                             <xsl:when test="content/system-data-structure/lead-image/image-thumb/link != '/'">
                                <a href="{content/system-data-structure/page/link}">
-                                   <!-- <img alt="{content/system-data-structure/lead-image/alt}" class="fltlft" src="{content/system-data-structure/lead-image/image-thumb/link}"/> -->
-                                   <img alt="{$alt-tag}" class="fltlft" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/> 
+                                   <img alt="{$alt-tag}" class="{$image-class}" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/> 
                                </a>
                                <span class="date">
                                 <xsl:call-template name="format-date-string">
@@ -159,8 +156,7 @@ add logic to news article to handle new article shortcut
                     <xsl:when test="content/system-data-structure/file/path != '/'">
                       <xsl:choose>
                           <xsl:when test="content/system-data-structure/lead-image/image-thumb/link != '/'"><a href="{content/system-data-structure/file/link}">
-                              <!-- <img alt="{content/system-data-structure/lead-image/alt}" class="fltlft" src="{content/system-data-structure/lead-image/image-thumb/link}"/> -->
-                              <img alt="{$alt-tag}" class="fltlft" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/>
+                              <img alt="{$alt-tag}" class="{$image-class}" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/>
                           </a>
                     <span class="date">
                        <xsl:call-template name="format-date-string">
@@ -193,9 +189,8 @@ add logic to news article to handle new article shortcut
                     <xsl:otherwise>
                         <xsl:choose>
                             <xsl:when test="content/system-data-structure/lead-image/image-thumb/link != '/'">
-                                <a href="{link}">
-                                    <!-- <img alt="{content/system-data-structure/lead-image/image-alt}" class="fltlft" src="{content/system-data-structure/lead-image/image-thumb/link}"/> -->
-                                    <img alt="{$alt-tag}" class="fltlft" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/>
+                                <a href="{link}">                                    
+                                    <img alt="{$alt-tag}" class="{$image-class}" height="{$height}" src="{content/system-data-structure/lead-image/image-thumb/link}"/>
                                 </a>
                          <span class="date">                  
                         <xsl:call-template name="format-date-string">
@@ -233,18 +228,18 @@ add logic to news article to handle new article shortcut
 <!-- FEATURED PROFILE -->
 
 <xsl:template match="*[content/system-data-structure/profile]" mode="homepage-block">
-    <div id="profile" class="profile-block">
-    <h3><xsl:value-of select="content/system-data-structure/profile/title1"/><xsl:if test="content/system-data-structure/profile/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/profile/title2"/></span></xsl:if></h3>
+    <div id="profile" class="block profile-block">
+    <h3 class="block-header"><xsl:value-of select="content/system-data-structure/profile/title1"/><xsl:if test="content/system-data-structure/profile/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/profile/title2"/></span></xsl:if></h3>
     <div class="inner">
 
     <!-- Is there a thumbnail assigned in the SD block? -->
     <xsl:if test="content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link">
         <xsl:choose>
             <xsl:when test="content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt != ''">
-                <img class="full" alt="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
+                <img class="{$image-class}" alt="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
             </xsl:when>
             <xsl:otherwise>
-                <img alt="No Image Alternative Tag Provided" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
+                <img class="{$image-class}" alt="No text provided" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
             </xsl:otherwise>
         </xsl:choose>   
     </xsl:if>
@@ -264,12 +259,12 @@ add logic to news article to handle new article shortcut
 
 <!--SLIDESHOW BLOCK -->
 <xsl:template match="*[content/system-data-structure/slideshow]" mode="homepage-block">
-    <div id="view" class="gallery-block">
-        <h3><xsl:value-of select="content/system-data-structure/slideshow/title1"/><xsl:if test="content/system-data-structure/slideshow/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/slideshow/title2"/></span></xsl:if></h3>
+    <div id="view" class="block gallery-block">
+        <h3 class="block-header"><xsl:value-of select="content/system-data-structure/slideshow/title1"/><xsl:if test="content/system-data-structure/slideshow/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/slideshow/title2"/></span></xsl:if></h3>
     <div class="inner">
         <xsl:for-each select="content/system-data-structure/slideshow/slide[image[link!='/']]">
             <a href="{image/link}" rel="lightbox" title="{alt}">
-                <img alt="{alt}" height="72" src="{thumb/link}" width="72"/>
+                <img class="{$image-class}" alt="{alt}" height="72" src="{thumb/link}" width="72"/>
             </a>
         </xsl:for-each>
     </div>
@@ -278,8 +273,8 @@ add logic to news article to handle new article shortcut
 
 <!-- TEXT BLOCK -->
 <xsl:template match="*[content/system-data-structure/text-block]" mode="homepage-block">
-    <div id="forstudents" class="text-block">
-      <h3><xsl:value-of select="content/system-data-structure/text-block/title1"/><xsl:if test="content/system-data-structure/text-block/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/text-block/title2"/></span></xsl:if></h3>
+    <div id="forstudents" class="block text-block">
+      <h3 class="block-header"><xsl:value-of select="content/system-data-structure/text-block/title1"/><xsl:if test="content/system-data-structure/text-block/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/text-block/title2"/></span></xsl:if></h3>
     <div class="inner">
     
             <xsl:copy-of select="content/system-data-structure/text-block/text/node()"/>
@@ -291,8 +286,8 @@ add logic to news article to handle new article shortcut
 <!-- CALENDAR BLOCK -->
 <xsl:template match="*[content/system-data-structure/calendar]" mode="homepage-block">
 
-    <div id="events" class="events-block">
-      <h3><xsl:value-of select="content/system-data-structure/calendar/title1"/><xsl:if test="content/system-data-structure/calendar/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/calendar/title2"/></span></xsl:if></h3>
+    <div id="events" class="block events-block">
+      <h3 class="block-header"><xsl:value-of select="content/system-data-structure/calendar/title1"/><xsl:if test="content/system-data-structure/calendar/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/calendar/title2"/></span></xsl:if></h3>
     <div class="inner">
         <dl>
         <xsl:for-each select="content/system-data-structure/calendar/event">
@@ -327,20 +322,20 @@ add logic to news article to handle new article shortcut
 <!-- YOUTUBE VIDEO BLOCK -->
 <xsl:template match="*[content/system-data-structure/youtube]" mode="homepage-block">
         
-        <div id="video" class="video-block">
-            <h3><xsl:value-of select="content/system-data-structure/youtube/title1"/><xsl:if test="content/system-data-structure/youtube/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/youtube/title2"/></span></xsl:if></h3>
+        <div id="video" class="block video-block">
+            <h3 class="block-header"><xsl:value-of select="content/system-data-structure/youtube/title1"/><xsl:if test="content/system-data-structure/youtube/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/youtube/title2"/></span></xsl:if></h3>
     
             <div class="inner">
                 <xsl:if test="content/system-data-structure/youtube/video_thumb/link != '/'">
                     <xsl:if test="content/system-data-structure/youtube/video_url">
                         <a class="fb thumb_link" href="{content/system-data-structure/youtube/video_url}">
-                            <img alt="Play button" class="play_btn" height="35" src="site://static/images/play_btn.png" width="48"/>
-                            <img alt="YouTube video thumbnail" height="90" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
+                            <img alt="Play button" class="play-button" height="35" src="site://static/images/play_btn.png" width="48"/>
+                            <img class="{$image-class}" alt="YouTube video thumbnail" height="90" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
                         </a>
                     </xsl:if>
                 </xsl:if>
                 <xsl:if test="content/system-data-structure/youtube/video_thumb/link = '/'">
-                    <img alt="YouTube video thumbnail" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
+                    <img class="{$image-class}" alt="YouTube video thumbnail" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
                 </xsl:if>
                 <xsl:if test="content/system-data-structure/youtube/video_title">
                     <a class="fb upTitle" href="{content/system-data-structure/youtube/video_url}">
@@ -365,8 +360,8 @@ add logic to news article to handle new article shortcut
 
 <!-- Catch any system-data-structure blocks that are not defined above -->
 <xsl:template match="*[content/system-data-structure]" mode="homepage-block" priority="-10">
-    [system-view:internal]<h3>INVALID BLOCK TYPE</h3><div class="inner">Invalid Block Type</div>[/system-view:internal]
-    [system-view:external]<h3><xsl:value-of select="ancestor::calling-page/system-page/display-name"/></h3><div class="inner"><xsl:value-of select="ancestor::calling-page/system-page/summary"/></div>[/system-view:external]
+    [system-view:internal]<h3 class="block-header">INVALID BLOCK TYPE</h3><div class="inner">Invalid Block Type</div>[/system-view:internal]
+    [system-view:external]<h3 class="block-header"><xsl:value-of select="ancestor::calling-page/system-page/display-name"/></h3><div class="inner"><xsl:value-of select="ancestor::calling-page/system-page/summary"/></div>[/system-view:external]
 </xsl:template>
 
 </xsl:stylesheet>

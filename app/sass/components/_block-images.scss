@@ -1,0 +1,17 @@
+// Image styles for blocks
+.block img {
+    padding:0.25em;
+    border-radius: $border-radius-base/2;    
+    .dark & {
+        background-color: $sand-light;    
+    }
+    .light & {
+        background-color: $sand-dark;       
+    }
+}
+
+/* Block images with a width of 216px should extend full-width */
+.block img[width="216"] {
+  display:block;
+  width:100%;
+}
