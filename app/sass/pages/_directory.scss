@@ -1,5 +1,10 @@
 table td.rowHeadDirectory{
   font-weight: bold;
+  width: 25%;
+}
+
+table.directoryTableInfo {
+  font-size: 85%;
 }
 
 div.directoryPhoto {
@@ -7,7 +12,7 @@ div.directoryPhoto {
 }
 
 img.directoryPhoto {
-  width: 30%;
+  width: 20%;
   padding:0.25em;
   margin: 1em 0 1em 1em; 
   background-color: $sand-light;
@@ -27,7 +32,7 @@ div.directoryTextBlock h3 {
 }
 
 .directoryTableInfo {
-  width: 62%;
+  width: 72%;
   float: right;
   #title {
     font-size: 1.8em;
