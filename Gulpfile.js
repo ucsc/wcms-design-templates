@@ -156,7 +156,6 @@ gulp.task('watch', function() {
     gulp.watch('app/js/**/**', ['scripts']);
     gulp.watch('app/sass/**/*.scss', ['styles']);
     gulp.watch('app/images/**/.**', ['images']);
-    gulp.watch('app/svg/**/.**', ['sprites']);
     gulp.watch(['app/examples/layouts/*.hbs', 'app/examples/partials/*.hbs', 'app/examples/pages/*.hbs'], ['assemble']);
 });
 
