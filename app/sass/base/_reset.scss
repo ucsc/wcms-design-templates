@@ -168,10 +168,9 @@ ol {
 ul {
 	list-style-type: square;
 	padding: 0;
-}
-
-ul li li {
+	ul {
 		list-style-type: circle;
+	}
 }
 
 dt {
@@ -372,7 +371,6 @@ textarea {
 	outline: 0;
 }
 select {
-	//-webkit-appearance: button;
 	appearance: normal;
 }
 button,
@@ -395,10 +393,7 @@ input[type="checkbox"] {
 input[type="search"] {
 	-webkit-appearance: none;
 }
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	//-webkit-appearance: none;
-}
+
 [disabled] {
 	cursor:  default;
 }
