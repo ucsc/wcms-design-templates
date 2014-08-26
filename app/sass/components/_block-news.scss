@@ -7,22 +7,18 @@
 		li {
 			clear: both;
 			line-height:130%;
-			margin: 0 0 $font-size-base*1.5;
+			margin: 0 0 1em;
+			min-height: 80px;
 			padding: 0;
 			background-image: none;
 			list-style-type: none;
 
-			.thumbnail {
+			img {
 				float: left;
 				display: block;
 				margin: 0 0.5em 0.5em 0;	
-				padding:0.25em;
-				background-color: $sand;
-				border-radius: $border-radius-base;
-				img {
-					width:72px;
-					height:72px;
-				}
+				width:80px;
+				height:auto;
 			}
 
 			.date {
