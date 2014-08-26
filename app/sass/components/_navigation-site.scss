@@ -99,7 +99,7 @@
    
    li:focus ul, 
    li:hover ul,
-   li:active ul {
+   ul.active-dropdown {
      left:auto;
    }
 }
