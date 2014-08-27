@@ -23,6 +23,10 @@ their functionality would need to be replaced on a site-by-site basis.
   outline:none;
 }
 
+.upTitle {
+  text-transform: uppercase;
+}
+
 
 /* Special table styles for special people */
 .alt tr:nth-child(even) { background-color:#f5f3e8; }
