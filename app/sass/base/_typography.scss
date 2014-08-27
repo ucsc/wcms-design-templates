@@ -35,9 +35,10 @@ h1, .h1 {
 	}
 }
 
-#title {
-		@include fontSize(46);
-		margin:0 0.25em 0.5em 0;
+#title,
+.page-title {
+		@include fontSize(42);
+		margin:0 0.25em 0.25em 0;
 	}
 
 //
