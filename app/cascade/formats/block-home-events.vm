@@ -1,8 +1,8 @@
 ## Get events for an Featured Events listing
 #set ($events = $_XPathTool.selectNodes($contentRoot,"//system-data-structure/event"))
 
-<div id="events" class="events">
-  <h2><a href="https://events.ucsc.edu">Featured <span>Events</span></a></h2>
+<div id="events" class="block events-block">
+  <h3 class="block-header"><a href="https://events.ucsc.edu">Featured <span>Events</span></a></h3>
   <dl>
     
 #foreach($item in $events)
@@ -23,5 +23,5 @@
     
 #end
   </dl>
-  <p><a class="more" title="More events" href="https://events.ucsc.edu">More events &#187;</a></p>
+  <p><a class="more" href="https://events.ucsc.edu">More events &#187;</a></p>
 </div>

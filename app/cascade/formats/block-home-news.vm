@@ -8,8 +8,8 @@ $_SortTool.addSortCriterion("dynamic-metadata[name='type']/value","","text","des
 $_SortTool.addSortCriterion("start-date","","number","descending","upper-first")
 $_SortTool.sort($articles)
 
-<section id="news" class="news">
-  <h1><a class="headline" href="http://news.ucsc.edu">University <span>News</span></a></h1>
+<div id="news" class="block news-block">
+  <h3 class="block-header"><a class="headline" href="http://news.ucsc.edu">University <span>News</span></a></h3>
   <ul class="archive-list">
 
 #if ($articles.size() <= $articlesLimit )
@@ -51,7 +51,7 @@ $_SortTool.sort($articles)
 
 #end
   </ul>
-    <p class="more"><a class="more" title="More UCSC news stories" href="http://news.ucsc.edu">News center &#187;</a></p>
-</section>
+    <p class="more"><a class="more" href="http://news.ucsc.edu">More news&#187;</a></p>
+</div>
 
 #end
