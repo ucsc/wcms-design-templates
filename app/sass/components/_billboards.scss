@@ -21,7 +21,6 @@ Slide Styles
 		width: 100%;
 		max-width: 475px;
 		margin: 3% 0 3% 0;
-		top: 0;
 	}
 }
 
@@ -50,29 +49,31 @@ Slide Styles
 
 // COLUMN RULES
 
-@mixin billboard-slider-h1 {
-
-	@include media($mobile) {
-		font-size: 2.5em;
-		margin: 0;
-	}
-	
-	@include media($tablet) {
-		font-size: 3em;
-		display: block;
-		line-height: 90%;
+@mixin billboard-title {
+	.slider-title {
+		@include media($mobile) {
+			font-size: 2.5em;
+			margin: 0;
+		}
+		
+		@include media($tablet) {
+			font-size: 3em;
+			display: block;
+			line-height: 90%;
+		}
 	}
 
 }
 
-@mixin billboard-slider-p {
+@mixin billboard-teaser{
+	.slider-teaser {
+		@include media($mobile) {
+			font-size: 1.25em;
+		}
 
-	@include media($mobile) {
-		font-size: 1.25em;
-	}
-
-	@include media($tablet)  {
-		font-size: 1.5em;
+		@include media($tablet)  {
+			font-size: 1.5em;
+		}
 	}
 
 }
@@ -91,12 +92,12 @@ Slide Styles
 
 // HORIZONTAL RULES
 
-@mixin horizontal-h1 {
-	h1 {
+@mixin horizontal-title {
+	.slider-title {
 		  display: block;
 		  margin: 0;
 		  width: 40%;
-		  line-height: 1.10em;
+		  line-height: .9em;
 		  text-align: right;
 		  float: left;
 	  
@@ -106,10 +107,10 @@ Slide Styles
 			text-align: left;
 			float: none;
 			padding:0;
-			@include billboard-slider-h1;
+			font-size: 2.5em;
 		}
 	  @include media($tablet) {
-	  		@include billboard-slider-h1;
+	  		font-size: 3em;
 	  		padding: .20em .5em .20em;
 	  }
 
@@ -117,8 +118,8 @@ Slide Styles
 }
 
 
-@mixin horizontal-p {
-	p {
+@mixin horizontal-teaser {
+	.slider-teaser {
 	  display: block;
 	  line-height:1.25em;
 	  width: 60%;
@@ -130,10 +131,10 @@ Slide Styles
 			float: none;
 			position: static;
 			margin: 0;
-			@include billboard-slider-p;
+			font-size: 1.25em;
 		}
 	  @include media($tablet)  {
-		  	@include billboard-slider-p;
+		  	font-size: 1.5em;
 		  	padding: .80em 0 .20em;
 	  }
 	}
@@ -171,9 +172,8 @@ Slide Styles
 	background-color:rgba($ucsc-blue, 0.85);
 	color:$sand-light;
 	padding:2em 1em 1em;
-	@include slider-position; /* T */
-	/*@include slider-clearfix;*/
-	h1 {
+	@include slider-position;
+	.slider-title {
 		text-transform: uppercase;
 		color:$sand-light;
 		font-weight: bold;
@@ -181,7 +181,7 @@ Slide Styles
 		line-height: 90%;
 	}
 
-	p {
+	.slider-teaser {
 		color:$sand-light;
 		padding:0;
 		margin:0 0 .25em 0;
@@ -198,33 +198,33 @@ Slide Styles
 	}
 
 	&.layout-left{
-		@include billboard-slider-h1; /* T */
-		@include billboard-slider-p; /* T */
+		@include billboard-title;
+		@include billboard-teaser;
 		@include layout-left-right;
 		text-align: right;
-		left:0; /* T */
+		left:0;
 	}
 	
 	&.layout-right{
-		@include billboard-slider-h1; /* T */
-		@include billboard-slider-p; /* T */
+		@include billboard-title;
+		@include billboard-teaser; 
 		@include layout-left-right;
 		text-align: left;
-		right: 0; /* T */
+		right: 0;
 	}
 	
 	&.layout-top {   	
 	   	@include layout-horizontal;
-	   	@include horizontal-h1;
-	   	@include horizontal-p;
-	   	@include slider-clearfix; /* T */
+	   	@include horizontal-title;
+	   	@include horizontal-teaser;
+	   	@include slider-clearfix;
 	   	top:5%;
   }
 
 	&.layout-bottom{
 		@include layout-horizontal;
-		@include horizontal-h1;
-		@include horizontal-p;
+		@include horizontal-title;
+		@include horizontal-teaser;
 		@include slider-clearfix; /* T */
 		bottom: 5%;
 	}
@@ -251,7 +251,7 @@ $themes: (
 @each $color, $i in $themes {
     .color-#{nth($color, 1)} {
     		background-color:#{map-get($i, background-color)};
-        h1 {
+        .slider-title {
         	color:#{map-get($i, color)};
         }
         a {
