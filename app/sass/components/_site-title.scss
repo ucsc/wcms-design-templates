@@ -12,7 +12,7 @@
   padding:0;
   @include fontSize(46);
   text-transform:uppercase;
-  display: block;
+  display: inline-block;
   color:$gold;
   text-decoration:none;
   line-height:100%;
