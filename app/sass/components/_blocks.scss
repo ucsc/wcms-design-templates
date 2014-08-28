@@ -39,12 +39,13 @@
     h4,
     .header {
         margin: 0 0 1em 0;
+        color: $brown;
         text-transform: uppercase;
         font-size: $font-size-base;
         font-weight: normal;
         span {
             font-weight: bold;
-            color: $gray-dark;
+            color: $brown-dark;
         }
     }
 
@@ -144,8 +145,8 @@
 
 .separate h3,
 .separate .header {
-        border: 1px solid lighten($brown-light, 20%);
-        color: $brown;
+        border: 1px solid lighten($brown-light, 44%);
+        color: lighten($brown-light, 12%);
         font-size: $font-size-base*1.2;
         font-weight: normal;
         margin: 0 0 10px 0;
@@ -153,7 +154,7 @@
         text-transform: uppercase;
         span {
             font-weight: bold;
-            color: $brown-dark;
+            color: $brown-light;
         }
     }
 
