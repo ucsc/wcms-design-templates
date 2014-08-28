@@ -105,7 +105,6 @@
     .wrap {
       @include pad(1em);
       @include omega;
-      padding: 1em 0;
     }
 
     .inner {
