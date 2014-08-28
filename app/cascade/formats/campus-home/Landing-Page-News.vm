@@ -8,7 +8,7 @@ $_SortTool.sort($articles)
 
 
   <h3>University <span>News</span></h3>
-  <div id="landingNews">
+  <div id="landingNews" class="block block-news">
   <ul class="archive-list horizontal">
 
 #if ($articles.size() <= $articlesLimit )
