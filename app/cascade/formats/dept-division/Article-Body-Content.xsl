@@ -38,6 +38,8 @@
       <p class="vcard"><xsl:apply-templates select="system-data-structure/contact"/></p>
     </xsl:if>
     
+    <div class="content-box">
+    
     <!-- Add main image -->
     <xsl:if test="system-data-structure/lead-image/image/path != '/' or system-data-structure/lead-image/image-caption != ''">
       <xsl:apply-templates select="system-data-structure/lead-image"/>      
@@ -54,6 +56,8 @@
         <div class="article-body"><xsl:copy-of select="node()"/></div>
       </xsl:if>
     </xsl:for-each>
+    
+    </div>
     
   <!-- Add related links -->
     <!-- REMOVED...IS NOW CONTENT BOTTOM REGION FORMAT
@@ -99,7 +103,7 @@
 
   <xsl:template match="lead-image | secondary-images">
       
-    <figure>
+    <figure class="article-image">
           <xsl:choose>
                       <xsl:when test="image-alt != ''">
                         <img alt="{image-alt}" src="{image/path}"/>
