@@ -50,7 +50,7 @@ Slide Styles
 // COLUMN RULES
 
 @mixin billboard-title {
-	.slider-title {
+	.slide-title {
 		@include media($mobile) {
 			font-size: 2.5em;
 			margin: 0;
@@ -66,7 +66,7 @@ Slide Styles
 }
 
 @mixin billboard-teaser{
-	.slider-teaser {
+	.slide-teaser {
 		@include media($mobile) {
 			font-size: 1.25em;
 		}
@@ -93,7 +93,7 @@ Slide Styles
 // HORIZONTAL RULES
 
 @mixin horizontal-title {
-	.slider-title {
+	.slide-title {
 		  display: block;
 		  margin: 0;
 		  width: 40%;
@@ -119,7 +119,7 @@ Slide Styles
 
 
 @mixin horizontal-teaser {
-	.slider-teaser {
+	.slide-teaser {
 	  display: block;
 	  line-height:1.25em;
 	  width: 60%;
@@ -173,7 +173,7 @@ Slide Styles
 	color:$sand-light;
 	padding:2em 1em 1em;
 	@include slider-position;
-	.slider-title {
+	.slide-title {
 		text-transform: uppercase;
 		color:$sand-light;
 		font-weight: bold;
@@ -181,7 +181,7 @@ Slide Styles
 		line-height: 90%;
 	}
 
-	.slider-teaser {
+	.slide-teaser {
 		color:$sand-light;
 		padding:0;
 		margin:0 0 .25em 0;
@@ -251,7 +251,7 @@ $themes: (
 @each $color, $i in $themes {
     .color-#{nth($color, 1)} {
     		background-color:#{map-get($i, background-color)};
-        .slider-title {
+        .slide-title {
         	color:#{map-get($i, color)};
         }
         a {
