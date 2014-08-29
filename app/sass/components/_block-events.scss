@@ -2,28 +2,38 @@
 .events-block {
 
 	dt {
+		//border:1px solid red;
 		width:18%; 
 		float: left;
+		font-size: 1.2em;
 		clear:both;
 		color: $gray;
 		font-weight:normal;
-		font-size: 1em;
 		letter-spacing: 1px;
 		margin:0 0 1em 0;
+		text-align: center;
 		padding:0;
 		line-height: 1;
-		text-align: center;
 		text-transform: uppercase;
+		@include media($tablet) {
+			font-size: 1em;
+		}
 		strong,
 		span {
 			color: $gray-dark;
-			font-size: 1.4em;
 			letter-spacing: 0px;
 			line-height: 1em;
-			display: block;
+			font-weight: normal;
+			display: inline;
+			@include media($tablet) {
+				font-size: 1.4em;
+				font-weight: 600;
+				display: block;
+			}
 		}
 	}
 	dd {
+		//border:1px solid blue;
 		width:82%;
 		float:left;
 		margin:0;

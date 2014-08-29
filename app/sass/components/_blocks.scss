@@ -147,8 +147,7 @@
 // @todo: we should make this more standardized.
 // A mixin, perhaps?
 
-.separate h3,
-.separate .header {
+.separate .block-header {
         border: 1px solid lighten($brown-light, 44%);
         color: lighten($brown-light, 12%);
         font-size: $font-size-base*1.2;
@@ -162,9 +161,8 @@
         }
     }
 
-
-.combined h2,
-.combined .header {
+// Home page, right under billboards  
+.combined .block-header {
     border-bottom: #E5E4DE 1px solid;
     color: $gray-dark;
     font-size: $font-size-large;
@@ -172,13 +170,17 @@
     margin: 0 0 1em 0;
     padding-bottom: 0.4em;
     text-transform: uppercase;
+    a {
+        color: $gray-dark;
+    }
     span {
         color: darken($gray, 20%);
     }
 }
 
-.combined h4,
-.combined .header {
+// Dept-Div pages
+.dept .combined .block-header,
+.dept .combined .block-header {
     border: 1px solid $brown-light;
     color: $brown;
     font-size: $font-size-base*1.2;
