@@ -32,6 +32,16 @@
     margin:0 0.5em 1em 0;
   }
 
+  // Alternative style: horizontal list
+  &.horizontal li {
+      display: table-cell;
+      padding:0 0.5em;
+      line-height: 1.3;
+      @include media($mobile) {
+        display: block;
+      }
+  }
+
   // Alternative style: images on the right
   &.image-right img {
     float:right;
