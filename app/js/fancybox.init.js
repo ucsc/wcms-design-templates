@@ -1,15 +1,18 @@
-jQuery(document).ready(function() {
-      var owl = jQuery("#slides");
-      owl.owlCarousel({
-        autoPlay : 5000,
-        stopOnHover : true,
-        navigation: true,
-        paginationSpeed : 1000,
-        goToFirstSpeed : 2000,
-        singleItem : true,
-        autoHeight : true,
-        lazyLoad : true,
-        transitionStyle: "fade"
-      });
-      
+// <![CDATA[
+jQuery(document).ready(function() {  
+      jQuery("#video a.fb").each(function()
+           { 
+               jQuery(this).fancybox({
+                 'titleShow'     : false,
+                 'overlayOpacity': '0.8',
+                 'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+                 'type'          : 'swf',
+                 'swf'          : {'wmode':'transparent','allowfullscreen':'true'}
+               });  
+           });
+
+         jQuery("#view a").fancybox();
+         jQuery(".thumb-grid a").fancybox();
+
     });
+// ]]>
