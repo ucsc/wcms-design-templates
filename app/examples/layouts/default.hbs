@@ -28,18 +28,27 @@
 
         {{> global-header}}
 
-        {{#www}}
-          {{> header-www }}    
-        {{/www}}
-        {{^www}}
-          {{> header-dept }}
-        {{/www}}
-
-        {{^front}}
-            <div class="row breadcrumbs">
-                <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
-            </div>
-        {{/front}}
+        {{!-- For the titles sample page, ignore everything else. --}}
+        {{#titles}}
+          {{> header-titles }}
+        {{/titles}}
+        {{!-- Not the titles page, show the full goods. --}}
+        {{^titles}}
+          {{!-- Campus home header --}}
+          {{#www}}
+            {{> header-www }}    
+          {{/www}}
+          {{!-- Department/Division header --}}
+          {{^www}}
+            {{> header-dept }}
+          {{/www}}
+          {{!-- Breadcrumbs if we're not on a front page. --}}
+          {{^front}}
+              <div class="row breadcrumbs">
+                  <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
+              </div>
+          {{/front}}
+        {{/titles}}
 
       </div>
 
@@ -56,35 +65,27 @@
     </div>
 
     
-<div class="row" id="footer" role="footer">
+    <div class="row" id="footer" role="footer">
           <p class="links">
-            <a href="about/contact.html">Contact</a>
+            <a href="about/contact.html">Feedback</a>
           </p>
           <p class="links">
             <a href="about/contact.html">Contact</a>
           </p>
           <p class="links">
-            <a href="about/contact.html">Contact</a>
+            <a href="about/contact.html">Information</a>
           </p>
 
-<div class="links"><a class="stripped" href="../feedback.php" style="padding: 0px; border: none;">Feedback</a> <a href="../contact/index.html#Contact">Contact</a><a class="stripped" href="http://www.facebook.com/pages/Santa-Cruz-CA/UC-Santa-Cruz-Undergraduate-Admissions/125565329303?v=wall" style="padding: 0px; border: none;"><img alt="Facebook" height="24" src="http://admissions.ucsc.edu/images/facebook-icon.png?t=0" width="24"></a><a href="http://www.twitter.com/ucsc_admission"><img alt="Follow ucsc_admission on Twitter" class="stripped" height="24" src="http://admissions.ucsc.edu/images/twitter-icon.png?t=0" width="24" style="padding: 0px; border: none;"></a></div>
-
-{{!-- 
-          <p class="links"><a href="http://www.facebook.com/pages/University-of-California-Santa-Cruz-Division-of-Social-Sciences/130321120141"><img alt="FBicon" height="32" src="http://socialsciences-dev.ucsc.edu/images/facebook.png?t=0" width="32"></a></p>
-          <p class="links"><a href="http://www.facebook.com/pages/University-of-California-Santa-Cruz-Division-of-Social-Sciences/130321120141"><img alt="FBicon" height="32" src="http://socialsciences-dev.ucsc.edu/images/facebook.png?t=0" width="32"></a></p>
-          <p class="links"><a href="http://www.facebook.com/pages/University-of-California-Santa-Cruz-Division-of-Social-Sciences/130321120141"><img alt="FBicon" height="32" src="http://socialsciences-dev.ucsc.edu/images/facebook.png?t=0" width="32"></a></p>
-<p class="links"><a href="department-use-only.html">Internal</a></p>
-<p class="links"><a href="feedback.php" title="Feedback">Feedback</a></p> --}}
           <p class="address home">UC Santa Cruz, 1156 High Street, Santa Cruz, Ca 95064<br>
-©2012 Regents of the University of California. All Rights Reserved.</p>
-        </div>
+©2014 Regents of the University of California. All Rights Reserved.</p>
+    </div>
 
-      <div class="row legal">
-        <p><a href="http://its.ucsc.edu/terms/">Privacy Policy and Terms of Use</a></p>
-        <p><b>Page last built:</b> ##DATE##</p>
-      </div>
+    <div class="row legal">
+      <p><a href="http://its.ucsc.edu/terms/">Privacy Policy and Terms of Use</a></p>
+      <p><b>Page last built:</b> ##DATE##</p>
+    </div>
     
-    </footer>
+    
 
     </div><!-- /content-->        
   </div><!-- /container -->
