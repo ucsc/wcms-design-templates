@@ -9,16 +9,30 @@
   ul {
     margin:0;
     padding-left:0;
-    li {
-      list-style: none;
-      margin:0 0.5em 0.25em 0.25em;
-      padding:0.25em;
-      float:left;
-      width:48%;
+
+    // If modernizr says the browser suuports columns, let's do it.
+    .csscolumns & {
       @include media($mobile) {
-        float: none;
-        width: 100%;
+        column-count: 1;
+      }
+      @include media($tablet) {
+        column-count: 2;
+      }
+      @include media($desktop) {
+        column-count: 3;
       }
     }
+
+    li {
+      list-style: square;
+      // Something about this border makes things
+      // break **slightly** less awkwardly.
+      border:1px solid transparent;
+      margin:0 0.5em 0.1em 1.25em;
+      padding:0.1em 0.2em 0.1em 0em;
+      column-break-inside: avoid;
+      column-break-after: always;
+    }
+
   }
 }
