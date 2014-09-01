@@ -10,8 +10,16 @@
     margin:0;
     padding-left:0;
 
-    // If modernizr says the browser suuports columns, let's do it.
-    .csscolumns & {
+    li {
+      list-style-type: disc;
+      width: 100%;
+      margin:0 0.5em 0.1em 1.25em;
+      padding:0.1em 0.5em 0.1em 0.25em;
+    }
+
+    // If modernizr says the browser suuports columns,
+    // let's do it for landing pages only.
+    .csscolumns .landing & {
       @include media($mobile) {
         column-count: 1;
       }
@@ -23,16 +31,7 @@
       }
     }
 
-    li {
-      list-style: square;
-      // Something about this border makes things
-      // break **slightly** less awkwardly.
-      border:1px solid transparent;
-      margin:0 0.5em 0.1em 1.25em;
-      padding:0.1em 0.2em 0.1em 0em;
-      column-break-inside: avoid;
-      column-break-after: always;
-    }
+    
 
   }
 }
