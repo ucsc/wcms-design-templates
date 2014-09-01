@@ -58,20 +58,24 @@
             <!-- When there is a small thumbnail -->
             <xsl:when test="thumbnail/path != '/'">
                 <span class="thumbnail">
-                    <img alt="{thumb-alt}" src="{thumbnail/link}" />
+                    <img alt="{thumb-alt}" src="{thumbnail/link}"/>
                 </span>
-                <span class="description">
-                    <xsl:value-of select="text"/>
-                </span>
+                <xsl:if test="text !=''">
+                    <span class="description">
+                        <xsl:value-of select="text"/>
+                    </span>
+                </xsl:if>
             </xsl:when>
             <!-- When there is a wide thumbnail -->
             <xsl:when test="large-thumb/path != '/'">
                 <span class="thumbnail">
-                    <img alt="{thumb-alt}" src="{large-thumb/link}" class="landscape" />
+                    <img alt="{thumb-alt}" class="landscape" src="{large-thumb/link}"/>
                 </span>
-                <span class="description">
-                    <xsl:value-of select="text"/>
-                </span>
+                <xsl:if test="text !=''">
+                    <span class="description">
+                        <xsl:value-of select="text"/>
+                    </span>
+                </xsl:if>
             </xsl:when>
             <!-- When there is text -->
             <xsl:when test="text !=''">
