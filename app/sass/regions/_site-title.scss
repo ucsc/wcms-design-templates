@@ -4,41 +4,88 @@
 
 .names {
 
+    // Mobile
+    margin: 1em auto 0 auto;
+
+    // Tablet
+    @include media($tablet) {      
+      margin-bottom: $font-size-base;
+    }
+ 
   .site-name {
     
     // Mobile
     @include span-columns(12);
     margin: $font-size-base 0;
 
-    // Tablet+
+    // Tablet
     @include media($tablet) {      
-      @include span-columns(9);
+      @include span-columns(8);
       margin:0 auto;
     }
+
+    // Desktop
+    @include media($desktop) {      
+      @include span-columns(9);
+      margin:0 auto;
+    }    
 
   }
 
   
   .campus-name {
 
-    @include span-columns(12);
-    border-bottom: 1px solid lighten($gray-light, 24%);
-    padding-bottom:0.5em;
+    // Mobile
+    @include span-columns(7);
+    .www & {
+      @include span-columns(12);
+    }
 
-
+    // Tablet
     @include media($tablet) {
+      @include span-columns(4);
+      padding-bottom:0;
+      .www & {
+        @include span-columns(12);
+      }
+    }
+
+    // Desktop
+    @include media($desktop) {
       @include span-columns(3);
       border-bottom: none;
       padding-bottom:0;
+      .www & {
+        @include span-columns(12);
+      }
     }
 
+
     .campus-logo {
-      @include span-columns(7);
-      max-height: 1.8em;
+
+      @include hide-text();
+      display: block;  
+      background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
+      background-size: contain;
+      height: 72px;
+
       @include media($tablet) {
         @include span-columns(12);
-        max-height: 72px;
       }
+
+      .www & {    
+        // Home environment uses the "tagged" campaign logo.    
+        background:transparent url(../images/logos/ucsc-logotype-tagged.svg) no-repeat left top;
+        
+        // Mobile
+        @include span-columns(8);
+        
+        // Desktop
+        @include media($desktop) {
+          @include span-columns(12);          
+        }      
+      }
+
     }
 
   }    
