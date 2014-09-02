@@ -3,7 +3,7 @@
 <xsl:output indent="yes" method="xml" omit-xml-declaration="yes"/>
 
   <xsl:template match="/system-index-block">
-    <div id="slides" class="owl-carousel">
+    <div class="owl-carousel" id="slides">
       <xsl:if test="calling-page/system-page/system-data-structure/billboards-random/value = 'Yes'">
         <xsl:attribute name="class">random</xsl:attribute>
       </xsl:if>
