@@ -7,8 +7,18 @@
   </xsl:template>
   
   <xsl:template match="system-page">
+ 
+    <!-- Grab the title value for string manipulation below. -->
+    <xsl:variable name="landing-title">
+        <xsl:value-of select="system-data-structure/title-content/title-text"/>
+    </xsl:variable>
+
+    <!-- Add non-breaking space between two words to keep it all on one line. -->
+    <xsl:variable name="headline" select="concat(substring-before($landing-title, ' '), '&#xA0;' ,substring-after($landing-title, ' '))"/>
+ 
+    <!-- Now we can print the title. -->
     <div class="title-group">
-      <h1><xsl:value-of select="system-data-structure/title-content/title-text"/></h1>
+      <h1><xsl:value-of select="$headline"/></h1>
       <p><xsl:value-of select="system-data-structure/title-content/title-tagline"/></p>
     </div>
   </xsl:template>
