@@ -18,15 +18,25 @@
   <xsl:if test="system-data-structure/banner/image/path != '/'">
     <div class="banners bannerBox" id="bannerBox">
       <xsl:choose>
-        <xsl:when test="system-data-structure/banner/image-alt != ''">
+        <!-- Both caption and alternative text present -->
+        <xsl:when test="system-data-structure/banner/caption != '' and system-data-structure/banner/image-alt != ''">
+          <img alt="{system-data-structure/banner/image-alt}" id="banner" src="{system-data-structure/banner/image/path}"/>
+          <p class="caption">
+            <xsl:value-of select="system-data-structure/banner/caption"/>
+          </p>
+        </xsl:when>
+        <!-- Just alternative text present -->                        
+        <xsl:when test="system-data-structure/banner/caption = '' and system-data-structure/banner/image-alt != ''">
           <img alt="{system-data-structure/banner/image-alt}" id="banner" src="{system-data-structure/banner/image/path}"/>
         </xsl:when>
+        <!-- Just caption present -->
         <xsl:when test="system-data-structure/banner/caption != '' and system-data-structure/banner/image-alt = ''">
           <img alt="Banner photo, caption follows." id="banner" src="{system-data-structure/banner/image/path}"/>
           <p class="caption">
             <xsl:value-of select="system-data-structure/banner/caption"/>
           </p>
-        </xsl:when>        
+        </xsl:when>
+        <!-- Neither alternative text nor caption present -->  
         <xsl:otherwise>
           <img alt="Banner photo with no alternative text" id="banner" src="{system-data-structure/banner/image/path}"/>
         </xsl:otherwise>
