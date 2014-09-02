@@ -4,7 +4,16 @@
   
   :::::::::::::::::::::::::::::::::::::::::::::::::::*/
   $(document).ready(function() {
-    
+
+  // This is TERRIBLY kludgy, but we'll hide the
+  // main nav and top row if the page width is 
+  // below 768 on load.
+  var bodyWidth = $("body").innerWidth();
+  if(bodyWidth <= 767) {
+    $('.page-top').hide();
+    $('#mainNav').hide();
+  }
+
   //MOBILE MENUS
   var mobileNavOpen = 0; //mobile nav closed
   
@@ -33,14 +42,14 @@
     var bodyResize = $("body").innerWidth();
     
     //MOBILE NAV CONTROL
-    if (bodyResize <= 803) {
-      $(".mobile-menu").show();
-    } else {
-      $(".mobile-menu").hide();
-    }
+    // if (bodyResize <= 767) {
+    //   $(".mobile-menu").show();
+    // } else {
+    //   $(".mobile-menu").hide();
+    // }
     
     //SHOW OR HIDE NAVS
-    if ( (bodyResize <= 803) && mobileNavOpen == 0) {
+    if ( (bodyResize <= 767) && mobileNavOpen == 0) {
       $('.page-top').hide();
       $('#mainNav').hide();
     } else {
@@ -51,7 +60,7 @@
   });
 });
 
-//IFRAMES
+// iFRAMES
 function adjustIframes()
 {
     $('iframe').each(function(){
