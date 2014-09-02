@@ -55,4 +55,9 @@
     border-bottom: 1px solid lighten($gray-light, 10%);
   }
 
+  // Modifier for right-column pages
+  .news .sidebar & {
+    padding-left: 0; 
+  }
+
 }
