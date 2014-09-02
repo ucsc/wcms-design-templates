@@ -13,13 +13,22 @@
         <xsl:value-of select="system-data-structure/title-content/title-text"/>
     </xsl:variable>
 
-    <!-- Add non-breaking space between two words to keep it all on one line. -->
-    <xsl:variable name="headline" select="concat(substring-before($landing-title, ' '), '&#xA0;' ,substring-after($landing-title, ' '))"/>
- 
+    
     <!-- Now we can print the title. -->
     <div class="title-group">
-      <h1><xsl:value-of select="$headline"/></h1>
-      <p><xsl:value-of select="system-data-structure/title-content/title-tagline"/></p>
+    
+    <!-- When there are two words, add a non-breaking space between them. Otherwise, don't. -->      
+    <xsl:choose>
+      <xsl:when test="contains($landing-title, ' ')">        
+        <h1>
+          <xsl:value-of select="concat(substring-before($landing-title, ' '), '&#xA0;' ,substring-after($landing-title, ' '))"/>
+        </h1>
+      </xsl:when>
+      <xsl:otherwise>
+          <h1><xsl:value-of select="$landing-title"/></h1>
+      </xsl:otherwise>
+    </xsl:choose>
+          <p><xsl:value-of select="system-data-structure/title-content/title-tagline"/></p>
     </div>
   </xsl:template>
   
