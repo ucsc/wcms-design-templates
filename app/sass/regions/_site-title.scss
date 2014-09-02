@@ -36,7 +36,7 @@
   .campus-name {
 
     // Mobile
-    @include span-columns(7);
+    @include span-columns(12);
     .www & {
       @include span-columns(12);
     }
@@ -68,6 +68,7 @@
       background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
       background-size: contain;
       height: 72px;
+      @include span-columns(7);
 
       @include media($tablet) {
         @include span-columns(12);
@@ -108,7 +109,7 @@
     @include hoverActiveFocus($ucsc-blue, $sand-light, none);
 
     // Tablet+
-    @include media($portrait) {
+    @include media($tablet) {
       display:none;
     }
     
