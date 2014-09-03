@@ -102,7 +102,6 @@ h6 {
 
 nav ul {
 	margin: 0;
-	// list-style: none;
 }
 
 
@@ -119,12 +118,11 @@ hr {
 	font-size: $font-size-base/2;
 	line-height: 1;
 	text-align: center;
-	margin: 1em 0 1.5em; /* 0 0 32px */
+	margin: 1em 0 1.5em;
 	border: 0;
-	border-bottom:1px dotted $gray-dark;
+	border-bottom:1px dotted $gray;
 	padding: 0;
 	height: 1px;
-	clear: both;
 	display: block;
 	}
 
