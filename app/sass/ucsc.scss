@@ -52,3 +52,6 @@
 @import "pages/landing";
 @import "pages/feedback-form";
 @import "pages/directory";
+
+// Print styles come last
+@import "base/print";

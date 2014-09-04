@@ -1,0 +1,119 @@
+@media print {
+
+    * {
+        box-shadow: none !important;
+        border-radius: 0px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    .contentBox,
+    .content-box,
+    .article-body {
+        padding:0 !important;
+        border:none;
+        box-shadow:none;
+        border-radius:0px !important;
+        overflow:hidden !important;
+    }
+
+    .article-body {
+        border-bottom: 1px solid #999;
+        padding-bottom: 24pt !important;
+    }
+
+    body {
+        background-color:#fff ;
+        font-size:10pt;
+        padding:24pt 48pt !important;
+        color:#333;
+    }
+
+    h1 {
+        font-size:24pt !important;
+    }
+
+    .page-title {
+        margin-bottom: 18pt !important;
+    }
+
+    figure {
+        width:38% !important;
+        float:right !important;
+        background-color:transparent;
+        box-shadow:none !important;
+        border:1px solid #999 !important;
+        padding:0 !important;
+        border-radius:0px !important;
+    }
+
+    figure img {
+        background-color:transparent !important;
+        margin:0 !important;
+        padding:0 !important;
+        width:100% !important;
+        border-radius:0px !important;
+    }
+
+    .sidebar,
+    .main-navigation,
+    .search,
+    .page-top,
+    .campus-name,
+    .breadcrumbs,
+    .mobile-menu,
+    #bannerBox,
+    .banner-box,
+    #footer,
+    .legal {
+        display:none !important;
+    }
+
+    .www .campus-name {
+        display:block !important;
+        .campus-logo {
+            color: #333 !important;
+            background-image: none !important;
+            float:none !important; 
+            display: block !important;
+            overflow: visible !important;
+            width: auto !important;
+            height: auto !important;
+        }
+    }
+
+    .site-header {
+        padding: 0 !important;
+        margin-bottom: 18pt !important; 
+        border-bottom: 1px solid #eee !important;
+    }
+
+    .row {
+        margin: 0 !important;
+    }
+
+    .site-name {
+        margin: 0 0 8pt 0 !important;
+        padding: 0 !important; 
+        #site-title { 
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        a {
+            color:#333 !important;
+            font-size: 16pt !important;
+            margin: 0px !important;
+            padding-bottom: 0 !important;
+        }
+    }
+
+    .names {
+        margin-bottom: 0px;
+    }
+
+    .main-content {
+        width:100% !important;
+        margin:0 auto !important;
+    }
+
+}
