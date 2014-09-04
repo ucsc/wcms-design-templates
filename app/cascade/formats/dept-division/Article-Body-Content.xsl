@@ -102,23 +102,30 @@
   </xsl:template>
 
   <xsl:template match="lead-image | secondary-images">
-      
-    <figure class="article-image">
-          <xsl:choose>
-                      <xsl:when test="image-alt != ''">
-                        <img alt="{image-alt}" src="{image/path}"/>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <img alt="Alternative text missing" src="{image/path}"/>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:if test="image-caption">
-                        <figcaption class="caption">
-                        <xsl:copy-of select="image-caption/node()"/>
-                        </figcaption>
-                    </xsl:if>
-           </figure>
-  
-  </xsl:template>
 
+    <xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'"/>
+    <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+    <xsl:variable name="layout-style" select="layout-width"/>
+    <xsl:variable name="layout" select="translate($layout-style, $uppercase, $smallcase)"/>
+    
+    <figure>
+      <xsl:attribute name="class">article-image <xsl:value-of select="concat('width-', $layout)"/></xsl:attribute>
+      <xsl:if test="image/path !='/'">    
+          <xsl:if test="contains('empty.png',image/name)">
+              <!-- Empty to print caption --><br/>
+          </xsl:if>
+          <xsl:if test="not(contains('empty.png',image/name))">
+              <img alt="{image/display-name}" src="{image/path}"/>
+          </xsl:if>       
+      </xsl:if>
+        
+      <xsl:if test="image-caption != ''">
+        <figcaption class="caption">
+          <xsl:copy-of select="image-caption/node()"/>
+        </figcaption>
+      </xsl:if>
+              
+    </figure>
+  </xsl:template>
+  
 </xsl:stylesheet>
