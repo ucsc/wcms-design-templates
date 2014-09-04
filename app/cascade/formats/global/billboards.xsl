@@ -43,7 +43,7 @@
     </xsl:if>
     
     <!-- If the headline and teaser are absent, we use the old style. [DEPRECATE] -->
-    <xsl:if test="headline = '' and teaser = ''">
+    <xsl:if test="headline = '' or teaser = ''">
       <xsl:choose>
         <xsl:when test="page/path != '/'">
           <a href="{page/link}"><img alt="{alt-text}" src="{image/path}" width="780"/></a>
