@@ -1,0 +1,92 @@
+/*doc
+---
+title: Profile and Article Images
+name: image
+category: Components
+---
+
+News and Profile article images are wrapped in a `<figure>` element with an optional caption wrapped in a `<figcaption>` element:
+
+```html_example
+<figure class="article-image">
+    <img alt="Text description of the image" src="http://robohash.org/happy-robot.png?set=any&&bgset=bg1&size=240x240">
+    <figcaption class="caption">Your image caption (and photo credit) should appear here.</figcaption>
+</figure>
+```
+
+In the WCMS interface, we give users the option to display their image at relative widths (relative to the article width) using these modifier classes on the `<figure>` element:
+
+- `width-25`
+- `width-50`
+- `width-75`
+- `width-100`
+
+*/
+
+
+.article-image {
+  display:block;
+  clear: right;
+  width: auto;
+  min-width: 20%;
+  max-width:56%;
+  float:right;
+  background-color: lighten($sand, 2%);
+  padding: 0.25em;
+  border-radius:5px;
+  border-bottom: solid 1px #dad8c8;
+  margin:0 0 1em 1em;
+
+  // Image inside of figure is always 100%
+  img {
+    background-color: transparent;
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  // Caption styles
+  .caption {
+    margin: 0;
+    padding:0.5em;
+    p {
+      margin: 0;
+    }
+  }
+
+  // Width modifier classes
+  &.width-small {
+    max-width: 33%;
+    @include media($mobile) {
+       max-width: 50%;
+    }
+  }
+
+  &.width-medium {
+    max-width: 43%;
+    @include media($mobile) {
+       max-width: 50%;
+    }    
+  }
+
+  &.width-large {
+    max-width: 66%;
+    @include media($mobile) {
+       max-width: 100%;
+       margin-left: 0;
+    }    
+  }  
+
+  &.width-full {
+    max-width: 100%;
+    margin-left: 0;
+  }  
+  
+  // At mobile width, all figures are 100%
+  @include media($mobile) {
+    width:100%;
+    max-width:100%;
+  }
+
+
+}
