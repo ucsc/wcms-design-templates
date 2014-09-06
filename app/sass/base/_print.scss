@@ -12,6 +12,10 @@
     color:#333;
     background-color: #fff;
     font-size: 10pt;
+    position: relative !important;
+    float: none !important;
+    overflow: visible !important;
+    width: auto !important;
     padding: 0 !important;
     margin:24pt 48pt !important;        
   }
@@ -145,4 +149,7 @@
     margin:0 auto !important;
   }
 
+  .subhead {
+    font-size: 1.1em !important;
+  }
 }
