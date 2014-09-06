@@ -21,23 +21,26 @@
         <div class="slide-title">
           <xsl:value-of select="headline"/>
         </div>
-        <p class="slide-teaser">
+        <p class="slide-teaser">          
           <xsl:value-of select="teaser"/>
-        </p>
-        <!-- Depending on the URL (internal, symlink, or external), we change the href. -->
-        <xsl:if test="link-text != ''">
-          <xsl:choose>
-            <xsl:when test="page/path != '/'">
-              <a href="{page/link}"><xsl:value-of select="link-text"/></a>
-            </xsl:when>
-            <xsl:when test="symlink/path != '/'">
-              <a href="{symlink/path}"><xsl:value-of select="link-text"/></a>
-            </xsl:when>        
-            <xsl:otherwise>  
-              <a href="{url}"><xsl:value-of select="link-text"/></a>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:if>
+          <!-- 
+            Print the link with a preceding space. 
+            Depending on the URL (internal, symlink, or external), we change the href. 
+          -->
+          <xsl:if test="link-text != ''">
+            <xsl:choose>
+              <xsl:when test="page/path != '/'">
+                &#160;<a href="{page/link}"><xsl:value-of select="link-text"/></a>
+              </xsl:when>
+              <xsl:when test="symlink/path != '/'">
+                &#160;<a href="{symlink/path}"><xsl:value-of select="link-text"/></a>
+              </xsl:when>        
+              <xsl:otherwise>  
+                &#160;<a href="{url}"><xsl:value-of select="link-text"/></a>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
+        </p>        
       </div>
       <img alt="{alt-text}" src="{image/path}" width="780"/>
     </xsl:if>
