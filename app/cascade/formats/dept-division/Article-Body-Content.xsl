@@ -103,13 +103,15 @@
 
   <xsl:template match="lead-image | secondary-images">
 
+<!--
+    Removed 09/06/2014 due to complexity for user. -RK
     <xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'"/>
     <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
     <xsl:variable name="layout-style" select="layout-width"/>
     <xsl:variable name="layout" select="translate($layout-style, $uppercase, $smallcase)"/>
-    
+ -->    
     <figure>
-      <xsl:attribute name="class">article-image <xsl:value-of select="concat('width-', $layout)"/></xsl:attribute>
+      <xsl:attribute name="class">article-image</xsl:attribute>
       <xsl:if test="image/path !='/'">    
           <xsl:if test="contains('empty.png',image/name)">
               <!-- Empty to print caption --><br/>

@@ -7,24 +7,12 @@
   </group>
   <group identifier="lead-image" label="Lead Image">
     <asset type="file" identifier="image" label="Lead Image (max width: 760 px)"/>
-    <text type="radiobutton" identifier="layout-width" label="Display Width" default="Medium" help-text="How wide should your image display?">
-      <radio-item value="Small"/>
-      <radio-item value="Medium"/>
-      <radio-item value="Large"/>
-      <radio-item value="Full"/>
-    </text>    
     <text identifier="image-alt" label="Image Alt Text (Required for Accessibility)" maxlength="90"/>
     <asset type="file" identifier="image-thumb" label="Lead Image Thumbnail (80x80)"/>
     <text wysiwyg="true" identifier="image-caption" label="Lead Image Caption" wysiwyg-toolbar-remove="font formatting,font assignment,insert image,insert table,"/>
   </group>
   <group identifier="secondary-images" label="Secondary Images" multiple="true">
     <asset type="file" identifier="image" label="Image"/>
-    <text type="radiobutton" identifier="layout-width" label="Display Width" default="Medium" help-text="How wide should your image display?">
-      <radio-item value="Small"/>
-      <radio-item value="Medium"/>
-      <radio-item value="Large"/>
-      <radio-item value="Full"/>
-    </text>
     <text identifier="image-alt" label="Image Alt Text (Required for Accessibility)" maxlength="90"/>
     <text wysiwyg="true" identifier="image-caption" label="Image Caption" wysiwyg-toolbar-remove="font formatting,font assignment,insert image,insert table,"/>
   </group>
