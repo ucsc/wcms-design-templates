@@ -57,7 +57,20 @@ $(document).ready(function(){
       });
   });
 
-  
+
+$('.sidebar li > ul').each(function() {
+    var $this = $(this);
+    var $lis = $this.find('li');
+
+    if ($lis.length === 0) return;
+
+    if ($lis.filter('.excluded').length === $lis.length) {
+        $this.hide();
+    } else {
+        return;
+    }
+});
+
   /*
   // MAIN NAV
   $(".dropdown-link").bind("click",dropDownMenu); //bind dropdown menu function

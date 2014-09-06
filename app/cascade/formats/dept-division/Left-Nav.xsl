@@ -61,8 +61,11 @@
     
     <xsl:template match="system-page">
         <xsl:choose>
-            <xsl:when test="dynamic-metadata/value = 'Exclude'">
-                <!-- item excluded from display by user. --> 
+            <xsl:when test="dynamic-metadata/value = 'Exclude'">                
+                <li class="excluded" style="display:none;">
+                    <span style="display:none;">Excluded</span>
+                    <xsl:comment>item excluded from display by user.</xsl:comment>
+                </li>
             </xsl:when>
             <xsl:otherwise>
             <li>
@@ -80,7 +83,12 @@
     <xsl:template match="system-page[@current]">
         <xsl:choose>
             <xsl:when test="dynamic-metadata/value = 'Exclude'">
-                 <!-- item excluded from display by user. --> 
+                 
+                <li class="excluded" style="display:none;">
+                    <span style="display:none;">Excluded</span>
+                    <xsl:comment>item excluded from display by user.</xsl:comment>
+                </li>
+
             </xsl:when>
             <xsl:otherwise>
                 <li>
@@ -113,5 +121,5 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+   
 </xsl:stylesheet>
