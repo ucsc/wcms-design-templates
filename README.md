@@ -55,4 +55,4 @@ Then run `gulp` and load the [development server](http://localhost:8080).
 
 ## Changelog
 
-- **June 30, 2014**: Removed Compass as a dependency to make it easier to use Sass 3.3 and specifically source maps. Also removed `scut` and `modular-scale` gem dependencies. 
+- **June 30, 2014**: Removed Compass as a dependency to make it easier to use Sass 3.3 and specifically source maps. Also removed `scut` and `modular-scale` gems as dependencies. 
