@@ -55,26 +55,47 @@ In the WCMS interface, we give users the option to display their image at relati
   }
 
   // Width modifier classes
-  &.width-small {
-    max-width: 33%;
+  &.width-110 {
+    max-width: 110px;
     @include media($mobile) {
-       max-width: 50%;
+       max-width: 25%;
     }
   }
 
-  &.width-medium {
-    max-width: 43%;
+  &.width-180 {
+    max-width: 180px;
+    @include media($mobile) {
+       max-width: 35%;
+    }
+  }  
+
+  &.width-280 {
+    max-width: 280px;
+    @include media($mobile) {
+       max-width: 40%;
+    }
+  }
+
+  &.width-350 {
+    max-width: 350px;
     @include media($mobile) {
        max-width: 50%;
     }    
   }
 
-  &.width-large {
-    max-width: 66%;
+  &.width-480 {
+    max-width: 480px;
     @include media($mobile) {
        max-width: 100%;
-       margin-left: 0;
+       margin-left: 50%;
     }    
+  }  
+
+  &.width-580 {
+    max-width: 580px;
+    @include media($mobile) {
+       max-width: 67%;
+    }
   }  
 
   &.width-full {

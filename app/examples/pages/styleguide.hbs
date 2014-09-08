@@ -158,13 +158,69 @@ p q r s t u v w x y z { | } ~</samp></pre>
       <h3>Figures</h3>
       <p>Figures are usually used to refer to images:</p>
       <div class="example">
-        <figure>
-          <img src="http://lorempixum.com/680/400/abstract" alt="Example image"/>
-          <figcaption>
+        <figure class="article-image">
+          <img src="http://placehold.it/100x120" alt="Example image"/>
+          <figcaption class="caption">
             This is a placeholder image, with supporting caption.
           </figcaption>
         </figure>
+
+        <figure class="article-image">
+          <img src="http://placehold.it/168x100" alt="Example image"/>
+          <figcaption class="caption">
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>
+
+        <figure class="article-image">
+          <img src="http://placehold.it/270x140" alt="Example image"/>
+          <figcaption class="caption">
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>        
+
+        <figure class="article-image">
+          <img src="http://placehold.it/340x200" alt="Example image"/>
+          <figcaption class="caption">
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>                
+
+        <figure class="article-image">
+          <img src="http://placehold.it/480x280" alt="Example image"/>
+          <figcaption class="caption">
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>        
+
+        <figure class="article-image">
+          <img src="http://placehold.it/460x380" alt="Example image"/>
+          <figcaption class="caption">
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>  
+
+        <figure class="article-image">
+          <img src="http://placehold.it/581x380" alt="Example image"/>
+          <figcaption class="caption">
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>          
+
       </div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium qui ea temporibus illum. Repellat hic quae, repellendus ipsum voluptatem neque impedit dolor molestias eaque reprehenderit possimus beatae incidunt labore.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium qui ea temporibus illum. Repellat hic quae, repellendus ipsum voluptatem neque impedit dolor molestias eaque reprehenderit possimus beatae incidunt labore.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium qui ea temporibus illum. Repellat hic quae, repellendus ipsum voluptatem neque impedit dolor molestias eaque reprehenderit possimus beatae incidunt labore.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium qui ea temporibus illum. Repellat hic quae, repellendus ipsum voluptatem neque impedit dolor molestias eaque reprehenderit possimus beatae incidunt labore.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium qui ea temporibus illum. Repellat hic quae, repellendus ipsum voluptatem neque impedit dolor molestias eaque reprehenderit possimus beatae incidunt labore.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium qui ea temporibus illum. Repellat hic quae, repellendus ipsum voluptatem neque impedit dolor molestias eaque reprehenderit possimus beatae incidunt labore.</p>
+
       <p>Here, a part of a poem is marked up using figure:</p>
       <div class="example">
         <figure>
@@ -283,6 +339,113 @@ p q r s t u v w x y z { | } ~</samp></pre>
 &#160;&#160;&#160;&#160;echo $aDeliciousSnack;
 }</code></pre>
       </div>
+
+<h3>Forms</h3>
+
+<form action="#">
+
+  <header>
+    <h2>Example Responsive Form</h2>
+    <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div>
+  </header>
+  
+  <div>
+    <label class="desc" id="title1" for="Field1">Full Name</label>
+    <div>
+      <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+    
+  <div>
+    <label class="desc" id="title3" for="Field3">
+      Email
+    </label>
+    <div>
+      <input id="Field3" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+   </div>
+  </div>
+    
+  <div>
+    <label class="desc" id="title4" for="Field4">
+      Message
+    </label>
+  
+    <div>
+      <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+    </div>
+  </div>
+    
+  <div>
+    <fieldset>
+    
+      <legend id="title5" class="desc">
+        Select a Choice
+      </legend>
+      
+      <div>
+        <input id="radioDefault_5" name="Field5" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="Field5" type="radio" value="First Choice" tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0">First Choice</label>
+        </div>
+        <div>
+          <input id="Field5_1" name="Field5" type="radio" value="Second Choice" tabindex="6">
+          <label class="choice" for="Field5_1">Second Choice</label>
+        </div>
+        <div>
+          <input id="Field5_2" name="Field5" type="radio" value="Third Choice" tabindex="7">
+          <label class="choice" for="Field5_2">Third Choice</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div>
+    <fieldset>
+      <legend id="title6" class="desc">
+        Check All That Apply
+      </legend>
+      <div>
+      <div>
+        <input id="Field6" name="Field6" type="checkbox" value="First Choice" tabindex="8">
+        <label class="choice" for="Field6">First Choice</label>
+      </div>
+      <div>
+        <input id="Field7" name="Field7" type="checkbox" value="Second Choice" tabindex="9">
+        <label class="choice" for="Field7">Second Choice</label>
+      </div>
+      <div>
+        <input id="Field8" name="Field8" type="checkbox" value="Third Choice" tabindex="10">
+        <label class="choice" for="Field8">Third Choice</label>
+      </span>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div>
+    <label class="desc" id="title106" for="Field106">
+      Select a Choice
+    </label>
+    <div>
+    <select id="Field106" name="Field106" class="field select medium" tabindex="11"> 
+      <option value="First Choice">First Choice</option>
+      <option value="Second Choice">Second Choice</option>
+      <option value="Third Choice">Third Choice</option>
+    </select>
+    </div>
+  </div>
+  
+  <div>
+    <div>
+      <input id="saveForm" name="saveForm" type="submit" value="Submit">
+    </div>
+  </div>
+  
+</form>
+
+
+<hr />
+
 
       <h3>Variable</h3>
       <p>The <code>var</code> element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:</p>

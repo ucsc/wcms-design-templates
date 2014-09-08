@@ -58,6 +58,11 @@ $(document).ready(function(){
   });
 
 
+/**
+    UI-tweak: sidebar folders where all but the current page
+    are excluded from view still show an empty <ul>.
+    This adds a class to that <ul> that hides it.
+ */
 $('.sidebar li > ul').each(function() {
     var $this = $(this);
     var $lis = $this.find('li');
@@ -94,6 +99,42 @@ $('.sidebar li > ul').each(function() {
   
   
 });
+
+$(window).load(function() {
+
+/**
+ * UI-tweak: This looks at the natural width of article/profile
+ * images and sets a class on the parent <figure> element to
+ * establish the maximum width of the figure, which prevents
+ * the image from stretching too much.
+ *
+ * Called with the window.load event to ensure
+ * all images have loaded.
+ */
+$(".article-image img").each(function() { 
+  if(this.naturalWidth > 580) {
+    $(this).parent().addClass("width-full");
+  } else if(this.naturalWidth > 480) {
+      $(this).parent().addClass("width-580");
+  } else if(this.naturalWidth > 350) {
+      $(this).parent().addClass("width-480");
+  } else if(this.naturalWidth > 280) {
+      $(this).parent().addClass("width-350");
+  } else if(this.naturalWidth > 180) {
+      $(this).parent().addClass("width-280");
+  } else if(this.naturalWidth > 110) {
+      $(this).parent().addClass("width-180");
+  } else {
+      $(this).parent().addClass("width-110");
+  }
+});
+
+
+
+
+
+});
+
 
 /*
  * jQuery dropdown: A simple dropdown plugin
