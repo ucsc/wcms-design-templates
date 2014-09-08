@@ -34,14 +34,13 @@
     border: 1px solid #999 !important;
   }
 
-  
-
   #access-links,
   .page-top,
   .search,
   .mobile-menu,
   .main-navigation,
   .breadcrumbs,
+  #slides,
   .sidebar,
   #bannerBox,
   .banner-box,
@@ -50,8 +49,15 @@
     display:none !important;
   }
 
-  .row {
+  .row,
+  .cell {
     margin: 0 !important;
+    width: auto !important;
+  }
+
+  .php,
+  .phpContent {
+    overflow: visible !important;
   }
 
   .contentBox,
