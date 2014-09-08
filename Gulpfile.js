@@ -78,7 +78,8 @@ gulp.task('scripts', function() {
         // Pass in options to the task
         .pipe(changed('./app/build/js/'))
         .pipe(uglify())
-        .pipe(gulp.dest('./app/build/js/'));
+        .pipe(gulp.dest('./app/build/js/'))
+        .pipe(connect.reload());
 });
 
 
