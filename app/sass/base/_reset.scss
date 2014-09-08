@@ -12,8 +12,7 @@
 /* ============================================================
 	HTML5 Elements
 ============================================================ */
-section, nav, article, aside, hgroup, header, footer, main,
-img, figure, figcaption, details, menu {
+section, nav, article, aside, hgroup, header, footer, main, figure, figcaption, details, menu {
 	display: block;
 }
 audio, video, canvas {
@@ -358,6 +357,7 @@ textarea {
 	font-size: 100%;
 	margin: 0;
 	outline: 0;
+	padding:0.25em;
 }
 select {
 	appearance: normal;
