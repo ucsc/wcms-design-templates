@@ -58,7 +58,7 @@
             <!-- When there is a small thumbnail -->
             <xsl:when test="thumbnail/path != '/'">
                 <span class="thumbnail">
-                    <img alt="{thumb-alt}" src="{thumbnail/link}"/>
+                    <img alt="{thumb-alt}" class="portrait" src="{thumbnail/link}"/>
                 </span>
                 <xsl:if test="text !=''">
                     <span class="description">
