@@ -57,9 +57,26 @@ $(document).ready(function(){
       });
   });
 
+/** 
+ *  UI tweak: Set equal heights on all separated home blocks.
+ *  http://stackoverflow.com/questions/11688250/setting-equal-heights-for-divs-with-jquery
+ */
+$('.separate').each(function(){  
+
+  var highestBox = 0;
+  $('.wrap .inner', this).each(function(){
+
+      if($(this).height() > highestBox) 
+         highestBox = $(this).height(); 
+  });  
+
+  $('.wrap .inner',this).height(highestBox);
+
+});  
+
 
 /**
-    UI-tweak: sidebar folders where all but the current page
+    UI tweak: sidebar folders where all but the current page
     are excluded from view still show an empty <ul>.
     This adds a class to that <ul> that hides it.
  */
