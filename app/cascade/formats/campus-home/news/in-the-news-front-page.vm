@@ -8,8 +8,8 @@ $_SortTool.addSortCriterion("created-on","","number","descending","upper-first")
 $_SortTool.sort($links)
 
 <div id="links" class="inner">
-  <h3>UCSC in the news</h3>
-  <ul class="archive-list">
+  <h3 class="header">UCSC in the news</h3>
+  <ul class="archive-list with-thumbs">
     
 #foreach($item in $links.subList(0,4))
   
@@ -20,9 +20,19 @@ $_SortTool.sort($links)
     #set ($headline = $_EscapeTool.xml($item.getChild("system-data-structure").getChild("headline").text))
     
       ## Output the HTML
-      <li>
-        <a href="${url}#${promote}" class="icon"><img src="${icon}" class="thumbnail" alt="${source}" /></a>
-        <p><a href="${url}"><span class="source" style="display:block;font-size:12px;font-weight:bold;">${source}</span></a> ${headline}</p>
+      <li>          
+        <span class="item-media">
+          <a href="${url}">            
+            <img alt="${source}" src="${icon}" />
+          </a>
+        </span>
+
+        <span class="item-body">
+          <a href="${url}">
+            <span class="date">${source}</span>
+          </a>
+          <span class="headline">${headline}</span>
+        </span>
       </li>
     
 
@@ -30,5 +40,5 @@ $_SortTool.sort($links)
   
   </ul>
 
-<p class="more"><a class="more-link" href="[system-asset:local]/inthenews/index[/system-asset:local]">More&#160;&#187;</a></p>
+<p class="more"><a class="more-link" href="[system-asset:local]/inthenews/index[/system-asset:local]">More...</a></p>
 </div>

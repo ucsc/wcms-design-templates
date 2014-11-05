@@ -56,8 +56,33 @@
   }
 
   // Modifier for right-column pages
-  .news .sidebar & {
-    padding-left: 0; 
+  .right-column .sidebar & {
+    padding-left: 0;
   }
+
+  .sidebar &.with-thumbs {
+    li {
+      list-style-type: none;
+      display: table;
+      margin: 1em 0;
+    }
+
+    .item-media,
+    .item-body {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .item-media {
+      min-width: 60px;
+    }
+
+    .item-body {
+      line-height: 1.4;
+    }
+
+  }
+
+
 
 }
