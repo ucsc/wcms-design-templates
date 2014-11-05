@@ -12,12 +12,12 @@
   @include pad;
 
   .wrap {
-    @include row(block);
+    @include row(default);
   }
   
   @include media($tablet) {
     padding:0;
-    @include row(table);
+    @include display-context(table);
     @include module-box(4);
   }
   
@@ -27,7 +27,7 @@
 .four {
   
   @include media($tablet) {
-    @include row(table);
+    @include display-context(table);
     @include module-box(3);  
   }
   

@@ -10,7 +10,7 @@
  
   #topNav,
   .global-nav {
-    @include reset-display();
+    @include display(block);
     @include span-columns(12);
     @include media($tablet) {
       @include span-columns(9);
@@ -24,7 +24,7 @@
   .search {
     @include span-columns(12);
     @include media($tablet) {
-      @include reset-display;
+      @include display(block);
       @include span-columns(3);
       // @include rowborders(green);
     }

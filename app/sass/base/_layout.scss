@@ -63,8 +63,8 @@
     }
 
     #footer {
-      @include reset-display();
-      @include row(table);
+      @include display-context(block);
+      @include row(default);
     }
 }
 
