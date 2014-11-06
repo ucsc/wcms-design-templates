@@ -6,6 +6,7 @@
     padding: 0.75em 1em;
     margin-bottom: 1em;
     background-color: $sand;
+    @include clearfix;
   }
 
    h4, .header {
