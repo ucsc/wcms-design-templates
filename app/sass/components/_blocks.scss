@@ -124,7 +124,7 @@
         @include pad(1em);
         @include module-box-shadow(dark);
         background-color: $sand-dark;
-        min-height: 325px;
+        min-height: 380px;
         margin: 0;        
         @include media($mobile) {
             min-height: auto;
