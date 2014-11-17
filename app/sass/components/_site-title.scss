@@ -10,7 +10,7 @@
 
 .site-name a {
   padding:0;
-  @include fontSize(46);
+  @include fontSize(28);
   text-transform:uppercase;
   display: inline-block;
   color:$gold;
@@ -18,6 +18,9 @@
   line-height:100%;
   font-weight: 400;
   margin-top: 15px;
+  @include media($tablet) {
+    @include fontSize(46);
+  }
 }
     
 
@@ -75,12 +78,15 @@ $titles: (
 );
 
 
-// Loop over the mapped classes
-// and output a rule for each one.
-@each $title, $i in $titles {
-    .title-#{nth($title, 1)} a {
-        font-size: #{map-get($i, size)};
-        margin-top: #{map-get($i, margin-top)};
-        width: #{map-get($i, width)};
-    }
+@include media($tablet) {
+  // Loop over the mapped classes
+  // and output a rule for each one.
+  @each $title, $i in $titles {
+      .title-#{nth($title, 1)} a {
+          font-size: #{map-get($i, size)};
+          margin-top: #{map-get($i, margin-top)};
+          width: #{map-get($i, width)};
+      }
+  }
+
 }
