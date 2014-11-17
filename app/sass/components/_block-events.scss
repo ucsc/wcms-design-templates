@@ -1,10 +1,12 @@
 #events,
 .events-block {
 
-	dt {
-		//border:1px solid red;
-		width:18%; 
+	dt, dd {
 		float: left;
+	}
+
+	dt {
+		width:20%;
 		font-size: 1.2em;
 		clear:both;
 		color: $gray;
@@ -27,16 +29,14 @@
 			display: inline;
 			@include media($tablet) {
 				font-size: 1.4em;
-				font-weight: 600;
+				font-weight: 500;
 				display: block;
 			}
 		}
 	}
 	dd {
-		//border:1px solid blue;
-		width:82%;
-		float:left;
-		margin:0;
+		width:78%;
+		margin:0 1% 0.5em;
 		border-left: 2px solid $sand-dark;
 		line-height:128%;
 		padding: 0 0.15em 1% 5%;
