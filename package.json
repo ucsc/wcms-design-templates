@@ -11,6 +11,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "cheerio": "~0.13.1",
+    "imagemin-svgo": "^4.0.0",
     "request": "~2.33.0"
   },
   "devDependencies": {
@@ -38,6 +39,6 @@
     "gulp-ruby-sass": "^0.6.0",
     "gulp-zip": "^0.4.0",
     "main-bower-files": "^1.0.2",
-    "grunt-cascade-deploy": "^0.2.3"
+    "gulp-svg-sprites": "^1.1.0"
   }
 }
