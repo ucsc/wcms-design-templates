@@ -15,6 +15,8 @@ var pkg = require('./package.json'),
     moment = require('moment'),
     mainBowerFiles = require('main-bower-files'),
     zip = require('gulp-zip'),
+    svgo = require('imagemin-svgo'),
+    sprites = require('gulp-svg-sprites'),
     connect = require('gulp-connect');
 
 
@@ -25,7 +27,7 @@ var paths = {
     styles: ['./app/sass/*.scss', './app/sass/**/**.**'],
     scripts: './app/js/**/**',
     images: './app/images/**',
-    svg: './app/svg/*.svg',
+    svg: './app/svg/**/**.svg',
     fonts: './app/fonts/*'
 };
 
@@ -95,6 +97,17 @@ gulp.task('images', function() {
         .pipe(gulp.dest('./app/build/images/'));
 });
 
+//
+// Optimize svg and make sprites in the build folder.
+//
+gulp.task('svg', function() {
+    return gulp.src(paths.svg)
+        .pipe(changed('./app/build/images/svg/'))
+        .pipe(svgo()())
+        .pipe(sprites())
+        .pipe(gulp.dest('./app/build/images/svg'));
+});
+
 
 //
 // Assemble handlebars page templates and prettify the HTML.
@@ -157,6 +170,7 @@ gulp.task('watch', function() {
     gulp.watch('app/js/**/**', ['scripts']);
     gulp.watch('app/sass/**/*.scss', ['styles']);
     gulp.watch('app/images/**/.**', ['images']);
+    gulp.watch('app/svg/**/.**', ['svg']);
     gulp.watch(['app/examples/layouts/*.hbs', 'app/examples/partials/*.hbs', 'app/examples/pages/*.hbs'], ['assemble']);
 });
 
@@ -164,7 +178,7 @@ gulp.task('watch', function() {
 //
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'assemble', 'webserver', 'watch']);
+gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'svg', 'assemble', 'webserver', 'watch']);
 
 
 //
