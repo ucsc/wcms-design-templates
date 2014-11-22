@@ -17,6 +17,7 @@ var pkg = require('./package.json'),
     zip = require('gulp-zip'),
     svgo = require('imagemin-svgo'),
     sprites = require('gulp-svg-sprites'),
+    imacss = require('gulp-imacss'),
     connect = require('gulp-connect');
 
 
@@ -102,10 +103,9 @@ gulp.task('images', function() {
 //
 gulp.task('svg', function() {
     return gulp.src(paths.svg)
-        .pipe(changed('./app/build/images/svg/'))
         .pipe(svgo()())
-        .pipe(sprites())
-        .pipe(gulp.dest('./app/build/images/svg'));
+        .pipe(imacss('_svg.scss', 'icon'))
+        .pipe(gulp.dest('./app/sass/base'));
 });
 
 
@@ -170,7 +170,7 @@ gulp.task('watch', function() {
     gulp.watch('app/js/**/**', ['scripts']);
     gulp.watch('app/sass/**/*.scss', ['styles']);
     gulp.watch('app/images/**/.**', ['images']);
-    gulp.watch('app/svg/**/.**', ['svg']);
+    gulp.watch('app/svg/**/**.svg', ['svg']);
     gulp.watch(['app/examples/layouts/*.hbs', 'app/examples/partials/*.hbs', 'app/examples/pages/*.hbs'], ['assemble']);
 });
 
