@@ -1,9 +1,5 @@
 // Set account and track pageviews
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-4301164-1']);
-_gaq.push(['_trackPageview']);
-
-// Global GA account
 _gaq.push(['b._setAccount', 'UA-4301164-1']);
 _gaq.push(['b._setDomainName', 'ucsc.edu']);
 _gaq.push(['b._trackPageview']);
@@ -14,10 +10,6 @@ _gaq.push(['b._trackPageview']);
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-
-
-
-
 
 // Event tracking calls
 // jQuery required for DOM selection
@@ -50,7 +42,7 @@ $(function() {
 		if ( linkURL.match(/\.(zip|pdf|doc*|xls*|ppt*|mp3)$/i) ) {
 			$(this).click(function() {
 				var docExtension = linkURL.slice(linkURL.lastIndexOf(".") +1);
-				var docPath = linkURL.replace(/^https?\:\/\/(www.)ucla\.edu\//i, ''); // Document file path
+				var docPath = linkURL.replace(/^https?\:\/\/(www.)ucsc\.edu\//i, ''); // Document file path
 				_gaq.push(['_trackEvent', currPageTitle + ' - (' + currPagePath + ')', 'Click - ' + docExtension, linkText + ' (' + docPath + ')']);
 			});
 		}
