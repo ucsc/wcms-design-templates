@@ -1,0 +1,22 @@
+# Site settings
+title: Responsive Web Templates
+email: raknight@ucsc.edu
+description: Sample site for previewing pages using the new templates.
+baseurl: ""
+url: "http://localhost:8080"
+
+source: ./app/jekyll
+destination: ./app/_site
+
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
