@@ -18,6 +18,7 @@ var pkg = require('./package.json'),
     svgo = require('imagemin-svgo'),
     sprites = require('gulp-svg-sprites'),
     imacss = require('gulp-imacss'),
+    exec = require('child_process').exec,
     connect = require('gulp-connect');
 
 
@@ -39,7 +40,7 @@ var paths = {
 gulp.task('webserver', function() {
     connect.server({
         livereload: true,
-        root: ['./app/build']
+        root: ['./app/_site']
     });
 });
 
@@ -68,7 +69,7 @@ gulp.task('styles', function() {
         }))
         .pipe(autoprefix('last 4 versions'))
         .pipe(minifycss())
-        .pipe(gulp.dest('./app/build/css/'))
+        .pipe(gulp.dest('./app/jekyll/css/'))
         .pipe(connect.reload());
 });
 
@@ -79,9 +80,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         // Pass in options to the task
-        .pipe(changed('./app/build/js/'))
+        .pipe(changed('./app/jekyll/js/'))
         .pipe(uglify())
-        .pipe(gulp.dest('./app/build/js/'))
+        .pipe(gulp.dest('./app/jekyll/js/'))
         .pipe(connect.reload());
 });
 
@@ -91,11 +92,11 @@ gulp.task('scripts', function() {
 //
 gulp.task('images', function() {
     return gulp.src(paths.images)
-        .pipe(changed('./app/build/images/'))
+        .pipe(changed('./app/jekyll/images/'))
         .pipe(imagemin({
             optimizationLevel: 5
         }))
-        .pipe(gulp.dest('./app/build/images/'));
+        .pipe(gulp.dest('./app/jekyll/images/'));
 });
 
 //
@@ -136,13 +137,27 @@ gulp.task('assemble', function() {
 
 
 //
+// Gulp task to run Jekyll
+// 
+gulp.task('jekyll', function (cb) {
+
+  exec('jekyll build', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+
+});
+
+
+//
 // Copy Bower assets into the build folder.
 //
 gulp.task('bower-files', function() {
     return gulp.src(mainBowerFiles(), {
             base: './bower_components'
         })
-        .pipe(gulp.dest("./app/build/lib"))
+        .pipe(gulp.dest("./app/jekyll/lib"))
 });
 
 
@@ -151,10 +166,10 @@ gulp.task('bower-files', function() {
 //
 gulp.task('build', function() {
     return gulp.src([
-            './app/build/css/**.**',
-            './app/build/images/**/**.**',
-            './app/build/js/**.**',
-            './app/build/lib/**/**.**'
+            './app/jekyll/css/**.**',
+            './app/jekyll/images/**/**.**',
+            './app/jekyll/js/**.**',
+            './app/jekyll/lib/**/**.**'
         ], {
             base: "./app/build"
         })
@@ -171,14 +186,14 @@ gulp.task('watch', function() {
     gulp.watch('app/sass/**/*.scss', ['styles']);
     gulp.watch('app/images/**/.**', ['images']);
     gulp.watch('app/svg/**/**.svg', ['svg']);
-    gulp.watch(['app/examples/layouts/*.hbs', 'app/examples/partials/*.hbs', 'app/examples/pages/*.hbs'], ['assemble']);
+    gulp.watch('app/jekyll/**/**', ['jekyll']);
 });
 
 
 //
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'svg', 'assemble', 'webserver', 'watch']);
+gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'svg', 'webserver', 'watch']);
 
 
 //

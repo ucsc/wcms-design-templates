@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Campus Left Column Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
@@ -7,19 +8,19 @@ www: true
 front: false
 ---
 
-        <div class="row" id="sprflt">
-            
-            <div id="mainContent">
-                
-                <h1 class="page-title" id="title">Research in the Divisions</h1>
-                <div id="bannerBox">
-                    <img alt="" id="banner" src="http://www.ucsc.edu/research/images/res-in-divisions-550.jpg">
+<div class="row" id="sprflt">
 
-                    <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, harum sed alias consectetur repellat ab illo.</p>                    
+<div id="mainContent">
 
-                </div>
+<h1 class="page-title" id="title">Research in the Divisions</h1>
+<div id="bannerBox">
+<img alt="" id="banner" src="http://www.ucsc.edu/research/images/res-in-divisions-550.jpg">
 
-                <div class="contentBox"><p>UC Santa Cruz faculty and students have made significant contributions to the body of research that has earned the University of California the ranking as the foremost public research institution in the world.</p>
+<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, harum sed alias consectetur repellat ab illo.</p>                    
+
+</div>
+
+<div class="contentBox"><p>UC Santa Cruz faculty and students have made significant contributions to the body of research that has earned the University of California the ranking as the foremost public research institution in the world.</p>
 <p>Here are links to research activities and opportunities in UCSC's four academic divisions and the Baskin School of Engineering:</p>
 <ul>
 <li><a href="http://artsites.ucsc.edu/ari/">Division of the Arts</a> (Arts Research Institute)</li>

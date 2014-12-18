@@ -47,28 +47,11 @@
         </div>
       {% endif %}
     
-<div class="row" id="sprflt">
-  
     <div id="main" role="main" class="main-content">
 
       {{ content }}
 
     </div>
-
-    {% unless page.front %}
-    <div class="sidebar" id="subNav" role="navigation">
-                
-      <ul>
-        {% for page in site.pages %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-      </ul>
-                
-    </div>
-    {% endunless %}
-  
-</div>
-
 
     <div class="row" id="footer" role="footer">
           <p class="links">
