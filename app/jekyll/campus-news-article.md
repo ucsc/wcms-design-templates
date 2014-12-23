@@ -3,9 +3,7 @@ title: News Article
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
 classes: "contentLeftNav dept article left-column"
-www: false
-dept: true
-front: false
+env: dept
 ---
 
 <div class="row" id="sprflt">

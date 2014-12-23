@@ -3,15 +3,7 @@ title: 2014 Mobile Web Templates
 description: "Index page for mobile web templates."
 keywords: "university, college, Santa Cruz, California"
 class: www left-column
-www: true
-dept: false
-front: false
+env: www
 ---
 
-
-<ul>
-  {% for page in site.pages %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
-
+Use the links on the left to navigate the sample pages in this site.

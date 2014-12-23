@@ -1,11 +1,11 @@
 ---
+layout: front
 title: Division Home Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
 classes: "division home"
-www: false
+env: dept
 front: true
-dept: true
 ---
 
 <div class="row three separate dark">

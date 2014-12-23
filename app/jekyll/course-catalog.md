@@ -1,10 +1,9 @@
 ---
-title: Campus Left Column Page
+title: Course Catalog Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
 classes: "dept contentleftNav left-column"
-front: false
-dept: true
+env: dept
 ---
 
 <div id="sprflt" class="row">

@@ -2,10 +2,8 @@
 title: Department Profile Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
-classes: "dept contentleftNav left-column"
-www: false
-front: false
 classes: contentLeftNav dept article
+env: dept
 ---
 <div id="sprflt">
   

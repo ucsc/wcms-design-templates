@@ -2,9 +2,8 @@
 title: Department Left Column Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
-dept: true
-front: false
 classes: "dept left-column"
+env: dept
 ---
 
 <div id="sprflt" class="row">

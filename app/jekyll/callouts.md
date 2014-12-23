@@ -1,10 +1,9 @@
 ---
-title: Campus Home Page
+title: Callout Examples
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
 classes: "www homeEnv contentLeftNav left-column"
-www: true
-front: false
+env: www
 ---
 
 <div id="sprflt">
