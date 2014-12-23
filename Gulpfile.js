@@ -145,6 +145,7 @@ gulp.task('jekyll', function (cb) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
+    connect.reload();
   });
 
 });
