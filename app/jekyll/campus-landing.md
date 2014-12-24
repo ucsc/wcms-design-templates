@@ -3,7 +3,7 @@ layout: landing
 title: Campus Landing Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
-classes: "www landing homeEnv"
+classes: "www landing homeEnv fifty"
 env: www
 ---
 
