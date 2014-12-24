@@ -99,6 +99,7 @@ gulp.task('images', function() {
         .pipe(gulp.dest('./app/jekyll/images/'));
 });
 
+
 //
 // Optimize svg and make sprites in the build folder.
 //
@@ -107,32 +108,6 @@ gulp.task('svg', function() {
         .pipe(svgo()())
         .pipe(imacss('_svg.scss', 'icon'))
         .pipe(gulp.dest('./app/sass/base'));
-});
-
-
-//
-// Assemble handlebars page templates and prettify the HTML.
-//
-gulp.task('assemble', function() {
-
-    var compiled = moment().format('MMMM DD, YYYY - HH:mm:ss');
-
-    var assembleOptions = {
-        data: './app/examples/data/*.json',
-        partials: './app/examples/partials/*.hbs',
-        layoutdir: './app/examples/layouts/'
-    };
-
-    gulp.src('./app/examples/pages/*.hbs')
-        .pipe(changed('./app/build/'))
-        .pipe(assemble(assembleOptions))
-        .pipe(prettify({
-            indent_char: ' ',
-            indent_size: 2
-        }))
-        .pipe(replace(/##DATE##/g, compiled))
-        .pipe(gulp.dest('./app/build/'))
-        .pipe(connect.reload());
 });
 
 
