@@ -28,7 +28,7 @@ var pkg = require('./package.json'),
 var paths = {
     styles: ['./app/sass/*.scss', './app/sass/**/**.**'],
     scripts: './app/js/**/**',
-    images: './app/images/**',
+    images: './app/images/**/**',
     svg: './app/svg/**/**.svg',
     fonts: './app/fonts/*'
 };
