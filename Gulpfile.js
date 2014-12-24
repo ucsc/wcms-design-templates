@@ -147,7 +147,7 @@ gulp.task('build', function() {
             './app/jekyll/js/**.**',
             './app/jekyll/lib/**/**.**'
         ], {
-            base: "./app/build"
+            base: "./app/jekyll"
         })
         .pipe(zip('_responsive.zip'))
         .pipe(gulp.dest('./static'));
