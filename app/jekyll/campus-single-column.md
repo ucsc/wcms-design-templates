@@ -3,7 +3,7 @@ layout: single-column
 title: Campus Single Column Page
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
 keywords: "university, college, Santa Cruz, California"
-classes: "www homeEnv contentSingleCol single-column"
+classes: "www homeEnv contentSingleCol single-column fifty"
 env: www
 ---
 
