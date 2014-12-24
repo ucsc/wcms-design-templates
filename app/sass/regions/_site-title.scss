@@ -90,6 +90,23 @@
         }      
       }
 
+      .www.fifty & {    
+        // Home environment uses the "tagged" campaign logo.          
+        background:transparent url(../images/logos/ucsc-logotype-tagged-50th.svg) no-repeat left top;
+        // IE 9, 10, and 11 require a discreet width on the element 
+        // because the svg background image is always in the center. :-(
+        max-width:380px;
+        height:80px;
+        
+        // Mobile
+        @include span-columns(8);
+        
+        // Desktop
+        @include media($desktop) {
+          @include span-columns(8);          
+        }      
+      }
+
     }
 
   }    
