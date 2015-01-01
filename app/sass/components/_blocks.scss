@@ -11,14 +11,22 @@
 
   @include pad;
 
+  display: block;
+
   .wrap {
-    @include row(default);
+    float: none;
+    display: block;
+    width: 100%;
   }
   
   @include media($tablet) {
+    display: table;
     padding:0;
-    @include display-context(table);
-    @include module-box(4);
+    .wrap {
+      float: none;
+      display: table-cell;       
+      width: 33%;
+    }
   }
   
 }
@@ -26,9 +34,15 @@
 // Module row with four columns
 .four {
   
+  display: block;
+
   @include media($tablet) {
-    @include display-context(table);
-    @include module-box(3);  
+    display: table;
+    .wrap {
+      float: none;
+      display: table-cell;
+      width: 25%;
+    }
   }
   
   .wrap {
