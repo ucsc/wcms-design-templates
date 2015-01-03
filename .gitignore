@@ -2,12 +2,10 @@
 .sass-cache
 node_modules
 bower_components
-app/current-html
-app/build
-app/jekyll/css
-app/jekyll/images
-app/jekyll/js
-app/jekyll/lib
-_site
+app/src/jekyll/css
+app/src/jekyll/images
+app/src/jekyll/js
+app/src/jekyll/lib
+serve
 vendor
 static
