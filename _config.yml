@@ -5,10 +5,8 @@ description: Sample site for previewing pages using the new templates.
 baseurl: ""
 url: "http://localhost:8080"
 
-source: ./app/jekyll
-destination: ./app/_site
-
-include: ['_pages']
+source: ./app/src/jekyll
+destination: ./app/serve
 
 # Build settings
 markdown: kramdown

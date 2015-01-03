@@ -7,8 +7,6 @@ var pkg = require('./package.json'),
     minifycss = require('gulp-minify-css'),
     clean = require('gulp-clean'),
     uglify = require('gulp-uglify'),
-    refresh = require('gulp-livereload'),
-    assemble = require('gulp-assemble'),
     prettify = require('gulp-html-prettify'),
     replace = require('gulp-replace'),
     imagemin = require('gulp-imagemin'),
@@ -18,41 +16,55 @@ var pkg = require('./package.json'),
     svgo = require('imagemin-svgo'),
     sprites = require('gulp-svg-sprites'),
     imacss = require('gulp-imacss'),
-    exec = require('child_process').exec,
-    connect = require('gulp-connect');
+    browserSync = require('browser-sync');
 
 
 //
 // Set default file path variables for tasks
 //
 var paths = {
-    styles: ['./app/sass/*.scss', './app/sass/**/**.**'],
-    scripts: './app/js/**/**',
-    images: './app/images/**/**',
-    svg: './app/svg/**/**.svg',
-    fonts: './app/fonts/*'
+    styles: ['./app/src/sass/*.scss', './app/src/sass/**/**.**'],
+    scripts: './app/src/js/**/**',
+    images: './app/src/images/**/**',
+    svg: './app/src/svg/**/**.svg',
+    fonts: './app/src/fonts/*'
 };
 
 
 //
 // Static webserver with livereload via connect
 //
+// gulp.task('webserver', function() {
+//     connect.server({
+//         livereload: true,
+//         root: ['./app/serve']
+//     });
+// });
 gulp.task('webserver', function() {
-    connect.server({
-        livereload: true,
-        root: ['./app/_site']
+    browserSync.init("./app/serve/index.html", {
+        server: {
+            baseDir: "./app/serve"            
+        },
+        watchOptions: {
+            debounceDelay: 3000
+        }
     });
 });
+
 
 
 //
 // Clean the build folder so we start clean
 //
 gulp.task('clean', function() {
-    gulp.src(['app/build/images', 'app/build/css', 'app/build/js', 'app/build/*.html'], {
+    gulp.src([
+        'app/src/jekyll/images',
+        'app/src/jekyll/css',
+        'app/src/jekyll/js'
+        ], {
         read: false
     })
-        .pipe(clean());
+    .pipe(clean());
 });
 
 
@@ -61,7 +73,7 @@ gulp.task('clean', function() {
 //
 gulp.task('styles', function() {
     return gulp.src(paths.styles)
-        .pipe(changed('./app/build/css/'))
+        .pipe(changed('./app/src/jekyll/css/'))
         .pipe(sass({
             sourcemap: false,
             sourcemapPath: '.',
@@ -69,8 +81,7 @@ gulp.task('styles', function() {
         }))
         .pipe(autoprefix('last 4 versions'))
         .pipe(minifycss())
-        .pipe(gulp.dest('./app/jekyll/css/'))
-        .pipe(connect.reload());
+        .pipe(gulp.dest('./app/src/jekyll/css/'));
 });
 
 
@@ -80,10 +91,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         // Pass in options to the task
-        .pipe(changed('./app/jekyll/js/'))
+        .pipe(changed('./app/src/jekyll/js/'))
         .pipe(uglify())
-        .pipe(gulp.dest('./app/jekyll/js/'))
-        .pipe(connect.reload());
+        .pipe(gulp.dest('./app/src/jekyll/js/'));
 });
 
 
@@ -92,11 +102,11 @@ gulp.task('scripts', function() {
 //
 gulp.task('images', function() {
     return gulp.src(paths.images)
-        .pipe(changed('./app/jekyll/images/'))
+        .pipe(changed('./app/src/jekyll/images/'))
         .pipe(imagemin({
             optimizationLevel: 5
         }))
-        .pipe(gulp.dest('./app/jekyll/images/'));
+        .pipe(gulp.dest('./app/src/jekyll/images/'));
 });
 
 
@@ -107,21 +117,21 @@ gulp.task('svg', function() {
     return gulp.src(paths.svg)
         .pipe(svgo()())
         .pipe(imacss('_svg.scss', 'icon'))
-        .pipe(gulp.dest('./app/sass/base'));
+        .pipe(gulp.dest('./app/src/sass/base'));
 });
 
 
 //
 // Gulp task to run Jekyll
 // 
-gulp.task('jekyll', function (cb) {
+gulp.task('jekyll', function (gulpCallBack) {
 
-  exec('jekyll build', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-    connect.reload();
-  });
+    var spawn = require('child_process').spawn;
+    var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
+
+    jekyll.on('exit', function(code) {
+        gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+    });
 
 });
 
@@ -133,7 +143,7 @@ gulp.task('bower-files', function() {
     return gulp.src(mainBowerFiles(), {
             base: './bower_components'
         })
-        .pipe(gulp.dest("./app/jekyll/lib"))
+        .pipe(gulp.dest("./app/jekyll/lib"));
 });
 
 
@@ -142,12 +152,12 @@ gulp.task('bower-files', function() {
 //
 gulp.task('build', function() {
     return gulp.src([
-            './app/jekyll/css/**.**',
-            './app/jekyll/images/**/**.**',
-            './app/jekyll/js/**.**',
-            './app/jekyll/lib/**/**.**'
+            './app/src/jekyll/css/**.**',
+            './app/src/jekyll/images/**/**.**',
+            './app/src/jekyll/js/**.**',
+            './app/src/jekyll/lib/**/**.**'
         ], {
-            base: "./app/jekyll"
+            base: "./app/src/jekyll"
         })
         .pipe(zip('_responsive.zip'))
         .pipe(gulp.dest('./static'));
@@ -155,21 +165,15 @@ gulp.task('build', function() {
 
 
 //
-// Watch files for changes and run tasks as needed.
-//
-gulp.task('watch', function() {
-    gulp.watch('app/js/**/**', ['scripts']);
-    gulp.watch('app/sass/**/*.scss', ['styles']);
-    gulp.watch('app/images/**/.**', ['images']);
-    gulp.watch('app/svg/**/**.svg', ['svg']);
-    gulp.watch('app/jekyll/**/**', ['jekyll']);
-});
-
-
-//
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['clean', 'bower-files', 'styles', 'scripts', 'images', 'svg', 'webserver', 'watch']);
+gulp.task('default', ['bower-files', 'styles', 'scripts', 'images', 'svg', 'jekyll', 'webserver'], function () {
+    gulp.watch('app/src/js/**/**', ['scripts']);
+    gulp.watch('app/src/sass/**/*.scss', ['styles']);
+    gulp.watch('app/src/images/**/.**', ['images']);
+    gulp.watch('app/src/svg/**/**.svg', ['svg']);
+    gulp.watch('app/src/jekyll/**/**', ['jekyll']);
+});
 
 
 //

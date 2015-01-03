@@ -4,6 +4,9 @@
     <xsl:include href="/formats/Format Date"/>
     <xsl:include href="/formats/content-pages/related-links"/>
     
+    <xsl:variable name="siteURL"><xsl:text>http://news.ucsc.edu</xsl:text></xsl:variable>
+    <xsl:variable name="page-url"><xsl:value-of select="$siteURL"/><xsl:value-of select="/system-index-block/calling-page/system-page/path"/>.html</xsl:variable>
+
     <xsl:template match="/system-index-block">
         <xsl:apply-templates select="calling-page/system-page"/>
     </xsl:template>
@@ -16,6 +19,10 @@
           </h1>          
         </xsl:if>
         
+        <p>
+           <xsl:value-of select="$page-url" />
+        </p>
+
         <!-- Print the subhead, if there is one. -->
         <xsl:if test="system-data-structure/article-subhead != ''">
             <p class="subhead"><xsl:value-of select="system-data-structure/article-subhead"/></p>
