@@ -10,16 +10,20 @@ env: dept
 <h1 id="title">UC Santa Cruz moves up in Shanghai ranking of world universities </h1>
 
 <div class="article-meta">
-<p class="date">August 19, 2014</p><p class="vcard">
-By <a class="email fn" href="mailto:lasnier@ucsc.edu">Guy Lasnier</a></p>
-<p class="social-sharing">
-<span>Share:</span> 
+
+<div class="author-info">
+<p class="date">August 19, 2014</p>
+<p class="vcard">By <a class="email fn" href="mailto:lasnier@ucsc.edu">Guy Lasnier</a></p>
+</div>
+<div class="social-sharing">
+<span>Share this story:</span> 
 <a class="icon icon-facebook--inverted" href="http://facebook.com">Facebook</a>
 <a class="icon icon-twitter--inverted" href="http://twitter.com">Twitter</a>
 <a class="icon icon-google-plus--inverted" href="http://google.com">Google+</a>
 <a class="icon icon-linkedin--inverted" href="http://linkedin.com">LinkedIn</a>
 <a class="icon icon-reddit--inverted" href="http://google.com">Reddit</a>  
-</p>
+</div>
+
 </div>
 
 <div class="contentBox">
@@ -30,7 +34,18 @@ By <a class="email fn" href="mailto:lasnier@ucsc.edu">Guy Lasnier</a></p>
 <div class="article-body">
 <p>UC Santa Cruz is ranked 93 among the world's best universities and in the top 50 in the U.S., according to the Academic Ranking of World Universities (ARWU) published by a Shanghai education-consulting firm. &nbsp;<br><br>It's a move up at least eight places for the campus that last year was listed in the 101-150 category. The annual study by the Shanghai Ranking Consultancy, a firm spun off five years ago from Shanghai Jiao Tong University, looks at more that 1,200 universities in the world and publishes data on what it deems are the top 500.<br><br>The ranking system uses six criteria, including the number of alumni and staff winning Nobel Prizes and Fields Medals, number of highly cited researchers selected by Thomson Reuters, number of articles published in the journals of Nature and Science, and the number of articles indexed in Science Citation Index – Expanded and Social Sciences Citation Index. It's then adjusted based on the number of faculty an institution has. <br><br>In subject areas, UC Santa Cruz ranked 33 in the world for physics. In broad academic areas the campus ranked in the 51-75 range for natural sciences and mathematics; also 51-75 for life and agricultural sciences; and 151-200 for social sciences. <br><br>The ARWU was first published in 2003 by the Center for World-Class Universities, Graduate School of Education of Shanghai Jiao Tong University, China. Initially, it was launched in an effort to see how Chinese universities compared with others around the world. <br><br>Nine University of California campuses placed in the top 150. Harvard University was listed as first, Stanford University, second, MIT third, and UC Berkeley fourth. <br><br>Details on the ARWU methodology, along with the complete list of academic rankings for 2014 and prior years, may be found at the <a href="http://www.shanghairanking.com/">ARWU website</a>.<br><br></p>
 
+
 </div>
+
+<div class="social-sharing">
+<span>Share this story:</span> 
+<a class="icon icon-facebook--inverted" href="http://facebook.com">Facebook</a>
+<a class="icon icon-twitter--inverted" href="http://twitter.com">Twitter</a>
+<a class="icon icon-google-plus--inverted" href="http://google.com">Google+</a>
+<a class="icon icon-linkedin--inverted" href="http://linkedin.com">LinkedIn</a>
+<a class="icon icon-reddit--inverted" href="http://google.com">Reddit</a>  
+</div>
+
 </div>
 
 <div class="row">
