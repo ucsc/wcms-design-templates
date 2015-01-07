@@ -143,7 +143,7 @@ gulp.task('bower-files', function() {
     return gulp.src(mainBowerFiles(), {
             base: './bower_components'
         })
-        .pipe(gulp.dest("./app/jekyll/lib"));
+        .pipe(gulp.dest("./app/src/jekyll/lib"));
 });
 
 
