@@ -1,16 +1,19 @@
 .social-sharing {
+  margin: 0.25em 0.25em 0 0;
   span {
     display:inline-block;
     text-transform:uppercase;
     font-size:0.8em;
+    font-weight: 200;
     letter-spacing: 0.1em;
     vertical-align:18%;
   }
    a {
      width: 20px;
      height: 20px;
-     margin-left:0.12em;
-     padding: 0.1em;
+     margin-left:0.25em;
+     padding: 0;
+     display: inline-block;
      &:focus,
      &:hover,
      &:active {
@@ -19,8 +22,31 @@
    }
 
   .article-meta & {
-    display: inline-block;
-    width:40%;
+    text-align: right;
+  }
+
+  .contentBox & {
+    border-top: 1px solid $sand-dark;
+    padding-top: 1em;
+    margin: 2em 0 0 0;
+    text-align: center;
+    span {
+      background-color: $sand-light;
+      display:block;
+      top:-33px;
+      position: relative;
+      margin: 0.5em auto 0;
+      padding: 0.25em;
+      width: 16em;
+      letter-spacing: 0.3em;
+    }
+    a {
+      width:28px;
+      height:28px;
+      margin:0.25em 0.5em;
+      position: relative;
+      top: -16px;
+    }
   }
 
  }
