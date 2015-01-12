@@ -18,10 +18,6 @@
               <xsl:value-of select="title"/>
           </h1>          
         </xsl:if>
-        
-        <p>
-           <xsl:value-of select="$page-url" />
-        </p>
 
         <!-- Print the subhead, if there is one. -->
         <xsl:if test="system-data-structure/article-subhead != ''">
@@ -43,6 +39,8 @@
         </xsl:if>
             
         <div class="article-meta">
+        
+        <div class="article-info">
         <!-- Print the article date -->
         <p class="date">
             <xsl:call-template name="format-date">
@@ -65,7 +63,16 @@
         <xsl:if test="system-data-structure/contact != ''">
             <p class="vcard"><xsl:apply-templates select="system-data-structure/contact"/></p>
         </xsl:if>
-
+    </div>
+    
+  <div class="social-sharing">
+<span>Share this story:</span> 
+<a class="icon icon-twitter--inverted" href="https://twitter.com/intent/tweet?text={title}&amp;url={$page-url}&amp;via=ucsc">Twitter</a>
+<a class="icon icon-facebook--inverted" href="https://www.facebook.com/sharer/sharer.php?t={title}&amp;u={$page-url}">Facebook</a>
+<a class="icon icon-google-plus--inverted" href="https://plus.google.com/share?url={$page-url}">Google+</a>
+<a class="icon icon-linkedin--inverted" href="http://www.linkedin.com/shareArticle?mini=true&amp;title={title}&amp;url={$page-url}&amp;source=http%3a%2f%2fnews.ucsc.edu">LinkedIn</a>
+<a class="icon icon-reddit--inverted" href="http://www.reddit.com/submit?url={$page-url}">Reddit</a>  
+</div>
         </div> 
         
         <div class="contentBox">
@@ -83,7 +90,8 @@
         <!-- Add article text -->
         <xsl:for-each select="system-data-structure/article-text">
             <xsl:if test=". != ''">
-                <div class="article-body"><xsl:copy-of select="node()"/></div>
+                <div class="article-body">
+                <xsl:copy-of select="node()"/></div>
             </xsl:if>
         </xsl:for-each>
 
@@ -104,6 +112,16 @@
                 <a class="dsq-brlink" href="http://disqus.com">Comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
         </xsl:if>
+
+  <div class="social-sharing">
+<span>Share this story:</span> 
+<a class="icon icon-twitter--inverted" href="https://twitter.com/intent/tweet?text={title}&amp;url={$page-url}&amp;via=ucsc">Twitter</a>
+<a class="icon icon-facebook--inverted" href="https://www.facebook.com/sharer/sharer.php?t={title}&amp;u={$page-url}">Facebook</a>
+<a class="icon icon-google-plus--inverted" href="https://plus.google.com/share?url={$page-url}">Google+</a>
+<a class="icon icon-linkedin--inverted" href="http://www.linkedin.com/shareArticle?mini=true&amp;title={title}&amp;url={$page-url}&amp;source=http%3a%2f%2fnews.ucsc.edu">LinkedIn</a>
+<a class="icon icon-reddit--inverted" href="http://www.reddit.com/submit?url={$page-url}">Reddit</a>  
+</div>
+
 
         </div><!-- End the .contentBox -->
         
