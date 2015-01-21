@@ -54,7 +54,7 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                     </xsl:for-each>
                 </xsl:comment>
                 
-                <ul class="archive-list">
+                <ul class="archive-list image-right">
                     <xsl:choose>
                     <!-- the following takes pages from the block that have categories matching the index page category. It excludes pages that have an element called "Category Index" which is how we exclude the index page itself from being matched. -->
                         <xsl:when test="$campus-index-block//system-page[name != 'index'][dynamic-metadata[starts-with(name,'category-') and value=$news-categories]] | $dept-index-block//system-page[name != 'index' and not(system-data-structure/page-type = 'Category Index')]">
@@ -91,25 +91,27 @@ To accomplish standardization of the two different formats, an EXSLT function ha
     </xsl:choose>
     </xsl:variable>
         
+  <!-- Get the article date from the article, or fallback to the creation date for the link.  -->
+  <xsl:variable name="article-date">
+    <xsl:choose>
+        <xsl:when test="system-data-structure/page/path != '/'">
+          <xsl:call-template name="format-date-string">
+            <xsl:with-param name="date" select="system-data-structure/page/start-date"/>
+            <xsl:with-param name="mask">mmmm dd, yyyy</xsl:with-param>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:call-template name="format-date">
+              <xsl:with-param name="date" select="start-date"/>
+              <xsl:with-param name="mask">mmmm d, yyyy</xsl:with-param> 
+          </xsl:call-template>  
+        </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>                
+
+
             <li>
-                <span class="date">
-                <!-- here's the problem with dates: in the shortcut Content Type, you can select an article page and I would like the resulting link, image, summary, and date to come from that original article. Everything works right except the date which comes through as a string not in a system date format. I figured out how to display each by using the calling the format-date-string and format-date templates. However, I can't figure out how to sort the resulting articles by date since I have both types of dates. I could ask the users to input the date but I would rather pull it from the original article. -->      
-                    <xsl:choose>
-                        <xsl:when test="system-data-structure/page/path != '/'">
-                         <xsl:call-template name="format-date-string">
-          <xsl:with-param name="date" select="system-data-structure/page/start-date"/>
-          <xsl:with-param name="mask">mmmm dd, yyyy</xsl:with-param>
-        </xsl:call-template>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:call-template name="format-date">
-                                <xsl:with-param name="date" select="start-date"/>
-                                <xsl:with-param name="mask">mmmm d, yyyy</xsl:with-param> 
-                            </xsl:call-template>  
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </span>
-                
+                        
                 <!-- 
                 This section returns content from pages types that specify external URL, link to internal page, or link to file.  This section determines what type of link 
                 it is (URL, Page, File).  In each case it then determines if there is a thumbnail to display.  In the case of the page, it also checks to see if 
@@ -124,18 +126,20 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                                 <a href="{system-data-structure/external-url}">
                                     <img alt="{$alt-tag}" class="right" src="{system-data-structure/lead-image/image-thumb/link}"/> 
                                 </a>
-                                <h3><a href="{system-data-structure/external-url}">
+                                <h2>
+                                  <a href="{system-data-structure/external-url}">
                                     <xsl:value-of select="title"/>
-                                </a></h3>
-                                <p>
-                                    <xsl:value-of select="summary"/>
-                                </p>
+                                  </a>
+                                </h2>
+                                <p class="date"><xsl:value-of select="$article-date"/></p>
+                                <p><xsl:value-of select="summary"/></p>
                             </xsl:when>
                            <xsl:otherwise>
                                
-                               <h3><a href="{system-data-structure/external-url}">
+                               <h2><a href="{system-data-structure/external-url}">
                                    <xsl:value-of select="title"/>
-                               </a></h3>
+                               </a></h2>
+                               <p class="date"><xsl:value-of select="$article-date"/></p>
                                <p>
                                    <xsl:value-of select="summary"/>
                                </p>
@@ -151,10 +155,11 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                               <a href="{system-data-structure/page/link}">
                                   <img alt="{$alt-tag}" class="right" src="{system-data-structure/page/content/system-data-structure/lead-image/image-thumb/link}"/>
                               </a> 
-                              <h3><a href="{system-data-structure/page/link}">
+                              <h2><a href="{system-data-structure/page/link}">
                                   <xsl:value-of select="system-data-structure/page/title"/>
                               </a> 
-                              </h3>
+                              </h2>
+                              <p class="date"><xsl:value-of select="$article-date"/></p>
                               <p>
                                   
                                   <xsl:value-of select="system-data-structure/page/summary"/> 
@@ -167,19 +172,21 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                                <a href="{system-data-structure/page/link}">
                                    <img alt="{$alt-tag}" class="right" src="{system-data-structure/lead-image/image-thumb/link}"/> 
                                </a>
-                               <h3><a href="{system-data-structure/page/link}">
+                               <h2><a href="{system-data-structure/page/link}">
                                    <xsl:value-of select="system-data-structure/page/title"/>
                                </a>
-                               </h3>
+                               </h2>
+                               <p class="date"><xsl:value-of select="$article-date"/></p>
                                <p>
                                    <xsl:apply-templates select="system-data-structure/page/summary"/>
                                </p>
                             </xsl:when>
                             <!-- if no thumbnail at all -->
                             <xsl:otherwise>
-                                <h3><a href="{system-data-structure/page/link}">
+                                <h2><a href="{system-data-structure/page/link}">
                                     <xsl:value-of select="system-data-structure/page/title"/>
-                                </a></h3>
+                                </a></h2>
+                                <p class="date"><xsl:value-of select="$article-date"/></p>
                                 <p>
                                     <xsl:apply-templates select="system-data-structure/page/summary"/>
                                 </p>
@@ -194,18 +201,20 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                           <xsl:when test="system-data-structure/lead-image/image-thumb/path != '/'"><a href="{system-data-structure/file/link}">
                               <img alt="{$alt-tag}" class="right" src="{system-data-structure/lead-image/image-thumb/link}"/> 
                           </a>
-                              <h3><a href="{system-data-structure/file/link}">
+                              <h2><a href="{system-data-structure/file/link}">
                                   <xsl:value-of select="title"/>
-                              </a></h3>
+                              </a></h2>
+                              <p class="date"><xsl:value-of select="$article-date"/></p>
                               <p>
                                   <xsl:apply-templates select="summary"/>
                               </p>
                           </xsl:when>
                           <xsl:otherwise>
                               
-                              <h3><a href="{system-data-structure/file/link}">
+                              <h2><a href="{system-data-structure/file/link}">
                                   <xsl:value-of select="title"/>
-                              </a></h3>
+                              </a></h2>
+                              <p class="date"><xsl:value-of select="$article-date"/></p>
                               <p>
                                   <xsl:apply-templates select="summary"/>
                               </p>
@@ -222,17 +231,19 @@ To accomplish standardization of the two different formats, an EXSLT function ha
                                 <a href="{link}">
                                     <img alt="{$alt-tag}" class="right" src="{system-data-structure/lead-image/image-thumb/link}"/> 
                                 </a>
-                                <h3><a href="{link}">
+                                <h2><a href="{link}">
                                     <xsl:value-of select="title"/>
-                                </a></h3>
+                                </a></h2>
+                                <p class="date"><xsl:value-of select="$article-date"/></p>
                                 <p>
                                     <xsl:apply-templates select="summary"/>
                                 </p>
                             </xsl:when>
                             <xsl:otherwise>
-                                <h3>
+                                <h2>
                                     <a href="{link}"><xsl:value-of select="title"/></a>
-                                </h3>
+                                </h2>
+                                <p class="date"><xsl:value-of select="$article-date"/></p>
                                 <p><xsl:value-of select="summary"/></p>
                             </xsl:otherwise>
                         </xsl:choose>
