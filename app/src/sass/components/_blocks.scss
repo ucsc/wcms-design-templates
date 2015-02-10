@@ -90,6 +90,7 @@
     border-radius: $border-radius-base;
     background-color: $sand-light;
     padding:0.4em 1em;
+    width: 100%; 
     @include module-box-shadow;
 
     
