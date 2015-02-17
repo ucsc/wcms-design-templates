@@ -123,7 +123,16 @@
 .separate {
     
     .wrap {
-      @include pad(1em);
+      padding: 1em;
+      &:first-child {
+          padding-left: 0;
+      }
+      &:last-child {
+          padding-right: 0;
+      }     
+      &:nth-child(2) {
+          padding:1em 0;          
+      }       
       @include omega;
       @include media($mobile) {
         padding: 0;
