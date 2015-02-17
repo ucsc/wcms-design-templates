@@ -44,6 +44,7 @@
   .sidebar,
   #bannerBox,
   .banner-box,
+  .social-sharing,
   #footer,
   .legal {
     display:none !important;
@@ -158,4 +159,9 @@
   .subhead {
     font-size: 1.1em !important;
   }
+
+  @page {
+    margin: 0.6in 0.45in;
+  }
+
 }
