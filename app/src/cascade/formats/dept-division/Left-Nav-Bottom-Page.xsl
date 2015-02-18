@@ -8,7 +8,7 @@
     <xsl:template match="system-index-block">
       <!-- If block header has content, print it -->
       <xsl:if test="$nav-block/content/system-data-structure/block-content/header != ''">
-        <h4>
+        <h4 class="block-header">
           <xsl:value-of select="$nav-block/content/system-data-structure/block-content/header"/>
         </h4>
       </xsl:if>
