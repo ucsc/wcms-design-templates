@@ -4,8 +4,8 @@
     "authors": [
         "Rob Knight <raknight@ucsc.edu>"
     ],
-    "description": "UCSC adaptive templates",
-    "main": "./app/index.html",
+    "description": "UCSC responsive templates 2014",
+    "main": "./src/index.html",
     "keywords": [
         "responsive"
     ],

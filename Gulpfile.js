@@ -1,5 +1,11 @@
+//
+// Load Gulp and dependencies
+//
 var pkg = require('./package.json'),
     gulp = require('gulp'),
+    assemble = require('assemble'),
+    gulpAssemble = require('gulp-assemble'),
+    browserSync = require('browser-sync'),
     changed = require('gulp-changed'),
     autoprefix = require('gulp-autoprefixer'),
     sass = require('gulp-ruby-sass'),
@@ -12,38 +18,30 @@ var pkg = require('./package.json'),
     imagemin = require('gulp-imagemin'),
     moment = require('moment'),
     mainBowerFiles = require('main-bower-files'),
-    zip = require('gulp-zip'),
     svgo = require('imagemin-svgo'),
-    sprites = require('gulp-svg-sprites'),
     imacss = require('gulp-imacss'),
-    browserSync = require('browser-sync');
+    zip = require('gulp-zip');
+
 
 
 //
 // Set default file path variables for tasks
 //
 var paths = {
-    styles: ['./app/src/sass/*.scss', './app/src/sass/**/**.**'],
-    scripts: './app/src/js/**/**',
-    images: './app/src/images/**/**',
-    svg: './app/src/svg/**/**.svg',
-    fonts: './app/src/fonts/*'
+    styles:     ['./src/sass/**.scss', './src/sass/**/**.**'],
+    scripts:    './src/js/**/**',
+    images:     './src/images/**/**',
+    svg:        './src/svg/**/**.svg'
 };
 
 
 //
-// Static webserver with livereload via connect
+// Static webserver with livereload via Browsersync
 //
-// gulp.task('webserver', function() {
-//     connect.server({
-//         livereload: true,
-//         root: ['./app/serve']
-//     });
-// });
 gulp.task('webserver', function() {
-    browserSync.init("./app/serve/index.html", {
+    browserSync.init("./build/index.html", {
         server: {
-            baseDir: "./app/serve"            
+            baseDir: "./build"            
         },
         watchOptions: {
             debounceDelay: 3000
@@ -52,15 +50,14 @@ gulp.task('webserver', function() {
 });
 
 
-
 //
 // Clean the build folder so we start clean
 //
 gulp.task('clean', function() {
     gulp.src([
-        'app/src/jekyll/images',
-        'app/src/jekyll/css',
-        'app/src/jekyll/js'
+        'build/images',
+        'build/css',
+        'build/js'
         ], {
         read: false
     })
@@ -72,16 +69,15 @@ gulp.task('clean', function() {
 // Compile sass into CSS without source map.
 //
 gulp.task('styles', function() {
-    return gulp.src(paths.styles)
-        .pipe(changed('./app/src/jekyll/css/'))
-        .pipe(sass({
-            sourcemap: false,
-            sourcemapPath: '.',
-            require: ['bourbon', 'neat']
-        }))
-        .pipe(autoprefix('last 4 versions'))
-        .pipe(minifycss())
-        .pipe(gulp.dest('./app/src/jekyll/css/'));
+    return sass('src/sass', {
+        require: ['bourbon', 'neat']
+    }) 
+    .on('error', function (err) {
+      console.error('Error!', err.message);
+   })
+    .pipe(autoprefix('last 4 versions'))
+    .pipe(minifycss())
+    .pipe(gulp.dest('build/css'));
 });
 
 
@@ -91,9 +87,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         // Pass in options to the task
-        .pipe(changed('./app/src/jekyll/js/'))
+        .pipe(changed('./build/js/'))
         .pipe(uglify())
-        .pipe(gulp.dest('./app/src/jekyll/js/'));
+        .pipe(gulp.dest('./build/js/'));
 });
 
 
@@ -102,37 +98,22 @@ gulp.task('scripts', function() {
 //
 gulp.task('images', function() {
     return gulp.src(paths.images)
-        .pipe(changed('./app/src/jekyll/images/'))
+        .pipe(changed('./build/images/'))
         .pipe(imagemin({
             optimizationLevel: 5
         }))
-        .pipe(gulp.dest('./app/src/jekyll/images/'));
+        .pipe(gulp.dest('./build/images/'));
 });
 
 
 //
-// Optimize svg and make sprites in the build folder.
+// Optimize SVG and make sprites in the build folder.
 //
 gulp.task('svg', function() {
     return gulp.src(paths.svg)
         .pipe(svgo()())
         .pipe(imacss('_svg.scss', 'icon'))
-        .pipe(gulp.dest('./app/src/sass/base'));
-});
-
-
-//
-// Gulp task to run Jekyll
-// 
-gulp.task('jekyll', function (gulpCallBack) {
-
-    var spawn = require('child_process').spawn;
-    var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
-
-    jekyll.on('exit', function(code) {
-        gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
-    });
-
+        .pipe(gulp.dest('./src/sass/base'));
 });
 
 
@@ -143,36 +124,35 @@ gulp.task('bower-files', function() {
     return gulp.src(mainBowerFiles(), {
             base: './bower_components'
         })
-        .pipe(gulp.dest("./app/src/jekyll/lib"));
+        .pipe(gulp.dest("./build/lib"));
 });
 
 
 //
 // Create zip archive of static file assets
 //
-gulp.task('build', function() {
+gulp.task('deploy', function() {
     return gulp.src([
-            './app/src/jekyll/css/**.**',
-            './app/src/jekyll/images/**/**.**',
-            './app/src/jekyll/js/**.**',
-            './app/src/jekyll/lib/**/**.**'
+            './build/assets/css/**.**',
+            './build/assets/images/**/**.**',
+            './build/assets/js/**.**',
+            './build/assets/lib/**/**.**'
         ], {
-            base: "./app/src/jekyll"
+            base: "./build"
         })
         .pipe(zip('_responsive.zip'))
-        .pipe(gulp.dest('./static'));
+        .pipe(gulp.dest('./deploy'));
 });
 
 
 //
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['bower-files', 'styles', 'scripts', 'images', 'svg', 'jekyll', 'webserver'], function () {
-    gulp.watch('app/src/js/**/**', ['scripts']);
-    gulp.watch('app/src/sass/**/*.scss', ['styles']);
-    gulp.watch('app/src/images/**/.**', ['images']);
-    gulp.watch('app/src/svg/**/**.svg', ['svg']);
-    gulp.watch('app/src/jekyll/**/**', ['jekyll']);
+gulp.task('default', ['bower-files', 'styles', 'scripts', 'images', 'svg', 'webserver'], function () {
+    gulp.watch('src/js/**/**', ['scripts']);
+    gulp.watch('src/sass/**/*.scss', ['styles']);
+    gulp.watch('src/images/**/.**', ['images']);
+    gulp.watch('src/svg/**/**.svg', ['svg']);
 });
 
 

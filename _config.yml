@@ -1,12 +1,20 @@
+gems: ['bourbon', 'neat']
+
 # Site settings
-title: Responsive Web Templates
+title: Responsive Web Templates 2014
 email: raknight@ucsc.edu
 description: Sample site for previewing pages using the new templates.
 baseurl: ""
 url: "http://localhost:8080"
-
-source: ./app/src/jekyll
-destination: ./app/serve
+source: ./src
+destination: ./build
+sass:
+  sass_dir: _sass
+  style: :compact
+collections:
+  examples:
+    output: true
+    permalink: /:path:output_ext
 
 # Build settings
 markdown: kramdown
@@ -15,6 +23,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "pages"
+      type: "examples"
     values:
       layout: "two-column"

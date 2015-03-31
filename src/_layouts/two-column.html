@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="row" id="sprflt">
+  
+    <div id="main" role="main" class="main-content">
+
+      {{ content | split: '<!-- COLUMN -->' | first }}
+
+    </div>
+    
+    {% assign columns = content | split: '<!-- COLUMN -->' %}
+    {% assign count = columns.size %}
+            
+    <div class="sidebar" id="subNav" role="navigation">
+    
+      <!-- {{ count }} -->
+
+      {% if count > 1 %}
+    
+        {{ columns | last }}
+
+      {% else %}
+        <ul>
+          {% for example in site.examples %}
+            <li><a href="{{ example.url }}">{{ example.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    
+    </div>
+                
+  
+</div>
