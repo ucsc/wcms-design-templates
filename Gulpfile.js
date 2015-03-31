@@ -138,7 +138,7 @@ gulp.task('deploy', function() {
             './build/assets/js/**.**',
             './build/assets/lib/**/**.**'
         ], {
-            base: "./build"
+            base: "./build/assets"
         })
         .pipe(zip('_responsive.zip'))
         .pipe(gulp.dest('./deploy'));

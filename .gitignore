@@ -1,11 +1,5 @@
-.grunt
 .sass-cache
 node_modules
 bower_components
-app/src/jekyll/css
-app/src/jekyll/images
-app/src/jekyll/js
-app/src/jekyll/lib
-serve
-vendor
-static
+deploy
+app/build
