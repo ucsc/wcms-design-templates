@@ -1,0 +1,29 @@
+---
+layout: default
+title: Left column page patterns
+type: left
+---
+
+<div class="row" id="sprflt">
+
+    <div id="main" role="main" class="main-content">
+
+      {% for p in site.patterns %}
+        {% if p.categories contains page.type and p.region == 'main' %}
+            {{ p.content }}
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+    <div id="subnav" class="sidebar" role="navigation">
+      
+      {% for p in site.patterns %}
+        {% if p.categories contains page.type and p.region == 'sidebar' %}
+            {{ p.content }}
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+</div>

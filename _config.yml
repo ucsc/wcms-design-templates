@@ -12,17 +12,22 @@ sass:
   sass_dir: _sass
   style: :compact
 collections:
-  examples:
+  patterns:
     output: true
-    permalink: /:path:output_ext
+    #permalink: /:collection/:path:output_ext
 
 # Build settings
 markdown: kramdown
+
+kramdown:
+  input: GFM
+
+highlighter: pygments
 
 defaults:
   -
     scope:
       path: ""
-      type: "examples"
+      type: "patterns"
     values:
       layout: "two-column"

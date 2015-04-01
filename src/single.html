@@ -1,0 +1,21 @@
+---
+layout: default
+title: Single column page patterns
+type: single
+---
+
+<div id="main" role="main" class="main-content">
+
+  {% for p in site.patterns %}
+    {% if p.categories contains page.type and p.region == 'main' %}
+      
+      <div class="row">
+        
+        {{ p.content }}
+
+      </div>
+
+    {% endif %}
+  {% endfor %}
+
+</div>
