@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Left column page patterns
-type: left
+title: Right column page patterns
+type: right
 ---
 
 <div class="row" id="sprflt">
@@ -10,10 +10,9 @@ type: left
 
     <div id="main" role="main" class="main-content">
 
-  
     {% for p in sorted_patterns %}
       {% if p.categories contains page.type and p.region == 'main' %}
-              
+                
           {{ p.content }}
 
       {% endif %}

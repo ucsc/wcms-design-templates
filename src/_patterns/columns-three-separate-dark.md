@@ -1,9 +1,8 @@
 ---
 title: "Row: Three combined light"
+categories: home
 region: main
 order: 6
-categories:
-- home
 description: "Three column row, separate with boxed header."
 ---
 

@@ -1,10 +1,8 @@
 ---
 title: Archive List Horizontal
+categories: [left, right, single]
 region: main
-categories:
-- left
-- right
-- single
+order: 4
 description: "Archive lists feature a thumbnail image, a headline, a date, and a teaser link. This is the horizontal (flat) variant."
 ---
 

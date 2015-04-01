@@ -1,11 +1,9 @@
 ---
-title: "Row: Four"
+title: Four column row
+categories: [home, single]
 region: main
 order: 7
-categories:
-- home
-- single
-description: "Three column row, encapsulated with a light background."
+description: "Four column row"
 ---
 
 <div class="row clear four">

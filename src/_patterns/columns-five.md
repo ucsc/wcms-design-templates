@@ -1,9 +1,8 @@
 ---
 title: Landing Page 5 Column Grid
+categories: [landing, single]
 region: main
-categories:
-- landing
-- single
+order: 6
 description: "This five-column grid shows up in the campus home environment, on the second-level (landing) pages."
 ---
 <div class="row five combined light">

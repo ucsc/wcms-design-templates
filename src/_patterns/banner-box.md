@@ -1,10 +1,8 @@
 ---
 title: Banner box
+categories: [left, right]
 region: main
-order: 0
-categories:
-- left
-- right
+order: 1
 description: "Banner boxes sit at the top of left-column pages."
 ---
 

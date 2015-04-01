@@ -1,9 +1,8 @@
 ---
 title: Home Page Billboards
+categories: home
 region: main
 order: 4
-categories:
-- home
 description: "The carousel rotates through a series of images (billboards). You can also swipe through the billboards on a touch-enabled device or use the buttons below them to navigate through them."
 ---
 

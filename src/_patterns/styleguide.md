@@ -1,14 +1,11 @@
 ---
 title: Styleguide
+categories: [left, right, single]
+region: main
+order: 4
 description: "Four-year public institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
-keywords: "university, college, Santa Cruz, California"
-classes: "www homeEnv contentLeftNav left-column"
-env: www
 ---
 
-
-
-<h1 id="title">Style Guide</h1>
 
 <div class="contentBox">
 
@@ -25,6 +22,8 @@ env: www
 <li>LinkedIn: <a class="icon icon-linkedin-plain" href="#">LinkedIn</a></li>
 <li>Reddit: <a class="icon icon-reddit-plain" href="#">Reddit</a></li>
 </ul>
+
+</div>
 
 <p class="social-media">
 <a class="icon icon-twitter-plain" href="http://twitter.com/ucsc">Twitter</a>
@@ -611,15 +610,3 @@ Select a Choice
 </tbody>
 </table>
 </div>
-</div>    
-</div>
-<div class="sidebar">
-<ul>
-<li><a href="http://example.com/">This</a></li>
-<li><a href="http://example.com/">Then this</a></li>
-<li><a href="http://example.com/">this too</a></li>
-<li><a href="http://example.com/">And this</a></li>
-<li><a href="http://example.com/">And you!</a></li>
-<li><a href="http://example.com/">and youe!</a></li>
-</ul>
-

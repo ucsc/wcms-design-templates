@@ -1,9 +1,8 @@
 ---
 title: Page Top
+categories: [home, left, right, single]
 region: header
 order: 0
-categories:
-- all
 description: "The page top area shows the global links and site search."
 ---
 

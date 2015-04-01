@@ -25,15 +25,7 @@
 
     <div role="banner" class="site-header">
 
-        {% for p in site.patterns %}
-
-          {% if p.region == 'header' %}
-
-            {{ p.content }}
-          
-          {% endif %}
-
-        {% endfor %}
+      {{ site.patterns | where:'region','header' | sort:'order' }}
             
     </div>
 
@@ -43,24 +35,13 @@
 
     <div class="row" id="footer">
       
-      {% for p in site.patterns %}
-
-        {% if p.region == 'footer' %}
-         
-          {{ p.content }}
-        
-        {% endif %}
-
-      {% endfor %}
+      {{ site.patterns | where:'region','footer' | sort:'order' }}
 
     </div>
-
-
 
     </div><!-- /content-->        
   </div><!-- /container -->
 </div><!-- /wrap -->
-
 
 {% include footer-scripts-global.html %}
 

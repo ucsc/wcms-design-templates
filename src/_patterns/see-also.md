@@ -1,10 +1,8 @@
 ---
 title: See Also Link List
+categories: [left, right, single]
 region: main
-categories:
-- left
-- right
-- single
+order: 4
 description: "See Also lists show up at the bottom of some pages to link to additional, related content."
 ---
 

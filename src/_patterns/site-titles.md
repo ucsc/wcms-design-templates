@@ -1,13 +1,12 @@
 ---
 title: Site title examples
+categories: [home, left, right, single]
 region: header
 order: 1
-categories:
-- all
-description: "Site titles are given different classes based on their length."
+description: "Site titles get different classes based on their length."
 ---
 
-<h2>Standard (no class)</h2>
+<!-- <h2>Standard (no class)</h2> -->
 <div class="row names">
 <div class="campus-name">
   <a class="campus-logo" href="http://www.ucsc.edu/index.html" id="logo">UC Santa Cruz</a> <a class="mobile-menu" href="#mainNav">Menu</a>

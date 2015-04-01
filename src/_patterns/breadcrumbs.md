@@ -1,11 +1,8 @@
 ---
 title: Breadcrumbs
+categories: [left, right, single]
 region: header
 order: 3
-categories:
-- left
-- right
-- single
 description: "Breadcrumbs show up on any page but a home page. They occupy an entire row, sitting just under the main navigation."
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: Footer
+categories: [home, left, right, single]
 region: footer
-categories:
-- all
+order: 1
+description: "The footer contains the campus address and additional links."
 ---
 
 <p class="links">

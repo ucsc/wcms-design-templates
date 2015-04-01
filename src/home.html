@@ -6,13 +6,13 @@ type: home
 
 <div id="main" role="main" class="main-content">
 
-  {% for p in site.patterns | sort: 'order' %}
+  {% assign sorted_patterns = site.patterns | sort: 'order' %}
+
+  {% for p in sorted_patterns %}
     {% if p.categories contains page.type and p.region == 'main' %}
       
-      <div class="row">
-        
+      <div class="row">        
         {{ p.content }}
-
       </div>
 
     {% endif %}
