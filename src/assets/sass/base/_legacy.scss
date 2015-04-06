@@ -69,7 +69,7 @@ for fancybox.
 https://github.com/ucsc/webtemplates2014/issues/241 
 
 */
-.fancybox-overlay .fancybox-title-float-wrap {
+.fancybox-wrap.fancybox-opened .fancybox-title-float-wrap {
   position: relative;
   bottom: auto;
   right: 0;
