@@ -55,3 +55,33 @@ their functionality would need to be replaced on a site-by-site basis.
   column-gap:1em;
 }
 .columns-2 :first-child { margin-top:0; }
+
+
+/*
+
+The fancybox javascript library is configured at the site level
+in a header block on the pages where it is used. This makes 
+changing configuration settings difficult. 
+
+To fix issue #241, these styles override the default settings
+for fancybox.
+
+https://github.com/ucsc/webtemplates2014/issues/241 
+
+*/
+.fancybox-overlay .fancybox-title-float-wrap {
+  position: relative;
+  bottom: auto;
+  right: 0;
+  margin-bottom: 0;
+  .child {
+    background-color: transparent;
+    border-radius: 0;
+    color: $body-text;
+    line-height: 1.8;
+    margin-right: auto;
+    padding: 0.25em;
+    text-shadow: none;
+    white-space: normal;
+  }
+}
