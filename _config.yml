@@ -1,5 +1,3 @@
-gems: ['bourbon', 'neat']
-
 # Site settings
 title: Responsive Web Templates 2014
 email: raknight@ucsc.edu
@@ -8,9 +6,6 @@ baseurl: ""
 url: "http://localhost:8080"
 source: ./src
 destination: ./build
-sass:
-  sass_dir: _sass
-  style: :compact
 collections:
   patterns:
     output: true
