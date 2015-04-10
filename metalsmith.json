@@ -9,6 +9,10 @@
       "directory": "src/styleguide/_layouts"
     },
     "metalsmith-collections": {
+      "patterns": {
+        "pattern": "_patterns/*.md",
+        "sortBy": "order"
+      },
       "categories": {
         "sortBy": "order"
       }
