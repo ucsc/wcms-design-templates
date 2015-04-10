@@ -27,10 +27,10 @@ var pkg = require('./package.json'),
 // Set default file path variables for tasks
 //
 var paths = {
-    styles:     './src/assets/sass',
-    scripts:    './src/assets/js/**/**',
-    images:     './src/assets/images/**/**',
-    svg:        './src/assets/images/svg/**/**.svg'
+    styles:     './src/sass',
+    scripts:    './src/js/**/**',
+    images:     './src/images/**/**',
+    svg:        './src/svg/**/**.svg'
 };
 
 
@@ -58,7 +58,8 @@ gulp.task('clean', function(cb) {
     del([
         'build/_responsive/images/**',
         'build/_responsive/css/**',
-        'build/_responsive/js/**'
+        'build/_responsive/js/**',
+        'build/_responsive/lib/**'
     ], cb);
 });
 
@@ -87,7 +88,6 @@ gulp.task('styles', function() {
 //
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
-        // Pass in options to the task
         .pipe(changed('./build/_responsive/js/'))
         .pipe(uglify())
         .pipe(gulp.dest('./build/_responsive/js/'));
@@ -114,7 +114,7 @@ gulp.task('svg', function() {
     return gulp.src(paths.svg)
         .pipe(svgo()())
         .pipe(imacss('_svg.scss', 'icon'))
-        .pipe(gulp.dest('./src/assets/sass/base'));
+        .pipe(gulp.dest('./src/sass/base'));
 });
 
 
@@ -147,10 +147,10 @@ gulp.task('deploy', function() {
 // The default task (called when you run `gulp`)
 //
 gulp.task('default', ['clean', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'webserver'], function () {
-    gulp.watch('./src/assets/js/**/**', ['scripts']);
-    gulp.watch('./src/assets/sass/**/*.scss', ['styles']);
-    gulp.watch('./src/assets/images/**/.**', ['images']);
-    gulp.watch('./src/assets/svg/**/**.svg', ['svg']);
+    gulp.watch('./src/js/**/**', ['scripts']);
+    gulp.watch('./src/sass/**/*.scss', ['styles']);
+    gulp.watch('./src/images/**/.**', ['images']);
+    gulp.watch('./src/svg/**/**.svg', ['svg']);
 });
 
 

@@ -1,11 +1,7 @@
----
-layout: default
----
-        
+{% extends '_page.html' %}
 
-    
 <div id="main" role="main" class="main-content">
 
-  {{ content }}
+  {{ contents | safe }}
 
 </div>

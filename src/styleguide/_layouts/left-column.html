@@ -1,0 +1,29 @@
+{% extends '_page.html' %}
+
+{% block content %}
+
+<h1>Begin left_column.html</h1>
+
+<div class="row" id="sprflt">
+  
+    <div id="main" role="main" class="main-content">
+
+      {{ contents | safe }}
+
+    </div>
+                
+    <div class="sidebar" id="subNav" role="navigation">
+    
+      {# TODO: Add sidebar content #}
+
+      {% for c in metadata.categories %}
+        
+          <h1>{{ c }}</h1>
+
+      {% endfor %}
+
+    </div>
+                               
+</div>
+
+{% endblock %}

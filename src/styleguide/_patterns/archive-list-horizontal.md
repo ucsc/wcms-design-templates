@@ -1,4 +1,5 @@
 ---
+template: left-column.html
 title: Archive List Horizontal
 categories: [left, right, single]
 region: main

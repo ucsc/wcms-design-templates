@@ -1,13 +1,11 @@
----
-layout: default
----
+{% extends '_page.html' %}
     
 <div class="row" id="sprflt">
   
   <div id="main" role="main">
       <div class="main-content" id="mainContent">  
 
-      {{ content }}
+      {{ contents | safe }}
 
     </div>
   </div>
