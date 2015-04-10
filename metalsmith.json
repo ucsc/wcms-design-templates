@@ -1,0 +1,17 @@
+{
+  "source": "src/styleguide/_patterns",
+  "destination": "build/styleguide",
+  "plugins": {
+    "metalsmith-markdown": true,
+    "metalsmith-permalinks": ":file",
+    "metalsmith-templates": {
+      "engine": "swig",
+      "directory": "src/styleguide/_layouts"
+    },
+    "metalsmith-collections": {
+      "categories": {
+        "sortBy": "order"
+      }
+    }
+  }
+}
