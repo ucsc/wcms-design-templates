@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
-  <title>{{ page.title }} - University of California, Santa Cruz</title>
-  {% if page.description %}
-  <meta content="{{ page.description }}" name="description">
+  <title>{{ title }} - University of California, Santa Cruz</title>
+  {% if description %}
+  <meta content="{{ description }}" name="description">
   {% endif %}
-  {% if page.keywords %}
-  <meta content="{{ page.keywords }}" name="keywords">  
+  {% if keywords %}
+  <meta content="{{ keywords }}" name="keywords">  
   {% endif %}
 
   <link rel="stylesheet" href="/_responsive/css/ucsc.css" />
@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="{{ page.classes }}">
+<body class="{% block classes %}www{% endblock %}">
     
 <div id="wrap">
   <div id="container">
@@ -46,9 +46,6 @@
 </div><!-- /wrap -->
 
 {% include '../_includes/footer-scripts-global.html' %}
-
-
-_Page.html
 
 </body>
 </html>
