@@ -45,26 +45,45 @@
    }
 
     
-    // Second order list and links.
+    // Second level list and links (ul ul).
     li  > ul {
+        
         margin: 0;
         padding:$font-size-base/2 0;
-        border-bottom:1px solid lighten($gray-light, 24%);
+        border-bottom:1px solid lighten($gray-light, 24%);        
         li {
           list-style: square;
           margin:0.5em 0 0.5em 1.7em;
-          padding-left:0;          
+          padding-left:0;                    
           a {
             border-bottom:none;
             padding:0;
             @include hoverActiveFocus(transparent, $blue, underline);  
-          }
+          }                    
           &:first-child a {
             border-top:none;
+          }
+          // If it's the current open list item (added to format 4/17/2015)
+          &.current-path {
+            background-color: transparent;
+          }
+          // The current link inside of the list item
+          .current {
+            background-color: transparent !important;
+            font-weight: 700;
           }
         }
       }
 
+      // Third level list (ul ul ul)
+      ul ul ul {
+        border-bottom: none;
+        li {
+          list-style: circle outside none;
+          margin:0 0 0 1.25em;
+          font-size: 0.9em;          
+        }
+      }
  
 
 
