@@ -24,6 +24,7 @@ In the WCMS interface, we give users the option to display their image at relati
 */
 
 
+.article-video,
 .article-image {
   display:block;
   clear: right;
@@ -32,25 +33,28 @@ In the WCMS interface, we give users the option to display their image at relati
   max-width:56%;
   float:right;
   background-color: lighten($sand, 2%);
-  padding: 0.25em;
+  padding: 0.5em;
   border-radius:5px;
   border-bottom: solid 1px #dad8c8;
   margin:0 0 1em 1em;
 
   // Image inside of figure is always 100%
+  iframe,
   img {
     background-color: transparent;
     display:block;
     width:100%;
     height:auto;
+    padding: 0;
   }
 
   // Caption styles
   .caption {
     margin: 0;
-    padding:0.5em;
+    padding:0.5em 0.5em 0 0.5em;
     p {
       margin: 0;
+      line-height: 1.2;
     }
   }
 
@@ -67,7 +71,7 @@ In the WCMS interface, we give users the option to display their image at relati
     @include media($mobile) {
        max-width: 35%;
     }
-  }  
+  }
 
   &.width-280 {
     max-width: 280px;
@@ -80,7 +84,7 @@ In the WCMS interface, we give users the option to display their image at relati
     max-width: 350px;
     @include media($mobile) {
        max-width: 50%;
-    }    
+    }
   }
 
   &.width-480 {
@@ -88,21 +92,21 @@ In the WCMS interface, we give users the option to display their image at relati
     @include media($mobile) {
        max-width: 100%;
        margin-left: 50%;
-    }    
-  }  
+    }
+  }
 
   &.width-580 {
     max-width: 580px;
     @include media($mobile) {
        max-width: 67%;
     }
-  }  
+  }
 
   &.width-full {
     max-width: 100%;
     margin-left: 0;
-  }  
-  
+  }
+
   // At mobile width, all figures are 100%
   @include media($mobile) {
     width:100%;
