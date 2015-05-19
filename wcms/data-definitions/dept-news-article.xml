@@ -5,6 +5,11 @@
     <text identifier="phone" label="Phone"/>
     <text identifier="email" label="E-Mail"/>
   </group>
+  <group identifier="video" label="Lead Video" collapsed="true">
+    <text wysiwyg="true" identifier="embed" label="Embed Code" wysiwyg-toolbar-remove="font formatting,font assignment,text formatting,insert image,insert table,"/>
+    <text identifier="width" label="Width (number only)"/>
+    <text wysiwyg="true" identifier="caption" label="Video Caption" wysiwyg-toolbar-remove="font assignment,insert image,insert table,"/>
+  </group>
   <group identifier="lead-image" label="Lead Image">
     <asset type="file" identifier="image" label="Lead Image (max width: 760 px)"/>
     <text identifier="image-alt" label="Image Alt Text (Required for Accessibility)" maxlength="90"/>
