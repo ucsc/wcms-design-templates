@@ -40,7 +40,7 @@ var paths = {
 gulp.task('webserver', function() {
     browserSync.init("./build/index.html", {
         server: {
-            baseDir: "./build",                      
+            baseDir: "./build",
         },
         watchOptions: {
             debounceDelay: 3000
@@ -72,13 +72,13 @@ gulp.task('styles', function() {
         require: ['bourbon', 'neat'],
         style: 'compressed',
         sourcemap: true
-    }) 
+    })
     .on('error', function (err) {
       console.error('Error!', err.message);
    })
     .pipe(autoprefix('last 4 versions'))
     .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write('.'))
+    //.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/_responsive/css'));
 });
 
@@ -158,6 +158,3 @@ gulp.task('default', ['clean', 'bower-files', 'scripts', 'images', 'svg', 'style
 // The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.
 //
 gulp.task('fresh', ['clean', 'bower-files', 'scripts', 'images', 'svg', 'styles']);
-
-
-

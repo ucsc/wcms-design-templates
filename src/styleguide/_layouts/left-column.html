@@ -10,18 +10,21 @@
   
     <div id="main" role="main" class="main-content">
 
-      {{ contents | safe }}
-
+      
+              {{ contents | safe }}
+      
     </div>
                 
     <div class="sidebar" id="subNav" role="navigation">
     
       {# TODO: Add sidebar content #}
 
-      {% for c in categories %}
-        
-          <h1>{{ c }}</h1>
+      {% for f in collections.fragments %}        
+          
+          
 
+             <p> {{ f.title }}</p>
+         
       {% endfor %}
 
     </div>

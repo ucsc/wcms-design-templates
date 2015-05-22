@@ -2,20 +2,17 @@
   "source": "src/styleguide/_patterns",
   "destination": "build/styleguide",
   "plugins": {
+    "metalsmith-collections": {
+      "fragments": {
+        "pattern": "*.md",
+        "sortBy": "title"
+      }
+    },
     "metalsmith-markdown": true,
-    "metalsmith-permalinks": ":file",
+    "metalsmith-permalinks": ":title",
     "metalsmith-templates": {
       "engine": "swig",
       "directory": "src/styleguide/_layouts"
-    },
-    "metalsmith-collections": {
-      "patterns": {
-        "pattern": "_patterns/*.md",
-        "sortBy": "order"
-      },
-      "categories": {
-        "sortBy": "order"
-      }
     }
   }
 }

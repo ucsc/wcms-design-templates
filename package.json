@@ -40,6 +40,7 @@
     "metalsmith-templates": "^0.7.0",
     "moment": "^2.9.0",
     "request": "~2.33.0",
+    "sc5-styleguide": "^0.3.15",
     "swig": "^1.4.2",
     "vinyl": "^0.4.6"
   }
