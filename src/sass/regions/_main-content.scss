@@ -4,7 +4,7 @@
     background-color: darken($sand, 5%);
     padding: $font-size-base/3;
     border-radius: $border-radius-base;
-    
+
     &[align="left"] {
       float:left;
       margin: $font-size-base/2 $font-size-base/2 $font-size-base/2 0;
@@ -19,10 +19,13 @@
       margin-top: 0;
     }
 
-
   }
 
 }
 
 
-
+.touch .main-content .search {
+  @include media($mobile) {
+    display: none;
+  }
+}
