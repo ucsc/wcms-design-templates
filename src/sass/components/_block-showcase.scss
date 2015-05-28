@@ -6,7 +6,7 @@
 		width:100%;
 		height:auto;
 		margin-bottom: em(14);
-		
+
 		&.play-button {
 			width:auto;
 			position:absolute;
@@ -15,12 +15,31 @@
 			opacity: 0.75;
 			background-color: transparent;
 		}
-	
+
 	}
 
 	.title,
 	.uptitle {
 		text-transform: uppercase !important;
+	}
+
+}
+
+
+/**
+*		Profile images on department &
+*		division sites are not full-width,
+*		so they shouldn't be 100% wide.
+*/
+.dept .profile-block,
+.division .profile-block {
+
+	.block-image {
+		float: left;
+		margin-bottom: 0.5em;
+		margin-right: 0.5em;
+		width: auto;
+		height: auto;
 	}
 
 }
