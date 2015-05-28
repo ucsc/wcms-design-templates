@@ -4,14 +4,14 @@
 *  Some pages in the WCMS display dynamic content
 *  via PHP scripts. These rules make
 *  those pages as responsive as possible.
-*  See: https://github.com/ucsc/webtemplates2014/wiki/Changes-to-soc.css 
+*  See: https://github.com/ucsc/webtemplates2014/wiki/Changes-to-soc.css
 */
 
 // All of the PHP content is wrapped in this div.
 // There is a namespace conflict with `.row`
-// So we're specifying that rows within the .table div pf .phpContent span full-width. 
+// So we're specifying that rows within the .table div pf .phpContent span full-width.
 .phpContent {
-  overflow: scroll;
+  overflow-x: auto;
   .table .row {
     margin-bottom:0px;
     padding:0.2em;
