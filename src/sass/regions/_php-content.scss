@@ -12,9 +12,19 @@
 // So we're specifying that rows within the .table div pf .phpContent span full-width.
 .phpContent {
   overflow-x: auto;
+  .table { min-width: 800px; }
   .table .row {
-    margin-bottom:0px;
-    padding:0.2em;
+    margin-bottom: 0px;
+    padding:0.2em 0.1em;
     max-width:100%;
+    display: flex;
+    & > div {
+      flex: 1 10%;
+    }
+    & > .idCol,
+    & > .titleCol,
+    & > .timesCol {
+      flex: 1 18%;
+    }    
   }
 }
