@@ -8,6 +8,11 @@
 
 // **@todo** - Switch to mobile-first styles
 
+#wrap {
+  padding: 0 $font-size-base 0 $font-size-base;
+}
+
+
 .row {
     @include outer-container();
     margin-bottom: $font-size-base*1.5;
@@ -24,9 +29,9 @@
 
 // ### Left-column and single-column pages
 #sprflt {
-    
+
     @include outer-container();
-    
+
     #mainContent,
     .main-content {
       @include span-columns(12);
@@ -41,22 +46,22 @@
 
         .right-column & {
           @include span-columns(8);
-          @include shift(0); 
+          @include shift(0);
         }
 
       }
     }
-    
+
     #sideBar,
     .sidebar {
       @include span-columns(12);
-      @include media($tablet) { 
-        @include span-columns(3);      
+      @include media($tablet) {
+        @include span-columns(3);
         @include shift(-12);
 
         .right-column & {
           @include span-columns(4);
-          @include shift(0); 
+          @include shift(0);
         }
 
       }
@@ -70,14 +75,14 @@
 
 // ## Ugly quick fix for the titles on the landing pages.
 //
-// This will need to be removed. 
+// This will need to be removed.
 .landing {
-    
+
     .title {
       position: relative;
       color:$gold-light;
       min-height:90px;
- 
+
       h1, p {
         @include hide-text;
       }
@@ -85,9 +90,9 @@
       img {
         position:absolute;
         top: 0;
-        left:0;  
-      }  
-  
+        left:0;
+      }
+
     }
 
 }
