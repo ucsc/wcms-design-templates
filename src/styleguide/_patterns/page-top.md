@@ -12,8 +12,8 @@ description: "The page top area shows the global links and site search."
         <li><a href="tools/people.html" title="Find People - UCSC People Search">People</a></li>
         <li><a href="tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
         <li><a href="tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
-    </ul> 
-    
+    </ul>
+
     <div class="search" role="search">
         <div>
             <form action="http://www.ucsc.edu/search" id="cse-search-box">
@@ -25,6 +25,5 @@ description: "The page top area shows the global links and site search."
             <input alt="Search button" class="srchBtn" src="http://static.ucsc.edu/images/search_button.gif" type="image">
             </form>
         </div>
-
     </div>
 </div>
