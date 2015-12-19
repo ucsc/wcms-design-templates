@@ -1,6 +1,6 @@
 {
   "source": "src/styleguide/_patterns",
-  "destination": "build/styleguide",
+  "destination": "build/_responsive/styleguide",
   "plugins": {
     "metalsmith-markdown": true,
     "metalsmith-permalinks": ":file",
