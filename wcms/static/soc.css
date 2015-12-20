@@ -223,11 +223,11 @@ padding-bottom: 2px;
 .header_form {
 height: 30px;
 }
-.table_container {
+/*.table_container {
 float:left;
 display:inline;
 width:50%;  
-}
+}*/
 .table {
 float:left;
 width:100%;

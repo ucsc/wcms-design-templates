@@ -38,6 +38,7 @@
 
   @include media($tablet) {
     display: table;
+    width:100%;
     .wrap {
       float: none;
       display: table-cell;

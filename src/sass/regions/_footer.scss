@@ -76,4 +76,11 @@
 .legal {
 	text-align: center;
 	@include meta-small(-1);
+  font-size: 12px;
+  max-width: 100%;
+  text-transform: none;
+  margin:3em 0;
+  li {
+    display: inline;
+  }    
 }

@@ -53,7 +53,7 @@ Slide Styles
 	.slide-title {
 		@include media($mobile) {
 			font-size: 2.5em;
-			margin: 0;
+			margin: 0 0 0.10em;
 		}
 		
 		@include media($tablet) {
@@ -169,15 +169,15 @@ Slide Styles
 	width: 100%;
 	bottom: 0;
 	z-index:1;
-	background-color:rgba($ucsc-blue, 0.85);
+	background-color:rgba($ucsc-blue, 0.80);
 	color:$sand-light;
-	padding:2em 1em 1em;
+	padding: 1em 1.2em 0.6em;
 	@include slider-position;
 	.slide-title {
 		text-transform: uppercase;
 		color:$sand-light;
-		font-weight: bold;
-		margin:0 0 .25em 0;
+		font-weight: 500;
+		margin:0 0 .10em 0;
 		line-height: 90%;
 	}
 
@@ -186,6 +186,7 @@ Slide Styles
 		padding:0;
 		margin:0 0 .25em 0;
 		line-height: 115%;
+		font-weight: 400;
 	}
 
 	a {
