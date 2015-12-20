@@ -2,11 +2,13 @@
 
 Responsive reboot of UCSC web templates originally created in 2009-10. These will be the basis for new WCMS and other CMS templates.
 
-## Dependencies
+- [Sass and Javascript file structure](FRONTEND.md) (documentation in progress)
+
+## Development dependencies
 
 ### Ruby and gems
 
-- Ruby >=1.9 (I use [rbenv](https://github.com/sstephenson/rbenv) to manage different Ruby versions)
+- Ruby 2.2.0 (I use [rbenv](https://github.com/sstephenson/rbenv) to manage different Ruby versions)
 - [Sass](http://sass-lang.com/)
 - [Bourbon](http://bourbon.io/) for helpful Sass mixin tools.
 - [Neat](http://neat.bourbon.io/) for grid layout.
@@ -25,7 +27,7 @@ Responsive reboot of UCSC web templates originally created in 2009-10. These wil
     - `gem install bourbon`
     - `gem install neat`
 3. Install `node` and `npm` by downloading the installer from [nodejs.com](http://nodejs.org).
-4. Install gulp, grunt, and bower globally: `npm install -g gulp grunt grunt-cli bower`
+4. Install gulp and bower globally: `npm install -g gulp bower`
 5. `cd` into the project  directory and run `npm install` in the project root to install all node dependencies.
 6. Run `bower install` to install bower components into the `./bower_components` directory.
 
@@ -47,12 +49,10 @@ The creator of an issue-fixing branch should submit a pull-request to be tested 
 
 Then run `gulp` and load the [development server](http://localhost:8080).
 
-## Comparing to current live.
+***
+
+## (Deprecated) Comparing to current live.
 
 1. If you want to see the differences between our development HTML changes and the current live site, run `npm run fetch` in the command line.
     - The script fetches the files listed in `pages.json` and places them in the directory `app/current-html`.
     - You can now use a diff tool to see the differences between the live site and the development work in this repository. To see a diff, run this from the Terminal: `opendiff ./app/current-html/campus-home.html ./app/build/campus-home.html`.
-
-## Changelog
-
-- **June 30, 2014**: Removed Compass as a dependency to make it easier to use Sass 3.3 and specifically source maps. Also removed `scut` and `modular-scale` gems as dependencies. 
