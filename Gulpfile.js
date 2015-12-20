@@ -75,9 +75,9 @@ gulp.task('styles', function() {
    })
     .pipe(autoprefix('last 4 versions'))
     .pipe(sourcemaps.init())
+    .pipe(gulp.dest('./build/_responsive/css'))
     .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest('./build/styleguide'))
-    .pipe(gulp.dest('./build/_responsive/css'));
+    .pipe(gulp.dest('./build/styleguide'));
 });
 
 
