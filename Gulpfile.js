@@ -4,22 +4,21 @@
 var pkg = require('./package.json'),
     gulp = require('gulp'),
     autoprefix = require('gulp-autoprefixer'),
+    browserSync = require('browser-sync'),
     changed = require('gulp-changed'),
     concat = require('gulp-concat'),
-    prettify = require('gulp-html-prettify'),
+    del = require('del'),
     imacss = require('gulp-imacss'),
     imagemin = require('gulp-imagemin'),
-    minifycss = require('gulp-minify-css'),
-    replace = require('gulp-replace'),
-    sass = require('gulp-ruby-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify'),
-    zip = require('gulp-zip'),
-    browserSync = require('browser-sync'),
-    del = require('del'),
     mainBowerFiles = require('main-bower-files'),
+    minifycss = require('gulp-minify-css'),
+    prettify = require('gulp-html-prettify'),
+    sass = require('gulp-ruby-sass'),
+    styleguide = require('sc5-styleguide'),
+    sourcemaps = require('gulp-sourcemaps'),
     svgo = require('imagemin-svgo'),
-    moment = require('moment');
+    uglify = require('gulp-uglify'),
+    zip = require('gulp-zip');
 
 
 
@@ -27,10 +26,11 @@ var pkg = require('./package.json'),
 // Set default file path variables for tasks
 //
 var paths = {
-    styles:     './src/sass',
+    styles:     ['./src/sass/*.scss', './src/sass/**/**.**'],
     scripts:    './src/js/**/**',
     images:     './src/images/**/**',
-    svg:        './src/svg/**/**.svg'
+    svg:        './src/svg/**/**.svg',
+    build:      './build/'
 };
 
 
@@ -40,7 +40,7 @@ var paths = {
 gulp.task('webserver', function() {
     browserSync.init("./build/index.html", {
         server: {
-            baseDir: "./build",
+            baseDir: "./build/styleguide",
         },
         watchOptions: {
             debounceDelay: 3000
@@ -55,11 +55,8 @@ gulp.task('webserver', function() {
 // Clean the build folder.
 //
 gulp.task('clean', function(cb) {
-    del([
-        'build/_responsive/images/**',
-        'build/_responsive/css/**',
-        'build/_responsive/js/**',
-        'build/_responsive/lib/**'
+    del.sync([
+        'build/**'
     ], cb);
 });
 
@@ -68,18 +65,19 @@ gulp.task('clean', function(cb) {
 // Compile sass into CSS and a source map.
 //
 gulp.task('styles', function() {
-    return sass(paths.styles, {
+    return sass('./src/sass/ucsc.scss', {
         require: ['bourbon', 'neat'],
-        style: 'compressed',
+        //style: 'compressed',
         sourcemap: true
     })
     .on('error', function (err) {
-      console.error('Error!', err.message);
+      console.error('Error: ', err.message);
    })
     .pipe(autoprefix('last 4 versions'))
     .pipe(sourcemaps.init())
-    //.pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build/_responsive/css'));
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest('./build/styleguide'))
+    .pipe(gulp.dest('./build/_responsive/css'));
 });
 
 
@@ -130,11 +128,29 @@ gulp.task('bower-files', function() {
 
 
 //
+// Generate a styleguide from the style resources
+//
+gulp.task('styleguide', function() {
+  return gulp.src('./src/sass/**/*.scss')
+    .pipe(styleguide.generate({
+        title: 'UC Santa Cruz web styleguide',
+        server: true,
+        rootPath: './build/styleguide',
+        overviewPath: 'README.md'
+      }))
+    .pipe(gulp.dest('./build/styleguide'));
+});
+
+
+//
 // Create zip archive of static file assets ready for the WCMS.
 //
 gulp.task('deploy', function() {
     return gulp.src([
-            './build/_responsive/**'
+            './build/_responsive/css',
+            './build/_responsive/images',
+            './build/_responsive/js',
+            './build/_responsive/lib'
         ], {
             base: "./build/_responsive"
         })
@@ -144,15 +160,20 @@ gulp.task('deploy', function() {
 
 
 //
-// The default task (called when you run `gulp`)
+// Rerun all tasks when files change
 //
-gulp.task('default', ['clean', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'webserver'], function () {
+gulp.task('watch', function() {
     gulp.watch('./src/js/**/**', ['scripts']);
-    gulp.watch('./src/sass/**/*.scss', ['styles']);
+    gulp.watch('./src/sass/**/*.scss', ['styles', 'styleguide']);
     gulp.watch('./src/images/**/.**', ['images']);
     gulp.watch('./src/svg/**/**.svg', ['svg']);
 });
 
+
+//
+// The default task (called when you run `gulp`)
+//
+gulp.task('default', ['clean', 'watch', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'styleguide', 'webserver']);
 
 //
 // The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.

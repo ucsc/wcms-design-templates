@@ -1,3 +1,17 @@
+// Breadcrumb styles
+/*
+Breadcrumbs
+
+Linked path back to a site's front page.
+
+markup:
+<div class="row breadcrumbs">
+   <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
+</div>
+
+Styleguide 2.1.0
+*/
+
 .breadcrumbs {
   
   p {

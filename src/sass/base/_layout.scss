@@ -1,13 +1,3 @@
-// # Primary layout styles
-// Styles for page structure.
-
-// ## The layout row
-// The row does as it says. Each 'row' of content is
-// cleared and and sets the `flex` property so it's direct
-// descendants will flex in the right direction.
-
-// **@todo** - Switch to mobile-first styles
-
 #wrap {
   padding: 0 $font-size-base 0 $font-size-base;
 }
@@ -73,9 +63,7 @@
     }
 }
 
-// ## Ugly quick fix for the titles on the landing pages.
-//
-// This will need to be removed.
+
 .landing {
 
     .title {
