@@ -1,5 +1,5 @@
 {
-  "name": "ucsc-responsive-pages",
+  "name": "ucsc-responsive-templates",
   "description": "Responsive reboot of the 2010 UCSC web templates.",
   "repository": "https://github.com/ucsc/webtemplates2014/",
   "version": "1.5.0",
@@ -40,6 +40,7 @@
     "metalsmith-templates": "^0.7.0",
     "moment": "^2.9.0",
     "request": "~2.33.0",
+    "sc5-styleguide": "^0.3.41",
     "swig": "^1.4.2",
     "vinyl": "^0.4.6"
   }
