@@ -3,6 +3,11 @@
 }
 
 
+#wrap {
+  padding: 0 $font-size-base 0 $font-size-base;
+}
+
+
 .row {
     @include outer-container();
     margin-bottom: $font-size-base*1.5;
@@ -62,7 +67,6 @@
       @include row(default);
     }
 }
-
 
 .landing {
 
