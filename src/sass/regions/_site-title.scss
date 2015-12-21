@@ -68,6 +68,7 @@
       background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
       background-size: contain;
       height: 72px;
+      max-width: 260px;
       @include span-columns(7);
 
       @include media($tablet) {
