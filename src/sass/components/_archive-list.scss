@@ -4,6 +4,7 @@
 //
 // .item-border - Adds a border to the bottom of each list item.
 // .image-right - Move the thumbnail to the right side of each list item.
+// .horizontal - Flat list of items that take up 33% of the width.
 //
 // markup:
 // <ul class="archive-list {$modifiers}">
@@ -58,14 +59,27 @@
   }
 
   // Alternative style: horizontal list
-  &.horizontal li {
+  &.horizontal {
+
+    display: flex;
+    flex-direction: row;
+
+    li {
       display: table-cell;
-      padding:0 0.5em;
+      flex: 1 1 33%;
+      padding: 0 0.5em 0 0;
       line-height: 1.3;
-      @include media($mobile) {
-        display: block;
+    }
+
+    @include media($mobile) {
+      li {
+        flex: 1 1 auto;
+        width: 100%;        
       }
-  }
+      flex-direction: column;
+    }
+
+  }  
 
   // Alternative style: images on the right
   &.image-right img {
