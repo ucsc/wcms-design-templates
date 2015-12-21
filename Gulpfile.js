@@ -67,7 +67,7 @@ gulp.task('clean', function(cb) {
 gulp.task('styles', function() {
     return sass('./src/sass/ucsc.scss', {
         require: ['bourbon', 'neat'],
-        //style: 'compressed',
+        style: 'compressed',
         sourcemap: true
     })
     .on('error', function (err) {
