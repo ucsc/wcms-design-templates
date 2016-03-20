@@ -1,0 +1,51 @@
+##  Facebook Open Graph, Twitter Card, and schema.org integration for UCSC news articles
+##  by: Rob Knight <raknight@ucsc.edu>
+##  Last edit: March 20, 2016
+##  Edit: add categories code from Philip Guther
+
+## Get XML for current page
+#set($article = $_XPathTool.selectSingleNode($contentRoot, "/system-index-block/calling-page/system-page"))
+
+## Get the title of the page
+#set($title = $article.getChild("title"))
+#set($link = $article.getChild("path").text)
+#set($summary = $article.getChild("summary"))
+#set($image = $article.getChild("system-data-structure").getChild("lead-image").getChild("image").getChild("path").text)
+
+<link rel="canonical" href="http://news.ucsc.edu${link}.html" />
+
+<meta property="og:title" content="$_EscapeTool.xml($title.value)" />
+<meta property="og:url" content="http://news.ucsc.edu${link}.html" />
+#if($summary)
+<meta property="og:description" content="$_EscapeTool.xml($summary.value)" />
+#end
+<meta property="og:type" content="article" />
+#if($image)
+<meta property="og:image" content="http://news.ucsc.edu${image}" />
+#end  
+<meta property="og:site_name" content="UC Santa Cruz News" />
+<meta property="fb:admins" content="1322847221,508316988" />
+<meta property="article:publisher" content="https://www.facebook.com/ucsantacruz" />
+
+## Twitter card integration (https://dev.twitter.com/docs/cards)
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ucsc" />
+<meta name="twitter:url" content="http://news.ucsc.edu${link}.html" />
+<meta name="twitter:title" content="$_EscapeTool.xml($title.value)" />
+#if($summary)
+<meta name="twitter:description" content="$_EscapeTool.xml($summary.value)" />
+#end
+#if($image)
+<meta name="twitter:image" content="http://news.ucsc.edu${image}" />
+#end
+
+## If the `dynamic-metadata` has a value, output a new HTML meta tag
+#foreach($meta in $article.getChildren("dynamic-metadata"))
+  #foreach($value in $meta.getChildren("value"))
+    #if($value != $prevvalue)
+<meta name="category" content="$value.value" />
+        #set($prevvalue = $value)
+    #end
+#end
+
+#end
