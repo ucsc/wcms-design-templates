@@ -73,6 +73,13 @@
 
 }
 
+// An IP address is displayed in the footer
+// of some pages (ITS added this)
+// We hide it from view.
+.check-ip {
+	display: none;
+}
+
 .legal {
 	text-align: center;
 	@include meta-small(-1);
@@ -82,5 +89,5 @@
   margin:3em 0;
   li {
     display: inline;
-  }    
+  } 
 }
