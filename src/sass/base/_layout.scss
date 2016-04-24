@@ -1,35 +1,48 @@
-#wrap {
-  padding: 0 $font-size-base 0 $font-size-base;
-}
+// Layout and grid
+/*
+Layout Grid
+
+The layout grid we use for pages on the UCSC website.
+
+markup:
+<div class="row breadcrumbs">
+   <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
+</div>
+
+Styleguide 2.2.0
+*/
 
 
 #wrap {
-  padding: 0 $font-size-base 0 $font-size-base;
+  padding: 0 $font-size-base;
 }
-
 
 .row {
-    @include outer-container();
-    margin-bottom: $font-size-base*1.5;
-    // @include rowborders(red); // Debug
+  margin-bottom: $font-size-base * 1.5;
+
+  @include outer-container();
+
 }
 
 .site-header {
   margin-bottom: 2em;
+
   @include media($mobile) {
-    margin:2em 0;
+    margin: 2em 0;
   }
 }
 
 
 // ### Left-column and single-column pages
-#sprflt {
+#sprflt,
+.grid-container {
 
     @include outer-container();
 
     #mainContent,
     .main-content {
       @include span-columns(12);
+
       @include media($tablet) {
         @include span-columns(9);
         @include shift(3);
@@ -43,13 +56,13 @@
           @include span-columns(8);
           @include shift(0);
         }
-
       }
     }
 
     #sideBar,
     .sidebar {
       @include span-columns(12);
+
       @include media($tablet) {
         @include span-columns(3);
         @include shift(-12);
@@ -58,7 +71,6 @@
           @include span-columns(4);
           @include shift(0);
         }
-
       }
     }
 
@@ -70,21 +82,21 @@
 
 .landing {
 
-    .title {
-      position: relative;
-      color:$gold-light;
-      min-height:90px;
+  .title {
+    color: $gold-light;
+    min-height: 90px;
+    position: relative;
 
-      h1, p {
-        @include hide-text;
-      }
-
-      img {
-        position:absolute;
-        top: 0;
-        left:0;
-      }
-
+    h1, p {
+      @include hide-text;
     }
+
+    img {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+  }
 
 }
