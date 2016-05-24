@@ -1,38 +1,51 @@
-// ## UCSC logo and Site Title
-// At minimum, contains the UCSC logo.
-// On division/department sites, it contains the site title too.
+// Site Title
+/*
+UCSC Logo and Site Title
 
+At minimum, contains the UCSC logo. On division/department sites, it contains the site title too.
+
+markup:
+<div class="site-header">
+  <div class="names">
+    <div class="campus-name">
+      <a class="campus-logo" href="http://www.ucsc.edu/index.html">UC Santa Cruz</a>
+    </div>
+  <div class="site-name">Undergraduate Admissions</div>
+</div>
+
+Styleguide 5.2.0
+*/
 .names {
 
     // Mobile
     margin: 1em auto 0 auto;
 
     // Tablet
-    @include media($tablet) {      
+    @include media($tablet) {
       margin-bottom: $font-size-base;
     }
- 
+
   .site-name {
-    
+
     // Mobile
     @include span-columns(12);
     margin: $font-size-base 0;
 
     // Tablet
-    @include media($tablet) {      
+    @include media($tablet) {
       @include span-columns(8);
       margin:0 auto;
     }
 
     // Desktop
-    @include media($desktop) {      
+    @include media($desktop) {
       @include span-columns(9);
       margin:0 auto;
-    }    
+    }
 
   }
 
-  
+
   .campus-name {
 
     // Mobile
@@ -64,7 +77,7 @@
     .campus-logo {
 
       @include hide-text();
-      display: block;  
+      display: block;
       background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
       background-size: contain;
       height: 72px;
@@ -77,7 +90,7 @@
 
     }
 
-  }    
+  }
 
   .mobile-menu {
 
@@ -100,7 +113,7 @@
     @include media($tablet) {
       display:none;
     }
-    
+
   }
 
 }

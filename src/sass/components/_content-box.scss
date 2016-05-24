@@ -1,3 +1,18 @@
+// Content Box
+/*
+Content Box
+
+markup:
+<div class="content-box">
+  <ul>
+    <li>List Item #1</li>
+    <li>List Item #2</li>
+    <li>List Item #3</li>
+  </ul>
+</div>
+
+Styleguide 3.13.0
+*/
 .contentBox,
 .content-box {
   @include module-box-shadow;
@@ -7,7 +22,7 @@
   margin:0;
   overflow-x: auto;
   @include clearfix;
-  
+
   > :first-child   {
     margin-top: 0;
   }

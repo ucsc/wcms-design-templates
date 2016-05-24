@@ -1,3 +1,21 @@
+//Footer
+/*
+Footer
+
+The footer of every page.
+
+markup:
+<div id="footer">
+	<p class="links"><a href="#">Feedback</a></p>
+	<p class="address">UC Santa Cruz, 1156 High Street, Santa Cruz, Ca 95064<br/> &#169;2015 Regents of the University of California. All Rights Reserved.</p>
+	<p class="social-media">
+		<a class="icon icon-twitter" href="http://twitter.com/ucsc">Twitter</a>
+		<a class="icon icon-instagram" href="http://instagram.com/ucsc">Instagram</a>
+	</p>
+</div>
+
+Styleguide 5.0.0
+*/
 #footer {
 	border-top: 1px solid lighten($gray-light, 10%);
 	padding-top:$line-height-base/2;
@@ -17,7 +35,7 @@
 			br {
 				display: none;
 			}
-		}		
+		}
 	}
 
 	.links,
@@ -30,7 +48,7 @@
 		}
 		@include media($mobile) {
 			margin: 0.25em 0;
-		}		
+		}
 	}
 
 	.links a {
@@ -43,7 +61,7 @@
 		margin-left: 1em;
 		order: 3;
 		text-align:right;
-		a { 
+		a {
 			display:inline-block;
 			overflow:hidden;
 			img {
@@ -60,14 +78,14 @@
 		}
 	}
 
-	
+
 		@include media($mobile) {
 		flex-flow: column nowrap;
 		& .address,
 		& .links,
 		& .social-media {
 			text-align: center;
-		} 
+		}
 	}
 
 
@@ -89,5 +107,5 @@
   margin:3em 0;
   li {
     display: inline;
-  } 
+  }
 }
