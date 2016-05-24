@@ -1,9 +1,39 @@
+//News Block
+/*
+News Block
+
+List of recent news articles for homepages.
+
+markup:
+<div class="news-block">
+	<h3 class="block-header">University News</h3>
+	<ul class="archive-list">
+		<li>
+			<a href="#">
+				<img src="http://placehold.it/72x72">
+				<span class="date">May 20, 2016</span>
+				<span class="headline">Article Headline Here</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="http://placehold.it/72x72">
+				<span class="date">May 20, 2016</span>
+				<span class="headline">Article Headline Here</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+Styleguide 3.8.0
+*/
+
 #news,
 .news-block {
 
 	ul {
 		@include reset(list);
-		
+
 		li {
 			clear: both;
 			line-height:130%;
@@ -16,7 +46,7 @@
 			img {
 				float: left;
 				display: block;
-				margin: 0 0.5em 0.5em 0;	
+				margin: 0 0.5em 0.5em 0;
 				width:80px;
 				height:auto;
 			}

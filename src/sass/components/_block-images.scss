@@ -1,12 +1,17 @@
-// Image styles for blocks
+//Image Blocks
+/*
+Image Blocks
+
+Styleguide 3.7.0
+*/
 .block img {
     padding:0.25em;
-    border-radius: $border-radius-base/2;    
+    border-radius: $border-radius-base/2;
     .dark & {
-        background-color: $sand-light;    
+        background-color: $sand-light;
     }
     .light & {
-        background-color: $sand-dark;       
+        background-color: $sand-dark;
     }
 }
 

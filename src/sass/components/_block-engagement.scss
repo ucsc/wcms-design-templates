@@ -1,15 +1,10 @@
-/*doc
----
-title: Engagement Buttons
-name: component
-category: Components
----
+// Engagement Buttons
+/*
+Engagement Buttons
 
-```html_example
+markup:
 <div class="block engagement-block" id="quickstart">
-  <h3 class="block-header"><a href="stayconnected.ucsc.edu">
-    Engage with <span>#ucsc</span></a>
-  </h3>
+  <h2 class="block-header">Engage with <span>#ucsc</span></h2>
   <ul>
     <li class="commencement">
       <a href="#">
@@ -29,8 +24,8 @@ category: Components
     </li>
   </ul>
 </div>
-```
 
+Styleguide 3.4.0
 */
 
 .engagement-block {

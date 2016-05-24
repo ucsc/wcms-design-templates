@@ -2,30 +2,29 @@
 /*
 Billboards
 
+The main display of content on home pages.
+
+.layout-left - Puts the content of the billboard to the left
+.layout-right - Puts the content of the billboard to the right
+.layout-top - Puts the content of the billboard at the top
+.layout-bottom - Puts the content of the billboard at the bottom
+.color-blue - Makes the theme of the billboard blue
+.color-gold - Makes the theme of the billboard gold
+
 markup:
 <div id="carousel">
-  <div class="owl-carousel" id="slides">
-		<div class="slide">
-		<a href="http://news.ucsc.edu/2016/04/pulitzers-mendoza-finnegan.html">
-			<div class="slide-body layout-right color-blue">
-				<div class="slide-title">Pulitzer pride</div>
-				<p class="slide-teaser"> Two UC Santa Cruz alumni win  journalism's highest honor »</p>
-			</div>
-			<img alt="Martha Mendoza and William Finnegan - Pulitzer Prize winners" src="http://placehold.it/780x350" width="780"/>
-		</a>
-	</div>
 	<div class="slide">
-		<a href="http://magazine.ucsc.edu/2016/03/building-a-ladder-to-a-cure/">
-			<div class="slide-body layout-left color-blue">
-				<div class="slide-title">Building a ladder to a cure</div>
-				<p class="slide-teaser">UC Santa Cruz researchers are opening a new front in the battle against pediatric cancer »</p>
+		<a href="#">
+			<div class="slide-body {$modifiers}">
+				<div class="slide-title">Title Here</div>
+				<p class="slide-teaser">Description of content »</p>
 			</div>
-			<img alt="Artwork of DNA Treehouse" src="http://placehold.it/780x350" width="780"/>
+			<img src="http://placehold.it/780x350"/>
 		</a>
 	</div>
 </div>
 
-Styleguide 3.4.0
+Styleguide 3.3.0
 */
 
 /* ===============================================================
@@ -228,6 +227,7 @@ Slide Styles
   		}
 	}
 
+// Alternative style: text on the left
 	&.layout-left{
 		@include billboard-title;
 		@include billboard-teaser;
@@ -236,6 +236,7 @@ Slide Styles
 		left:0;
 	}
 
+// Alternative style: text on the right
 	&.layout-right{
 		@include billboard-title;
 		@include billboard-teaser;
@@ -244,6 +245,7 @@ Slide Styles
 		right: 0;
 	}
 
+// Alternative style: text on the top
 	&.layout-top {
 	   	@include layout-horizontal;
 	   	@include horizontal-title;
@@ -252,6 +254,7 @@ Slide Styles
 	   	top:5%;
   }
 
+// Alternative style: text on the bottom
 	&.layout-bottom{
 		@include layout-horizontal;
 		@include horizontal-title;
@@ -267,6 +270,7 @@ Color Themes
 ================================================================*/
 
 // A map of color theme settings for these slides.
+// Alternative style: Changes the color of the background for the information
 $themes: (
   "blue": (
 	 background-color: rgba($ucsc-blue, 0.85),

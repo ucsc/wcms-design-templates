@@ -1,3 +1,36 @@
+//Blocks
+/*
+Blocks
+
+Blocks of content on homepages.
+
+.three - Row with three columns
+.four - Row with four columns
+.five - Row with five columns
+
+
+markup:
+<div class="block {#modifiers}">
+  <div class="wrap">
+    <p>Item #1</p>
+    <p>Item #2</p>
+    <p>Item #3</p>
+  </div>
+  <div class="wrap">
+    <p>Item #1</p>
+    <p>Item #2</p>
+    <p>Item #3</p>
+  </div>
+  <div class="wrap">
+    <p>Item #1</p>
+    <p>Item #2</p>
+    <p>Item #3</p>
+  </div>
+</div>
+
+Styleguide 3.10.0
+*/
+
 @mixin module-box($columns) {
     @include outer-container;
     .wrap {
@@ -18,22 +51,22 @@
     display: block;
     width: 100%;
   }
-  
+
   @include media($tablet) {
     display: table;
     padding:0;
     .wrap {
       float: none;
-      display: table-cell;       
+      display: table-cell;
       width: 33%;
     }
   }
-  
+
 }
 
 // Module row with four columns
 .four {
-  
+
   display: block;
 
   @include media($tablet) {
@@ -45,11 +78,11 @@
       width: 25%;
     }
   }
-  
+
   .wrap {
     @include omega;
     @include pad;
-  }  
+  }
 
     h4,
     .header {
@@ -66,6 +99,7 @@
 
 }
 
+// Module row with five columns
 .five {
 
     > div {
@@ -87,14 +121,14 @@
 }
 
 .combined {
-    
+
     border-radius: $border-radius-base;
     background-color: $sand-light;
     padding:0.4em 1em;
-    width: 100%; 
+    width: 100%;
     @include module-box-shadow;
 
-    
+
 
     .wrap {
         border-right: 1px solid $sand-light;
@@ -122,7 +156,7 @@
 }
 
 .separate {
-    
+
     .wrap {
       padding: 1em;
       &:first-child {
@@ -130,10 +164,10 @@
       }
       &:last-child {
           padding-right: 0;
-      }     
+      }
       &:nth-child(2) {
-          padding:1em 0;          
-      }       
+          padding:1em 0;
+      }
       @include omega;
       @include media($mobile) {
         padding: 0;
@@ -142,7 +176,7 @@
 
     }
 
-    
+
 
     .inner {
         @include clearfix;
@@ -150,12 +184,12 @@
         @include module-box-shadow(dark);
         background-color: $sand-dark;
         min-height: 350px;
-        margin: 0;        
+        margin: 0;
         @include media($mobile) {
             min-height: auto;
         }
     }
-    
+
 }
 
 
@@ -201,7 +235,7 @@
         }
     }
 
-// Home page, right under billboards  
+// Home page, right under billboards
 .combined .block-header {
     border-bottom: #E5E4DE 1px solid;
     color: $gray-dark;

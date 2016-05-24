@@ -1,3 +1,19 @@
+//Factoid Block
+/*
+Factoid Block
+
+Block with title, image and caption.
+
+markup:
+<div class="factoid-block" style="width:200px; height:200px">
+	<h3>Title of the Block</h3>
+	<a href="#">
+		<img src="http://placehold.it/200x200">
+	</a>
+</div>
+
+Styleguide 3.5.0
+*/
 .factoid-block {
 
 	img {
