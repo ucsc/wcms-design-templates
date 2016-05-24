@@ -1,50 +1,52 @@
-// Archive list
-//
-// A list of teasers for news articles or videos, etc.
-//
-// .item-border - Adds a border to the bottom of each list item.
-// .image-right - Move the thumbnail to the right side of each list item.
-// .horizontal - Flat list of items that take up 33% of the width.
-//
-// markup:
-// <ul class="archive-list {$modifiers}">
-//   <li>
-//     <a href="#URL">
-//       <img alt="Text description of this image" class="thumbnail" src="http://placehold.it/80x80">
-//     </a>
-//     <span class="date">December 17, 2015</span>
-//     <h3>
-//       <a href="#URL">The title of your article or video</a>
-//     </h3>
-//     <p>Researchers found record levels of the algal toxin domoic acid in samples from a wide range of marine organisms in 2015.</p>
-//   </li>
-// </ul>
-//
-// Styleguide 2.0.0
+/*
+Archive list
+
+A list of teasers for news articles or videos, etc.
+
+.item-border - Adds a border to the bottom of each list item.
+.image-right - Move the thumbnail to the right side of each list item.
+.horizontal - Flat list of items that take up 33% of the width.
+
+markup:
+<ul class="archive-list {$modifiers}">
+ <li>
+   <a href="#URL">
+     <img alt="Text description of this image" class="thumbnail" src="http://placehold.it/80x80">
+   </a>
+   <span class="date">December 17, 2015</span>
+   <h3>
+     <a href="#URL">The title of your article or video</a>
+   </h3>
+   <p>Researchers found record levels of the algal toxin domoic acid in samples from a wide range of marine organisms in 2015.</p>
+ </li>
+</ul>
+
+Styleguide 3.0.0
+*/
 
 .archive-list {
-  
+
   list-style:none;
   margin:0;
   padding:0;
 
-  li { 
+  li {
     table-layout:fixed;
-    margin-left:0; 
+    margin-left:0;
     margin-bottom:1em;
     @include clearfix;
   }
-  
+
   h2,
   h3 {
     line-height: 120%;
     margin:0 0 0.15em 0;
   }
-  
+
   p {
     line-height:1.4;
   }
-  
+
   .date {
     display:block;
     margin-bottom:0.15em;
@@ -52,7 +54,7 @@
     font-weight: 400;
     font-size:0.9em;
   }
-  
+
   img {
     float:left;
     margin:0 0.5em 1em 0;
@@ -74,19 +76,19 @@
     @include media($mobile) {
       li {
         flex: 1 1 auto;
-        width: 100%;        
+        width: 100%;
       }
       flex-direction: column;
     }
 
-  }  
+  }
 
   // Alternative style: images on the right
   &.image-right img {
     float:right;
     margin:0 0 1em 0.5em;
-  }    
-  
+  }
+
   // Alternative style: list item borders
   &.item-border li {
     margin-bottom: 1em;

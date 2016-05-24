@@ -1,3 +1,33 @@
+//Billboards
+/*
+Billboards
+
+markup:
+<div id="carousel">
+  <div class="owl-carousel" id="slides">
+		<div class="slide">
+		<a href="http://news.ucsc.edu/2016/04/pulitzers-mendoza-finnegan.html">
+			<div class="slide-body layout-right color-blue">
+				<div class="slide-title">Pulitzer pride</div>
+				<p class="slide-teaser"> Two UC Santa Cruz alumni win  journalism's highest honor »</p>
+			</div>
+			<img alt="Martha Mendoza and William Finnegan - Pulitzer Prize winners" src="http://placehold.it/780x350" width="780"/>
+		</a>
+	</div>
+	<div class="slide">
+		<a href="http://magazine.ucsc.edu/2016/03/building-a-ladder-to-a-cure/">
+			<div class="slide-body layout-left color-blue">
+				<div class="slide-title">Building a ladder to a cure</div>
+				<p class="slide-teaser">UC Santa Cruz researchers are opening a new front in the battle against pediatric cancer »</p>
+			</div>
+			<img alt="Artwork of DNA Treehouse" src="http://placehold.it/780x350" width="780"/>
+		</a>
+	</div>
+</div>
+
+Styleguide 3.4.0
+*/
+
 /* ===============================================================
 Slide Styles
 ================================================================*/
@@ -55,7 +85,7 @@ Slide Styles
 			font-size: 2.5em;
 			margin: 0 0 0.10em;
 		}
-		
+
 		@include media($tablet) {
 			font-size: 3em;
 			display: block;
@@ -83,7 +113,7 @@ Slide Styles
 	@include media($mobile) {
 		font-size: .9em;
 	}
-	
+
 	@include media($tablet)  {
 		font-size: .9em;
 	}
@@ -100,7 +130,7 @@ Slide Styles
 		  line-height: .9em;
 		  text-align: right;
 		  float: left;
-	  
+
 	  @include media($mobile) {
 			width: 100%;
 			max-width:803px;
@@ -114,7 +144,7 @@ Slide Styles
 	  		padding: .20em .5em .20em;
 	  }
 
-	}	
+	}
 }
 
 
@@ -154,13 +184,13 @@ Slide Styles
 	max-height:362px;
 	border-radius: $border-radius-base;
 	overflow:hidden;
-	
+
 	img{
 		width:100%;
 		height: auto;
 		z-index:1;
 	}
-	
+
 }
 
 .slide-body {
@@ -192,7 +222,7 @@ Slide Styles
 	a {
 		color: $gold;
 		text-decoration: none;
-		@include billboard-slider-a; 
+		@include billboard-slider-a;
   	 &:after {
     		content: " »";
   		}
@@ -205,16 +235,16 @@ Slide Styles
 		text-align: right;
 		left:0;
 	}
-	
+
 	&.layout-right{
 		@include billboard-title;
-		@include billboard-teaser; 
+		@include billboard-teaser;
 		@include layout-left-right;
 		text-align: left;
 		right: 0;
 	}
-	
-	&.layout-top {   	
+
+	&.layout-top {
 	   	@include layout-horizontal;
 	   	@include horizontal-title;
 	   	@include horizontal-teaser;
@@ -237,11 +267,11 @@ Color Themes
 ================================================================*/
 
 // A map of color theme settings for these slides.
-$themes: (	
+$themes: (
   "blue": (
 	 background-color: rgba($ucsc-blue, 0.85),
 	 color: $gold
-  ),  
+  ),
   "gold": (
     background-color: rgba($gold, 0.85),
     color: $blue
@@ -256,7 +286,7 @@ $themes: (
         	color:#{map-get($i, color)};
         }
         a {
-        	color:#{map-get($i, color)};	
+        	color:#{map-get($i, color)};
         }
     }
 }
@@ -277,7 +307,7 @@ Pagination Styles
 
 // The control dots under each set of billboards.
 .owl-controls .owl-pagination {
-	
+
 	.owl-page span {
 		background-color:$gray-light;
 		opacity:0.25;

@@ -1,9 +1,18 @@
 // Article
-//
-// Custom styles for a news article or person profile.
-//
-//
-// Styleguide 2.1.5
+/*
+Articles
+
+Custom styles for a news article or person profile.
+
+markup:
+<div class="article">
+  <h1 id="title">Example Title</h1>
+  <p class="subhead">Article Subhead</p>
+  <p class="article-body">Lorem ipsum dolor sit amet, oratio essent cum et. Sed ea eripuit dignissim, ei nec illud luptatum suscipiantur. Qualisque sadipscing per ne, id consul accumsan vis. Mei et inani mentitum. Sit te mandamus incorrupte, congue alienum eu eos, vis id diceret pertinacia voluptatibus.<br><br>No has dictas mentitum voluptatum, nec perfecto patrioque scriptorem in. Cu habemus apeirian per, mel fugit tritani vivendo eu, dicit dissentiunt ius ne. Duo esse accusata id, etiam possit ad qui, mei prima cetero eu. Per dicat augue legere an, laoreet officiis at eos. Latine habemus mea id, sonet aliquando deterruisset no vis. Legimus adipiscing contentiones in vis, no quo iisque argumentum.<br><br>Amet eros summo te pri, labores maiorum prodesset cum at. Ut mutat noluisse suscipit quo, at constituto disputationi sed. Vide posidonium id usu, mea te mollis rationibus, an iudico prompta elaboraret mei. Id dictas fastidii nec, eu his contentiones reprehendunt. Et quaeque forensibus his. Qui illum nullam similique an, diam fugit civibus usu ne. Populo eruditi in his, cu mei elit mazim docendi, solet quodsi equidem id ius.</p>
+</div>
+
+Styleguide 4.0.0
+*/
 .article {
 
   #title {
@@ -43,7 +52,3 @@
   }
 
 }
-
-
-
-

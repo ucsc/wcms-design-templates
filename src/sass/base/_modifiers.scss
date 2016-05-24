@@ -1,4 +1,11 @@
-// Classes that modify the deafult display of elements.
+// Element Display
+/*
+Custom Element Display
+
+Classes that modify the deafult display of elements.
+
+Styleguide 2.3.0
+*/
 
 .full {
   width:100%;
@@ -7,7 +14,7 @@
 .borderless {
   border:none;
   td {
-    border-bottom:none; 
+    border-bottom:none;
   }
 }
 
@@ -16,4 +23,3 @@
   left: -900em;
   outline: none;
 }
-

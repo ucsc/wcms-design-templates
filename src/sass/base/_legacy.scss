@@ -1,16 +1,14 @@
-/*doc
----
-title: Legacy Styles
-name: block
-category: Base CSS
----
+// Legacy Styles
+/*
+Legacy Styles
 
 These styles are carry-overs from the previous stylesheet because
-their functionality would need to be replaced on a site-by-site basis. 
+their functionality would need to be replaced on a site-by-site basis.
 
-*/ 
+Styleguide 2.1.0
+*/
 
-/* Hide anything with this class (some Registrar FAQ pages use this) */
+/*Hide anything with this class (some Registrar FAQ pages use this)*/
 .sleed,
 #mainNav li img,
  {
@@ -28,7 +26,7 @@ their functionality would need to be replaced on a site-by-site basis.
 }
 
 
-/* Special table styles for special people */
+/*Special table styles for special people*/
 .alt tr:nth-child(even) { background-color:#f5f3e8; }
 .full { width:100%; }
 .borderless,
@@ -40,12 +38,12 @@ their functionality would need to be replaced on a site-by-site basis.
 .allborders tr { border:1px solid $gray-light; border-radius: 0px; }
 .allborders td { padding:0.4em 0.6em; }
 
-/* 
+/*
   There were a few experimental column styles
   in version 1 of the templates. Turns out, a
-  few people found and used them. 
+  few people found and used them.
 */
-.columns-2 { 
+.columns-2 {
   padding:0.55em;
   background-color:$sand-dark;
   border-bottom:1px solid $gray-light;
@@ -57,17 +55,16 @@ their functionality would need to be replaced on a site-by-site basis.
 .columns-2 :first-child { margin-top:0; }
 
 
-/*
 
+/*
 The fancybox javascript library is configured at the site level
-in a header block on the pages where it is used. This makes 
-changing configuration settings difficult. 
+in a header block on the pages where it is used. This makes
+changing configuration settings difficult.
 
 To fix issue #241, these styles override the default settings
 for fancybox.
 
-https://github.com/ucsc/webtemplates2014/issues/241 
-
+https://github.com/ucsc/webtemplates2014/issues/241
 */
 .fancybox-wrap.fancybox-opened .fancybox-title-float-wrap {
   position: relative;

@@ -1,26 +1,16 @@
-/*doc
----
-title: Profile and Article Images
-name: image
-category: Components
----
+// Article Images
+/*
+Article Images
 
 News and Profile article images are wrapped in a `<figure>` element with an optional caption wrapped in a `<figcaption>` element:
 
-```html_example
+markup:
 <figure class="article-image">
     <img alt="Text description of the image" src="http://robohash.org/happy-robot.png?set=any&&bgset=bg1&size=240x240">
     <figcaption class="caption">Your image caption (and photo credit) should appear here.</figcaption>
 </figure>
-```
 
-In the WCMS interface, we give users the option to display their image at relative widths (relative to the article width) using these modifier classes on the `<figure>` element:
-
-- `width-25`
-- `width-50`
-- `width-75`
-- `width-100`
-
+Styleguide 3.1.0
 */
 
 

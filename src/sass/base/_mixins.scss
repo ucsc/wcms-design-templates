@@ -1,11 +1,20 @@
-// # Custom mixins for UCSC theme.
+// UCSC Theme Mixins
+/*
+UCSC Mixins
+
+Custom mixins for UCSC theme.
+
+Styleguide 2.2.0
+*/
 
 
-// ## Debugging: `breakpoints`
+
+// Debugging: `breakpoints`
 //
 // Shows breakpoint debugging information on rendered pages.
+
 @mixin breakpoints() {
-    
+
   @include media($mobile) {
     @include display-text("Mobile", green);
   }
@@ -14,14 +23,16 @@
   }
   @include media($desktop) {
     @include display-text("Desktop", blue);
-  }  
+  }
 }
 
 
-// ## Debugging: `display-text`
+
+// Debugging: `display-text`
 //
 // Display text before an element.
 // Primarily used for showing which media queries are active.
+
 @mixin display-text($text, $bgcolor) {
   &:before {
     content: $text;
@@ -33,36 +44,35 @@
     color:white;
     position: relative;
     left: -14px;
-  }    
+  }
 }
 
-// ## Debugging: `rowborders`
+//  Debugging: `rowborders`
 //
 // Show borders around `.row` elements.
-@mixin rowborders($color:#80C108) {  
+@mixin rowborders($color:#80C108) {
   border: 2px solid $color;
 }
 
 
 @mixin reset($element:div) {
-  
+
     border:none;
     margin:0;
     padding:0;
-  
-  @if $element == list {  
+
+  @if $element == list {
     list-style: none;
     li {
       margin:0;
       padding:0;
     }
-  }  
+  }
 }
 
 
 
-// ## Calculate rems from pixels
-// 
+//  Calculate rems from pixels
 // Function and mixin to return rem units from px.
 @function calculateRem($size) {
   $remSize: $size / 16;
@@ -74,20 +84,20 @@
   font-size: calculateRem($size);
 }
 
-// # Box Shadow
+// Box Shadow
 // Add box-shadow to modules.
 @mixin module-box-shadow($bgcolor:light) {
   @if $bgcolor == light {
     border-bottom: solid 1px lighten($gray-light, 20%);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);    
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
   } @else if $bgcolor == dark {
     border-bottom: solid 1px lighten($gray-light, 10%);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);  
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   }
   border-radius:$border-radius-base;
 }
 
-// # Hover, active, focus
+// Hover, active, focus
 // Set hover, active, and focus for elements.
 @mixin hoverActiveFocus($background, $color, $decoration) {
     &:hover, &:active, &:focus {
@@ -102,11 +112,11 @@
     width:100%;
     margin:0;
     padding:0;
-    > li {  
+    > li {
         width:auto;
         -webkit-flex: 1;
         flex:1;
-        a {     
+        a {
           padding: 2em 2em;
         }
     }
@@ -130,12 +140,12 @@
   }
 }
 
-// # Toggle function for mobile menus
+// Toggle function for mobile menus
 // Collapse global and site menus on mobile screens.
 @mixin toggle-menu() {
   transition: all 1s ease-in-out;
   overflow: hidden;
-  max-height:0;  
+  max-height:0;
   // Active mobile menu removes min-height of 0.
   &.active {
     max-height:auto;
@@ -177,4 +187,3 @@
     margin-bottom: 0;
   }
 }
-
