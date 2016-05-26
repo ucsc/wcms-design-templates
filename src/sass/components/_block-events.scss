@@ -1,3 +1,32 @@
+//Events Block
+/*
+Events Block
+
+Block of information on home page about upcoming events.
+
+markup:
+<div class="blocks events-block" id="events">
+	<h3 class="block-header">
+		<a href="http://www.ucsc.edu/tools/azindex.html">Featured Events</a>
+	</h3>
+	<dl>
+		<dt>May <strong>27</strong></dt>
+		<dd>
+			<a href="#">Event Title
+				<br>
+			</a>
+		</dd>
+		<dt>May <strong>27</strong></dt>
+		<dd>
+			<a href="#">Event Title
+				<br>
+			</a>
+		</dd>
+	</dl>
+</div>
+
+Styleguide 3.5.0
+*/
 #events,
 .events-block {
 
