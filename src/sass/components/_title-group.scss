@@ -1,19 +1,16 @@
-/*doc
----
-title: Title group
-name: title
-category: Landing Page
----
+//Title Group
+/*
+Title Group
 
 A title group is a word or *very short* phrase, followed by an associated tweet-length tag line. They are used on the campus "landing" pages (see http://www.ucsc.edu/about/):
 
-```html_example
+markup:
 <div class="title-group">
     <h1>About</h1>
     <p>This is a place like no other -- a place that inspires, a place that evokes passion and imagination -- all with a view to a limitless horizon.</p>
 </div>
- ```
 
+ Styleguide 3.25.0
 */
 
 .title-group {
@@ -43,7 +40,7 @@ A title group is a word or *very short* phrase, followed by an associated tweet-
         h1, p {
             display:table-cell;
             position: relative;
-            vertical-align: middle;                     
+            vertical-align: middle;
         }
 
         p {
@@ -53,6 +50,3 @@ A title group is a word or *very short* phrase, followed by an associated tweet-
     }
 
 }
-
-
-

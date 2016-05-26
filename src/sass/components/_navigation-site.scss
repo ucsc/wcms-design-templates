@@ -1,3 +1,23 @@
+// Site Navigation
+/*
+Site Navigation
+
+Navigation bar.
+
+markup:
+<div class="main-navigation" role="navigation">
+  <ul id="mainNav">
+    <li class="first"><a href="#">Why UCSC</a></li>
+    <li><a href="#">Academics</a></li>
+    <li><a href="#">Campus Life</a></li>
+    <li><a href="#">Apply</a></li>
+    <li><a href="#">Visit</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+Styleguide 3.19.0
+*/
 .main-navigation {
   margin-bottom: 0;
   .home & {
@@ -13,7 +33,7 @@
   margin:0;
   border-radius:5px;
   background-color:$sand-light;
-  
+
   li {
     position:relative;
     display:table-cell;
@@ -28,7 +48,7 @@
        display:block;
        //border-bottom:2px solid lighten($gray-light, 28%);
     }
-    
+
     a, span {
       @include fontSize(14);
       cursor:pointer;
@@ -50,7 +70,7 @@
     // This rule removes it.
     a span { padding: 0; }
   }
-  
+
   @include media($tablet) {
     > :last-child {
       border-right:1px solid lighten($gray-light, 28%);
@@ -64,7 +84,7 @@
         border-top-right-radius:$border-radius-base;
       }
     }
-    
+
     > :first-child {
       border-left:1px solid lighten($gray-light, 28%);
       border-top-left-radius:$border-radius-base;
@@ -84,7 +104,7 @@
      margin:0;
      width:100%;
      min-width: 14em;
-     padding:0;     
+     padding:0;
      position:absolute;
      left:-900em;
      li {
@@ -97,8 +117,8 @@
        }
      }
    }
-   
-   li:focus ul, 
+
+   li:focus ul,
    li:hover ul,
    li.hover ul {
      left:auto;

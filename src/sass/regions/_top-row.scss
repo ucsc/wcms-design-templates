@@ -1,11 +1,21 @@
-// # The top row
-// The top row of the page, containing the global UCSC
-// navigation and the site search form.
+// Top Row
+/*
+Top Row
 
+The top row of the page, containing the global UCSC navigation and the site search form. They occupy the same row on large screens and the separate rows on smaller screens.
 
-// ## Layout
-// They occupy the same row on large screens
-// and the separate rows on smaller screens.
+markup:
+<div class="site-header" role="banner">
+  <ul id="topNav">
+    <li class="ucscHome"><a href="http://www.ucsc.edu" title="Go to the myUCSC portal">MyUCSC</a></li>
+    <li><a href="http://www.ucsc.edu/tools/people.html" title="Find People - UCSC People Search">People</a></li>
+    <li><a href="http://www.ucsc.edu/tools/calendars.html" title="View UCSC events, academic, and administrative calendars">Calendars</a></li>
+    <li><a href="http://www.ucsc.edu/tools/azindex.html" title="A to Z index of important links">A-Z Index</a></li>
+  </ul>
+</div>
+
+Styleguide 5.3.0
+*/
 .page-top {
 
   #topNav,

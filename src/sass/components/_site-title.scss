@@ -1,5 +1,19 @@
-/**
-*   Page title classes for titles of different lengths
+// Site Title
+/*
+UCSC Logo and Site Title
+
+At minimum, contains the UCSC logo. On division/department sites, it contains the site title too. Page title classes for titles of different lengths
+
+markup:
+<div class="site-header">
+  <div class="names">
+    <div class="campus-name">
+      <a class="campus-logo" href="http://www.ucsc.edu/index.html">UC Santa Cruz</a>
+    </div>
+  <div class="site-name">Undergraduate Admissions</div>
+</div>
+
+Styleguide 3.23.0
 */
 
 .site-name h1,
@@ -22,14 +36,14 @@
     @include fontSize(46);
   }
 }
-    
+
 
 $titles: (
   small: (
     size: 30px,
     margin-top: 4px,
     width: inherit
-  ),  
+  ),
   large: (
     size: 40px,
     margin-top: 18px,
@@ -39,7 +53,7 @@ $titles: (
     size: 44px,
     margin-top: 15px,
     width: inherit
-  ),  
+  ),
   standard: (
     size: 46px,
     margin-top: 14px,

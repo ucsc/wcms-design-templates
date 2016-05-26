@@ -1,3 +1,23 @@
+// See Also Links
+/*
+See Also
+
+Related links at the end of a news article.
+
+markup:
+<div class="row">
+  <h3>See <span>Also</span></h3>
+  <div id="seeAlso">
+    <ul>
+      <li><a href="#">Title of Related Article</a></li>
+      <li><a href="#">Title of Related Article</a></li>
+      <li><a href="#">Title of Related Article</a></li>
+    </ul>
+  </div>
+</div>
+
+Styleguide 3.20.0
+*/
 #seeAlso,
 .see-also {
   padding:0.8em;

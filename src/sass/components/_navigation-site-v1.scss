@@ -1,3 +1,23 @@
+// Main Navigation Version 1
+/*
+Main Navigation V.1
+
+Navigation bar.
+
+markup:
+<div class="main-navigation" role="navigation">
+  <ul id="mainNav">
+    <li class="first"><a href="#">Why UCSC</a></li>
+    <li><a href="#">Academics</a></li>
+    <li><a href="#">Campus Life</a></li>
+    <li><a href="#">Apply</a></li>
+    <li><a href="#">Visit</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+Styleguide 3.17.0
+*/
 #mainNav,
 .site-nav {
     // Mobile-first defaults
@@ -37,9 +57,9 @@
         padding-left: 0 !important;
         border-collapse: separate;
         @include module-box-shadow;
-        
+
         > li {
-            
+
             float: none;
             display: table-cell;
             width: 1%;
@@ -48,12 +68,12 @@
             &:first-child a {
                 border-radius: $border-radius-base 0 0 $border-radius-base;
             }
-            
+
             &:last-child a,
             &:last-child span {
                 border-radius: 0 $border-radius-base $border-radius-base 0;
             }
-            
+
             > a, span {
                 border-left: 1px solid $sand-light;
                 border-right: 1px solid $sand-dark;
@@ -70,7 +90,7 @@
                 text-shadow: 1px 1px 0px #FFF;
                 text-align: center;
 				white-space: nowrap;
-                
+
                 &:focus,
                 &:hover,
                 &:active {
@@ -88,16 +108,16 @@
                     text-shadow: none;
                 }
             }
-			
+
 	        > ul {
 	            display: none;
 				color: #000;
 	        }
 
         } // END: > li
-        
-        
-    
+
+
+
     } // END: @media $tablet
 
 } // END: #mainNav
