@@ -2,8 +2,41 @@
 /*
 Gallery
 
+Gallery of images on a homepage.
 
-Stylguide 3.7.0
+markup:
+<div class="gallery-block" id="view">
+  <h3 class="block-header">Photo
+    <span>Journal</span>
+  </h3>
+  <div class="inner">
+    <a href="http://placehold.it/222x335" title="Sample Image">
+      <img class="block-image" height="72" src="http://placehold.it/92x92" width="72">
+    </a>
+    <a href="http://placehold.it/222x335" title="Sample Image">
+      <img class="block-image" height="72" src="http://placehold.it/92x92" width="72">
+    </a>
+    <a href="http://placehold.it/222x335" title="Sample Image">
+      <img class="block-image" height="72" src="http://placehold.it/92x92" width="72">
+    </a>
+    <a href="http://placehold.it/222x335" title="Sample Image">
+      <img class="block-image" height="72" src="http://placehold.it/92x92" width="72">
+    </a>
+    <a href="http://placehold.it/222x335" title="Sample Image">
+      <img class="block-image" height="72" src="http://placehold.it/92x92" width="72">
+    </a>
+    <a href="http://placehold.it/222x335" title="Sample Image">
+      <img class="block-image" height="72" src="http://placehold.it/92x92" width="72">
+    </a>
+  </div>
+</div>
+
+sg-wrapper:
+<div class="block" style="width:240px; height:240px">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.4.4
 */
 #view,
 .gallery-block {

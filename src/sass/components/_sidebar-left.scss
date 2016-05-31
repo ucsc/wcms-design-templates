@@ -1,3 +1,24 @@
+//Left Sidebar
+/*
+Left Sidebar
+
+markup:
+<div class="sidebar" id="subNav" role="navigation">
+  <h4>University News</h4>
+  <ul>
+    <li><a href="#">University News Home</a></li>
+    <li><a href="#">Monthly Newsletter</a></li>
+  </ul>
+  <h4>Other News & Events</h4>
+  <ul>
+    <li><a href="#">Campus Calendars</a></li>
+    <li><a href="#">Slug Sports</a></li>
+    <li><a href="#">UC News</a></li>
+  </ul>
+</div>
+
+Styleguide 3.13.0
+*/
 .left-column .sidebar {
 
   .sidebar-header {
@@ -13,7 +34,7 @@
   .block-header {
     font-weight:bold;
     margin:2em 0 0.25em 0;
-  } 
+  }
 
   ul {
     list-style: none;
@@ -29,7 +50,7 @@
       padding:0;
       margin:0;
 
-      > a {        
+      > a {
         display: block;
         padding:0.5em 0 0.5em 0.5em;
         border-bottom:1px solid lighten($gray-light, 24%);
@@ -44,22 +65,22 @@
       }
    }
 
-    
+
     // Second level list and links (ul ul).
     li  > ul {
-        
+
         margin: 0;
         padding:$font-size-base/2 0;
-        border-bottom:1px solid lighten($gray-light, 24%);        
+        border-bottom:1px solid lighten($gray-light, 24%);
         li {
           list-style: square;
           margin:0.5em 0 0.5em 1.7em;
-          padding-left:0;                    
+          padding-left:0;
           a {
             border-bottom:none;
             padding:0;
-            @include hoverActiveFocus(transparent, $blue, underline);  
-          }                    
+            @include hoverActiveFocus(transparent, $blue, underline);
+          }
           &:first-child a {
             border-top:none;
           }
@@ -81,17 +102,17 @@
         li {
           list-style: circle outside none;
           margin:0 0 0 1.25em;
-          font-size: 0.9em;          
+          font-size: 0.9em;
         }
       }
- 
+
 
 
   .block {
- 
+
     border: none;
     margin:1.25em 0;
-       
+
     > li {
       border: none;
       padding:0 0 1em 0;
@@ -125,7 +146,7 @@
       margin:0 0 0.25em 0;
       background-color:$sand-dark;
     }
-    
+
     .thumbnail img {
       width:100%;
       margin:0 0 0.25em 0;
@@ -136,13 +157,13 @@
         width: 48%;
       }
     }
-    
+
     .description {
       display:block;
       padding:0.5em 0.5em 0.5em;
       line-height: 128%;
     }
-    
+
   }
-   
+
 }

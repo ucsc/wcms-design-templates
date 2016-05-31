@@ -2,7 +2,20 @@
 /*
 Image Blocks
 
-Styleguide 3.8.0
+.dark - light sand background color
+.light - dark sand background color
+
+markup:
+<div class="block {$modifiers}">
+  <img src="http://placehold.it/300x130">
+</div>
+
+sg-wrapper:
+<div class="block">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.4.5
 */
 .block img {
     padding:0.25em;

@@ -2,7 +2,30 @@
 /*
 Showcase
 
-Styleguide 3.10.0
+Showcases a photo or video on the home page.
+
+markup:
+<div class="block profile-block" id="profile">
+	<h3 class="block-header">True
+		<span>Originals</span>
+	</h3>
+	<div class="inner">
+		<a href="#">
+			<img src="http://placehold.it/300x130" style="width:300px; height:130px">
+		</a>
+		<a href="#">NAME OF PERSON</a>
+		<p>Short text about the person being profiled.
+			<a class="continu" href="#"> Continue >></a>
+		</p>
+	</div>
+</div>
+
+sg-wrapper:
+<div class="block" style="width:375px; height:300px">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.4.7
 */
 .profile-block,
 .video-block {

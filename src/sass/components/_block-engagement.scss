@@ -3,7 +3,7 @@
 Engagement Buttons
 
 markup:
-<div class="block engagement-block" id="quickstart">
+<div class="engagement-block" id="quickstart">
   <h2 class="block-header">Engage with <span>#ucsc</span></h2>
   <ul>
     <li class="commencement">
@@ -25,7 +25,12 @@ markup:
   </ul>
 </div>
 
-Styleguide 3.4.0
+sg-wrapper:
+<div class="block" style="width:305px; height:360px">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.4.1
 */
 
 .engagement-block {

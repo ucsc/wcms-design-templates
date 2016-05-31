@@ -1,3 +1,31 @@
+//Right Sidebar
+/*
+Right Sidebar
+
+markup:
+<div class="sidebar right-column">
+  <div class="inner">
+    <h3 class="header">UCSC in the news</h3>
+    <ul class="archive-list with-thumbs">
+      <li>
+        <span class="item-media">
+          <a href="#">
+            <img src="http://placehold.it/48x48" width="48">
+          </a>
+        </span>
+        <span class="item-body">
+          <a href="http://www.npr.org/2016/05/19/478692554/at-80-carla-bley-keeps-looking-towards-the-next-composition">
+            <span class="date">NPR All Things Considered</span>
+            <span class="headline">Title of story in the news</span>
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+Styleguide 3.14.0
+*/
 .right-column .sidebar {
 
   .inner {
@@ -17,7 +45,7 @@
     margin-top: 0;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
    }
-  
+
   ul {
     list-style: square;
     font-size: 1em;
@@ -37,7 +65,7 @@
         }
     }
   }
-  
+
 }
 
 // Modifier for news site.
