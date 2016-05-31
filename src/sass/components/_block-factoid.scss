@@ -5,7 +5,7 @@ Factoid Block
 Block with title, image and caption.
 
 markup:
-<div class="factoid-block" style="width:200px; height:200px">
+<div class="factoid-block">
 	<h3>Title of the Block</h3>
 	<a href="#">
 		<img src="http://placehold.it/200x200">
@@ -13,7 +13,7 @@ markup:
 </div>
 
 sg-wrapper:
-<div class="block" style="width:356px; height:220px">
+<div class="block" style="width:200px; height:200px">
   <sg-wrapper-content/>
 </div>
 
