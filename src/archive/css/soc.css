@@ -1,0 +1,297 @@
+/*#wrap {
+width:1240px;
+}
+#container {
+width:1240px;
+}
+#sprflt {
+width:1240px;
+}
+.js .sleed { 
+display:none; 
+}
+.sleed {
+display:none;
+}
+.js .sleed { 
+display:none; 
+}
+#mainContent {
+float:left;
+width:1010px;
+}
+.detail_page_box {
+	width:780px;
+	display:block;
+}
+.list_page_box {
+	width:950px;
+	display:inline-block;
+}*/
+.PSTEXT {
+font-size: 10px;
+font-weight: normal;
+font-style: normal;
+padding-top: 2px;
+}
+.PAPAGETITLE {
+font-family: "Georgia","Times New Roman","serif";
+font-size: 16px;
+font-weight: bold;
+font-style: normal;
+color: #4A598C;
+margin-bottom: 17px;
+padding-right: 6px;
+}
+.PALEVEL0SECONDARY {
+font-size: 16px;
+font-weight: bold;
+font-style: normal;
+display:block;
+}
+.PAGRIDHEADER {
+font-family: "Arial","sans-serif";
+font-size: 8px;
+font-weight: bold;
+font-style: normal;
+color: white;
+vertical-align: bottom;
+background-color: #4A598C;
+border-top: 1px;
+border-bottom: 1px;
+border-left: 1px;
+border-right: 1px;
+border-color: #D5DCEE #284277 #284277 #D5DCEE;
+border-style: solid solid solid solid;
+}
+
+.PSDROPDOWNLABEL {
+font-family: "Verdana","Arial","sans-serif";
+font-weight: bold;
+font-style: normal;
+font-size: 10px;
+color: #284277;
+vertical-align: middle;
+}
+.PSLEVEL1GRIDCOLUMNHDR {
+font-family: "Verdana","Arial","sans-serif";
+font-size: 10px;
+font-weight: bold;
+color: #4A598C;
+vertical-align: middle;
+line-height: 14px;
+background-color: #DAE2EE;
+border-width: 1px 1px 1px 1px;
+border-color: #7B97C0 #7B97C0 #7B97C0 #7B97C0;
+border-style: solid solid solid solid;
+cursor: pointer;
+}
+.SSSGROUPBOXLEFTLABEL {
+width:100%;
+font-family: Arial,Verdana,sans-serif;
+font-size: 11px;
+font-weight: bold;
+font-style: normal;
+color: rgb(255,255,255);
+//background-color: rgb(115,130,181);
+background-color: #5585A2;
+letter-spacing: 1px;
+vertical-align: middle;
+text-indent: 1px;
+padding-top: 1px;
+padding-bottom: 2px;
+border-width: 1px;
+border-color: rgb(74,89,140);
+}
+.SSSKEYTEXT {
+font-family: "Verdana","Arial","sans-serif";
+font-size: 10px;
+font-weight: normal;
+color: #999999;
+white-space: nowrap;
+padding-top: 2px;
+padding-bottom: 1px;
+}
+.SSSBUTTON_CONFIRMLINKHOVER,.SSSBUTTON_CONFIRMLINK:HOVER {
+font-family: Arial,sans-serif;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-variant: small-caps;
+color: rgb(58,98,55);
+background-color: rgb(182,209,146);
+letter-spacing: 1px;
+text-decoration: none;
+text-transform: capitalize;
+text-align: center;
+border-width: 1px;
+border-top-color: rgb(76,140,64);
+border-bottom-color: rgb(137,177,113);
+border-left-color: rgb(76,140,64);
+border-right-color: rgb(137,177,113);
+border-top-style: none;
+border-bottom-style: solid;
+border-left-style: none;
+border-right-style: solid;
+display: block;
+white-space: nowrap;
+cursor: pointer;
+}
+.SSSBUTTON_CONFIRMLINK {
+font-family: Arial,sans-serif;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-variant: small-caps;
+color: rgb(64,111,53);
+background-color: rgb(222,235,181);
+letter-spacing: 1px;
+text-decoration: none;
+text-transform: capitalize;
+text-align: center;
+line-height: 20px;
+margin-left: 4px;
+border-width: 1px;
+border-top-color: rgb(142,203,98);
+border-bottom-color: rgb(114,175,69);
+border-left-color: rgb(142,203,98);
+border-right-color: rgb(114,175,69);
+border-top-style: none;
+border-bottom-style: solid;
+border-left-style: none;
+border-right-style: solid;
+height: 20px;
+display: block;
+white-space: nowrap;
+cursor: pointer;
+}
+.results_header {
+font-weight:bold;
+vertical-align:middle;
+line-height:14px;
+background-color:#F2F0E4;
+float:left;
+display:inline;
+white-space:normal;
+}
+.outage {
+vertical-align:middle;
+line-height:14px;
+float:left;
+display:inline;
+white-space:normal;
+font-size:12px;
+}
+.inlineDiv {
+display: inline-block;
+}
+.navArrows {
+font-size:9px;	
+}
+.clickableText {
+cursor:pointer;
+color:#5585A2;
+}
+.clickableText:hover {
+text-decoration:underline;
+}
+.rightDiv {
+float:right;	
+}
+.term_descr {
+font-size:11px;
+}
+.detail_box {
+width:100%;
+display:inline-block;
+border-width: 1px 1px 1px 1px;
+border-spacing: 0px;
+border-style: solid solid solid solid;
+border-color: #7B97C0 #7B97C0 #7B97C0 #7B97C0;
+background-color: #ece9d8;
+padding-bottom: 2px;
+}
+.header_form {
+height: 30px;
+}
+.table {
+float:left;
+width:100%;
+}
+
+.phpContent .table_container .table {
+min-width:100%;
+}
+
+/*.row {
+float:left;
+width:100%;
+}*/
+.cell {
+float:left;
+padding:4px;
+display:inline-block;
+}
+.textbox {
+padding:5px;
+}
+.headertext {
+font-weight:bold;
+}
+.even {
+background: #ECE9D8;
+}
+.odd {
+background: #F2F0E4;
+}
+.yearCol {
+width:40px;
+}
+.qtrCol {
+width:60px;
+}
+.classNbrCol {
+width:50px;
+}
+.idCol {
+width:90px;
+}
+.titleCol {
+width:125px;	
+}
+.mtgDaysCol{
+width:50px;
+}
+.timesCol {
+width:110px;
+}
+.locationCol {
+width:110px;	
+}
+.instructorCol {
+width:90px;
+}
+.enrlTotCol {
+width:70px;
+}
+.availSeatsCol {
+width:50px;
+}
+.detailHeaderCol {
+width:170px;
+}
+.enrlCapCol {
+width:130px;
+}
+.mtgDaysTimesCol{
+width:140px;
+}
+.mtgDatesCol {
+width:140px;
+}
+.sectionCol {
+width:30px;
+}
+.typeCol {
+width:60px;
+}

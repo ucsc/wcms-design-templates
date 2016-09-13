@@ -40,7 +40,7 @@ var paths = {
 gulp.task('webserver', function() {
     browserSync.init("./build/index.html", {
         server: {
-            baseDir: "./build/styleguide",
+            baseDir: "./build",
         },
         watchOptions: {
             debounceDelay: 3000
@@ -126,6 +126,13 @@ gulp.task('bower-files', function() {
         .pipe(gulp.dest("./build/_responsive/lib"));
 });
 
+//
+// Copy old assets from previous design into the build folder.
+//
+gulp.task('archive-files', function() {
+    return gulp.src('./src/archive/**')
+        .pipe(gulp.dest("./build"));
+});
 
 //
 // Generate a styleguide from the style resources
@@ -173,7 +180,7 @@ gulp.task('watch', function() {
 //
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['clean', 'watch', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'styleguide', 'webserver']);
+gulp.task('default', ['clean', 'watch', 'archive-files', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'styleguide', 'webserver']);
 
 //
 // The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.
