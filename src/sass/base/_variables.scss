@@ -54,6 +54,7 @@ $font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace !defau
 $font-family-headlines: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-family-base: $font-family-sans-serif !default;
 
+$browser-context: 16;
 $font-size-base: 16px !default;
 $font-size-large: ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small: ceil($font-size-base * 0.85) !default; // ~12px
@@ -88,14 +89,14 @@ $visual-grid-opacity: 1.0;
 $visual-grid-index: front;
 
 // Layout variables for Bourbon Neat
-$max-width: em(1080);
+$max-width: #{1080/$browser-context}em;
 $default-feature: min-width;
 $grids-columns: 12;
 $column: golden-ratio(1em, 3);
 $gutter: golden-ratio(1em, 1);
 
 // Breakpoint variables
-$desktop:   new-breakpoint(min-width em(960) 12);
-$tablet:    new-breakpoint(min-width em(768) 12);
-$portrait:  new-breakpoint(min-width em(600) 12);
-$mobile:    new-breakpoint(max-width em(599) 12);
+$desktop:   new-breakpoint(min-width 60em 12);
+$tablet:    new-breakpoint(min-width 48em 12);
+$portrait:  new-breakpoint(min-width 37.5em 12);
+$mobile:    new-breakpoint(max-width 37.44em 12);

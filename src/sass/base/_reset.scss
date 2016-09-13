@@ -46,7 +46,7 @@ body {
 	text-rendering: optimizeLegibility;
 	margin: 0 auto;
 	padding: 0 0 $font-size-base 0;
-	min-width:em(310);
+	min-width: #{310/$browser-context}em;
 }
 
 h1 {
