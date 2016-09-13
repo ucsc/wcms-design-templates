@@ -4,6 +4,7 @@
 
 // Configuration
 @import "base/variables";
+@import "base/functions";
 @import "base/mixins";
 @import "base/reset";
 @import "base/legacy";
@@ -56,6 +57,7 @@
 @import "pages/landing";
 @import "pages/feedback-form";
 @import "pages/directory";
+@import "pages/thumbnail-grid";
 
 // Print styles come last
 @import "base/print";

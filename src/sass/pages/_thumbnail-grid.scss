@@ -1,0 +1,31 @@
+/*
+  Responsive list of thumbnail image links
+*/
+.thumb-list-grid {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0;
+   padding: 0;
+
+   li {
+    flex-basis: 18%;
+    list-style: none;
+    margin: 1em .75em;
+    max-width: 11em;
+    min-width: 8em;
+    padding: 0 0 .5em;
+    text-align: center;
+
+    img {
+       background-color: transparent;
+       padding: 0;
+       display: block;
+       margin-bottom: .5em;
+       width: 100%;
+       height: auto;
+       border-radius: 0;
+    }
+  }
+}
