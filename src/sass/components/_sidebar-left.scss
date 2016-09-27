@@ -36,7 +36,7 @@
         @include hoverActiveFocus($sand-dark, $blue, underline);
         &.current {
           display:block;
-          background:$sand-dark url(http://static.ucsc.edu/images/nav_arrow.gif) no-repeat 98% center;
+          background:$sand-dark url(https://static.ucsc.edu/images/nav_arrow.gif) no-repeat 98% center;
         }
       }
       &:first-child > a {
