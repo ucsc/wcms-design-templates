@@ -14,13 +14,10 @@ var pkg = require('./package.json'),
     minifycss = require('gulp-minify-css'),
     prettify = require('gulp-html-prettify'),
     sass = require('gulp-ruby-sass'),
-    styleguide = require('sc5-styleguide'),
     sourcemaps = require('gulp-sourcemaps'),
     svgo = require('imagemin-svgo'),
     uglify = require('gulp-uglify'),
     zip = require('gulp-zip');
-
-
 
 //
 // Set default file path variables for tasks
@@ -75,9 +72,7 @@ gulp.task('styles', function() {
    })
     .pipe(autoprefix('last 4 versions'))
     .pipe(sourcemaps.init())
-    .pipe(gulp.dest('./build/_responsive/css'))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest('./build/styleguide'));
+    .pipe(gulp.dest('./build/_responsive/css'));
 });
 
 
@@ -134,20 +129,6 @@ gulp.task('archive-files', function() {
         .pipe(gulp.dest("./build"));
 });
 
-//
-// Generate a styleguide from the style resources
-//
-gulp.task('styleguide', function() {
-  return gulp.src('./src/sass/**/*.scss')
-    .pipe(styleguide.generate({
-        title: 'UC Santa Cruz web styleguide',
-        server: true,
-        rootPath: './build/styleguide',
-        overviewPath: 'README.md'
-      }))
-    .pipe(gulp.dest('./build/styleguide'));
-});
-
 
 //
 // Create zip archive of static file assets ready for the WCMS.
@@ -171,7 +152,7 @@ gulp.task('deploy', function() {
 //
 gulp.task('watch', function() {
     gulp.watch('./src/js/**/**', ['scripts']);
-    gulp.watch('./src/sass/**/*.scss', ['styles', 'styleguide']);
+    gulp.watch('./src/sass/**/*.scss', ['styles']);
     gulp.watch('./src/images/**/.**', ['images']);
     gulp.watch('./src/svg/**/**.svg', ['svg']);
 });
@@ -180,7 +161,7 @@ gulp.task('watch', function() {
 //
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['clean', 'watch', 'archive-files', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'styleguide', 'webserver']);
+gulp.task('default', ['clean', 'watch', 'archive-files', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'webserver']);
 
 //
 // The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.

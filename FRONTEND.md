@@ -1,5 +1,7 @@
 # 2014 Responsive web templates for UC Santa Cruz 
 
+Frontend code structure for 2014 Responsive web templates for UC Santa Cruz. 
+
 ---
 
 ### Stylesheets
@@ -13,7 +15,7 @@ src/
 |  |- regions/
 |    |- _footer.scss _________________________ # 
 |    |- _main-content.scss ___________________ # 
-|    |- _php-content.scss ____________________ # 
+|    |- _php-content.scss ____________________ # Some pages in the WCMS display dynamic content
 |    |- _site-title.scss _____________________ # At minimum, contains the UCSC logo.
 |    |- _top-row.scss ________________________ # The top row of the page, containing the global UCSC
 |
@@ -22,6 +24,8 @@ src/
 |    |- _directory.scss ______________________ # 
 |    |- _feedback-form.scss __________________ # 
 |    |- _landing.scss ________________________ # 
+|    |- _search-results.scss _________________ # 
+|    |- _thumbnail-grid.scss _________________ # 
 |
 |  |- lib/
 |    |- _billboards-default.scss _____________ # 
@@ -58,7 +62,8 @@ src/
 |    |- _title-group.scss ____________________ # doc
 |
 |  |- base/
-|    |- _layout.scss _________________________ # 
+|    |- _functions.scss ______________________ # 
+|    |- _layout.scss _________________________ # Layout and grid
 |    |- _legacy.scss _________________________ # doc
 |    |- _mixins.scss _________________________ # 
 |    |- _modifiers.scss ______________________ # Classes that modify the deafult display of elements.
@@ -82,3 +87,5 @@ src/
 |  |- main.js ________________________________ # DROPDOWN MENU
 |  |- responsive.js __________________________ # 
 ````
+
+Generated 23 January 2017 using [Frontend.md](http://github.com/animade/frontend-md)
