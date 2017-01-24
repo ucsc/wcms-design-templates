@@ -40,14 +40,7 @@
   $(window).resize(function() {
     
     var bodyResize = $("body").innerWidth();
-    
-    //MOBILE NAV CONTROL
-    // if (bodyResize <= 767) {
-    //   $(".mobile-menu").show();
-    // } else {
-    //   $(".mobile-menu").hide();
-    // }
-    
+        
     //SHOW OR HIDE NAVS
     if ( (bodyResize <= 767) && mobileNavOpen == 0) {
       $('.page-top').hide();
