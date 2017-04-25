@@ -33,5 +33,8 @@
     "name": "2014 Responsive web templates for UC Santa Cruz",
     "stylesheets": "src/sass",
     "javascripts": "src/js"
+  },
+  "devDependencies": {
+    "frontend-md": "0.0.4"
   }
 }
