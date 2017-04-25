@@ -92,8 +92,8 @@ $visual-grid-index: front;
 $max-width: #{1080/$browser-context}em;
 $default-feature: min-width;
 $grids-columns: 12;
-$column: golden-ratio(1em, 3);
-$gutter: golden-ratio(1em, 1);
+$column: modular-scale(2);
+$gutter: modular-scale(2);
 
 // Breakpoint variables
 $desktop:   new-breakpoint(min-width 60em 12);

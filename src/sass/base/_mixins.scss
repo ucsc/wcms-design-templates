@@ -149,8 +149,8 @@
 
 @mixin meta-small($scale) {
   text-transform: uppercase;
-  font-size: golden-ratio($font-size-base, $scale);
-  line-height: golden-ratio($font-size-base, 0);
+  font-size: modular-scale($scale);
+  line-height: modular-scale(1);
 }
 
 @mixin image-display($bgcolor, $padding, $radius:false) {
