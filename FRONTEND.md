@@ -2,6 +2,8 @@
 
 Frontend code structure for 2014 Responsive web templates for UC Santa Cruz. 
 
+Generated 25 April 2017 using [Frontend.md](http://github.com/animade/frontend-md)
+
 ---
 
 ### Stylesheets
@@ -14,8 +16,8 @@ src/
 |
 |  |- regions/
 |    |- _footer.scss _________________________ # 
-|    |- _main-content.scss ___________________ # 
-|    |- _php-content.scss ____________________ # Some pages in the WCMS display dynamic content
+|    |- _main-content.scss ___________________ # Basic rules for elements in the .main-content area.
+|    |- _php-content.scss ____________________ # Style rules for dynamic content on PHP pages.
 |    |- _site-title.scss _____________________ # At minimum, contains the UCSC logo.
 |    |- _top-row.scss ________________________ # The top row of the page, containing the global UCSC
 |
@@ -80,12 +82,8 @@ src/
 src/
 |
 |- js/
-|  |- analytics.js ___________________________ # Universal Analytics snippet - 21 May 2015
 |  |- billboards.init.js _____________________ # 
 |  |- fancybox.init.js _______________________ # 
-|  |- imagecache.js __________________________ # set global variable
-|  |- main.js ________________________________ # DROPDOWN MENU
+|  |- main.js ________________________________ # 
 |  |- responsive.js __________________________ # 
 ````
-
-Generated 23 January 2017 using [Frontend.md](http://github.com/animade/frontend-md)
