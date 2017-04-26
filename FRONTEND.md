@@ -2,7 +2,7 @@
 
 Frontend code structure for 2014 Responsive web templates for UC Santa Cruz. 
 
-Generated 25 April 2017 using [Frontend.md](http://github.com/animade/frontend-md)
+Generated 26 April 2017 using [Frontend.md](http://github.com/animade/frontend-md)
 
 ---
 
@@ -12,7 +12,7 @@ Generated 25 April 2017 using [Frontend.md](http://github.com/animade/frontend-m
 src/
 |
 |- sass/
-|  |- ucsc.scss ______________________________ # Include Ruby gems
+|  |- ucsc.scss ______________________________ # All partials import into this file
 |
 |  |- regions/
 |    |- _footer.scss _________________________ # 
@@ -22,7 +22,7 @@ src/
 |    |- _top-row.scss ________________________ # The top row of the page, containing the global UCSC
 |
 |  |- pages/
-|    |- _articles.scss _______________________ # Article
+|    |- _articles.scss _______________________ # Custom styles for news articles and people profiles
 |    |- _directory.scss ______________________ # 
 |    |- _feedback-form.scss __________________ # 
 |    |- _landing.scss ________________________ # 
@@ -64,7 +64,6 @@ src/
 |    |- _title-group.scss ____________________ # doc
 |
 |  |- base/
-|    |- _functions.scss ______________________ # 
 |    |- _layout.scss _________________________ # Layout and grid
 |    |- _legacy.scss _________________________ # doc
 |    |- _mixins.scss _________________________ # 
