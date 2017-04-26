@@ -1,9 +1,7 @@
-// # Custom mixins for UCSC theme.
+// # Custom functions and mixins
 
-
-// ## Debugging: `breakpoints`
-//
 // Shows breakpoint debugging information on rendered pages.
+// @include breakpoints` on the body tag to use this.
 @mixin breakpoints() {
     
   @include media($mobile) {
@@ -172,9 +170,9 @@
     margin-bottom: $margin;
     margin-right: $margin;
   }
+
   &:nth-child(#{$numPerRow}n) {
-    margin-right: 0;
     margin-bottom: 0;
+    margin-right: 0;
   }
 }
-
