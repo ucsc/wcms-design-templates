@@ -1,38 +1,34 @@
-// Article
-//
-// Custom styles for a news article or person profile.
-//
-//
-// Styleguide 2.1.5
+// Custom styles for news articles and people profiles
 .article {
 
-  #title {
-    margin-bottom: 0.25em;
+  h1:nth-child(1) {
+    margin-bottom: .25em;
   }
 
   .subhead,
   .campus-message {
-    color:$gray-dark;
+    color: $gray-dark;
     font-size: 1.3em;
-    font-weight:300;
+    font-weight: 300;
     line-height: 1.4;
-    margin:0;
-    width:85%;
+    margin: 0;
+    width: 85%;
   }
-
 
   .campus-message {
     font-size: 1.2em;
+
     p {
-      margin:0;
+      margin: 0;
     }
   }
 
   .article-meta {
     font-size: 1em;
-    margin:0.5em 0 1em;
+    margin: .5em 0 1em;
+
     p {
-      margin:0;
+      margin: 0;
     }
   }
 
@@ -43,7 +39,3 @@
   }
 
 }
-
-
-
-
