@@ -1,64 +1,66 @@
+// All partials import into this file
+
 // Include Ruby gems
-@import "bourbon";
-@import "neat";
+@import 'bourbon';
+@import 'neat';
 
 // Configuration
-@import "base/variables";
-@import "base/functions";
-@import "base/mixins";
-@import "base/reset";
-@import "base/legacy";
-@import "base/modifiers";
-@import "base/layout";
-@import "base/svg";
-@import "base/typography";
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/reset';
+@import 'base/legacy';
+@import 'base/modifiers';
+@import 'base/layout';
+@import 'base/svg';
+@import 'base/typography';
 
 // Vendor Libraries
-@import "lib/icons-data-svg";
-@import "base/svg";
-@import "lib/billboards-default";
+@import 'lib/icons-data-svg';
+@import 'base/svg';
+@import 'lib/billboards-default';
 
 // Individual page and partial layouts
-@import "regions/top-row";
-@import "regions/site-title";
-@import "regions/main-content";
-@import "regions/footer";
-@import "regions/php-content";
+@import 'regions/top-row';
+@import 'regions/site-title';
+@import 'regions/main-content';
+@import 'regions/footer';
+@import 'regions/php-content';
 
 // Drop-in content components
-@import "components/accessibility-links";
-@import "components/article-images";
-@import "components/banners";
-@import "components/blocks";
-@import "components/block-images";
-@import "components/billboards";
-@import "components/block-events";
-@import "components/block-factoid";
-@import "components/block-gallery";
-@import "components/block-news";
-@import "components/block-showcase";
-@import "components/block-engagement";
-@import "components/callout-boxes";
-@import "components/breadcrumbs";
-@import "components/content-box";
-@import "components/navigation-site";
-@import "components/sidebar-left";
-@import "components/sidebar-right";
-@import "components/featured-story";
-@import "components/archive-list";
-@import "components/see-also";
-@import "components/title-group";
-@import "components/gallery";
-@import "components/site-title";
-@import "components/social-sharing";
+@import 'components/accessibility-links';
+@import 'components/article-images';
+@import 'components/banners';
+@import 'components/blocks';
+@import 'components/block-images';
+@import 'components/billboards';
+@import 'components/block-events';
+@import 'components/block-factoid';
+@import 'components/block-gallery';
+@import 'components/block-news';
+@import 'components/block-showcase';
+@import 'components/block-engagement';
+@import 'components/callout-boxes';
+@import 'components/breadcrumbs';
+@import 'components/content-box';
+@import 'components/navigation-site';
+@import 'components/sidebar-left';
+@import 'components/sidebar-right';
+@import 'components/featured-story';
+@import 'components/archive-list';
+@import 'components/see-also';
+@import 'components/title-group';
+@import 'components/gallery';
+@import 'components/site-title';
+@import 'components/social-sharing';
 
 // Specialty Pages
-@import "pages/articles";
-@import "pages/landing";
-@import "pages/feedback-form";
-@import "pages/directory";
-@import "pages/thumbnail-grid";
-@import "pages/search-results";
+@import 'pages/articles';
+@import 'pages/landing';
+@import 'pages/feedback-form';
+@import 'pages/directory';
+@import 'pages/thumbnail-grid';
+@import 'pages/search-results';
 
 // Print styles come last
-@import "base/print";
+@import 'base/print';
