@@ -35,6 +35,7 @@
     "javascripts": "src/js"
   },
   "devDependencies": {
-    "frontend-md": "0.0.4"
+    "frontend-md": "0.0.4",
+    "mkdirp": "^0.5.1"
   }
 }

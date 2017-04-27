@@ -3,8 +3,9 @@
 var request     = require('request');
 var cheerio     = require('cheerio');
 var fs          = require('fs');
+var mkdirp      = require('mkdirp');
 var pages       = require('./pages.js').pages;
-var appPath     = "./src/_examples/";
+var appPath     = "./examples/";
 
 // We create a new index file each time we fetch
 // the sample pages, just in case we've added more to the list.
@@ -16,6 +17,8 @@ fs.exists(appPath + 'index.html', function (exists) {
         });
     };
 });
+
+
 
 pages.forEach(function (i) {
 
@@ -37,8 +40,21 @@ pages.forEach(function (i) {
       // Load the response into the parser
       var $ = cheerio.load(body);
       
-      // Rewrite the CSS to use local files
-      // $('link').first().attr("href","css/ucsc.css");
+      // Iterate over <link> tags to use relative file paths 
+      $('link').map(function(i, el) {
+        // Get the 'src' attr for the image and replace with a relative path
+        var hrefSrc = $(this).attr('href').replace(/^\/\/static.ucsc.edu/gm, "..");
+        $(this).attr('href', hrefSrc);
+      });
+
+      // Iterate over <link> tags to use relative file paths 
+      $('script').map(function(i, el) {
+        // Get the 'src' attr for the script and replace with a relative path
+        if ($(this).attr('src')) {
+          var scriptSrc = $(this).attr('src').replace(/^\/\/static.ucsc.edu/gm, "..");
+          $(this).attr('src', scriptSrc);
+        }
+      });      
       
       // Iterate over <img> tags to look for relative 'src' paths 
       $('img').map(function(i, el) {
@@ -54,9 +70,11 @@ pages.forEach(function (i) {
       var html = $.html();
 
       // Write the local file
-      fs.writeFile(appPath + filename + ".html", html, function (err) {
-        if (err) throw err;
-        console.log(url + ' saved as => ' + filename + '.html');
+      mkdirp(appPath, function(err) {
+        fs.writeFile(appPath + filename + ".html", html, function (err) {
+          if (err) throw err;
+          console.log(url + ' saved as => ' + filename + '.html');
+        });
       });
 
       var listing = '<li><a href="' + filename + '.html">' + filename + '</a></li>\n';

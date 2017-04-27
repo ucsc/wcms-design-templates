@@ -10,7 +10,7 @@ var pkg = require('./package.json'),
     del = require('del'),
     imacss = require('gulp-imacss'),
     imagemin = require('gulp-imagemin'),
-    mainBowerFiles = require('main-bower-files'),
+    mainBowerFiles = require('main-bower-files'),    
     minifycss = require('gulp-minify-css'),
     prettify = require('gulp-html-prettify'),
     sass = require('gulp-ruby-sass'),
@@ -36,8 +36,12 @@ var paths = {
 //
 gulp.task('webserver', function() {
     browserSync.init("./build/index.html", {
+        
         server: {
             baseDir: "./build",
+            routes: {
+                "/examples": "examples"
+            }
         },
         watchOptions: {
             debounceDelay: 3000
@@ -45,6 +49,7 @@ gulp.task('webserver', function() {
         open: false,
         port: 8080
     });
+    gulp.watch("src/sass/*.scss", ['styles']);
 });
 
 
@@ -72,7 +77,8 @@ gulp.task('styles', function() {
    })
     .pipe(autoprefix('last 4 versions'))
     .pipe(sourcemaps.init())
-    .pipe(gulp.dest('./build/_responsive/css'));
+    .pipe(gulp.dest('./build/_responsive/css'))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 
