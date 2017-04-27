@@ -1,19 +1,21 @@
-// Image styles for blocks
+// Rules for images within blocks
 .block img {
-    padding:0.25em;
-    border-radius: $border-radius-base/2;    
-    .dark & {
-        background-color: $sand-light;    
-    }
-    .light & {
-        background-color: $sand-dark;       
-    }
+  border-radius: $border-radius-base / 2;
+  padding: .25em;
+
+  .dark & {
+    background-color: $sand-light;
+  }
+
+  .light & {
+    background-color: $sand-dark;
+  }
 }
 
-/* Block images with a width of 216px should extend full-width */
-.block img[width="216"] {
-  display:block;
-  width:100%;
-  margin-bottom: 0.5em;
+// Block images with a width of 216px should extend full-width
+.block [width="216"] {
+  display: block;
   height: auto;
+  margin-bottom: .5em;
+  width: 100%;
 }

@@ -1,22 +1,10 @@
-// Breadcrumb styles
-/*
-Breadcrumbs
-
-Linked path back to a site's front page.
-
-markup:
-<div class="row breadcrumbs">
-   <p><a href="../index.html">Home</a> / <a href="http://example.com/">Directory</a> / This page</p>
-</div>
-
-Styleguide 2.1.0
-*/
+// Breadcrumbs appear on some pages
 
 .breadcrumbs {
 
   p {
-    font-size: #{12/$browser-context}em;
-    margin: .75em 0 .75em $font-size-base / 2;  
+    font-size: #{12 / $browser-context}em;
+    margin: .75em 0 .75em $font-size-base / 2;
   }
 
 }

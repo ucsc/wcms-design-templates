@@ -1,38 +1,4 @@
-/*doc
----
-title: Engagement Buttons
-name: component
-category: Components
----
-
-```html_example
-<div class="block engagement-block" id="quickstart">
-  <h3 class="block-header"><a href="stayconnected.ucsc.edu">
-    Engage with <span>#ucsc</span></a>
-  </h3>
-  <ul>
-    <li class="commencement">
-      <a href="#">
-        <img src="http://goods.robknight.net.s3.amazonaws.com/commencement-thumb.jpg" alt="link header" />
-        <span>Commencement 2015 <b>#ucscalumni</b></span>
-      </a>
-    </li>
-    <li class="fifty-years">
-      <a href="#">
-        <span>Celebrating 50 years. <b>Join the fun</b></span>
-      </a>
-    </li>
-    <li class="campaign">
-      <a href="#">
-        <span>The Campaign for <b>UC Santa Cruz</b></span>
-      </a>
-    </li>
-  </ul>
-</div>
-```
-
-*/
-
+// Block: three fancy links, with an image link on top (www home page only)
 .engagement-block {
 
   li {
