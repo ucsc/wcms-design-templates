@@ -1,3 +1,5 @@
+// Custom rules for Google search results pages
+
 .gsc-refinementsArea {
   display: none;
 }
@@ -23,13 +25,14 @@
 .gsc-table-result {
   margin-bottom: 0;
   margin-top: 0;
+
+  td {
+    border-bottom: 0;
+  }
 }
 
-.gsc-table-result td {
-  border-bottom: 0;
-}
-
-img.gs-image, .gcsc-branding-img-noclear img {
+.gs-image,
+.gcsc-branding-img-noclear img {
   background-color: transparent;
   border-radius: 0;
   padding: 0;

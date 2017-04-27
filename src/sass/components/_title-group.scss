@@ -1,20 +1,4 @@
-/*doc
----
-title: Title group
-name: title
-category: Landing Page
----
-
-A title group is a word or *very short* phrase, followed by an associated tweet-length tag line. They are used on the campus "landing" pages (see http://www.ucsc.edu/about/):
-
-```html_example
-<div class="title-group">
-    <h1>About</h1>
-    <p>This is a place like no other -- a place that inspires, a place that evokes passion and imagination -- all with a view to a limitless horizon.</p>
-</div>
- ```
-
-*/
+// The title and subtitle on second-level pages of the main campus website
 
 .title-group {
     text-transform: uppercase;

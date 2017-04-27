@@ -1,19 +1,19 @@
-// Basic rules for elements in the .main-content area.
+// Rules for elements in the .main-content area.
 .main-content {
 
   img {
     background-color: darken($sand, 5%);
-    padding: $font-size-base/3;
     border-radius: $border-radius-base;
+    padding: $font-size-base / 3;
 
     &[align="left"] {
-      float:left;
-      margin: $font-size-base/2 $font-size-base/2 $font-size-base/2 0;
+      float: left;
+      margin: $font-size-base / 2 $font-size-base / 2 $font-size-base / 2 0;
     }
 
     &[align="right"] {
-      float:right;
-      margin: $font-size-base/2 0 $font-size-base/2 $font-size-base/2;
+      float: right;
+      margin: $font-size-base / 2 0 $font-size-base / 2 $font-size-base / 2;
     }
 
     table & {
@@ -23,7 +23,6 @@
   }
 
 }
-
 
 .touch .main-content .search {
   @include media($mobile) {

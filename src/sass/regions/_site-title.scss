@@ -1,42 +1,41 @@
-// ## UCSC logo and Site Title
-// At minimum, contains the UCSC logo.
-// On division/department sites, it contains the site title too.
+// Rules for the logo and site title in the second row of every page
+// Except in the 'www' site, where only the logo is present
 
 .names {
 
-    // Mobile
-    margin: 1em auto 0 auto;
+  // Mobile
+  margin: 1em auto 0;
 
-    // Tablet
-    @include media($tablet) {      
-      margin-bottom: $font-size-base;
-    }
- 
+  // Tablet
+  @include media($tablet) {
+    margin-bottom: $font-size-base;
+  }
+
   .site-name {
-    
+
     // Mobile
     @include span-columns(12);
     margin: $font-size-base 0;
 
     // Tablet
-    @include media($tablet) {      
+    @include media($tablet) {
       @include span-columns(8);
-      margin:0 auto;
+      margin: 0 auto;
     }
 
     // Desktop
-    @include media($desktop) {      
+    @include media($desktop) {
       @include span-columns(9);
-      margin:0 auto;
-    }    
+      margin: 0 auto;
+    }
 
   }
 
-  
   .campus-name {
 
     // Mobile
     @include span-columns(12);
+
     .www & {
       @include span-columns(12);
     }
@@ -44,7 +43,8 @@
     // Tablet
     @include media($tablet) {
       @include span-columns(4);
-      padding-bottom:0;
+      padding-bottom: 0;
+
       .www & {
         @include span-columns(12);
       }
@@ -53,8 +53,9 @@
     // Desktop
     @include media($desktop) {
       @include span-columns(3);
-      border-bottom: none;
-      padding-bottom:0;
+      border-bottom: 0;
+      padding-bottom: 0;
+
       .www & {
         @include span-columns(12);
       }
@@ -64,35 +65,34 @@
     .campus-logo {
 
       @include hide-text();
-      display: block;  
-      background:transparent url(../images/logos/ucsc-logotype.svg) no-repeat left top;
+      background: transparent url('../images/logos/ucsc-logotype.svg') no-repeat left top;
       background-size: contain;
+      display: block;
       height: 72px;
       max-width: 260px;
+
       @include span-columns(7);
 
       @include media($tablet) {
         @include span-columns(12);
       }
-
     }
-
-  }    
+  }  
 
   .mobile-menu {
 
     // Mobile
-    color:$sand-light;
     border-radius: $border-radius-base/2;
     background-color: darken($gray-light, 10%);
-    padding:0.5em 2.2em 0.5em 0.5em;
+    color:$sand-light;
     float: right;
-    margin-top: 0.55em;
-    text-align: center;
-    text-transform: uppercase;
     font-weight: 300;
+    margin-top: 0.55em;
     max-width: 8em;
-    text-decoration:none;
+    padding: .5em 2.2em .5em .5em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
 
     @include hoverActiveFocus($ucsc-blue, $sand-light, none);
 
@@ -100,7 +100,6 @@
     @include media($tablet) {
       display:none;
     }
-    
   }
 
 }
