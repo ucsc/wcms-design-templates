@@ -38,7 +38,7 @@ gulp.task('webserver', function() {
     browserSync.init("./build/index.html", {
         
         server: {
-            baseDir: "./build",
+            baseDir: ["./build", "./examples"],
             routes: {
                 "/examples": "examples"
             }
@@ -141,14 +141,10 @@ gulp.task('archive-files', function() {
 //
 gulp.task('deploy', function() {
     return gulp.src([
-            './build/_responsive/css',
-            './build/_responsive/images',
-            './build/_responsive/js',
-            './build/_responsive/lib'
-        ], {
-            base: "./build/_responsive"
-        })
-        .pipe(zip('_responsive.zip'))
+            './build/**/**',
+            './examples/**/**'
+        ])
+        .pipe(zip('webtemplates2014.zip'))
         .pipe(gulp.dest('./deploy'));
 });
 

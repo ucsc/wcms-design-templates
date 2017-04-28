@@ -43,7 +43,7 @@ pages.forEach(function (i) {
       // Iterate over <link> tags to use relative file paths 
       $('link').map(function(i, el) {
         // Get the 'src' attr for the image and replace with a relative path
-        var hrefSrc = $(this).attr('href').replace(/^\/\/static.ucsc.edu/gm, "..");
+        var hrefSrc = $(this).attr('href').replace(/^\/\/static.ucsc.edu\//gm, "");
         $(this).attr('href', hrefSrc);
       });
 
@@ -51,7 +51,7 @@ pages.forEach(function (i) {
       $('script').map(function(i, el) {
         // Get the 'src' attr for the script and replace with a relative path
         if ($(this).attr('src')) {
-          var scriptSrc = $(this).attr('src').replace(/^\/\/static.ucsc.edu/gm, "..");
+          var scriptSrc = $(this).attr('src').replace(/^\/\/static.ucsc.edu\//gm, "");
           $(this).attr('src', scriptSrc);
         }
       });      
