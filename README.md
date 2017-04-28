@@ -42,6 +42,12 @@ Type CTRL-C in the Terminal window will stop the `gulp` process and the web serv
 
 **Note**: you may need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever you modify a file during development.
 
+## Bundle sample files for preview
+
+1. From the project root, run `gulp deploy`
+2. That creates a `deploy` folder. Inside the deploy folder is a zip archive of the example HTML files and requisite CSS, JS, and image files.
+3. That zip file can be unarchived and placed on any server for others to preview.
+
 #### Footnotes
 
 1. The script `app.js` fetches the files listed in `pages.json` and places them in the directory `examples`. The web server serves those files from [`localhost:8080/examples/`](http://localhost:8080/examples/)
