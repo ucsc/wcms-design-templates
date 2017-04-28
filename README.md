@@ -8,7 +8,7 @@ Responsive reboot of UCSC web templates originally created in 2009-10.
 
 ### Ruby and gems
 
-- Ruby >2.2.0 (we use [rbenv](https://github.com/sstephenson/rbenv) to manage Ruby versions)
+- Ruby >2.3.0 (we use [rbenv](https://github.com/sstephenson/rbenv) to manage Ruby versions)
 - [Sass](http://sass-lang.com/)
 - [Bourbon](http://bourbon.io/) for helpful Sass mixin tools.
 - [Neat](http://neat.bourbon.io/) for grid layout.
