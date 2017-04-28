@@ -22,9 +22,9 @@ Responsive reboot of UCSC web templates originally created in 2009-10.
 
 1. Clone this repository locally using the Github app or with `git clone https://github.com/ucsc/webtemplates2014.git`.
 2. Install Gems:
-    - `gem install sass`
-    - `gem install bourbon`
-    - `gem install neat`
+    - `gem install sass -v 3.4.23`
+    - `gem install bourbon -v 4.3.2`
+    - `gem install neat -v 1.8.0`
 3. Install `node` and `npm` by downloading the installer from [nodejs.com](http://nodejs.org) or with Homebrew.
 4. Install gulp and bower globally: `npm install -g gulp bower`
 5. `cd` into the project  directory and run `npm install` in the project root to install all node dependencies.
