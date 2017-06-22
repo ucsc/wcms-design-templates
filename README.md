@@ -36,11 +36,11 @@ We recommend [Homebrew](https://brew.sh/) for managing packages on the Mac.
 
 1. In a terminal window, `cd` into the project directory and run `node app.js` to fetch the example HTML files<sup>1</sup> from the website. 
 2. Run `gulp` to start the local web server and compile the site files.
-2. Visit [http://localhost:8080/examples/](http://localhost:8080/examples/) to preview the site in the browser.
+2. Visit [http://localhost:8080/](http://localhost:8080/) to preview the site in the browser.
 
-Type CTRL-C in the Terminal window will stop the `gulp` process and the web server.
+To stop the `gulp` process and the web server, type CTRL-C in the Terminal window.
 
-**Note**: you may need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever you modify a file during development.
+**Note**: you need to have the [LiveReload](http://livereload.com/) browser extension installed in Chrome/Firefox/Safari to enable automatic browser refreshing whenever you modify a file during development.
 
 ## Bundle sample files for preview
 
@@ -50,4 +50,4 @@ Type CTRL-C in the Terminal window will stop the `gulp` process and the web serv
 
 #### Footnotes
 
-1. The script `app.js` fetches the files listed in `pages.json` and places them in the directory `examples`. The web server serves those files from [`localhost:8080/examples/`](http://localhost:8080/examples/)
+1. The script `app.js` fetches the files listed in `pages.json` and places them in the directory `examples`. The web server serves those files from [`localhost:8080/`](http://localhost:8080/)
