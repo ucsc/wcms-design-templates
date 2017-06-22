@@ -97,6 +97,11 @@ $grids-columns: 12;
 $column: modular-scale(2);
 $gutter: modular-scale(2);
 
+$neat-grid: (
+  columns: $grids-columns,
+  gutter: modular-scale(2),
+);
+
 // Breakpoint variables
 $desktop:   new-breakpoint(min-width 60em 12);
 $tablet:    new-breakpoint(min-width 48em 12);
