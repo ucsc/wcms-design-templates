@@ -1,7 +1,8 @@
 // Custom rules for images in news articles
 
 .article-video,
-.article-image {
+.article-image,
+.article figure {
   display:block;
   clear: right;
   width: auto;
@@ -25,6 +26,7 @@
   }
 
   // Caption styles
+  .article .image figcaption,
   .caption {
     margin: 0;
     padding:0.5em 0.5em 0 0.5em;
