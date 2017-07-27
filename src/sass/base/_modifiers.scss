@@ -17,3 +17,14 @@
   outline: none;
 }
 
+.align-right {
+  float: right;
+  margin: 0 0 1em 1em;
+  clear: right;
+}
+
+.align-left {
+  float: left;
+  margin: 0 1em 1em 0;
+  clear: left;
+}

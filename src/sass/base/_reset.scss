@@ -177,11 +177,23 @@ dd, li {
 	}
 
 /* Grouping > Figures */
+figure {
+	display: table;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
 figcaption {
 	font-size: 0.85em;
 	line-height: 1.3;
 	padding: 0.25em 0 0; /* 8px 0 */
 	margin: .25em;
+	display: table-caption;
+  caption-side: bottom;
 }
 
 
