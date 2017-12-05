@@ -3,31 +3,86 @@
 // ## Layout
 // They occupy the same row on large screens
 // and the separate rows on smaller screens.
+
+
+
 .page-top {
+  background-color: $brand-tertiary-blue;
+  padding: 10px $font-size-base 12px $font-size-base;
+  margin-left: -$font-size-base;
+  margin-right: -$font-size-base;
+
+  @include media($tablet) {
+    padding-top: 7px;
+    padding-bottom: 4px;
+  }
+
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .page-top-left {
+
+    // margin: 5px 0 15px 0;
+
+    @include media($tablet) {
+      float: left;
+      margin: 0;
+    }
+
+  }
+
+  .campus-secondary {
+    text-indent: -10000px;
+    background: transparent url(../images/logos/logo-abbr.png) no-repeat left top;
+    display: block;
+    width: 107px;
+    height: 26px;
+    margin-top: 2px;
+    color: #fff;
+  }
+
+  .page-top-right {
+
+    padding: 15px 0;
+
+    @include media($tablet) {
+      float: right;
+      padding: 0;
+    }
+  }
+
+
 
   #topNav,
   .global-nav {
     display: block;
-    @include span-columns(12);
+    font-size: .9rem;
     @include media($tablet) {
-      @include span-columns(9);
+      @include span-columns(12);
+
+      width: auto;
       // Resetting the width and margin a smidgen for spacing.
       margin-right: 0;
-      width:76.41059%;
-      //@include rowborders(purple);
+
     }
   }
 
   .search {
+
+    margin-bottom: 15px;
     @include span-columns(12);
     @include media($tablet) {
       display: block;
-      @include span-columns(3);
-      // @include rowborders(green);
+      margin-left: 20px;
+      width: 250px;
+      margin-bottom: 4px;
     }
   }
 
 }
+
 
 // ## Global Navigation
 // The global navigation at the top of the page.
@@ -36,52 +91,61 @@
 .global-nav {
 
     // Mobile first defaults
-    @include reset(list);
-    margin:0;
-    padding:0;
-    text-align:right;
-
+    margin: 10px 0;
+    // @include reset(list);
     li {
         display: inline-block;
         width: 48%;
-        margin:0 0 0.4em 0;
+        margin: 0 0 10px 0;
         padding:0;
         list-style: none;
     }
+
     a {
-      @include mobile-button();
+      color: #fff;
     }
 
     // Tablet and up
     @include media($tablet) {
 
-        text-align: right;
-        margin:0;
+        margin: 5px 0 0 0;
 
         > li {
           display: inline-block;
           width: auto;
           background-image: none;
-          border-left: 1px solid lighten($gray-light, 12%);
           line-height: 1.2em;
           list-style-type: none;
-          padding: 1.25em 0.25em 0 0.25em;
+          margin-left: 1.5em;
+          position: relative;
+          padding: 0;
         }
 
-        .dept & :nth-child(1),
-        .division & :nth-child(1) {
-          float: left;
+        > li:after {
+          background-color: $brand-gold;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: -1em;
+          margin-left: -1.5px;
+          margin-top: -2.5px;
         }
+
+          > li:first-child:after {
+            display: none;
+          }
 
         a {
           border: none;
           background-color: transparent;
           border-radius:0;
-          color: $blue;
           font-weight:400;
-
-          padding:$font-size-base/4 $font-size-base/2 0 $font-size-base/2;
-          @include hoverActiveFocus(transparent, $blue, underline);
+          padding: 0;
+          @include hoverActiveFocus(transparent, #fff, underline);
         }
     }
 }
@@ -98,8 +162,9 @@
     padding:$font-size-base/4 $font-size-base/2;
     width: 100%;
     color: $gray-dark;
-    border: 1px solid lighten($gray-light, 20%);
-    border-radius: $border-radius-base;
+    // border: 1px solid lighten($gray-light, 20%);
+    // border-radius: $border-radius-base;
+    border: none;
     &:focus,
     &:active {
       box-shadow:0 0 8px rgba(0,0,0,0.4);
@@ -117,11 +182,18 @@
   // Tablet and up
   @include media($tablet) {
 
-    margin-top: 1em;
+    // margin-top: 1em;
     .query {
       display: block;
       margin-top: 0;
     }
   }
 
+}
+
+.www .page-top-right {
+
+  @include media($tablet-minus) {
+  padding: 0;
+  }
 }

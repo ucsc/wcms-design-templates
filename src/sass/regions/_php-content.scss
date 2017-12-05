@@ -5,7 +5,7 @@
 // There is a namespace conflict with `.row`
 // So we're specifying that rows within the .table div pf .phpContent span full-width.
 .phpContent {
- 
+
   .table::before {
     content: '\021E0  Scroll side to side for more information \021E2';
     display: block;
@@ -18,7 +18,7 @@
   .table {
     font-size: 13px;
     min-width: 100%;
-    display: block;    
+    display: block;
     overflow-x: scroll;
 
     .row {
@@ -27,20 +27,24 @@
       max-width: 100%;
       min-width: 1000px;
       overflow: visible;
-      padding: .2em .1em;
+      padding: 0.45em 2em 0.45em 0;
       width: 100%;
+      border-bottom: 1px solid #d3d2d1;
 
       &.even,
       &.odd {
-        background-color: transparent;
+        background-color: white
       }
 
       &.even div {
         background: #ece9d8;
+        background: white;
+
       }
 
       &.odd div {
         background: #f2f0e4;
+        background: white;
       }
 
       > div {

@@ -20,37 +20,40 @@ category: Components
 </div>
 ```
 
-*/ 
+*/
 
 .feature-story {
-  border-radius: 5px;
   font-size: 110%;
   padding: 1.3em 1.5em;
-  margin-bottom: 1em;
-  background-color: #FFFFFE;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2em;
+  border: 1px solid #ccc;
+
   .type {
-    font-size: 0.75em;
+    font-size: .8em;
     text-transform: uppercase;
-    color: #929290;
     display: block;
-    letter-spacing: 0.2em;
     margin-bottom: 0.4em;
+    font-weight: 700;
+    font-family: $font-family-sans-serif-condensed
   }
   .description,
   p {
     line-height: 1.4;
-    color: #666;
     margin:0.5em 0;
+    font-size: .9em;
   }
   .headline,
   h2 {
     margin:0 0 0.5em;
     line-height:110%;
+    color: #fff;
   }
   .thumbnail,
   img {
     float:right;
     margin: 0 0 1em 0.8em;
+  }
+
+  a {
   }
 }
