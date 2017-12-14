@@ -1,92 +1,79 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-
-<system-region name="UNIFORM HTML HEAD" />
-
-<title><system-page-title/></title>
-<system-page-meta-description/>
-<system-page-meta-keywords/>
-
-<system-region name="LOCAL HTML HEAD" />
-<system-region name="PAGE HTML HEAD" />
-<system-region name="CUSTOM HTML HEAD" />
-
-</head>
-
-<body class="left-column dept article">
-
-  <!-- Accessibility links. Hidden until they receive :focus -->
-  <ul id="access-links">
-    <li><a href="#main">Skip to main content</a></li>
-    <li><a href="#mainNav">Skip to primary navigation</a></li>
-  </ul>
-
-<system-region name="ALERT AREA" />
-
-  <div id="wrap">
-    <div id="container">
-      <div id="content">
-
-        <div class="site-header" role="banner">
-
-          <div class="row page-top">
-            <system-region name="UNIFORM CAMPUS LINKS" />
-            
-            <div class="search" role="search">
-              <system-region name="SEARCH" />
-            </div>           
+<html
+  xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <system-region name="UNIFORM HTML HEAD"/>
+    <title>
+      <system-page-title/>
+    </title>
+    <system-page-meta-description/>
+    <system-page-meta-keywords/>
+    <system-region name="LOCAL HTML HEAD"/>
+    <system-region name="PAGE HTML HEAD"/>
+    <system-region name="CUSTOM HTML HEAD"/>
+  </head>
+  <body class="left-column dept article">
+    <!-- Accessibility links. Hidden until they receive :focus -->
+    <ul id="access-links">
+      <li>
+        <a href="#main">Skip to main content</a>
+      </li>
+      <li>
+        <a href="#mainNav">Skip to primary navigation</a>
+      </li>
+    </ul>
+    <system-region name="ALERT AREA"/>
+    <div id="wrap">
+      <div id="container">
+        <div id="content">
+          <div class="site-header" role="banner">
+            <div class="row page-top">
+              <system-region name="UNIFORM CAMPUS LINKS"/>
+              <div class="search" role="search">
+                <system-region name="SEARCH"/>
+              </div>
+            </div>
+            <div class="row names">
+              <div class="campus-name">
+                <system-region name="UNIFORM CAMPUS LOGO"/>
+              </div>
+              <div class="site-name">
+                <system-region name="DEPARTMENT NAME"/>
+              </div>
+            </div>
+            <div class="row main-navigation" role="navigation">
+              <system-region name="MAIN NAV"/>
+            </div>
+            <system-region name="BREADCRUMBS"/>
           </div>
-          
-          <div class="row names">
-            <div class="campus-name">
-              <system-region name="UNIFORM CAMPUS LOGO" />
-            </div>  
-            <div class="site-name">
-              <system-region name="DEPARTMENT NAME" />
+          <div class="row" id="sprflt">
+            <div class="main-content" id="main" role="main">
+              <system-region name="DEFAULT"/>
+              <system-region name="CONTENT BOTTOM"/>
+            </div>
+            <div class="sidebar" id="subNav">
+              <system-region name="LEFT NAV TOP"/>
+              <system-region name="LEFT NAV"/>
+              <system-region name="LEFT NAV BOTTOM"/>
+              <system-region name="LEFT NAV BOTTOM GLOBAL"/>
             </div>
           </div>
-
-          <div class="row main-navigation" role="navigation">
-            <system-region name="MAIN NAV" />
+          <div class="row" id="footer">
+            <system-region name="FOOTER LINKS"/>
+            <system-region name="UNIFORM CAMPUS FOOTER"/>
           </div>
-        
-          <system-region name="BREADCRUMBS" />
-
-        </div>
-        
-        <div class="row" id="sprflt">
-          
-          <div class="main-content" id="main" role="main">
-            <system-region name="DEFAULT" />
-            <system-region name="CONTENT BOTTOM" />
+          <div class="row legal">
+            <system-region name="UNIFORM DISCLAIMERS"/>
+            <system-region name="UNIFORM SERVER META"/>
           </div>
-          
-          <div class="sidebar" id="subNav">
-            <system-region name="LEFT NAV TOP" />
-            <system-region name="LEFT NAV" />
-            <system-region name="LEFT NAV BOTTOM" />
-            <system-region name="LEFT NAV BOTTOM GLOBAL" />
-          </div>
-        
         </div>
-        
-        <div class="row" id="footer">
-          <system-region name="FOOTER LINKS" />
-          <system-region name="UNIFORM CAMPUS FOOTER" />
-        </div>
-        
-        <div class="row legal">
-          <system-region name="UNIFORM DISCLAIMERS" />
-        </div>
-      
-      </div><!-- /content -->
-    </div><!-- /container -->
-  </div><!-- /wrap -->
-  
-  <system-region name="UNIFORM BOTTOM SCRIPTS" />
-  <system-region name="LOCAL BOTTOM SCRIPTS" />
-  <system-region name="PAGE BOTTOM SCRIPTS" />
-
-</body>
+        <!-- /content -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /wrap -->
+    <system-region name="UNIFORM BOTTOM SCRIPTS"/>
+    <system-region name="LOCAL BOTTOM SCRIPTS"/>
+    <system-region name="PAGE BOTTOM SCRIPTS"/>
+  </body>
 </html>
