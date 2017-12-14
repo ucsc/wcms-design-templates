@@ -4,11 +4,10 @@
 .names {
 
   // Mobile
-  margin: 1em auto 0;
+  margin: 1.5em auto 1em auto;
 
   // Tablet
   @include media($tablet) {
-    margin-bottom: $font-size-base;
   }
 
   .site-name {
@@ -65,41 +64,85 @@
     .campus-logo {
 
       @include hide-text();
-      background: transparent url('../images/logos/ucsc-logotype.svg') no-repeat left top;
+      background: transparent url('../images/logos/ucsc-logo-no-seal.png') no-repeat left top;
       background-size: contain;
       display: block;
-      height: 72px;
-      max-width: 260px;
+      overflow: hidden;
+      float: left;
+      width: 150px;
+      height: 59px;
 
-      @include span-columns(7);
+      @include media($small-desktop-plus) {
+          width: 220px;
+          height: 85px;
+      }
 
       @include media($tablet) {
-        @include span-columns(12);
+
       }
+
     }
-  }  
+
+  }
+
+  .secondary-name {
+    position: relative;
+
+    h1 {
+    font-family: $font-family-sans-serif-condensed;
+    text-transform: uppercase;
+    float: left;
+    padding-right: 60px;
+    line-height: 1.2;
+    font-size: 2.25rem;
+
+    @include media($tablet-minus) {
+      font-size: 1.5rem
+    }
+
+    em {
+      text-transform: none;
+      color: #333;
+      font-size: .75em;
+      font-weight: 300;
+    }
+
+    a {
+      &:focus,
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+  }
 
   .mobile-menu {
-
     // Mobile
-    border-radius: $border-radius-base/2;
-    background-color: darken($gray-light, 10%);
-    color:$sand-light;
-    float: right;
+    background-color: $brand-primary-blue;
+    position: absolute;
+    right: 0;
+    margin-top: -3px;
     font-weight: 300;
-    margin-top: 0.55em;
-    max-width: 8em;
-    padding: .5em 2.2em .5em .5em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
 
-    @include hoverActiveFocus($ucsc-blue, $sand-light, none);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: black;
+    }
 
     // Tablet+
     @include media($tablet) {
       display:none;
     }
+
   }
 
 }

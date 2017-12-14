@@ -12,16 +12,30 @@
 
   > div {
 
+    padding-right: 1%;
+    margin-bottom: 2em;
+
+    @include media($mobile) {
+    padding-right: 0;
+    }
+
+    h2 {
+      margin-top: .5em;
+      margin-bottom: 0;
+    }
+
     @include media($portrait) {
       flex: 1 0 30%;
     }
 
     @include media($desktop) {
       flex: 1 0 20%;
+
     }
+
   }
 }
 
 .landing .three.combined.light {
-  padding: 1em;
+
 }

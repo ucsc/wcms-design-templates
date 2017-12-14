@@ -7,7 +7,7 @@
 .borderless {
   border:none;
   td {
-    border-bottom:none; 
+    border-bottom:none;
   }
 }
 
@@ -15,16 +15,6 @@
   position: absolute;
   left: -900em;
   outline: none;
-}
-
-.align-right {
-  float: right;
-  margin: 0 0 1em 1em;
-  clear: right;
-}
-
-.align-left {
-  float: left;
-  margin: 0 1em 1em 0;
-  clear: left;
+  color: #000;
+  background-color: #fff;
 }

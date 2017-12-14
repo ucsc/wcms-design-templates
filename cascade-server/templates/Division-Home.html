@@ -1,98 +1,99 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-
-<system-region name="UNIFORM HTML HEAD" />
-
-<title><system-page-title/></title>
-<system-page-meta-description/>
-<system-page-meta-keywords/>
-
-<system-region name="LOCAL HTML HEAD" />
-<system-region name="PAGE HTML HEAD" />
-<system-region name="CUSTOM HTML HEAD" />
-
-</head>
-
-<body class="home division">
-
-  <!-- Accessibility links. Hidden until they receive :focus -->
-  <ul id="access-links">
-    <li><a href="#main">Skip to main content</a></li>
-    <li><a href="#mainNav">Skip to primary navigation</a></li>
-  </ul>
-
-<system-region name="ALERT AREA" />
-
-  <div id="wrap">
-    <div id="container">
-      <div id="content">
-
-        <div role="banner" class="site-header"> 
-
-          <div class="row page-top">
-            <system-region name="UNIFORM CAMPUS LINKS" />
-            <div class="search" role="search">
-              <system-region name="SEARCH" />
+<html
+  xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <system-region name="UNIFORM HTML HEAD"/>
+    <title>
+      <system-page-title/>
+    </title>
+    <system-page-meta-description/>
+    <system-page-meta-keywords/>
+    <system-region name="LOCAL HTML HEAD"/>
+    <system-region name="PAGE HTML HEAD"/>
+    <system-region name="CUSTOM HTML HEAD"/>
+  </head>
+  <body class="home division">
+    <!-- Accessibility links. Hidden until they receive :focus -->
+    <ul id="access-links">
+      <li>
+        <a href="#main">Skip to main content</a>
+      </li>
+      <li>
+        <a href="#mainNav">Skip to primary navigation</a>
+      </li>
+    </ul>
+    <system-region name="ALERT AREA"/>
+    <div id="wrap">
+      <div id="container">
+        <div id="content">
+          <div class="site-header" role="banner">
+            <div class="row page-top">
+              <system-region name="UNIFORM CAMPUS LINKS"/>
+              <div class="search" role="search">
+                <system-region name="SEARCH"/>
+              </div>
+            </div>
+            <div class="row names">
+              <div class="campus-name">
+                <system-region name="UNIFORM CAMPUS LOGO"/>
+              </div>
+              <div class="site-name">
+                <system-region name="DIVISION NAME"/>
+              </div>
+            </div>
+            <div class="row main-navigation" role="navigation">
+              <system-region name="MAIN NAV"/>
             </div>
           </div>
-
-          <div class="row names">
-            <div class="campus-name">
-              <system-region name="UNIFORM CAMPUS LOGO" />
-            </div>  
-            <div class="site-name">
-              <system-region name="DIVISION NAME" />
+          <div id="main" role="main">
+            <div class="row">
+              <div id="carousel">
+                <system-region name="BANNER IMAGE"/>
+              </div>
+            </div>
+            <div class="row three separate dark">
+              <div class="wrap">
+                <system-region name="MIDDLE ROW LEFT"/>
+              </div>
+              <div class="wrap">
+                <system-region name="MIDDLE ROW CENTER"/>
+              </div>
+              <div class="wrap last">
+                <system-region name="MIDDLE ROW RIGHT"/>
+              </div>
+            </div>
+            <div class="row four clear">
+              <div class="wrap">
+                <system-region name="BOTTOM ROW 1"/>
+              </div>
+              <div class="wrap">
+                <system-region name="BOTTOM ROW 2"/>
+              </div>
+              <div class="wrap">
+                <system-region name="BOTTOM ROW 3"/>
+              </div>
+              <div class="wrap last">
+                <system-region name="BOTTOM ROW 4"/>
+              </div>
             </div>
           </div>
-
-          <div class="row main-navigation" role="navigation">
-            <system-region name="MAIN NAV" />
+          <div class="row" id="footer">
+            <system-region name="FOOTER LINKS"/>
+            <system-region name="UNIFORM CAMPUS FOOTER"/>
           </div>
-
-        </div> 
-
-        <div role="main" id="main">
-
-        <div class="row">
-          <div id="carousel">
-            <system-region name="BANNER IMAGE" />
-          </div>   
+          <div class="row legal">
+            <system-region name="UNIFORM DISCLAIMERS"/>
+            <system-region name="UNIFORM SERVER META"/>
+          </div>
         </div>
-
-        <div class="row three separate dark">
-          <div class="wrap"><system-region name="MIDDLE ROW LEFT" /></div>
-          <div class="wrap"><system-region name="MIDDLE ROW CENTER" /></div>
-          <div class="wrap last"><system-region name="MIDDLE ROW RIGHT" /></div>
-        </div>
-
-        <div class="row four clear">
-          <div class="wrap"><system-region name="BOTTOM ROW 1" /></div>
-          <div class="wrap"><system-region name="BOTTOM ROW 2" /></div>
-          <div class="wrap"><system-region name="BOTTOM ROW 3" /></div>
-          <div class="wrap last"><system-region name="BOTTOM ROW 4" /></div>
-        </div>
-
-        </div>
-        
-        <div class="row" id="footer">
-          <system-region name="FOOTER LINKS" />
-          <system-region name="UNIFORM CAMPUS FOOTER" />
-        </div>
-        
-        <div class="row legal">
-          <system-region name="UNIFORM DISCLAIMERS" />
-        </div>
-
-      </div><!-- /content -->
-    </div><!-- /container -->
-  </div><!-- /wrap -->
-
-  <system-region name="BOTTOM SCRIPTS" />
-  <system-region name="UNIFORM BOTTOM SCRIPTS" />
-  <system-region name="LOCAL BOTTOM SCRIPTS" />
-  <system-region name="PAGE BOTTOM SCRIPTS" />
-
-
-</body>
+        <!-- /content -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /wrap -->
+    <system-region name="BOTTOM SCRIPTS"/>
+    <system-region name="UNIFORM BOTTOM SCRIPTS"/>
+    <system-region name="LOCAL BOTTOM SCRIPTS"/>
+    <system-region name="PAGE BOTTOM SCRIPTS"/>
+  </body>
 </html>

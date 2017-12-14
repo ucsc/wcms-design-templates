@@ -11,23 +11,23 @@
   @include fontSize(28);
   text-transform:uppercase;
   display: inline-block;
-  color:$gold;
+  color:$brand-primary-blue;
   text-decoration:none;
   line-height:100%;
-  font-weight: 400;
+  font-weight: 100;
   margin-top: 15px;
   @include media($tablet) {
     @include fontSize(46);
   }
 }
-    
+
 
 $titles: (
   small: (
     size: 30px,
     margin-top: 4px,
     width: inherit
-  ),  
+  ),
   large: (
     size: 40px,
     margin-top: 18px,
@@ -37,7 +37,7 @@ $titles: (
     size: 44px,
     margin-top: 15px,
     width: inherit
-  ),  
+  ),
   standard: (
     size: 46px,
     margin-top: 14px,

@@ -1,9 +1,9 @@
 .contentBox,
 .content-box {
-  @include module-box-shadow;
-  background-color: $sand-light;
-  padding: 1.2em;
-  border-radius: $border-radius-base;
+  // @include module-box-shadow;
+  // background-color: $sand-light;
+  // padding: 1.2em;
+  // border-radius: $border-radius-base;
   margin:0;
   overflow-x: auto;
   @include clearfix;

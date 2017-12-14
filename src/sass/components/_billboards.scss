@@ -16,13 +16,12 @@ Slide Styles
 	@include media ($mobile) {
 		max-width: 100%;
 		text-align: left;
-		padding: 1.5em 1em;
 	}
 
 	@include media ($tablet) {
 		width: 100%;
-		max-width: 475px;
-		margin: 3% 0 3% 0;
+		max-width: 50%;
+		margin: 2% 0 ;
 	}
 }
 
@@ -53,15 +52,16 @@ Slide Styles
 
 @mixin billboard-title {
 	.slide-title {
-		@include media($mobile) {
+		font-family: $font-family-sans-serif;
+		font-weight: 700;
+
+		@include media($tablet-minus) {
 			font-size: 2.5em;
 			margin: 0 0 0.10em;
 		}
-		
+
 		@include media($tablet) {
-			font-size: 3em;
-			display: block;
-			line-height: 90%;
+			font-size: 2.5em;
 		}
 	}
 
@@ -70,11 +70,11 @@ Slide Styles
 @mixin billboard-teaser{
 	.slide-teaser {
 		@include media($mobile) {
-			font-size: 1.25em;
+			font-size: 1.1em;
 		}
 
 		@include media($tablet)  {
-			font-size: 1.5em;
+			font-size: 1.2em;
 		}
 	}
 
@@ -85,7 +85,7 @@ Slide Styles
 	@include media($mobile) {
 		font-size: .9em;
 	}
-	
+
 	@include media($tablet)  {
 		font-size: .9em;
 	}
@@ -98,11 +98,11 @@ Slide Styles
 	.slide-title {
 		  display: block;
 		  margin: 0;
-		  width: 40%;
+		  width: 50%;
 		  line-height: .9em;
 		  text-align: right;
 		  float: left;
-	  
+
 	  @include media($mobile) {
 			width: 100%;
 			max-width:803px;
@@ -116,7 +116,7 @@ Slide Styles
 	  		padding: .20em .5em .20em;
 	  }
 
-	}	
+	}
 }
 
 
@@ -154,15 +154,14 @@ Slide Styles
 	margin-bottom: 5px;
 	font-size: $font-size-small;
 	max-height:362px;
-	border-radius: $border-radius-base;
 	overflow:hidden;
-	
+
 	img{
 		width:100%;
 		height: auto;
 		z-index:1;
 	}
-	
+
 }
 
 .slide-body {
@@ -171,52 +170,38 @@ Slide Styles
 	width: 100%;
 	bottom: 0;
 	z-index:1;
-	background-color:rgba($ucsc-blue, 0.80);
-	color:$sand-light;
-	padding: 1em 1.2em 0.6em;
+	padding: 2em 2.5em 2em 2.5em;
+
 	@include slider-position;
 	.slide-title {
-		text-transform: uppercase;
-		color:$sand-light;
-		font-weight: 500;
-		margin:0 0 .10em 0;
 		line-height: 90%;
-	}
-
-	.slide-teaser {
-		color:$sand-light;
-		padding:0;
-		margin:0 0 .25em 0;
-		line-height: 115%;
-		font-weight: 400;
 	}
 
 	a {
 		color: $gold;
 		text-decoration: none;
-		@include billboard-slider-a; 
+		@include billboard-slider-a;
   	 &:after {
     		content: " »";
   		}
 	}
 
-	&.layout-left{
+	&.layout-left {
 		@include billboard-title;
 		@include billboard-teaser;
 		@include layout-left-right;
-		text-align: right;
 		left:0;
 	}
-	
+
 	&.layout-right{
 		@include billboard-title;
-		@include billboard-teaser; 
+		@include billboard-teaser;
 		@include layout-left-right;
 		text-align: left;
 		right: 0;
 	}
-	
-	&.layout-top {   	
+
+	&.layout-top {
 	   	@include layout-horizontal;
 	   	@include horizontal-title;
 	   	@include horizontal-teaser;
@@ -239,15 +224,31 @@ Color Themes
 ================================================================*/
 
 // A map of color theme settings for these slides.
-$themes: (	
+$themes: (
   "blue": (
-	 background-color: rgba($ucsc-blue, 0.85),
-	 color: $gold
-  ),  
+	 background-color: $brand-primary-blue,
+	 color: #fff
+  ),
+	"pink": (
+	 background-color: $brand-pink,
+	 color: #fff
+  ),
+	"green": (
+	 background-color: $brand-turquoise,
+	 color: #fff
+  ),
+	"light-blue": (
+	 background-color: $brand-tertiary-blue,
+	 color: #fff
+  ),
   "gold": (
-    background-color: rgba($gold, 0.85),
-    color: $blue
-  )
+    background-color: $brand-gold,
+    color: $brand-primary-blue
+  ),
+	"lime": (
+		background-color: $brand-green,
+		color: $brand-primary-blue
+	)
 );
 
 // Loop over the mapped themes and output a rule for each one.
@@ -257,8 +258,11 @@ $themes: (
         .slide-title {
         	color:#{map-get($i, color)};
         }
+				p {
+        	color:#{map-get($i, color)};
+        }
         a {
-        	color:#{map-get($i, color)};	
+        	color:#{map-get($i, color)};
         }
     }
 }
@@ -279,7 +283,7 @@ Pagination Styles
 
 // The control dots under each set of billboards.
 .owl-controls .owl-pagination {
-	
+
 	.owl-page span {
 		background-color:$gray-light;
 		opacity:0.25;

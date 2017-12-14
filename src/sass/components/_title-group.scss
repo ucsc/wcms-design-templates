@@ -1,42 +1,46 @@
 // The title and subtitle on second-level pages of the main campus website
 
 .title-group {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     display: table;
 
     h1 {
-        font-size:3.2rem;
+        font-size:2.5rem;
         margin:0;
-        color: $gold;
-        font-weight:500;
-        letter-spacing:-2px;
-        line-height: 1;
+        // color: $gold;
+        // font-weight:500;
+        // letter-spacing:-2px;
+        // line-height: 1;
+        font-weight: normal;
         padding:0;
-        text-shadow: 1px 1px 2px $sand-dark;
+        // text-shadow: 1px 1px 2px $sand-dark;
+
+
     }
 
     p {
-        font-size:1.20em;
-        line-height:1.2;
+        font-size: 1rem;
         font-weight:300;
-        color:$gray-light;
-        word-spacing:-1px;
+        margin-top: 0;
     }
 
     @include media($desktop) {
+
+        h1 {
+          font-size: 3rem;
+        }
+
         h1, p {
             display:table-cell;
             position: relative;
-            vertical-align: middle;                     
+            vertical-align: middle;
         }
 
         p {
-            padding:0.2em 0 0 1em;
+            font-size: 1.2rem;
+            padding:1em 0 0 1em;
             margin:0;
         }
     }
 
 }
-
-
-

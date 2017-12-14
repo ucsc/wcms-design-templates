@@ -4,7 +4,7 @@
 
 	ul {
 		@include reset(list);
-		
+
 		li {
 			clear: both;
 			line-height:130%;
@@ -17,15 +17,13 @@
 			img {
 				float: left;
 				display: block;
-				margin: 0 0.5em 0.5em 0;	
+				margin: 0 0.5em 0.5em 0;
 				width:80px;
 				height:auto;
 			}
 
 			.date {
-				color: #929290;
-				font-size: 0.75em;
-				letter-spacing: 1px;
+				color: $brand-medium-gray;
 				display: block;
 				margin:0;
 			}

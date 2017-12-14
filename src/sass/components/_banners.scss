@@ -2,23 +2,27 @@
 
 #bannerBox,
 .banner-box {
-  @include module-box-shadow(light);
-  background-color: $sand-light;
-  padding: 0.8em;
+  // @include module-box-shadow(light);
+  // background-color: $sand-light;
+  // padding: 0.8em;
   margin-bottom: $font-size-base;
-  border-radius: $border-radius-base;
+  // border-radius: $border-radius-base;
+
 
   img {
     width: 100%;
     height:auto;
     padding:0;
-    background-color: transparent;   
+    background-color: transparent;
   }
 
   .caption {
-    margin:$font-size-base/4 $font-size-base/4 0 $font-size-base/4;
-    font-size:90%;
-    color: $gray;
+    color: $brand-primary-blue;
+    margin-top: .25em;
+    margin-bottom: 1em;
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: 1.2em;
   }
 
 }

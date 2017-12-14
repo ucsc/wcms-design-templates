@@ -3,23 +3,20 @@
 .right-column .sidebar {
 
   .inner {
-    @include module-box-shadow();
-    border-radius: $border-radius-base;
-    padding: 0.75em 1em;
-    margin-bottom: 1em;
-    background-color: $sand;
+
+
+
+    margin-bottom: 2em;
     @include clearfix;
   }
 
    h4, .header {
     font-size: 1.2em;
     font-weight: bold;
-    border-bottom: 2px solid darken($sand-light, 2%);
     padding-bottom: 0.5em;
     margin-top: 0;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
    }
-  
+
   ul {
     list-style: square;
     font-size: 1em;
@@ -39,7 +36,7 @@
         }
     }
   }
-  
+
 }
 
 // Modifier for news site.

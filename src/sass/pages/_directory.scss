@@ -14,19 +14,18 @@ div.directoryPhoto {
 }
 
 img.directoryPhoto {
-  width: 20%;  
-  padding:0.25em;
-  margin: 1em 0 1em 1em; 
-  background-color: $sand-light;
+  width: 20%;
+  margin: 1em 0 1em 0;
+  background-color: white;
 }
 
 div.directoryTextBlock,
 div.directoryPhoto {
-  padding: 1em;
-  background-color: darken($sand, 8%);
+  // padding: 1em;
+  background-color: white;
   @include clearfix;
   margin-bottom: 2em;
-  @include module-box-shadow(light);
+  // @include module-box-shadow(light);
 }
 
 div.directoryTextBlock h3 {
@@ -50,4 +49,3 @@ img.directoryPhoto {
     margin: 1em 0;
   }
 }
-

@@ -2,11 +2,7 @@
 
 #seeAlso,
 .see-also {
-  padding:0.8em;
-  background-color:$sand-light;
-  border-radius: 5px;
-  margin:0 0 1em;
-  @include module-box-shadow(light);
+  margin:0 0 2em;
   @include clearfix;
 
   ul {

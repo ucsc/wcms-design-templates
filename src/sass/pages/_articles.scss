@@ -7,12 +7,12 @@
 
   .subhead,
   .campus-message {
-    color: $gray-dark;
+    color: #333;
     font-size: 1.3em;
     font-weight: 300;
     line-height: 1.4;
-    margin: 0;
-    width: 85%;
+    margin: 0 0 1em 0;
+    // width: 85%;
   }
 
   .campus-message {

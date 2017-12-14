@@ -2,16 +2,13 @@
 
 .article-video,
 .article-image {
-  display: table;
+  display:block;
   clear: right;
   width: auto;
   min-width: 20%;
   max-width:75%;
   float:right;
-  background-color: lighten($sand, 2%);
   padding: 0.5em;
-  border-radius:5px;
-  border-bottom: solid 1px #dad8c8;
   margin:0 0 1em 1em;
 
   // Image inside of figure is always 100%
@@ -25,13 +22,16 @@
   }
 
   // Caption styles
-  .article .image figcaption,
   .caption {
     margin: 0;
-    padding:0.5em 0.5em 0 0.5em;
+    padding:0.5em 0 0 0;
+    font-style: italic;
+    font-family:$font-family-serif;
+
     p {
       margin: 0;
-      line-height: 1.2;
+        color: $brand-primary-blue;
+        font-size: 1.2em;
     }
   }
 
