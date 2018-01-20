@@ -2,26 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 
-<system-region name="UNIFORM HTML HEAD" />
+<system-region name="UNIFORM HTML HEAD"/>
 
 <title><system-page-title/></title>
 <system-page-meta-description/>
 <system-page-meta-keywords/>
 
-<system-region name="LOCAL HTML HEAD" />
-<system-region name="PAGE HTML HEAD" />
-<system-region name="CUSTOM HTML HEAD" />
+<system-region name="LOCAL HTML HEAD"/>
+<system-region name="PAGE HTML HEAD"/>
+<system-region name="CUSTOM HTML HEAD"/>
 
 </head>
 
-<body class="right-column dept news home">
+<body class="left-column dept news">
 
   <!-- Accessibility links. Hidden until they receive :focus -->
   <ul id="access-links">
     <li><a href="#main">Skip to main content</a></li>
     <li><a href="#mainNav">Skip to primary navigation</a></li>
   </ul>
-  
+
 <system-region name="ALERT AREA"/>
 
   <div id="wrap">
@@ -39,10 +39,10 @@
 
           <div class="row names">
             <div class="campus-name">
-              <system-region name="UNIFORM CAMPUS LOGO" />
+              <system-region name="UNIFORM CAMPUS LOGO"/>
             </div>  
             <div class="site-name">
-              <system-region name="DEPARTMENT NAME" />
+              <system-region name="DEPARTMENT NAME"/>
             </div>
           </div>
           
@@ -50,24 +50,23 @@
              <system-region name="MAIN NAV"/>
           </div>
 
+          <system-region name="BREADCRUMBS"/>  
+
         </div>
 
-        <system-region name="BREADCRUMBS"/>
-
+       
         <div class="row" id="sprflt">
-          
-          <div class="main-content" id="main" role="main">          
-            <system-region name="FEATURE"/> 
+
+          <div class="main-content" id="main" role="main">
+            <system-region name="CONTENT TOP"/>
             <system-region name="DEFAULT"/>
-            <system-region name="MAIN COLUMN 1"/>
-            <system-region name="MAIN COLUMN 2"/>
-            <system-region name="CONTENT BOTTOM"/>         
+            <system-region name="CONTENT BOTTOM"/>
           </div>
           
-          <div class="sidebar" id="subNav">
-            <system-region name="RIGHT COLUMN 1"/>
-            <system-region name="RIGHT COLUMN 2"/>
-            <system-region name="CONTENT RIGHT"/>
+          <div class="sidebar" id="subNav" role="navigation">
+            <system-region name="LEFT NAV TOP"/>
+            <system-region name="LEFT NAV"/>
+            <system-region name="LEFT NAV BOTTOM"/>
           </div>
 
         </div>
@@ -78,9 +77,9 @@
         </div>
 
         <div class="row legal">
-          <system-region name="UNIFORM DISCLAIMERS" />
+          <system-region name="UNIFORM DISCLAIMERS"/>
+          <system-region name="UNIFORM SERVER META"/>
         </div>
-      
         
       </div><!-- /content -->
     </div><!-- /container -->
