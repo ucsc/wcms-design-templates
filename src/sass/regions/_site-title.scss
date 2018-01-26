@@ -64,7 +64,7 @@
     .campus-logo {
 
       @include hide-text();
-      background: transparent url('../images/logos/ucsc-logo-no-seal.png') no-repeat left top;
+      background: transparent url('https://d33wubrfki0l68.cloudfront.net/_responsive/images/logos/c5864e62bb85d4a7f50d170f2dcae0875ef539c3/ucsc-logo-no-seal.png') no-repeat left top;
       background-size: contain;
       display: block;
       overflow: hidden;
@@ -87,8 +87,6 @@
 
   .secondary-name {
     position: relative;
-
-    h1 {
     font-family: $font-family-sans-serif-condensed;
     text-transform: uppercase;
     float: left;
@@ -113,9 +111,6 @@
       &:active {
         text-decoration: none;
       }
-
-    }
-
   }
 
   }
