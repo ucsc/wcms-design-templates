@@ -10,7 +10,7 @@
   // below 768 on load.
   var bodyWidth = $("body").innerWidth();
   if(bodyWidth <= 767) {
-    $('.page-top').hide();
+    $('.page-top-right').hide();
     $('#mainNav').hide();
   }
 
@@ -19,14 +19,14 @@
   
   $('.mobile-menu').click(function(){
     if (mobileNavOpen == 0){
-      $('.page-top').slideDown(300);
+      $('.page-top-right').slideDown(300);
       $('#mainNav').slideDown(300);
       $(this).addClass("active");
       mobileNavOpen = 1;
       return false;
     }
     else {
-      $('.page-top').slideUp(300);
+      $('.page-top-right').slideUp(300);
       $('#mainNav').slideUp(300);
       $(this).removeClass("active");
       mobileNavOpen = 0;
@@ -43,10 +43,10 @@
         
     //SHOW OR HIDE NAVS
     if ( (bodyResize <= 767) && mobileNavOpen == 0) {
-      $('.page-top').hide();
+      $('.page-top-right').hide();
       $('#mainNav').hide();
     } else {
-      $('.page-top').show();
+      $('.page-top-right').show();
       $('#mainNav').show();
     }
     
