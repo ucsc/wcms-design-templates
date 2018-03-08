@@ -76,7 +76,7 @@
     @include media($tablet) {
       display: block;
       margin-left: 20px;
-      width: 250px;
+      width: 160px;
       margin-bottom: 4px;
     }
   }
@@ -116,7 +116,7 @@
           background-image: none;
           line-height: 1.2em;
           list-style-type: none;
-          margin-left: 1.5em;
+          margin-left: 1em;
           position: relative;
           padding: 0;
         }
@@ -130,7 +130,7 @@
           display: block;
           position: absolute;
           top: 50%;
-          left: -1em;
+          left: -.65em;
           margin-left: -1.5px;
           margin-top: -2.5px;
         }
@@ -158,8 +158,8 @@
   // Mobile first defaults
   .query {
     font-size: 15px;
-    line-height: 160%;
-    padding:$font-size-base/4 $font-size-base/2;
+    line-height: 140%;
+    padding:$font-size-base/4;
     width: 100%;
     color: $gray-dark;
     // border: 1px solid lighten($gray-light, 20%);
