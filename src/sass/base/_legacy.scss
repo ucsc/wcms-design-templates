@@ -37,14 +37,13 @@
   few people found and used them.
 */
 .columns-2 {
-  padding:0.55em;
-  background-color:$sand-dark;
-  border-bottom:1px solid $gray-light;
-  padding:1em;
-  border-radius:$border-radius-base;
-  column-count:2;
-  column-gap:1em;
+  background-color: lighten($brand-light-gray, 2%);
+  border-bottom: 2px solid $brand-primary-blue;
+  column-count: 2;
+  column-gap: .75em;
+  padding: 1em;
 }
+
 .columns-2 :first-child { margin-top:0; }
 
 
