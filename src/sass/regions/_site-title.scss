@@ -86,23 +86,27 @@
   }
 
   .secondary-name {
-    position: relative;
+    display: flex;
+  }
+
+  .secondary-name,
+  .secondary-name > * {
     font-family: $font-family-sans-serif-condensed;
     text-transform: uppercase;
-    float: left;
-    padding-right: 60px;
     line-height: 1.2;
     font-size: 2.25rem;
+    margin: 0 0 .25em;
 
     @include media($tablet-minus) {
-      font-size: 1.5rem;
+      font-size: 1.85rem;
+      margin: 0 0 .25em;
     }
 
-    em {
-      text-transform: none;
+    span {
       color: #333;
       font-size: .75em;
       font-weight: 300;
+      text-transform: none;
     }
 
     a {
