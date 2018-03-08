@@ -36,7 +36,7 @@ var paths = {
 //
 gulp.task('webserver', function() {
     browserSync.init("./build/index.html", {
-        https: true,
+        https: false,
         server: {
             baseDir: ["./build", "./examples"],
             routes: {
