@@ -30,7 +30,8 @@ We recommend [Homebrew](https://brew.sh/) for managing packages on the Mac.
 3. Install `node` and `npm` by downloading the installer from [nodejs.com](http://nodejs.org) or with Homebrew.
 4. Install gulp and bower globally: `npm install -g gulp bower`
 5. `cd` into the project  directory and run `npm install` in the project root to install all node dependencies.
-6. Run `bower install` to install bower components into the `./bower_components` directory.
+6. Run `mkdir ./bower_components` to create a directory for Bower.
+7. Run `bower install` to install bower components.
 
 ## Development
 
