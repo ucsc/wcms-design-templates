@@ -8,7 +8,7 @@
 .main-navigation {
   margin-bottom: 0;
   .home & {
-    margin-bottom:1.2em;
+    margin-bottom: 1.2em;
   }
 }
 
@@ -63,7 +63,6 @@
     }
 
     span {
-      padding-right: 20px;
       &:focus,
       &:hover,
       &:active {
@@ -89,22 +88,10 @@
 
     // A span tag inside of an a results in double-padding.
     // This rule removes it.
-    a span { padding: 0; }
+    a span { padding: 0; padding-right: 20px; }
+
   }
 
-  @include media($tablet) {
-    > :last-child {
-      > a {
-      }
-      > span {
-      }
-    }
-
-    > :first-child {
-      > a, > span {
-      }
-    }
-  }
 
   /* Dropdowns */
    li ul {
