@@ -14,7 +14,9 @@
   display: block;
 
   @include media($tablet) {
-    display: table;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
     padding: 0;
   }
 
@@ -26,6 +28,7 @@
     @include media($tablet) {
       float: left;
       width: 33.333%;
+      flex-basis: 33.333%;
 
     }
   }
