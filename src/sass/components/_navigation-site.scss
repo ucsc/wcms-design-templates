@@ -46,6 +46,11 @@
       }
     }
 
+    // A span tag inside of an a results in double-padding.
+    // This rule removes it.
+    & > a span,
+    & > span { padding: 0; padding-right: 20px; }
+
     @include media($small-desktop-plus) {
       font-size: 1.35rem;
       margin-right: 1.75em;
@@ -83,12 +88,7 @@
 
     &:last-of-type {
       margin-right: 0;
-    }
-
-
-    // A span tag inside of an a results in double-padding.
-    // This rule removes it.
-    a span { padding: 0; padding-right: 20px; }
+    }    
 
   }
 
