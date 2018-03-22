@@ -49,7 +49,11 @@
     // A span tag inside of an a results in double-padding.
     // This rule removes it.
     & > a span,
-    & > span { padding: 0; padding-right: 20px; }
+    & > span {
+      background: transparent url(../images/down-arrow.svg) no-repeat right 60%;
+      background-size: 14px;
+      padding: 0 20px 0 0;
+    }
 
     @include media($small-desktop-plus) {
       font-size: 1.35rem;
@@ -64,7 +68,6 @@
         border-bottom: 1px dashed $brand-light-gray;
         padding: 5px 10px;
       }
-
     }
 
     span {
@@ -73,18 +76,7 @@
       &:active {
         border-color: transparent;
       }
-    }
-
-    span:after {
-      content: "\f078";
-      font-size: 15px;
-      color: $brand-yellow;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 20%;
-      font-family: FontAwesome;
-    }
+    }    
 
     &:last-of-type {
       margin-right: 0;
