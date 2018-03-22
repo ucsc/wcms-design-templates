@@ -21,12 +21,12 @@ float:left;
 width:1010px;
 }
 .detail_page_box {
-	width:780px;
-	display:block;
+  width:780px;
+  display:block;
 }
 .list_page_box {
-	width:950px;
-	display:inline-block;
+  width:950px;
+  display:inline-block;
 }*/
 .PSTEXT {
 font-size: 10px;
@@ -186,7 +186,7 @@ font-size:12px;
 display: inline-block;
 }
 .navArrows {
-font-size:9px;	
+font-size:9px;  
 }
 .clickableText {
 cursor:pointer;
@@ -196,7 +196,7 @@ color:#5585A2;
 text-decoration:underline;
 }
 .rightDiv {
-float:right;	
+float:right;  
 }
 .term_descr {
 font-size:11px;
@@ -208,7 +208,7 @@ border-width: 1px 1px 1px 1px;
 border-spacing: 0px;
 border-style: solid solid solid solid;
 border-color: #7B97C0 #7B97C0 #7B97C0 #7B97C0;
-background-color: #ece9d8;
+background-color: transparent;
 padding-bottom: 2px;
 }
 .header_form {
@@ -257,7 +257,7 @@ width:50px;
 width:90px;
 }
 .titleCol {
-width:125px;	
+width:125px;  
 }
 .mtgDaysCol{
 width:50px;
@@ -266,7 +266,7 @@ width:50px;
 width:110px;
 }
 .locationCol {
-width:110px;	
+width:110px;  
 }
 .instructorCol {
 width:90px;
