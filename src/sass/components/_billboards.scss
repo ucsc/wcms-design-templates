@@ -28,13 +28,13 @@ Slide Styles
 // Top and bottom full-width layouts
 @mixin layout-horizontal {
 	@include media ($mobile) {
-		padding:1.5em 1em;
+		padding: 1.5em 1em;
 	}
 	@include media ($tablet) {
 		height: 35%;
 		margin: 0;
 		width:100%;
-		padding: 0;
+		padding: .4em 0;
 	}
 }
 
