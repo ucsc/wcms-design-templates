@@ -4,7 +4,7 @@
 .names {
 
   // Mobile
-  margin: 1.5em auto 1em auto;
+  margin: 1.5em auto .25em auto;
 
   // Tablet
   @include media($tablet) {
