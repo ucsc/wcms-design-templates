@@ -111,3 +111,19 @@ $(window).load(function() {
 
   });
 });
+
+(function() {
+var text = document.querySelector('.secondary-name a').innerHTML.split(" ");
+var words = ["of", "and", "is", "&amp;"];
+
+for (var i = 0; i < text.length; i++) {
+    for (var j = 0; j < words.length; j++) {
+        if (text[i].toLowerCase() == words[j]) {
+            text[i] = "<span>" + text[i] + "</span>";
+        }
+    }
+}
+
+var newHeading = text.join(' ');
+document.querySelector('.secondary-name a').innerHTML = newHeading;
+})();
