@@ -157,24 +157,20 @@
 }
 
 .more {
-	display:block;
-	clear:both;
-	text-transform:none;
+  background-image: none;
+  text-align: right;
+  clear: both;
+}
+
+.more a {
+  background: transparent url(../images/right-arrow.svg) no-repeat right 58%;
+  background-size: 14px;
+  padding: 0 14px 0 0;
+  text-transform:none;
 }
 
 .block table {
   margin-bottom: 1em;
-}
-
-
-
-
-// ## Header styles for each home page row style.
-// @todo: we should make this more standardized.
-// A mixin, perhaps?
-
-.separate .block-header {
-
 }
 
 // Home page, right under billboards
@@ -185,12 +181,5 @@
   a {
     color: $brand-dark-gray;
   }
-
-}
-
-// Dept-Div pages
-.dept .combined .block-header,
-.dept .combined .block-header {
-
 
 }
