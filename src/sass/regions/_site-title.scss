@@ -64,17 +64,18 @@
     .campus-logo {
 
       @include hide-text();
-      background: transparent url('https://d33wubrfki0l68.cloudfront.net/_responsive/images/logos/c5864e62bb85d4a7f50d170f2dcae0875ef539c3/ucsc-logo-no-seal.png') no-repeat left top;
+      background: transparent url('https://static-preview.ucsc.edu/_responsive/images/logos/uc-santa-cruz.svg') no-repeat left top;
       background-size: contain;
       display: block;
       overflow: hidden;
       float: left;
       width: 150px;
-      height: 59px;
+      height: auto;
 
       @include media($small-desktop-plus) {
           width: 220px;
-          height: 85px;
+          height: auto;
+          margin-bottom: 0.5em;
       }
 
       @include media($tablet) {
@@ -125,6 +126,7 @@
 
   .mobile-menu {
     // Mobile
+    @include hide-text();
     background-color: $brand-primary-blue;
     position: absolute;
     right: 0;
