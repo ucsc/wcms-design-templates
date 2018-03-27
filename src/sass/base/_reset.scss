@@ -147,11 +147,13 @@ blockquote {
 ol {
 	list-style-type: decimal;
 	padding: 0;
+	margin-left: 1em;
 }
 
 ul {
 	list-style-type: square;
 	padding: 0;
+	margin-left: 1em;
 	ul {
 		list-style-type: circle;
 	}
