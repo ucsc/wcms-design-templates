@@ -4,24 +4,52 @@ $(document).ready(function(){
   // "Enable" javascript by adding a body class.
   $('body').addClass('js');
 
-  /**
-   * Remove default value from search input on focus.
-  */
-  $('input.query').each( function(index){
-    var el = $(this);
-    var def = el.attr('value');
+  // Mobile mode if the screen width is below 768px
+  var bodyWidth = $("body").innerWidth();
+    if(bodyWidth <= 767) {
+      $('.page-top-right').hide();
+      $('#mainNav').hide();
+    }
 
-      el.val(def).focus(function() {
-        if(el.val() == def) {
-          el.val("");
-        }
-        el.blur(function() {
-          if(el.val() == "") {
-            el.val(def);
-          }
-        });
-      });
+  // Logic to toggle mobile navigation
+  var mobileNavOpen = 0; // Mobile nav closed by default
+    
+  $('.mobile-menu').click(function(){
+    if (mobileNavOpen == 0){
+      $('.page-top-right').slideDown(300);
+      $('#mainNav').slideDown(300);
+      $(this).addClass("active");
+      mobileNavOpen = 1;
+      return false;
+    }
+    else {
+      $('.page-top-right').slideUp(300);
+      $('#mainNav').slideUp(300);
+      $(this).removeClass("active");
+      mobileNavOpen = 0;
+      return false;
+    } 
   });
+
+
+  // Additional tweaks
+  var bodyWidth = $("body").innerWidth(); // No scrollbars
+
+  //WINDOW RESIZE
+    $(window).resize(function() {
+      
+      var bodyResize = $("body").innerWidth();
+          
+      //SHOW OR HIDE NAVS
+      if ( (bodyResize <= 767) && mobileNavOpen == 0) {
+        $('.page-top-right').hide();
+        $('#mainNav').hide();
+      } else {
+        $('.page-top-right').show();
+        $('#mainNav').show();
+      }
+      
+    });
 
   /**
    * UI tweak: sidebar folders where all but the current page
@@ -41,8 +69,50 @@ $(document).ready(function(){
       }
   });
 
+  // Add flourish to flourish words
+  if (document.querySelector('.secondary-name a')) {
+
+  var text = document.querySelector('.secondary-name a').innerHTML.split(" ");
+  var words = ["of", "and", "is", "&amp;"];
+
+  for (var i = 0; i < text.length; i++) {
+      for (var j = 0; j < words.length; j++) {
+          if (text[i].toLowerCase() == words[j]) {
+              text[i] = "<span class=\"flourish\">" + text[i] + "</span>";
+          }
+      }
+  }
+
+  var newHeading = text.join(' ');
+  document.querySelector('.secondary-name a').innerHTML = newHeading;
+
+}
+
 });
 
+// iFRAMES
+function adjustIframes()
+{
+    $('iframe').each(function(){
+        var
+            $this       = $(this),
+            proportion  = $this.data( 'proportion' ),
+            w           = $this.attr('width'),
+            actual_w    = $this.width();
+
+        if ( ! proportion )
+        {
+            proportion = $this.attr('height') / w;
+            $this.data( 'proportion', proportion );
+        }
+
+        if ( actual_w != w )
+        {
+            $this.css( 'height', Math.round( actual_w * proportion ) + 'px' );
+        }
+    });
+}
+$(window).on('resize load',adjustIframes);
 
 /**
  * UI-tweak: This looks at the natural width of article/profile

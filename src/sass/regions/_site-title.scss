@@ -4,7 +4,7 @@
 .names {
 
   // Mobile
-  margin: 1.5em auto 1em auto;
+  margin: 1.5em auto .25em auto;
 
   // Tablet
   @include media($tablet) {
@@ -64,17 +64,18 @@
     .campus-logo {
 
       @include hide-text();
-      background: transparent url('../images/logos/ucsc-logo-no-seal.png') no-repeat left top;
+      background: transparent url('https://static.ucsc.edu/_responsive/images/logos/uc-santa-cruz.svg') no-repeat left top;
       background-size: contain;
       display: block;
       overflow: hidden;
       float: left;
       width: 150px;
-      height: 59px;
+      height: auto;
 
       @include media($small-desktop-plus) {
           width: 220px;
-          height: 85px;
+          height: auto;
+          margin-bottom: 0.5em;
       }
 
       @include media($tablet) {
@@ -86,25 +87,31 @@
   }
 
   .secondary-name {
-    position: relative;
+    display: flex;
+  }
 
-    h1 {
+  .secondary-name,
+  .secondary-name > * {
     font-family: $font-family-sans-serif-condensed;
     text-transform: uppercase;
-    float: left;
-    padding-right: 60px;
     line-height: 1.2;
     font-size: 2.25rem;
+    margin: 0 0 .25em;
+    padding-right: 60px;
 
     @include media($tablet-minus) {
-      font-size: 1.5rem
+      font-size: 1.85rem;
+      margin: 0 0 .25em;
     }
 
-    em {
-      text-transform: none;
+    .flourish {
       color: #333;
       font-size: .75em;
       font-weight: 300;
+      font-family: Georgia,serif;
+      font-style: italic;
+      line-height: 90%;
+      text-transform: lowercase;
     }
 
     a {
@@ -113,15 +120,13 @@
       &:active {
         text-decoration: none;
       }
-
-    }
-
   }
 
   }
 
   .mobile-menu {
     // Mobile
+    @include hide-text();
     background-color: $brand-primary-blue;
     position: absolute;
     right: 0;

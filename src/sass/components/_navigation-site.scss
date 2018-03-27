@@ -8,7 +8,7 @@
 .main-navigation {
   margin-bottom: 0;
   .home & {
-    margin-bottom:1.2em;
+    margin-bottom: 1.2em;
   }
 }
 
@@ -28,7 +28,7 @@
     display: block;
     font-family: $font-family-serif;
     font-size: 1.15rem;
-    margin-right: 1.25em;
+    margin-right: 1.05em;
 
     a, span {
       color: #000;
@@ -46,9 +46,18 @@
       }
     }
 
+    // A span tag inside of an a results in double-padding.
+    // This rule removes it.
+    & > a span,
+    & > span {
+      background: transparent url(../images/down-arrow.svg) no-repeat right 60%;
+      background-size: 14px;
+      padding: 0 20px 0 0;
+    }
+
     @include media($small-desktop-plus) {
       font-size: 1.35rem;
-      margin-right: 1.75em;
+      margin-right: 1.25em;
     }
 
     @include media($tablet-minus) {
@@ -59,47 +68,22 @@
         border-bottom: 1px dashed $brand-light-gray;
         padding: 5px 10px;
       }
-
     }
 
     span {
-      padding-right: 20px;
       &:focus,
       &:hover,
       &:active {
         border-color: transparent;
       }
-    }
+    }    
 
-    span:after {
-      content: "\f078";
-      font-size: 15px;
-      color: $brand-yellow;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 20%;
-      font-family: FontAwesome;
-    }
+    &:last-of-type {
+      margin-right: 0;
+    }    
 
-    // A span tag inside of an a results in double-padding.
-    // This rule removes it.
-    a span { padding: 0; }
   }
 
-  @include media($tablet) {
-    > :last-child {
-      > a {
-      }
-      > span {
-      }
-    }
-
-    > :first-child {
-      > a, > span {
-      }
-    }
-  }
 
   /* Dropdowns */
    li ul {
