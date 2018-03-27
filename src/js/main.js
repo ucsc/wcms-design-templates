@@ -78,7 +78,7 @@ $(document).ready(function(){
   for (var i = 0; i < text.length; i++) {
       for (var j = 0; j < words.length; j++) {
           if (text[i].toLowerCase() == words[j]) {
-              text[i] = "<span>" + text[i] + "</span>";
+              text[i] = "<span class=\"flourish\">" + text[i] + "</span>";
           }
       }
   }
