@@ -69,6 +69,13 @@ $(document).ready(function(){
       }
   });
 
+  // Strip style attributes from main navigation.
+  if (typeof forEach == 'function') { 
+    var navItems = document.querySelectorAll(".main-navigation li a span").forEach(function (navItem) {
+      navItem.removeAttribute("style");
+    });   
+  }
+
   // Add flourish to flourish words
   if (document.querySelector('.secondary-name a')) {
 
