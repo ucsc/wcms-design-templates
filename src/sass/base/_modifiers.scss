@@ -1,4 +1,4 @@
-// Classes that modify the deafult display of elements.
+// Classes that modify the default display of elements.
 
 .full {
   width:100%;
@@ -18,3 +18,22 @@
   color: #000;
   background-color: #fff;
 }
+
+
+.align-left {
+  float: none;
+  margin: 1em 0;
+  @include media($portrait) {
+    float: left;
+    margin: 0 1.5em 1.5em 0;    
+  }
+}
+
+.align-right {
+  float: none;
+  margin: 1em 0;
+  @include media($portrait) {
+    float: right;
+    margin: 0 0 1.5em 1.5em;
+  }
+}  
