@@ -70,10 +70,11 @@ $(document).ready(function(){
   });
 
   // Strip style attributes from main navigation.
-  if (typeof forEach == 'function') { 
-    var navItems = document.querySelectorAll(".main-navigation li a span").forEach(function (navItem) {
-      navItem.removeAttribute("style");
-    });   
+  if (document.querySelectorAll('.main-navigation li a span')) {
+    var navItems = document.querySelectorAll('.main-navigation li a span');
+    for (var i = 0; i < navItems.length; i++) {
+      navItems[i].removeAttribute("style");      
+    }   
   }
 
   // Add flourish to flourish words
