@@ -19,8 +19,9 @@
   background-color: #fff;
 }
 
-
+[align="left"],
 .align-left {
+  clear: left;
   float: none;
   margin: 1em 0;
   @include media($portrait) {
@@ -29,11 +30,19 @@
   }
 }
 
+[align="right"],
 .align-right {
+  clear: right;
   float: none;
   margin: 1em 0;
   @include media($portrait) {
     float: right;
     margin: 0 0 1.5em 1.5em;
   }
-}  
+}
+
+[align="center"],
+.align-center {
+  clear: both;
+  text-align: center;
+}
