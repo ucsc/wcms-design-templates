@@ -22,26 +22,30 @@
 // Styleguide 2.0.0
 
 .archive-list {
-
-  list-style:none;
-  margin:0;
-  padding:0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   li {
-    table-layout:fixed;
-    margin-left:0;
-    margin-bottom:1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    table-layout: fixed;
+
     @include clearfix;
+
+    li {
+      margin-left: .85em;
+    }
   }
 
   h2,
   h3 {
     line-height: 120%;
-    margin:0 0 0.15em 0;
+    margin: 0 0 .15em;
   }
 
   p {
-    line-height:1.4;
+    line-height: 1.4;
   }
 
   .date {
