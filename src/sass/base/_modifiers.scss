@@ -1,47 +1,53 @@
 // Classes that modify the default display of elements.
 
 .full {
-  width:100%;
+  width: 100%;
 }
 
 .borderless {
-  border:none;
+  border: 0;
+
   td {
-    border-bottom:none;
+    border-bottom: 0;
   }
 }
 
 .hide {
-  position: absolute;
+  background-color: #fff;
+  color: #000;
   left: -900em;
   outline: none;
-  color: #000;
-  background-color: #fff;
+  position: absolute;
 }
 
-[align="left"],
+figure[align="left"],
+img[align="left"],
 .align-left {
   clear: left;
   float: none;
   margin: 1em 0;
+
   @include media($portrait) {
     float: left;
-    margin: 0 1.5em 1.5em 0;    
+    margin: 0 1.5em 1.5em 0;
   }
 }
 
-[align="right"],
+figure[align="right"],
+img[align="right"],
 .align-right {
   clear: right;
   float: none;
   margin: 1em 0;
+
   @include media($portrait) {
     float: right;
     margin: 0 0 1.5em 1.5em;
   }
 }
 
-[align="center"],
+figure[align="center"],
+img[align="center"],
 .align-center {
   clear: both;
   text-align: center;
