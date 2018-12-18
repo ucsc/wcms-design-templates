@@ -10,7 +10,7 @@ var pkg = require('./package.json'),
     del = require('del'),
     imacss = require('gulp-imacss'),
     imagemin = require('gulp-imagemin'),
-    mainBowerFiles = require('main-bower-files'),    
+    mainBowerFiles = require('main-bower-files'),
     minifycss = require('gulp-minify-css'),
     prettify = require('gulp-html-prettify'),
     sass = require('gulp-ruby-sass'),
@@ -49,7 +49,7 @@ gulp.task('webserver', function() {
         open: false,
         port: 8080
     });
-    gulp.watch("src/sass/*.scss", ['styles']);
+    gulp.watch("src/sass/*.scss", gulp.series('styles'));
 });
 
 
@@ -153,19 +153,19 @@ gulp.task('deploy', function() {
 // Rerun all tasks when files change
 //
 gulp.task('watch', function() {
-    gulp.watch('./src/js/**/**', ['scripts']);
-    gulp.watch('./src/sass/**/*.scss', ['styles']);
-    gulp.watch('./src/images/**/.**', ['images']);
-    gulp.watch('./src/svg/**/**.svg', ['svg']);
+    gulp.watch('./src/js/**/**', gulp.series('scripts'));
+    gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));
+    gulp.watch('./src/images/**/.**', gulp.series('images'));
+    gulp.watch('./src/svg/**/**.svg', gulp.series('svg'));
 });
 
 
 //
 // The default task (called when you run `gulp`)
 //
-gulp.task('default', ['clean', 'watch', 'archive-files', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'webserver']);
+gulp.task('default', gulp.series(gulp.parallel('clean', 'watch', 'archive-files', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'webserver')));
 
 //
 // The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.
 //
-gulp.task('fresh', ['clean', 'bower-files', 'scripts', 'images', 'svg', 'styles']);
+gulp.task('parallel', gulp.series(gulp.parallel('clean', 'bower-files', 'scripts', 'images', 'svg', 'styles')));
