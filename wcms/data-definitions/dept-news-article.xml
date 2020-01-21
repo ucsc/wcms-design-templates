@@ -1,0 +1,37 @@
+<system-data-structure>
+  <group identifier="contact" label="Contact Information" multiple="true" maximum-number="3">
+    <text identifier="name" label="Name"/>
+    <text identifier="title" label="Title"/>
+    <text identifier="phone" label="Phone"/>
+    <text identifier="email" label="E-Mail"/>
+  </group>
+  <group identifier="video" label="Lead Video" collapsed="true">
+    <text wysiwyg="true" identifier="embed" label="Embed Code" wysiwyg-toolbar-remove="font formatting,font assignment,text formatting,insert image,insert table,"/>
+    <text identifier="width" label="Width (number only)"/>
+    <text wysiwyg="true" identifier="caption" label="Video Caption" wysiwyg-toolbar-remove="font assignment,insert image,insert table,"/>
+  </group>
+  <group identifier="lead-image" label="Lead Image">
+    <asset type="file" identifier="image" label="Lead Image (max width: 760 px)"/>
+    <text identifier="image-alt" label="Image Alt Text (Required for Accessibility)" maxlength="90"/>
+    <asset type="file" identifier="image-thumb" label="Lead Image Thumbnail (80x80)"/>
+    <text wysiwyg="true" identifier="image-caption" label="Lead Image Caption" wysiwyg-toolbar-remove="font formatting,font assignment,insert image,insert table,"/>
+  </group>
+  <group identifier="secondary-images" label="Secondary Images" multiple="true">
+    <asset type="file" identifier="image" label="Image"/>
+    <text identifier="image-alt" label="Image Alt Text (Required for Accessibility)" maxlength="90"/>
+    <text wysiwyg="true" identifier="image-caption" label="Image Caption" wysiwyg-toolbar-remove="font formatting,font assignment,insert image,insert table,"/>
+  </group>
+  <text multi-line="true" identifier="article-subhead" label="Sub Headline"/>
+  <text wysiwyg="true" identifier="article-text" label="Article Text" wysiwyg-toolbar-remove="font assignment,"/>
+  <group identifier="admin" label="For Admin Messages">
+    <text identifier="audience" label="To:"/>
+    <text identifier="admin" label="From:"/>
+  </group>
+  <asset type="block" identifier="left-bottom-nav" label="Bottom Left Navigation Block" multiple="true" render-content-depth="unlimited"/>
+  <group identifier="related-links" label="Related Link" multiple="true" maximum-number="15">
+    <asset type="page" identifier="page" label="Internal link "/>
+    <asset type="symlink" identifier="symlink" label="External link"/>
+    <text identifier="url" label="OR text URL" default="http://"/>
+    <text identifier="title" label="Link text"/>
+  </group>
+</system-data-structure>

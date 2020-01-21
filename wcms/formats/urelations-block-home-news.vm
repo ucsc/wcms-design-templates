@@ -1,0 +1,58 @@
+## Get articles for an index block
+#set ($articlesLimit = 2)
+#set ($articles = $_XPathTool.selectNodes( $contentRoot,"//system-page[not(contains(path,'_internal'))][not(@current)][not(system-data-structure/page-type = 'Category Index')][not(system-data-structure/lead-image/image-thumb/path = '/')][dynamic-metadata[starts-with(name,'category-landing-pages')]/value = 'Home Page']") )
+
+
+#if (!$articles.isEmpty())
+## Sort articles by start-date, then article-date
+##$_SortTool.addSortCriterion("dynamic-metadata[name='type']/value","","text","descending","upper-first")
+$_SortTool.addSortCriterion("start-date","","number","descending","upper-first")
+$_SortTool.sort($articles)
+
+<div id="news">
+  <h3>Featured <span>News</span></h3>
+  <div class="inner">
+  <ul class="archive-list">
+
+#if ($articles.size() <= $articlesLimit )
+  #set ($articlesToList = $articles)
+#else
+  #set ($articlesToList = $articles.subList(0,$articlesLimit) )
+#end  
+#foreach($page in $articlesToList)
+
+    ## Get/set vars
+    #set ($title = $_SerializerTool.serialize($page.getChild("title"),true).replaceAll('"', '&#34;'))
+    #set ($path = $page.getChild("link").value)
+    ## Check for image thumbnails and set variable if it doesn't show.
+    #if($page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb").getChild("link"))
+      #set ($imgLink = $page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb").getChild("link").text)
+    #end
+  ## Get alt text if it is there
+  #if($page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb-alt"))
+      #set ($imgAlt = $page.getChild("system-data-structure").getChild("lead-image").getChild("image-thumb-alt").text)
+    #end
+    #set ($dateNode = $page.getChild("start-date"))
+    #set ($pageDate = $_DateTool.getDate($dateNode.value))
+    #set ($pageDateText = $_DateTool.format('MMMM d, yyyy',$pageDate))
+    
+      <li>
+        #if($imgLink && $imgLink != "")
+          <a href="${path}" title="Read more about: ${title}"><img class="fltlft" src="${imgLink}" alt="${imgAlt}" /></a>
+        #end
+          <span class="date">${pageDateText}</span>
+          <a href="${path}">${title}</a>
+      </li>
+    
+    ## Reset img path for next article
+    #set ($imgLink = "")
+
+
+#end
+<li><em><a title="More UCSC news stories" href="http://news.ucsc.edu">More stories &#187;</a></em></li>
+  </ul>
+  
+  </div>
+</div>
+
+#end

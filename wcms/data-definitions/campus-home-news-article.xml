@@ -1,0 +1,47 @@
+<system-data-structure>
+  <group identifier="contact" label="Contact Information" multiple="true" maximum-number="3">
+    <text identifier="name" label="Name"/>
+    <text identifier="title" label="Title"/>
+    <text identifier="phone" label="Phone"/>
+    <text identifier="email" label="E-Mail"/>
+  </group>
+  <group identifier="lead-image" label="Lead Image">
+    <asset type="file" identifier="image" label="Lead Image (max width: 760px)"/>
+    <text identifier="image-alt" label="Alternative image text" maxlength="90"/>
+    <asset type="file" identifier="image-thumb" label="Lead Image Thumbnail (80x80)"/>
+    <text identifier="image-thumb-alt" label="Alternative thumbnail text" maxlength="90"/>
+    <text wysiwyg="true" identifier="image-caption" label="Lead Image Caption" wysiwyg-toolbar-remove="font formatting,font assignment,insert image,insert table,"/>
+  </group>
+  <group identifier="secondary-images" label="Secondary Images" multiple="true">
+    <asset type="file" identifier="image" label="Image"/>
+    <text identifier="image-alt" label="Alternative image text" maxlength="90"/>
+    <text wysiwyg="true" identifier="image-caption" label="Image Caption" wysiwyg-toolbar-remove="font formatting,font assignment,insert image,insert table,"/>
+  </group>
+  <text multi-line="true" identifier="article-subhead" label="Sub Headline"/>
+  <text wysiwyg="true" identifier="article-text" label="Article Text" wysiwyg-toolbar-remove="font assignment,"/>
+  <text type="checkbox" identifier="comments" label="Enable comments?">
+    <checkbox-item value="Yes"/>
+  </text>
+  <text type="checkbox" identifier="show-updated" label="Show last updated date?">
+    <checkbox-item value="Yes"/>
+  </text>
+  <group identifier="admin" label="For Admin Messages" collapsed="true">
+    <text identifier="audience" label="To:"/>
+    <text identifier="admin" label="From:"/>
+  </group>
+  <group identifier="related-links" label="Related Link" multiple="true" maximum-number="15" collapsed="true">
+    <asset type="page" identifier="page" label="Internal link "/>
+    <asset type="symlink" identifier="symlink" label="External link"/>
+    <text identifier="url" label="OR text URL" default="http://"/>
+    <text identifier="title" label="Link text"/>
+  </group>
+  <group identifier="profile-content" label="For Featured Profiles" collapsed="true">
+    <asset type="file" identifier="thumb" label="Thumbnail (300w x 120h)"/>
+    <text identifier="thumb-alt" label="Alternative thumbnail text" maxlength="90"/>
+    <text identifier="title" label="Profile Title"/>
+    <text multi-line="true" identifier="description" label="Profile Description"/>
+  </group>
+  <group identifier="events" label="For events" collapsed="true">
+    <text type="calendar" identifier="end-date" label="Remove from event page lists on this date"/>
+  </group>
+</system-data-structure>

@@ -1,0 +1,44 @@
+## Get links for an In the News page
+#set ($links = $_XPathTool.selectNodes($contentRoot,"//system-index-block//system-folder/system-block[system-data-structure[promote = 'Yes']]"))
+
+## Sort the links by sticky, then article-date (arbitrary), then date created (system)
+$_SortTool.addSortCriterion("//system-data-structure/sticky","","text","descending","upper-first")
+$_SortTool.addSortCriterion("article-date","","number","descending","upper-first")
+$_SortTool.addSortCriterion("created-on","","number","descending","upper-first")
+$_SortTool.sort($links)
+
+<div id="links" class="inner">
+  <h3 class="header">UCSC in the news</h3>
+  <ul class="archive-list with-thumbs">
+    
+#foreach($item in $links.subList(0,4))
+  
+    ## Set variables
+    #set ($icon = $item.getChild("system-data-structure").getChild("thumbnail").getChild("link").value)
+    #set ($url = $_EscapeTool.xml($item.getChild("system-data-structure").getChild("url").text))
+    #set ($source = $_EscapeTool.xml($item.getChild("system-data-structure").getChild("source").text))
+    #set ($headline = $_EscapeTool.xml($item.getChild("system-data-structure").getChild("headline").text))
+    
+      ## Output the HTML
+      <li>          
+        <span class="item-media">
+          <a href="${url}">            
+            <img alt="${source}" src="${icon}" />
+          </a>
+        </span>
+
+        <span class="item-body">
+          <a href="${url}">
+            <span class="date">${source}</span>
+          </a>
+          <span class="headline">${headline}</span>
+        </span>
+      </li>
+    
+
+#end
+  
+  </ul>
+
+<p class="more"><a class="more-link" href="[system-asset:local]/inthenews/index[/system-asset:local]">More...</a></p>
+</div>
