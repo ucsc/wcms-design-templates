@@ -1,4 +1,0 @@
-<!-- _library/Data Definitions/Blocks/Script and Style Block Chooser -->
-<system-data-structure>
-  <asset type="block" identifier="features" label="Choose script and style blocks" multiple="true" render-content-depth="2"/>
-</system-data-structure>
