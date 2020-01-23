@@ -1,171 +1,151 @@
 //
 // Load Gulp and dependencies
 //
-var pkg = require('./package.json'),
-    gulp = require('gulp'),
-    autoprefix = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync'),
-    changed = require('gulp-changed'),
-    concat = require('gulp-concat'),
-    del = require('del'),
-    imacss = require('gulp-imacss'),
-    imagemin = require('gulp-imagemin'),
-    mainBowerFiles = require('main-bower-files'),
-    minifycss = require('gulp-minify-css'),
-    prettify = require('gulp-html-prettify'),
-    sass = require('gulp-ruby-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    svgo = require('imagemin-svgo'),
-    uglify = require('gulp-uglify'),
-    zip = require('gulp-zip');
+const { src, dest, watch, series, parallel } = require('gulp');
+// Importing all the Gulp-related packages we want to use
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const gnd = require('gulp-npm-dist');
+const del = require('del');
+var replace = require('gulp-replace');
+var pkg = require('./package.json');
+    
+sass.compiler = require('node-sass');
+    
 
 //
-// Set default file path variables for tasks
+// Paths to source files
 //
-var paths = {
-    styles:     ['./src/sass/*.scss', './src/sass/**/**.**'],
-    scripts:    './src/js/**/**',
-    images:     './src/images/**/**',
-    svg:        './src/svg/**/**.svg',
-    build:      './build/'
+var files = {
+    styles: 'src/sass/**/*.scss',
+    scripts: './src/js/**/**',
+    images:  './src/images/**/**',
+    svg:     './src/svg/**/**.svg'
 };
 
+//
+// Start a development server and serve files from dist
+//
 
-//
-// Static webserver with livereload via Browsersync
-//
-gulp.task('webserver', function() {
-    browserSync.init("./build/index.html", {
-        https: false,
-        server: {
-            baseDir: ["./build", "./examples"],
-            routes: {
-                "/examples": "examples"
-            }
-        },
-        watchOptions: {
-            debounceDelay: 3000
-        },
-        open: false,
-        port: 8080
-    });
-    gulp.watch("src/sass/*.scss", gulp.series('styles'));
-});
 
 
 //
 // Clean the build folder.
 //
-gulp.task('clean', function(cb) {
-    del.sync([
-        'build/**'
-    ], cb);
-});
+function clean(cb) {
+  del.sync([
+    'dist/**'
+  ], cb());
+}
 
 
 //
 // Compile sass into CSS and a source map.
 //
-gulp.task('styles', function() {
-    return sass('./src/sass/ucsc.scss', {
-        require: ['bourbon', 'neat'],
-        style: 'compressed',
-        sourcemap: true
-    })
-    .on('error', function (err) {
-      console.error('Error: ', err.message);
-   })
-    .pipe(autoprefix('last 4 versions'))
+function styles() {
+  return src(files.styles)
     .pipe(sourcemaps.init())
-    .pipe(gulp.dest('./build/_responsive/css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
-});
+    .pipe(sass())
+    .pipe(postcss([ autoprefixer(), cssnano() ]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist')
+  );
+}
 
 
 //
 // Uglify scripts into the build folder.
 //
-gulp.task('scripts', function() {
-    return gulp.src(paths.scripts)
-        .pipe(changed('./build/_responsive/js/'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./build/_responsive/js/'));
-});
+function scripts() {
+  return src([
+    files.scripts
+  ])
+  .pipe(concat('main.js'))
+  .pipe(uglify())
+  .pipe(dest('dist')
+  );  
+}
 
+//
+// Copy dependencies from package.json to dist folder
+// 
+function libraries() {
+  return src(gnd(), { base: './node_modules'})
+    .pipe(dest('dist/libs')
+  );
+}
 
 //
 // Optimize and copy images into the build folder.
 //
-gulp.task('images', function() {
-    return gulp.src(paths.images)
-        .pipe(changed('./build/_responsive/images/'))
-        .pipe(imagemin({
-            optimizationLevel: 5
-        }))
-        .pipe(gulp.dest('./build/_responsive/images/'));
-});
+// gulp.task('images', function() {
+//     return gulp.src(paths.images)
+//         .pipe(changed('./build/_responsive/images/'))
+//         .pipe(imagemin({
+//             optimizationLevel: 5
+//         }))
+//         .pipe(gulp.dest('./build/_responsive/images/'));
+// });
 
 
 //
 // Optimize SVG and make sprites in the build folder.
 //
-gulp.task('svg', function() {
-    return gulp.src(paths.svg)
-        .pipe(svgo()())
-        .pipe(imacss('_svg.scss', 'icon'))
-        .pipe(gulp.dest('./src/sass/base'));
-});
+// gulp.task('svg', function() {
+//     return gulp.src(paths.svg)
+//         .pipe(svgo()())
+//         .pipe(imacss('_svg.scss', 'icon'))
+//         .pipe(gulp.dest('./src/sass/base'));
+// });
 
 
-//
-// Copy Bower assets into the build folder.
-//
-gulp.task('bower-files', function() {
-    return gulp.src(mainBowerFiles(), {
-            base: './bower_components'
-        })
-        .pipe(gulp.dest("./build/_responsive/lib"));
-});
 
 //
 // Copy old assets from previous design into the build folder.
 //
-gulp.task('archive-files', function() {
-    return gulp.src('./src/archive/**')
-        .pipe(gulp.dest("./build"));
-});
+// gulp.task('archive-files', function() {
+//     return gulp.src('./src/archive/**')
+//         .pipe(gulp.dest("./build"));
+// });
 
 
 //
 // Create zip archive of static file assets ready for the WCMS.
 //
-gulp.task('deploy', function() {
-    return gulp.src([
-            './build/**/**',
-            './examples/**/**'
-        ])
-        .pipe(zip('webtemplates2014.zip'))
-        .pipe(gulp.dest('./deploy'));
-});
+// gulp.task('deploy', function() {
+//     return gulp.src([
+//             './build/**/**',
+//             './examples/**/**'
+//         ])
+//         .pipe(zip('webtemplates2014.zip'))
+//         .pipe(gulp.dest('./deploy'));
+// });
 
 
 //
 // Rerun all tasks when files change
 //
-gulp.task('watch', function() {
-    gulp.watch('./src/js/**/**', gulp.series('scripts'));
-    gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));
-    gulp.watch('./src/images/**/.**', gulp.series('images'));
-    gulp.watch('./src/svg/**/**.svg', gulp.series('svg'));
-});
+// gulp.task('watch', function() {
+//     gulp.watch('./src/js/**/**', gulp.series('scripts'));
+//     gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));
+//     gulp.watch('./src/images/**/.**', gulp.series('images'));
+//     gulp.watch('./src/svg/**/**.svg', gulp.series('svg'));
+// });
+function watchFiles() {
+  watch(files.styles, styles);
+  watch(files.scripts, scripts);
+}
 
 
-//
-// The default task (called when you run `gulp`)
-//
-gulp.task('default', gulp.series(gulp.parallel('clean', 'watch', 'archive-files', 'bower-files', 'scripts', 'images', 'svg', 'styles', 'webserver')));
 
-//
-// The fresh task: compiles everything so we can zip it up for Cascade with 'gulp build'.
-//
-gulp.task('parallel', gulp.series(gulp.parallel('clean', 'bower-files', 'scripts', 'images', 'svg', 'styles')));
+exports.default = series(
+  clean,
+  parallel(styles, scripts),
+  libraries
+);
+exports.watch = watchFiles;
