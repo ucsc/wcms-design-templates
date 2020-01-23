@@ -116,12 +116,12 @@ $visual-grid-index: front;
 $max-width: #{1080/$browser-context}em;
 $default-feature: min-width;
 $grids-columns: 12;
-$column: modular-scale(2, $modular-scale-base, $modular-scale-ratio);
-$gutter: modular-scale(2, $modular-scale-base, $modular-scale-ratio);
+$column: 12;
+$gutter: 1em;
 
 $neat-grid: (
   columns: $grids-columns,
-  gutter: modular-scale(2, $modular-scale-base, $modular-scale-ratio),
+  gutter: 1em,
 );
 
 // Breakpoint variables
