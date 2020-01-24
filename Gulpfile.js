@@ -11,6 +11,8 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const gnd = require('gulp-npm-dist');
 const del = require('del');
+const include = require('gulp-file-include');
+const zip = require('gulp-zip');
 const browserSync = require('browser-sync').create();
 var replace = require('gulp-replace');
 var pkg = require('./package.json');
@@ -19,36 +21,30 @@ sass.compiler = require('node-sass');
     
 
 //
-// Paths to source files
+// Paths for source and output files
 //
 var paths = {
-    styles: 'src/sass/**/*.scss',
-    scripts: './src/js/**/**',
-    html:    './src/html/*.html',
-    images:  './src/images/**/**',
-    svg:     './src/svg/**/**.svg',
-    dist:    './dist/'
-};
-
-//
-// Start a development server and serve files from dist
-//
-function server() {
-  browserSync.init({
-    port: 8888,
-    server: {
-      baseDir: paths.dist
+    styles: {
+      source: 'src/sass/**/*.scss',
+      dest:   'dist/css'
+    },
+    scripts: {
+      source: 'src/js/*.js',
+      dest:   'dist/js'
+    },
+    html: {   
+      source: 'src/html/*.html',
+      dest:   'dist'
+    },
+    images: {
+      source: 'src/images/**/**',
+      dest:    'dist/images'
+    },
+    svg: {
+      source: 'src/svg/**/**.svg',
+      dest:   'dist/images/svg'
     }
-  });
-}
-
-//
-// Reload the browser when certain tasks complete
-//
-function reload(done) {
-  browserSync.reload();
-  done();
-}
+};
 
 
 //
@@ -65,14 +61,15 @@ function clean(cb) {
 // Compile sass into CSS and a source map.
 //
 function styles() {
-  return src(paths.styles)
+  return src(paths.styles.source)
     .pipe(sourcemaps.init())
-    .pipe(sass())
-    .on("error", sass.logError)
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
     .pipe(postcss([ autoprefixer(), cssnano() ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist')
-  );
+    .pipe(dest(paths.styles.dest))
+    .pipe(browserSync.stream());
 }
 
 
@@ -81,19 +78,25 @@ function styles() {
 //
 function scripts() {
   return src([
-    paths.scripts
+    paths.scripts.source
   ])
   .pipe(concat('main.js'))
   .pipe(uglify())
-  .pipe(dest('dist'));  
+  .pipe(dest(paths.scripts.dest))
+  .pipe(browserSync.reload({ stream: true }));  
 }
 
 //
 // Copy HTML files
 //
 function html() {
-  return src(paths.html)
-    .pipe(dest('dist/'));
+  return src('./src/html/index.html')
+    .pipe(include({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest(paths.html.dest))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 //
@@ -101,8 +104,8 @@ function html() {
 // 
 function libraries() {
   return src(gnd(), { base: './node_modules'})
-    .pipe(dest('dist/libs')
-  );
+    .pipe(dest('dist/libs'))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 //
@@ -142,38 +145,32 @@ function libraries() {
 //
 // Create zip archive of static file assets ready for the WCMS.
 //
-// gulp.task('deploy', function() {
-//     return gulp.src([
-//             './build/**/**',
-//             './examples/**/**'
-//         ])
-//         .pipe(zip('webtemplates2014.zip'))
-//         .pipe(gulp.dest('./deploy'));
-// });
+function buildZip() {
+    return src([
+            './dist/**/**'
+        ])
+        .pipe(zip('wcms-static.zip'))
+        .pipe(dest('./deploy'));
+}
 
 
 //
 // Rerun all tasks when files change
 //
-// gulp.task('watch', function() {
-//     gulp.watch('./src/js/**/**', gulp.series('scripts'));
-//     gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));
-//     gulp.watch('./src/images/**/.**', gulp.series('images'));
-//     gulp.watch('./src/svg/**/**.svg', gulp.series('svg'));
-// });
-function watchFiles() {
+function dev() {
   browserSync.init({
     port: 8888,
     server: {
-      baseDir: paths.dist
+      baseDir: './dist'
     }
   });
-  watch(paths.styles, series(styles, reload));
-  watch(paths.scripts, series(scripts, reload));
-  watch(paths.html, series(html, reload));
+  watch(paths.styles.source, styles);
+  watch(paths.scripts.source, scripts);
+  watch(paths.html.source, html);
 }
 
 
 
-exports.default = series(clean, parallel(html, styles, scripts, libraries), watchFiles);
-exports.watch = watchFiles;
+exports.default = series(clean, parallel(html, styles, scripts, libraries));
+exports.watch = series(clean, parallel(html, styles, scripts, libraries), dev);
+exports.deploy = series(clean, parallel(html, styles, scripts, libraries), buildZip);
