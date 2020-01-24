@@ -1,8 +1,7 @@
-//
-// Load Gulp and dependencies
-//
+// Load Gulp functions so we don't have to use "gulp" everywhere.
 const { src, dest, watch, series, parallel } = require('gulp');
-// Importing all the Gulp-related packages we want to use
+
+// Import the packages to use with Gulp
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -12,6 +11,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const gnd = require('gulp-npm-dist');
 const del = require('del');
+const browserSync = require('browser-sync').create();
 var replace = require('gulp-replace');
 var pkg = require('./package.json');
     
@@ -21,17 +21,34 @@ sass.compiler = require('node-sass');
 //
 // Paths to source files
 //
-var files = {
+var paths = {
     styles: 'src/sass/**/*.scss',
     scripts: './src/js/**/**',
+    html:    './src/html/*.html',
     images:  './src/images/**/**',
-    svg:     './src/svg/**/**.svg'
+    svg:     './src/svg/**/**.svg',
+    dist:    './dist/'
 };
 
 //
 // Start a development server and serve files from dist
 //
+function server() {
+  browserSync.init({
+    port: 8888,
+    server: {
+      baseDir: paths.dist
+    }
+  });
+}
 
+//
+// Reload the browser when certain tasks complete
+//
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
 
 //
@@ -48,9 +65,10 @@ function clean(cb) {
 // Compile sass into CSS and a source map.
 //
 function styles() {
-  return src(files.styles)
+  return src(paths.styles)
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .on("error", sass.logError)
     .pipe(postcss([ autoprefixer(), cssnano() ]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist')
@@ -63,12 +81,19 @@ function styles() {
 //
 function scripts() {
   return src([
-    files.scripts
+    paths.scripts
   ])
   .pipe(concat('main.js'))
   .pipe(uglify())
-  .pipe(dest('dist')
-  );  
+  .pipe(dest('dist'));  
+}
+
+//
+// Copy HTML files
+//
+function html() {
+  return src(paths.html)
+    .pipe(dest('dist/'));
 }
 
 //
@@ -137,15 +162,18 @@ function libraries() {
 //     gulp.watch('./src/svg/**/**.svg', gulp.series('svg'));
 // });
 function watchFiles() {
-  watch(files.styles, styles);
-  watch(files.scripts, scripts);
+  browserSync.init({
+    port: 8888,
+    server: {
+      baseDir: paths.dist
+    }
+  });
+  watch(paths.styles, series(styles, reload));
+  watch(paths.scripts, series(scripts, reload));
+  watch(paths.html, series(html, reload));
 }
 
 
 
-exports.default = series(
-  clean,
-  parallel(styles, scripts),
-  libraries
-);
+exports.default = series(clean, parallel(html, styles, scripts, libraries), watchFiles);
 exports.watch = watchFiles;
