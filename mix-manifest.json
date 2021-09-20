@@ -1,0 +1,20 @@
+{
+    "/dist/css/ucsc.css": "/dist/css/ucsc.css",
+    "/dist/lib/owlcarousel/owl-carousel/AjaxLoader.gif": "/dist/lib/owlcarousel/owl-carousel/AjaxLoader.gif",
+    "/dist/lib/owlcarousel/owl-carousel/grabbing.png": "/dist/lib/owlcarousel/owl-carousel/grabbing.png",
+    "/dist/lib/owlcarousel/owl-carousel/owl.carousel.css": "/dist/lib/owlcarousel/owl-carousel/owl.carousel.css",
+    "/dist/lib/owlcarousel/owl-carousel/owl.carousel.js": "/dist/lib/owlcarousel/owl-carousel/owl.carousel.js",
+    "/dist/lib/owlcarousel/owl-carousel/owl.carousel.min.js": "/dist/lib/owlcarousel/owl-carousel/owl.carousel.min.js",
+    "/dist/lib/owlcarousel/owl-carousel/owl.theme.css": "/dist/lib/owlcarousel/owl-carousel/owl.theme.css",
+    "/dist/lib/owlcarousel/owl-carousel/owl.transitions.css": "/dist/lib/owlcarousel/owl-carousel/owl.transitions.css",
+    "/dist/lib/jquery/dist/jquery.js": "/dist/lib/jquery/dist/jquery.js",
+    "/dist/js/billboards.init.js": "/dist/js/billboards.init.js",
+    "/dist/js/fancybox.init.js": "/dist/js/fancybox.init.js",
+    "/dist/js/main.js": "/dist/js/main.js",
+    "/dist/js/modernizr.js": "/dist/js/modernizr.js",
+    "/dist/js/*.min.js": "/dist/js/*.min.js",
+    "/dist/images/apple-touch-icon.png": "/dist/images/apple-touch-icon.png",
+    "/dist/images/down-arrow.svg": "/dist/images/down-arrow.svg",
+    "/dist/images/favicon.ico": "/dist/images/favicon.ico",
+    "/dist/images/right-arrow.svg": "/dist/images/right-arrow.svg"
+}
