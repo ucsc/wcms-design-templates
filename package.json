@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp clean && parcel index.html",
-    "build": "gulp clean && parcel build index.html --out-dir build"
+    "build": "npx mix --production"
   },
   "author": "Rob Knight",
   "license": "BSD-2-Clause",
