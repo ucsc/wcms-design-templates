@@ -64,7 +64,7 @@
     .campus-logo {
 
       @include hide-text();
-      background: transparent url('https://static.ucsc.edu/_responsive/images/logos/uc-santa-cruz.svg') no-repeat left top;
+      background: transparent url('/images/logos/uc-santa-cruz.svg') no-repeat left top;
       background-size: contain;
       display: block;
       overflow: hidden;
