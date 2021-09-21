@@ -1,3 +1,4 @@
+@use "sass:math";
 // Rules for pages with a side bar on the left
 
 .left-column .sidebar {
@@ -8,7 +9,7 @@
     font-size: $font-size-base*1.2;
     font-weight: normal;
     padding-bottom: 2%;
-    margin-bottom: $font-size-base/2;
+    margin-bottom: math.div($font-size-base, 2);
     text-transform: uppercase;
   }
 
@@ -52,7 +53,7 @@
     li > ul {
 
         margin: 0;
-        padding: $font-size-base/2 0;
+        padding: math.div($font-size-base, 2) 0;
         border-bottom:1px solid lighten($gray-light, 24%);
         li {
           list-style: square;

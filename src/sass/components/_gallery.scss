@@ -1,3 +1,4 @@
+@use "sass:math";
 // Gallery pages have linked thumbnails
 
 .thumb-grid {
@@ -15,7 +16,7 @@
 
   li {
     list-style: none;
-    margin: $font-size-base/8;
+    margin: math.div($font-size-base, 8);
     padding: 0;
     a {
       display: block;
