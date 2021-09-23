@@ -39,7 +39,7 @@ We also recommend you put images in callout boxes without any surrounding tags, 
 
 
 [class^="callout"] {
-    background-color: lighten($brand-light-gray, 2%);
+    background-color: lighten($brand-light-gray, 6%);
     border-bottom: 2px solid $brand-primary-blue;
     font-size: floor($font-size-base*.95);
     text-align: left;

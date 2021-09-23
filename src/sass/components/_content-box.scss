@@ -27,4 +27,17 @@
     border-bottom: 1px outset #006aad;
   }
 
+  /* Customizations for Search results page */
+  .gsc-results-wrapper-visible a {
+    border-bottom: 0px solid #fff !important;
+  }
+
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    border-color: #fff;
+    background-color: #006aad;
+    color: #fff;
+    padding: .35em .65em;
+    margin-right: 1em;
+  }
+
 }
