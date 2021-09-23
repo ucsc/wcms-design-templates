@@ -17,6 +17,13 @@
 
     @include outer-container();
 
+    display: flex;
+    flex-direction: column;
+
+    @include media($tablet) {
+      flex-direction: row;
+    }
+
     #mainContent,
     .main-content {
       margin-bottom: 1.5em;

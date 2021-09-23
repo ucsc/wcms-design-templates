@@ -120,11 +120,25 @@
     }
 
     .item-body {
-      line-height: 1.4;
+      line-height: 1.3;
     }
 
   }
 
+  .home &.with-thumbs {
+    
+    li {
+      list-style-type:none;
+      display:flex;
+      margin:1em 0;
+    }
 
+    .item-media,
+    .item-body {
+      display: flex;
+      align-items: top;
+    }
+
+  }
 
 }
