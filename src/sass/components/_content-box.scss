@@ -1,9 +1,6 @@
 .contentBox,
 .content-box {
-  // @include module-box-shadow;
-  // background-color: $sand-light;
-  // padding: 1.2em;
-  // border-radius: $border-radius-base;
+
   margin:0;
   overflow-x: auto;
   @include clearfix;
@@ -16,5 +13,18 @@
   + .contentBox {
     margin-top: 1.75em;
   }
+
+  a {
+    color: #006aad;
+    text-decoration: none;
+    border-bottom: 1px solid #fdc700;
+  }
+
+  a:focus,
+  a:hover,
+  a:active {
+    color: #006aad;
+    border-bottom: 1px outset #006aad;
+
 
 }
