@@ -30,7 +30,7 @@
         margin-top: 1em;
     }
 
-    @include media($desktop) {
+    @include media($portrait) {
 
         flex-direction: row;
 
@@ -40,9 +40,10 @@
 
         p {
             font-size: 1.2rem;
-            padding-left: 1em;
-            margin-left: 1em;
+            padding: 0 0 0 1em;
+            margin: 0 0 0 1em;
             max-width: 68%;
+            border: none;
             border-left: 2px solid $brand-secondary-blue;
         }
     }
