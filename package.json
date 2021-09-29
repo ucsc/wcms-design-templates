@@ -22,6 +22,7 @@
     "javascripts": "src/js"
   },
   "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.3.0",
     "laravel-mix": "^6.0.31",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.41.1",
