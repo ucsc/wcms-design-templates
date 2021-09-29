@@ -5,10 +5,9 @@
 
   // Mobile
   margin: 1.5em auto .25em auto;
+  display:flex;
+  justify-content: space-between;
 
-  // Tablet
-  @include media($tablet) {
-  }
 
   .site-name {
 
