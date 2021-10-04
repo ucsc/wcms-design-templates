@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Block: profiles and video teasers
 .profile-block,
 .video-block {
@@ -6,7 +8,7 @@
 		display:block;
 		width:100%;
 		height:auto;
-		margin-bottom: #{14/$browser-context}em;
+		margin-bottom: #{math.div(14, $browser-context)}em;
 
 		&.play-button {
 			width:auto;

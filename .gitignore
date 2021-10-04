@@ -2,5 +2,8 @@
 node_modules
 bower_components
 deploy
+dist
 build
-examples
+test/pages
+.cache
+_local

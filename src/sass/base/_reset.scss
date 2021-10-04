@@ -1,3 +1,4 @@
+@use "sass:math";
 // Reset styles created by someone cool on the internet
 
 /* ============================================================
@@ -47,7 +48,7 @@ body {
 	text-rendering: optimizeLegibility;
 	margin: 0 auto;
 	padding: 0 0 0 0;
-	min-width: #{310/$browser-context}em;
+	min-width: #{math.div(310, $browser-context)}em;
 }
 
 h1 {
@@ -110,7 +111,7 @@ p, pre, blockquote, ul, ol, dl, figure, figcaption, table, fieldset, details {
 }
 
 hr {
-	font-size: $font-size-base/2;
+	font-size: math.div($font-size-base, 2);
 	line-height: 1;
 	text-align: center;
 	margin: 1em 0 1.5em;
@@ -293,6 +294,7 @@ del, s {
 img {
 	border: 0;
 	max-width: 100%;
+	height: auto;
 	table & {
 		max-width: inherit;
 	}

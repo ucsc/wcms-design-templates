@@ -1,3 +1,4 @@
+@use "sass:math";
 /*doc
 ---
 title: Callout boxes
@@ -38,7 +39,7 @@ We also recommend you put images in callout boxes without any surrounding tags, 
 
 
 [class^="callout"] {
-    background-color: lighten($brand-light-gray, 2%);
+    background-color: lighten($brand-light-gray, 6%);
     border-bottom: 2px solid $brand-primary-blue;
     font-size: floor($font-size-base*.95);
     text-align: left;
@@ -58,7 +59,7 @@ We also recommend you put images in callout boxes without any surrounding tags, 
 
     p {
       display: inline-block;
-      margin: $font-size-base/2 0;
+      margin: math.div($font-size-base, 2) 0;
       span {
         position: relative;
         display: inline;

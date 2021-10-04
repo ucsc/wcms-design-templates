@@ -10,26 +10,20 @@
 // Module row with three columns
 .three {
 
-  @include pad;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
 
   @include media($tablet) {
-    display: flex;
     flex-direction: row;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     padding: 0;
+    justify-content: space-evenly;    
   }
 
   .wrap {
-    display: block;
-    float: left;
-    width: 100%;
-
     @include media($tablet) {
-      float: left;
-      width: 33.333%;
-      flex-basis: 33.333%;
-
+      flex: 0 1 33%;
     }
   }
 }
@@ -37,68 +31,57 @@
 // Module row with four columns
 .four {
 
-  display: block;
-
-  .wrap {
-
-    margin-bottom: 2em;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  flex-wrap: nowrap;
 
   @include media($tablet) {
 
-    .wrap {
-      float: left;
-      width: 22%;
-      margin-right: 4%;
+    flex-direction: row;
 
+    .wrap {
+      flex: 0 1 25%;
     }
   }
 
-  .wrap.last {
-    margin-right: 0;
-  }
-
 }
+
 
 .five {
 
-  > div {
-    @include image-display(#fff, 0, false);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
 
-    img {
-      margin-bottom: 0;
+  @include media($portrait) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  > div {
+
+    @include media($portrait) {
+      flex: 1 0 30%;
     }
 
-    h2 {
-
+    @include media($desktop) {
+      flex: 1 0 20%;
     }
 
   }
-
-
 }
 
+
+
 .combined {
-  width: 100%;
 
   .wrap {
-
-    @include omega;
-    @include pad;
-    padding-top: 0;
 
     @include media($mobile) {
       padding: 1em;
     }
 
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      border-right: none;
-      padding-right: 0;
-    }
   }
 
   &.light {
@@ -111,16 +94,6 @@
 
   .wrap {
     padding: 1em;
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
-    &:nth-child(2) {
-      padding:1em 0;
-    }
-    @include omega;
     @include media($mobile) {
       padding: 0;
       margin:0 0 2em 0;
@@ -129,19 +102,6 @@
   }
 
 
-
-  .inner {
-    @include clearfix;
-    // @include pad(1em);
-    // @include module-box-shadow(dark);
-    // background-color: $sand-dark;
-    // background-color: #f1f1f1;
-    min-height: 350px;
-    margin: 0;
-    @include media($mobile) {
-      min-height: auto;
-    }
-  }
 
 }
 

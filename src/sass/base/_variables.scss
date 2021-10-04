@@ -1,3 +1,4 @@
+@use "sass:math";
 // All the variables used in the stylesheet
 
 /*
@@ -6,7 +7,7 @@
 */
 
 // 2010 template defaults
-$sand: #F2F0E4;
+$sand: #f2f0e4;
 $sand-light: lighten($sand, 8%);
 $sand-med: darken($sand, 2%);
 $sand-dark: darken($sand, 6%);
@@ -16,7 +17,7 @@ $brown-light: lighten($brown, 8%);
 $brown-med: darken($brown, 2%);
 $brown-dark: darken($brown, 6%);
 
-$gray: #8E8C87;
+$gray: #8e8c87;
 $gray-very-light: lighten($gray, 40%);
 $gray-light: lighten($gray, 8%);
 $gray-med: darken($gray, 2%);
@@ -27,7 +28,7 @@ $blue-light: lighten($blue, 8%);
 $blue-med: darken($blue, 2%);
 $blue-dark: darken($blue, 4%);
 
-$gold: #FFC500;
+$gold: #ffc500;
 $gold-light: lighten($gold, 8%);
 $gold-med: darken($gold, 2%);
 $gold-dark: darken($gold, 10%);
@@ -38,20 +39,20 @@ $body-bg: #fff;
 // $body-bg: lighten($sand, 2%);
 
 // Official identity colors, converted from print
-$ucsc-blue: #1B4084;
-$ucsc-gold: #CB9001;
+$ucsc-blue: #1b4084;
+$ucsc-gold: #cb9001;
 
 // Campaign identity colors
-$campaign-blue: #1B4084;
-$campaign-gold: #F1B523;
-$campaign-red: #F1B523;
+$campaign-blue: #1b4084;
+$campaign-gold: #f1b523;
+$campaign-red: #Ffb523;
 
 
 // Brand Refresh Colors
 
 $brand-primary-blue: #003c6c;
 $brand-yellow: #fdc700;
-$brand-secondary-blue: #006aad;
+$brand-secondary-blue: #00458c;
 $brand-orange: #d66e2e;
 $brand-tertiary-blue: #01589d;
 $brand-gold: #f1af13;
@@ -99,6 +100,8 @@ $headings-line-height: 1.1 !default;
 $headings-color: inherit !default;
 
 $border-radius-base: 5px;
+$modular-scale-base: 1em;
+$modular-scale-ratio: 1.25;
 
 /*
 *  Layout
@@ -111,15 +114,15 @@ $visual-grid-opacity: 1.0;
 $visual-grid-index: front;
 
 // Layout variables for Bourbon Neat
-$max-width: #{1080/$browser-context}em;
+$max-width: #{math.div(1080,$browser-context)}em;
 $default-feature: min-width;
 $grids-columns: 12;
-$column: modular-scale(2);
-$gutter: modular-scale(2);
+$column: 12;
+$gutter: 1em;
 
 $neat-grid: (
   columns: $grids-columns,
-  gutter: modular-scale(2),
+  gutter: 1em,
 );
 
 // Breakpoint variables

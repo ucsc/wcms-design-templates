@@ -1,46 +1,28 @@
 {
-    "name": "ucsc-responsive-templates",
-    "description": "Responsive reboot of the 2010 UCSC web templates.",
-    "repository": "https://github.com/ucsc/webtemplates2014/",
-    "version": "1.6.1",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "fetch": "node app.js"
-    },
-    "author": "Rob Knight",
-    "license": "BSD-2-Clause",
-    "dependencies": {
-        "fancybox": "^3.0.1",
-        "jquery": "^3.4.1",
-        "modernizr": "^3.8.0",
-        "owlcarousel": "^1.3.3"
-    },
-    "frontend": {
-        "name": "Web templates for UC Santa Cruz",
-        "stylesheets": "src/sass",
-        "javascripts": "src/js"
-    },
-    "devDependencies": {
-        "bower": "^1.8.8",
-        "browser-sync": "^2.26.7",
-        "cheerio": "^0.22.0",
-        "del": "^1.1.1",
-        "frontend-md": "0.0.4",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^2.1.0",
-        "gulp-changed": "^1.2.1",
-        "gulp-concat": "^2.6.1",
-        "gulp-html-prettify": "0.0.1",
-        "gulp-imacss": "^1.0.0",
-        "gulp-imagemin": "^5.0.3",
-        "gulp-minify-css": "^1.0.0",
-        "gulp-ruby-sass": "^3.0.0",
-        "gulp-sourcemaps": "^1.12.1",
-        "gulp-uglify": "^1.1.0",
-        "gulp-zip": "^3.0.0",
-        "imagemin-svgo": "^4.1.2",
-        "main-bower-files": "^2.13.3",
-        "mkdirp": "^0.5.1"
-    }
+  "name": "ucsc-responsive-templates",
+  "description": "Responsive reboot of the 2010 UCSC web templates.",
+  "repository": "https://github.com/ucsc/wcms-design-templates/",
+  "version": "2.1.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx mix watch",
+    "build": "npx mix --production",
+    "release": "standard-version"
+  },
+  "author": "Rob Knight",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "@frctl/fractal": "^0.7.5",
+    "fancybox": "^3.0.1",
+    "jquery": "^3.4.1",
+    "owlcarousel": "^1.3.3"
+  },
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.31",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.41.1",
+    "sass-loader": "^12.1.0",
+    "standard-version": "^9.3.1"
+  }
 }

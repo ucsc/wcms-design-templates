@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // # Custom functions and mixins
 
 // Shows breakpoint debugging information on rendered pages.
@@ -63,7 +65,7 @@
 // 
 // Function and mixin to return rem units from px.
 @function calculateRem($size) {
-  $remSize: $size / 16;
+  $remSize: math.div($size, 16);
   @return #{$remSize}rem;
 }
 
@@ -165,7 +167,7 @@
 
 
 @mixin rowMachine($numPerRow, $margin) {
-  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  width: (100% - (($numPerRow - 1) * $margin)) / $numPerRow;
   &:nth-child(n) {
     margin-bottom: $margin;
     margin-right: $margin;

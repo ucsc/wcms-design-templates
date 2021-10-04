@@ -5,10 +5,9 @@
 
   // Mobile
   margin: 1.5em auto .25em auto;
+  display:flex;
+  justify-content: space-between;
 
-  // Tablet
-  @include media($tablet) {
-  }
 
   .site-name {
 
@@ -62,20 +61,20 @@
 
 
     .campus-logo {
-
-      @include hide-text();
-      background: transparent url('https://static.ucsc.edu/_responsive/images/logos/uc-santa-cruz.svg') no-repeat left top;
+      background: transparent url('/images/logos/uc-santa-cruz-2021.svg') no-repeat left top;
       background-size: contain;
       display: block;
-      overflow: hidden;
       float: left;
-      width: 150px;
       height: auto;
+      overflow: hidden;
+      text-indent: 101%;
+      white-space: nowrap;
+      width: 150px;
 
       @include media($small-desktop-plus) {
-          width: 220px;
-          height: auto;
-          margin-bottom: 0.5em;
+        height: auto;
+        margin-bottom: 0.5em;
+        width: 220px;
       }
 
       @include media($tablet) {

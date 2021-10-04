@@ -4,6 +4,10 @@
   padding: 0 $font-size-base;
 }
 
+#main {
+  clear: both;
+}
+
 .row {
   margin-bottom: $font-size-base;
   @include outer-container();
@@ -15,7 +19,12 @@
 #sprflt,
 .grid-container {
 
-    @include outer-container();
+    display: flex;
+    flex-direction: column;
+
+    @include media($tablet) {
+      flex-direction: row;
+    }
 
     #mainContent,
     .main-content {
@@ -62,25 +71,4 @@
       @include display-context(block);
       @include row(default);
     }
-}
-
-.landing {
-
-  .title {
-    color: $gold-light;
-    min-height: 90px;
-    position: relative;
-
-    h1, p {
-      @include hide-text;
-    }
-
-    img {
-      left: 0;
-      position: absolute;
-      top: 0;
-    }
-
-  }
-
 }

@@ -1,8 +1,8 @@
 // All partials import into this file
 
 // Include Ruby gems
-@import 'bourbon';
-@import 'neat';
+@import 'lib/bourbon/bourbon';
+@import 'lib/neat/neat';
 
 // Configuration
 @import 'base/variables';
@@ -16,7 +16,6 @@
 
 // Vendor Libraries
 @import 'lib/icons-data-svg';
-@import 'base/svg';
 @import 'lib/billboards-default';
 
 // Individual page and partial layouts
