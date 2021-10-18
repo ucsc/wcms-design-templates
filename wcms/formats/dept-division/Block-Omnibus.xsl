@@ -25,7 +25,7 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
 
 -->
 <xsl:template match="*[content/system-data-structure/articles]" mode="homepage-block">
-    <div id="news" class="block news-block">
+    <div class="block news-block" id="news">
     <h3 class="block-header">
       <xsl:value-of select="content/system-data-structure/articles/title1"/>
       <xsl:if test="content/system-data-structure/articles/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/articles/title2"/></span>
@@ -219,7 +219,7 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
     </xsl:for-each>
     </ul>
     <xsl:if test="content/system-data-structure/articles/news-index/path !='/'">
-        <p><a class="more" href="{content/system-data-structure/articles/news-index/link}">More news&#187;</a></p>
+        <p class="more"><a href="{content/system-data-structure/articles/news-index/link}">More news</a></p>
     </xsl:if>
     </div>
     </div>
@@ -228,7 +228,7 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
 <!-- FEATURED PROFILE -->
 
 <xsl:template match="*[content/system-data-structure/profile]" mode="homepage-block">
-    <div id="profile" class="block profile-block">
+    <div class="block profile-block" id="profile">
     <h3 class="block-header"><xsl:value-of select="content/system-data-structure/profile/title1"/><xsl:if test="content/system-data-structure/profile/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/profile/title2"/></span></xsl:if></h3>
     <div class="inner">
 
@@ -236,10 +236,10 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
     <xsl:if test="content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link">
         <xsl:choose>
             <xsl:when test="content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt != ''">
-                <img class="{$image-class}" alt="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
+                <img alt="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-alt}" class="{$image-class}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
             </xsl:when>
             <xsl:otherwise>
-                <img class="{$image-class}" alt="No text provided" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
+                <img alt="No text provided" class="{$image-class}" src="{content/system-data-structure/profile/profile/content/system-data-structure/lead-image/image-thumb/link}"/>
             </xsl:otherwise>
         </xsl:choose>   
     </xsl:if>
@@ -259,12 +259,12 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
 
 <!--SLIDESHOW BLOCK -->
 <xsl:template match="*[content/system-data-structure/slideshow]" mode="homepage-block">
-    <div id="view" class="block gallery-block">
+    <div class="block gallery-block" id="view">
         <h3 class="block-header"><xsl:value-of select="content/system-data-structure/slideshow/title1"/><xsl:if test="content/system-data-structure/slideshow/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/slideshow/title2"/></span></xsl:if></h3>
     <div class="inner">
         <xsl:for-each select="content/system-data-structure/slideshow/slide[image[link!='/']]">
             <a href="{image/link}" rel="lightbox" title="{alt}">
-                <img class="{$image-class}" alt="{alt}" height="72" src="{thumb/link}" width="72"/>
+                <img alt="{alt}" class="{$image-class}" height="72" src="{thumb/link}" width="72"/>
             </a>
         </xsl:for-each>
     </div>
@@ -273,7 +273,7 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
 
 <!-- TEXT BLOCK -->
 <xsl:template match="*[content/system-data-structure/text-block]" mode="homepage-block">
-    <div id="forstudents" class="block text-block">
+    <div class="block text-block"> <!-- remove id="forstudents" on 3.9.2015 -->
       <h3 class="block-header"><xsl:value-of select="content/system-data-structure/text-block/title1"/><xsl:if test="content/system-data-structure/text-block/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/text-block/title2"/></span></xsl:if></h3>
     <div class="inner">
     
@@ -285,57 +285,83 @@ LIKE: <xsl:value-of select="content/system-data-structure/IDENTIFIER_IN_SD_BLOCK
 
 <!-- CALENDAR BLOCK -->
 <xsl:template match="*[content/system-data-structure/calendar]" mode="homepage-block">
-
-    <div id="events" class="block events-block">
-      <h3 class="block-header"><xsl:value-of select="content/system-data-structure/calendar/title1"/><xsl:if test="content/system-data-structure/calendar/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/calendar/title2"/></span></xsl:if></h3>
-    <div class="inner">
-        <dl>
-        <xsl:for-each select="content/system-data-structure/calendar/event">
-        <dt><xsl:value-of select="month"/>&#160;<strong><xsl:value-of select="day"/></strong>
-        </dt>
-            <dd>
-            <xsl:choose>
-                <xsl:when test="url !=''">
-                <a href="{url}"><xsl:value-of select="name"/></a>
-                </xsl:when>
-                <xsl:when test="page/path !='/'">
-                <a href="{page/link}"><xsl:value-of select="name"/></a>
-                </xsl:when>
-                <xsl:when test="file/path !='/'">
-                <a href="{file/link}"><xsl:value-of select="name"/></a>
-                </xsl:when>
-                <xsl:otherwise>
-                <xsl:value-of select="name"/>
-                </xsl:otherwise>
-            </xsl:choose>
-            </dd>
-        </xsl:for-each>
-        </dl>
-        <xsl:if test="content/system-data-structure/calendar/more/path !='/'">
-        <p><a class="more" href="{content/system-data-structure/calendar/more/link}">More events&#187;</a></p>        
+    <div class="block events-block" id="events">
+      <h3 class="block-header">
+        <xsl:value-of select="content/system-data-structure/calendar/title1"/>
+        <xsl:if test="content/system-data-structure/calendar/title2 !=''">&#160;
+            <span>
+                <xsl:value-of select="content/system-data-structure/calendar/title2"/>
+            </span>
         </xsl:if>
-    
-    </div>
+        </h3>
+        <div class="inner">
+            <dl>
+                <xsl:for-each select="content/system-data-structure/calendar/event">
+                    <dt>
+                        <xsl:value-of select="month"/>&#160;
+                            <strong>
+                                <xsl:value-of select="day"/>
+                            </strong>
+                    </dt>
+                    <dd>
+                        <xsl:choose>
+                            <xsl:when test="url !=''">
+                                <a href="{url}">
+                                    <xsl:value-of select="name"/>
+                                </a>
+                            </xsl:when>
+                            <xsl:when test="page/path !='/'">
+                                <a href="{page/link}">
+                                    <xsl:value-of select="name"/>
+                                </a>
+                            </xsl:when>
+                            <xsl:when test="file/path !='/'">
+                                <a href="{file/link}">
+                                    <xsl:value-of select="name"/>
+                                </a>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="name"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </dd>
+                </xsl:for-each>
+            </dl>
+            <xsl:choose>
+                <xsl:when test="content/system-data-structure/calendar/more/path !='/' !=''">
+                    <p class="more">
+                        <a href="{content/system-data-structure/calendar/more/link}">More events</a>
+                    </p>
+                </xsl:when>
+                <xsl:when test="content/system-data-structure/calendar/more-url !=''">
+                    <p class="more">
+                        <a href="{content/system-data-structure/calendar/more-url}">More events</a>
+                    </p>
+                </xsl:when>
+            </xsl:choose>
+        </div>
   </div>
 </xsl:template>
 
 <!-- YOUTUBE VIDEO BLOCK -->
 <xsl:template match="*[content/system-data-structure/youtube]" mode="homepage-block">
         
-        <div id="video" class="block video-block">
+        <div class="block video-block" id="video">
+            <xsl:if test="content/system-data-structure/youtube/title1 !=''">
             <h3 class="block-header"><xsl:value-of select="content/system-data-structure/youtube/title1"/><xsl:if test="content/system-data-structure/youtube/title2 !=''">&#160;<span><xsl:value-of select="content/system-data-structure/youtube/title2"/></span></xsl:if></h3>
+            </xsl:if>
     
             <div class="inner">
                 <xsl:if test="content/system-data-structure/youtube/video_thumb/link != '/'">
                     <xsl:if test="content/system-data-structure/youtube/video_url">
                         <a class="fb thumb_link" href="{content/system-data-structure/youtube/video_url}">
                             <img alt="Play button" class="play-button" height="35" src="site://static/images/play_btn.png" width="48"/>
-                            <img class="{$image-class}" alt="YouTube video thumbnail" height="90" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
+                            <img alt="YouTube video thumbnail" class="{$image-class}" height="90" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
                         </a>
                     </xsl:if>
                 </xsl:if>
                 <xsl:if test="content/system-data-structure/youtube/video_thumb/link = '/'">
-                    <img class="{$image-class}" alt="YouTube video thumbnail" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
+                    <img alt="YouTube video thumbnail" class="{$image-class}" src="{content/system-data-structure/youtube/video_thumb/link}" width="216"/>
                 </xsl:if>
                 <xsl:if test="content/system-data-structure/youtube/video_title">
                     <a class="fb upTitle" href="{content/system-data-structure/youtube/video_url}">
