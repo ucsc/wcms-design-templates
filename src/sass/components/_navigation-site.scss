@@ -14,8 +14,9 @@
 
 #mainNav,
 .site-nav {
-  display:table;
-  width:100%;
+  display:flex;
+  justify-content: space-between;
+  gap: .25em;
   padding:0;
   margin:0;
 
@@ -24,14 +25,11 @@
     padding:0;
     margin:0;
     list-style: none;
-    float: left;
-    display: block;
-    font-family: $font-family-serif;
-    font-size: 1.15rem;
-    margin-right: 1.05em;
+    font-family: $font-family-sans-serif;
+    font-size: 1.1rem;
 
     a, span {
-      color: #000;
+      color: $brand-primary-blue;
       cursor:pointer;
       display:block;
       text-decoration:none;
@@ -42,7 +40,7 @@
       &:hover,
       &:active {
         color: $brand-secondary-blue;
-        border-bottom: 1px dashed $brand-light-gray;
+        border-bottom: 2px solid $blue-light;
       }
     }
 
@@ -86,40 +84,43 @@
 
 
   /* Dropdowns */
-   li ul {
-     z-index:1000;
-     background-color:#fff;
-     border: 1px solid $brand-light-gray;
-     margin:0;
-     width:100%;
-     min-width: 14em;
-     margin-top: -1px;
-     padding:5px 0;
-     position:absolute;
-     left:-900em;
-     li {
-        font-size: .8em;
-       float: none;
-       display:block;
-       text-align:left;
-       border-bottom:none;
-       a {
-         text-transform: none;
-         padding: .25em .75em;
-         border: none;
-         &:focus,
-         &:hover,
-         &:active {
-           text-decoration: underline;
-           border: none;
-         }
-       }
-     }
-   }
+  li ul {
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid $brand-light-gray;
+    margin: 0;
+    width: 100%;
+    min-width: 14em;
+    margin-top: -1px;
+    padding: 5px 0;
+    position: absolute;
+    left: -900em;
 
-   li:focus ul,
-   li:hover ul,
-   li.hover ul {
-     left:auto;
-   }
+    li {
+      font-size: .8em;
+      float: none;
+      display: block;
+      text-align: left;
+      border-bottom: none;
+
+      a {
+        text-transform: none;
+        padding: .25em .75em;
+        border: none;
+
+        &:focus,
+        &:hover,
+        &:active {
+          text-decoration: underline;
+          border: none;
+        }
+      }
+    }
+  }
+
+  li:focus ul,
+  li:hover ul,
+  li.hover ul {
+    left: auto;
+  }
 }
