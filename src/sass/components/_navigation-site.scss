@@ -21,7 +21,6 @@
   margin:0;
 
   li {
-    position:relative;
     padding:0;
     margin:0;
     list-style: none;
@@ -32,17 +31,16 @@
 
     a, span {
       color: $brand-primary-blue;
-      cursor:pointer;
-      display:block;
+      cursor: pointer;
+      display: block;
       text-decoration: none;
       padding: 0;
-      position: relative;
-      border-bottom: 2px solid transparent;
       &:focus,
       &:hover,
       &:active {
         color: $brand-secondary-blue;
-        border-bottom: 2px solid $blue-light;
+        text-decoration: underline solid $gold;
+        text-decoration-thickness: .12em;
       }
     }
 
@@ -65,7 +63,6 @@
        float: none;
 
       a, span {
-        border-bottom: 1px dashed $brand-light-gray;
         padding: 5px 10px;
       }
     }
