@@ -26,16 +26,18 @@
     margin:0;
     list-style: none;
     font-family: $font-family-sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
 
     a, span {
       color: $brand-primary-blue;
       cursor:pointer;
       display:block;
-      text-decoration:none;
+      text-decoration: none;
       padding: 0;
       position: relative;
-      border-bottom: 1px solid transparent;
+      border-bottom: 2px solid transparent;
       &:focus,
       &:hover,
       &:active {
