@@ -121,20 +121,3 @@ function adjustIframes()
     });
 }
 $(window).on('resize load',adjustIframes);
-
-/**
- * UI-tweak: This looks at the natural width of article/profile
- * images and sets the width of the parent <figure> element to
- * x+16 to match the width of the image.
- *
- * Called with the window.load event to ensure
- * all images have loaded.
- */
-$(window).load(function() {
-  $(".article-image img").each(function() {
-
-    var newWidth = this.naturalWidth + 16;
-    $(this).parent().css({"width": newWidth});
-
-  });
-});
