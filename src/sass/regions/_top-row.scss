@@ -5,11 +5,6 @@
   margin-left: -$font-size-base;
   margin-right: -$font-size-base;
 
-  @include media($tablet) {
-    padding-top: 7px;
-    padding-bottom: 4px;
-  }
-
   .row {
     margin-top: 0;
     margin-bottom: 0;
@@ -25,6 +20,14 @@
     }
   }
 
+.page-top-left,
+.page-top-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
   .page-top-left {
 
     @include media($tablet) {
@@ -35,16 +38,15 @@
 
   .campus-secondary {
     text-indent: -10000px;
-    background: transparent url('/images/logos/uc-santa-cruz-2021-reverse.svg') no-repeat left top;
+    background: transparent url('/images/logos/uc-santa-cruz-2021.svg') no-repeat left top;
     display: block;
-    width: 110px;
-    height: 24px;
-    margin-top: 4px;
+    width: 150px;
+    height: 34px;
   }
 
   .page-top-right {
 
-    padding: 15px 0;
+    padding: 1em 0;
 
     @include media($tablet) {
       float: right;
@@ -74,19 +76,21 @@
 #topNav,
 .global-nav {
 
+    display: flex;
+    flex-direction: row;
+    gap: 0.8em;
+
     // Mobile first defaults
     margin: 10px 0;
     // @include reset(list);
     li {
-        display: inline-block;
-        width: 48%;
-        margin: 0 0 10px 0;
-        padding:0;
-        list-style: none;
+      margin: 0;
+      padding:0;
+      list-style: none;
     }
 
     a {
-      color: #fff;
+      color: $brand-primary-blue;
     }
 
     // Tablet and up
@@ -105,31 +109,13 @@
           padding: 0;
         }
 
-        > li:after {
-          background-color: $brand-gold;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          content: "";
-          display: block;
-          position: absolute;
-          top: 50%;
-          left: -.65em;
-          margin-left: -1.5px;
-          margin-top: -2.5px;
-        }
-
-          > li:first-child:after {
-            display: none;
-          }
-
         a {
           border: none;
           background-color: transparent;
           border-radius:0;
           font-weight:400;
           padding: 0;
-          @include hoverActiveFocus(transparent, #fff, underline);
+          @include hoverActiveFocus(transparent, $brand-primary-blue, underline);
         }
     }
 }
