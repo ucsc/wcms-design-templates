@@ -64,17 +64,6 @@
     }
   }
 
-  .search {
-    position: relative;
-    margin-bottom: 15px;
-
-    @include media($tablet) {
-      display: block;
-      margin-left: 20px;
-      width: 160px;
-      margin-bottom: 4px;
-    }
-  }
 
 }
 
@@ -150,6 +139,9 @@
 // Search box for searching each site.
 .search {
 
+      position: relative;
+      margin-bottom: 15px;
+
   // Mobile first defaults
   .query {
     font-size: 15px;
@@ -176,6 +168,11 @@
 
   // Tablet and up
   @include media($tablet) {
+
+    display: block;
+    margin-left: 20px;
+    width: 160px;
+    margin-bottom: 4px;
 
     // margin-top: 1em;
     .query {

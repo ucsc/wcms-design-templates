@@ -9,9 +9,9 @@
 }
 
 .row {
-  margin-bottom: $font-size-base;
-  clear: all;
-
+  margin: 0 auto $font-size-base auto;
+  clear: both;
+  max-width: $max-width;
 }
 
 
