@@ -10,7 +10,7 @@
 
 .row {
   margin-bottom: $font-size-base;
-  @include outer-container();
+  clear: all;
 
 }
 

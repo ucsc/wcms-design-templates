@@ -1,14 +1,6 @@
 @use "sass:math";
-// Rules for the the global navigation and search field at the top of every page
-
-// ## Layout
-// They occupy the same row on large screens
-// and the separate rows on smaller screens.
-
-
 
 .page-top {
-  background-color: $brand-tertiary-blue;
   padding: 10px $font-size-base 12px $font-size-base;
   margin-left: -$font-size-base;
   margin-right: -$font-size-base;
@@ -21,14 +13,21 @@
   .row {
     margin-top: 0;
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+
+    &:after {
+      all: unset;
+    }
   }
 
   .page-top-left {
 
-    // margin: 5px 0 15px 0;
-
     @include media($tablet) {
-      float: left;
       margin: 0;
     }
 
@@ -60,12 +59,8 @@
     display: block;
     font-size: .9rem;
     @include media($tablet) {
-      @include span-columns(12);
-
       width: auto;
-      // Resetting the width and margin a smidgen for spacing.
       margin-right: 0;
-
     }
   }
 
@@ -73,7 +68,6 @@
     position: relative;
     margin-bottom: 15px;
 
-    @include span-columns(12);
     @include media($tablet) {
       display: block;
       margin-left: 20px;
