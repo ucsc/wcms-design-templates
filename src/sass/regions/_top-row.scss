@@ -120,8 +120,9 @@
   border-radius: 6px;
   border: 2px solid $brown-light;
 
-  :focus-within {
-    box-shadow: 0 0 6px lighten($brand-primary-blue, 20%);
+  &:focus-within {
+    border: 2px solid $brand-primary-blue;
+    box-shadow: 0 0 6px lighten($brand-dark-gray, 20%);
   }
 
   label {
