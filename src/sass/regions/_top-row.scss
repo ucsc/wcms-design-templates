@@ -118,10 +118,10 @@
 // Search box for searching each site.
 .search {
   border-radius: 6px;
-  border: 2px solid $brand-turquoise;
+  border: 2px solid $brown-light;
 
   :focus-within {
-    box-shadow: 0 0 6px lighten($brand-turquoise, 10%);
+    box-shadow: 0 0 6px lighten($brand-primary-blue, 20%);
   }
 
   label {
@@ -138,6 +138,7 @@
     &:focus,
     &:hover,
     &:active {
+      color: $gray-dark;
       border: none;
       outline: none;
       box-shadow: none;
@@ -146,8 +147,8 @@
   }
 
   input[type="submit"] {
-    background: url(https://www.ucsc.edu/images/2021-branding-images/search-icon.svg) no-repeat;
-    background-size: 1.8em;
+    background: url(https://webassets.ucsc.edu/images/looking-glass.svg) no-repeat;
+    background-size: 22px;
     background-position: center center;
     border: 0;
     left: auto;
