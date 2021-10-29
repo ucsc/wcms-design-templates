@@ -35,10 +35,14 @@
   flex-direction: column;
   gap: 1.6em;
   flex-wrap: nowrap;
+  justify-content: space-evenly;
 
   @include media($tablet) {
 
     flex-direction: row;
+    background-color: #ebebeb;
+    margin-bottom: 0;
+    padding: 0 1.6em 1em 1.6em;
 
     .wrap {
       flex: 0 1 25%;
@@ -50,25 +54,19 @@
 
 .five {
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: no-wrap;
+  display: grid;
+  gap: 1.6em;
+  grid-template-columns: repeat(auto-fit, minmax(194px, 1fr));
+  align-items: start;
+  justify-content: space-between;
 
-  @include media($portrait) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  > div {
-
-    @include media($portrait) {
-      flex: 1 0 30%;
+  > div { 
+  
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
-
-    @include media($desktop) {
-      flex: 1 0 20%;
-    }
-
   }
 }
 

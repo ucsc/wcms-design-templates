@@ -8,6 +8,10 @@
 	font-family: $font-family-sans-serif-condensed;
 	font-weight: 400;
 
+	@include media($tablet) {
+		margin-top: 0;
+	}
+
 	a {
 		color: #fff;
 		text-decoration: underline;
@@ -33,12 +37,11 @@
 		.seal {
 			float: left;
 
-
-								@include media($tablet-minus) {
-									float: none;
-									margin: 0 auto;
-									display: block;
-								}
+			@include media($tablet-minus) {
+				float: none;
+				margin: 0 auto;
+				display: block;
+			}
 
 		}
 
@@ -48,11 +51,11 @@
 			padding-top: 20px;
 
 
-								@include media($tablet-minus) {
-									padding-left: 0;
-									text-align: center;
-									margin-bottom: 3em;
-								}
+			@include media($tablet-minus) {
+				padding-left: 0;
+				text-align: center;
+				margin-bottom: 3em;
+			}
 
 			.location {
 				font-weight: 700;
@@ -60,9 +63,9 @@
 				margin-bottom: 3px;
 
 
-												@include media($tablet-minus) {
-													font-size: .8rem;
-												}
+				@include media($tablet-minus) {
+					font-size: .8rem;
+				}
 			}
 
 			.copyright {
@@ -90,38 +93,39 @@
 
 		.links {
 			font-size: .8em;
-			 a {
-				 margin-left: 1em;
+
+			a {
+				margin-left: 1em;
 
 
-				 					@include media($tablet-minus) {
-				 						margin-left: 1em;
-										margin-right: 1em;
-				 					}
+				@include media($tablet-minus) {
+					margin-left: 1em;
+					margin-right: 1em;
+				}
 
-			 }
+			}
 		}
 
 		.social-media {
-			text-align:right;
+			text-align: right;
 			margin-top: 14px;
 			margin-bottom: 5px;
 
 
-					@include media($tablet-minus) {
-						text-align: center;
-					}
+			@include media($tablet-minus) {
+				text-align: center;
+			}
 
 			a {
-				display:inline-block;
+				display: inline-block;
 				margin-left: 1em;
 				font-size: 1.5em;
 
 
-									@include media($tablet-minus) {
-										margin-left: 10px;
-										margin-right: 10px
-									}
+				@include media($tablet-minus) {
+					margin-left: 10px;
+					margin-right: 10px
+				}
 
 				&:focus,
 				&:hover,
@@ -157,25 +161,25 @@
 	font-size: .8em;
 
 	@include media($tablet-minus) {
-		font-size: .7rem;
+		font-size: .7rem;		
 	}
 
 	ul {
 		margin: 0 0 1.5em 0;
 	}
 
-  li {
-    display: inline-block;
+	li {
+		display: inline-block;
 		margin: 0;
 		position: relative;
 		margin-left: 1.5em;
-  }
+	}
 
 	li:first-child:after {
 		display: none;
 	}
 
-  li:after {
+	li:after {
 		background-color: $brand-gold;
 		width: 5px;
 		height: 5px;
