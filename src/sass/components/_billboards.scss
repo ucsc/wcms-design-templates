@@ -145,6 +145,10 @@ Slide Styles
 	max-height: 362px;
 	overflow:hidden;
 
+	.www & {
+		max-height: 620px;
+	}
+
 	img {
 		width:100%;
 		height: auto;
