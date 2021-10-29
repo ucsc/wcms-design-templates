@@ -28,14 +28,14 @@
     margin: 0;
     line-height: 1.35;
     padding: .5em .25em;
-    font-family:$font-family-serif;
+    font-family:$font-family-sans-serif;
     width:0;
     min-width: 100%;
 
     p {
       margin: 0;
-        color: $brand-primary-blue;
-        font-size: 1.2em;
+        color: $brown-dark;
+        font-size: .9rem;
     }
   }
 

@@ -132,12 +132,19 @@
 }
 
 // Home page, right under billboards
-.combined .block-header {
+.block-header {
 
+  color: $brown-dark;
+  font-family: $font-family-sans-serif-condensed;
+  font-weight: 600;
   border-bottom: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: .75em;
 
   a {
     color: $brand-dark-gray;
+    text-decoration: none;
   }
 
 }

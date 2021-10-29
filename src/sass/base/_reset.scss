@@ -54,7 +54,7 @@ body {
 h1 {
 	font-size: 2em;
 	margin: 1em 0 0.5em;
-	font-family: 'EB Garamond', serif;
+	font-family: $font-family-sans-serif-condensed;
 	color: #222;
 	font-weight: normal;
 }
@@ -175,10 +175,10 @@ dd, li {
 
 /* Grouping > Figures */
 figcaption {
-	font-size: 1em;
+	font-size: .9rem;
 	line-height: 1.35;
 	padding: .5em .25em;
-	font-family:$font-family-serif;
+	font-family:$font-family-sans-serif;
 	margin: 0;
 }
 
