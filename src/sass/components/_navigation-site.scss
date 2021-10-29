@@ -19,6 +19,13 @@
   gap: .25em;
   padding:0;
   margin:0;
+  flex-direction: column;
+
+  @include media($tablet) {
+
+    flex-direction: row;
+
+  }
 
   li {
     padding:0;
@@ -87,7 +94,7 @@
     background-color: #fff;
     border: 1px solid $brand-light-gray;
     margin: 0;
-    width: 100%;
+    width: fit-content;
     min-width: 14em;
     margin-top: -1px;
     padding: 5px 0;

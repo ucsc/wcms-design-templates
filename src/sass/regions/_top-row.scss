@@ -4,6 +4,11 @@
   padding: 10px $font-size-base 12px $font-size-base;
   margin-left: -$font-size-base;
   margin-right: -$font-size-base;
+  @include media($tablet) {
+
+    margin-bottom: 3.25em;
+
+  }
 
   .row {
     margin-top: 0;
@@ -31,8 +36,8 @@
   text-indent: -10000px;
   background: transparent url('/images/logos/uc-santa-cruz-2021.svg') no-repeat left top;
   display: block;
-  width: 150px;
-  height: 34px;
+  width: 128px;
+  height: 26px;
 }
 
 .page-top-right {
