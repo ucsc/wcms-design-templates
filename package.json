@@ -13,9 +13,12 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "@frctl/fractal": "^0.7.5",
+    "cheerio": "*",
     "fancybox": "^3.0.1",
     "jquery": "^3.4.1",
-    "owlcarousel": "^1.3.3"
+    "mkdirp": "^0.5.5",
+    "owlcarousel": "^1.3.3",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "browser-sync-webpack-plugin": "^2.3.0",

@@ -5,7 +5,7 @@ var cheerio     = require('cheerio');
 var fs          = require('fs');
 var mkdirp      = require('mkdirp');
 var pages       = require('./pages.js').pages;
-var appPath     = "./examples/";
+var appPath     = "./dist/";
 
 // We create a new index file each time we fetch
 // the sample pages, just in case we've added more to the list.
