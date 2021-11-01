@@ -4,6 +4,7 @@
   padding: 10px $font-size-base 12px $font-size-base;
   margin-left: -$font-size-base;
   margin-right: -$font-size-base;
+  margin-bottom: 1em;
   @include media($tablet) {
 
     margin-bottom: 3.25em;
@@ -15,21 +16,32 @@
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     &:after {
       all: unset;
     }
+
+    @include media($tablet) {
+      align-items: center;
+      flex-direction: row;
+    }
+
   }
 
 .page-top-left,
 .page-top-right {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  @include media($tablet) {
+    width: auto;
+  }
 }
 
 .campus-secondary {
@@ -44,25 +56,17 @@
 
   padding: 1em 0;
   flex: 1;
-  justify-content: flex-end;
+  gap: 1em;
+  justify-content: flex-start;
+  flex-direction: column-reverse;
 
   @include media($tablet) {
     padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
-
-
-
-  #topNav,
-  .global-nav {
-    display: block;
-    font-size: .9rem;
-    @include media($tablet) {
-      width: auto;
-      margin-right: 0;
-    }
-  }
-
 
 }
 
@@ -75,42 +79,42 @@
 
     display: flex;
     flex-direction: row;
-    gap: 0.8em;
-
-    // Mobile first defaults
-    margin: 10px 0;
-    // @include reset(list);
+    flex-wrap: wrap;
+    font-size: .9em;
+    margin: 0;
+    gap: .8em;
+    
+    
     li {
       margin: 0;
       padding:0;
       list-style: none;
+      flex: 1 1 46%;
     }
 
     a {
       text-transform: uppercase;
       color: $brand-tertiary-blue;
+      padding: .25em .5em;
     }
 
     // Tablet and up
     @include media($tablet) {
 
+        flex-wrap: nowrap;
+        gap: 0.8em;
         margin: 0;
 
-        > li {
-          display: inline-block;
-          width: auto;
-          background-image: none;
+        > li {          
           line-height: 1.2em;
           list-style-type: none;
-          margin-left: 1em;
-          position: relative;
-          padding: 0;
+          flex: auto;                
         }
 
         a {
           border: none;
           background-color: transparent;
-          border-radius:0;
+          border-radius: 0;
           font-weight:400;
           padding: 0;
           @include hoverActiveFocus(transparent, $brand-primary-blue, underline);
@@ -124,11 +128,17 @@
 .search {
   border-radius: 6px;
   border: 2px solid lighten($gray-light, 8%);
-  transition: box-shadow .1s;
+  transition: all .1s;
+  width: 100%;
+  max-width: 20em;
 
   &:focus-within {
     border: 2px solid $brand-tertiary-blue;
     box-shadow: 2px 4px 8px lighten($gray, 24%);
+  }
+
+  div {
+    display: flex;
   }
 
   label {
@@ -141,6 +151,7 @@
     border: none;
     border-radius: 6px;
     padding: 0.4em 0.5em;
+    flex-grow: 1;
 
     &:focus,
     &:hover,
@@ -170,6 +181,12 @@
   @include media($tablet) {
     
     margin-left: 1em;
+    width: auto;
+    max-width: auto;
+
+    div {
+      display: block;
+    }
     
   }
 }
