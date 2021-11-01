@@ -13,8 +13,6 @@ h6, .h6 {
 }
 
 h1, .h1 {
-	// color: #4D4D4B;
-	// font-weight:700;
 
 	.site-header & {
 		margin:0;
@@ -36,7 +34,7 @@ h1, .h1 {
 
 #title,
 .page-title {
-		@include fontSize(52);
+		@include fontSize(38);
 		margin:0 0.25em 0.25em 0;
 		line-height: 1.2;
 

@@ -131,7 +131,7 @@
   margin-bottom: 1em;
 }
 
-// Home page, right under billboards
+// Block headers
 .block-header {
 
   color: $brown-dark;
@@ -143,8 +143,18 @@
   margin-bottom: .75em;
 
   a {
-    color: $brand-dark-gray;
+    color: inherit;
     text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $blue;
+      text-decoration: underline;
+      text-decoration-color: $gold;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: 4px;
+    }
   }
 
 }

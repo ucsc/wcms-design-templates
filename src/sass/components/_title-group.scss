@@ -1,7 +1,6 @@
 // The title and subtitle on second-level pages of the main campus website
 
 .title-group {
-    // text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,22 +8,16 @@
     margin: 2em 0;
 
     h1 {
+        color: $blue-med;
         font-size:2.5rem;
-        margin:0;
-        // color: $gold;
-        // font-weight:500;
-        // letter-spacing:-2px;
-        // line-height: 1;
-        font-weight: normal;
+        margin:0;        
+        font-weight:600;
+        line-height: 1;
         padding:0;
-        // text-shadow: 1px 1px 2px $sand-dark;
-
-
     }
 
     p {
-        padding-top: 1em;
-        border-top: 2px solid $brand-secondary-blue;
+        padding-top: 0;
         font-size: 1rem;
         font-weight:300;
         margin-top: 1em;
@@ -36,15 +29,18 @@
 
         h1 {
           font-size: 3rem;
+          line-height: 1.2;
+          padding: 0 .5em 0 0;
+          margin: 0;
+          border-right: 4px solid $gray-very-light;
         }
 
         p {
             font-size: 1.2rem;
             padding: 0 0 0 1em;
-            margin: 0 0 0 1em;
+            margin: 0 0 0 .25em;
             max-width: 68%;
-            border: none;
-            border-left: 2px solid $brand-secondary-blue;
+            border: none;            
         }
     }
 

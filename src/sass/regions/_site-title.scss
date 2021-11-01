@@ -4,9 +4,10 @@
 .names {
 
   // Mobile
-  margin: 1.5em auto .25em auto;
+  margin: 1.5em auto 1em auto;
   display:flex;
   justify-content: space-between;
+  border-bottom: 2px solid $gold;
 
 
   .site-name {
@@ -73,7 +74,7 @@
 
       @include media($small-desktop-plus) {
         height: auto;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.35em;
         width: 220px;
       }
 
@@ -95,13 +96,13 @@
     text-transform: uppercase;
     line-height: 1.2;
     font-size: 2.25rem;
-    margin: 0 0 .25em;
+    margin: 0;
     padding-right: 60px;
     font-weight: 600;
 
     @include media($tablet) {
       font-size: 2.8rem;
-      margin: 0 0 .2em;    
+      margin: 0;    
     }
 
     .flourish {
