@@ -88,7 +88,7 @@
 
 // # Hover, active, focus
 // Set hover, active, and focus for elements.
-@mixin hoverActiveFocus($color: #00458c, $decorate: true) {
+@mixin hoverActiveFocus($color: $brand-tertiary-blue, $decorate: true) {
     &:hover, &:active, &:focus {
         color: $color;
         @if $decorate == true {

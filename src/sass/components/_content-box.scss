@@ -22,7 +22,7 @@
     text-underline-offset: .1em;
     text-decoration-skip-ink: auto;
 
-    @include hoverActiveFocus($blue, true);
+    @include hoverActiveFocus($brand-primary-blue, true);
   }  
 
   /* Customizations for Search results page */

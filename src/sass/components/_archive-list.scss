@@ -40,8 +40,12 @@
 
   h2,
   h3 {
-    line-height: 120%;
-    margin: 0 0 .15em;
+    line-height: 1.4;
+    margin: 0 0 .5em;
+    a {
+      text-decoration: none;
+      @include hoverActiveFocus;
+    }
   }
 
   p {
