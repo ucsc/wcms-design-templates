@@ -23,13 +23,7 @@
     text-decoration-skip-ink: auto;
   }
 
-  a:focus,
-  a:hover,
-  a:active {
-    color: $blue;
-    text-decoration-color: $gold;
-    text-decoration-thickness: 2px;
-  }
+  @include hoverActiveFocus($blue, true);
 
   /* Customizations for Search results page */
   .gsc-results-wrapper-visible a {
