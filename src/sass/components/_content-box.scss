@@ -18,9 +18,9 @@
     color: $brand-tertiary-blue;
     text-decoration: underline;
     text-decoration-color: $gold;
+    text-decoration-thickness: .14em;
+    text-underline-offset: .1em;
     text-decoration-skip-ink: auto;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
   }
 
   a:focus,
