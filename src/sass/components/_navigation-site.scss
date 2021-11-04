@@ -44,10 +44,8 @@
       padding: 0;
       &:focus,
       &:hover,
-      &:active {
-        color: $brand-secondary-blue;
-        text-decoration: underline solid $gold;
-        text-decoration-thickness: .12em;
+      &:active {        
+        @include hoverActiveFocus($brand-secondary-blue, true);
       }
     }
 

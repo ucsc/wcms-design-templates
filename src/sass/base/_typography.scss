@@ -34,9 +34,15 @@ h1, .h1 {
 
 #title,
 .page-title {
-		@include fontSize(38);
+		@include fontSize(32);
 		margin:0 0.25em 0.25em 0;
 		line-height: 1.2;
+
+		@include media($tablet) {
+
+			@include fontSize(48);
+
+		}
 
 	}
 

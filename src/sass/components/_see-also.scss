@@ -8,6 +8,9 @@
   ul {
     margin:0;
     padding-left:0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 2em;
 
     li {
       list-style-type: disc;

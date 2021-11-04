@@ -189,11 +189,7 @@ figcaption {
 a {
 	color: $brand-secondary-blue;
 	text-decoration: none;
-	&:focus,
-	&:hover,
-	&:active {
-		text-decoration: underline;
-	}
+	@include hoverActiveFocus($brand-primary-blue, true);
 	&:active {
 		outline: 0;
 	}

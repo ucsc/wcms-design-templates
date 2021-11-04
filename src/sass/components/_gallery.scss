@@ -22,7 +22,7 @@
       display: block;
       margin-bottom: 0;
       padding: 0;
-      @include hoverActiveFocus($blue-light, $blue-light, none);
+      @include hoverActiveFocus($blue-light, true);
       &:focus,
       &:hover,
       &:active {

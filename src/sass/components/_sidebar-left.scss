@@ -13,11 +13,6 @@
     text-transform: uppercase;
   }
 
-  .block-header {
-    font-weight:bold;
-    margin:2em 0 0.25em 0;
-  }
-
   ul {
     list-style: none;
     margin:0 0 2em 0;
@@ -36,7 +31,7 @@
         display: block;
         padding:0.5em 0 0.5em 1em;
         border-bottom:1px solid $brand-light-gray;
-        @include hoverActiveFocus(#fff, $brand-secondary-blue, underline);
+        @include hoverActiveFocus($brand-secondary-blue, true);
         &.current {
           display:block;
           background:$brand-primary-blue;
@@ -62,7 +57,7 @@
           a {
             border-bottom:none;
             padding:0;
-            @include hoverActiveFocus(transparent, $blue, underline);
+            @include hoverActiveFocus($blue, true);
           }
           &:first-child a {
             border-top:none;

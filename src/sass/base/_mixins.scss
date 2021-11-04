@@ -70,7 +70,6 @@
 }
 
 @mixin fontSize($size) {
-  font-size: #{$size}px; //Fallback in px
   font-size: calculateRem($size);
 }
 
@@ -89,11 +88,17 @@
 
 // # Hover, active, focus
 // Set hover, active, and focus for elements.
-@mixin hoverActiveFocus($background, $color, $decoration) {
+@mixin hoverActiveFocus($color: #00458c, $decorate: true) {
     &:hover, &:active, &:focus {
         color: $color;
-        background-color: $background;
-        text-decoration: $decoration;
+        @if $decorate == true {
+          text-decoration: underline;
+          text-decoration-color: $gold;
+          text-decoration-skip-ink: auto;
+          text-decoration-thickness: .14em;
+          text-underline-offset: .1em;
+          text-decoration-skip-ink: auto;
+        }
     }
 }
 

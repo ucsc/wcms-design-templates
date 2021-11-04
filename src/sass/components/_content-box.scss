@@ -15,16 +15,20 @@
   }
 
   a {
-    color: #006aad;
-    text-decoration: none;
-    border-bottom: 1px solid #fdc700;
+    color: $brand-tertiary-blue;
+    text-decoration: underline;
+    text-decoration-color: $gold;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
   }
 
   a:focus,
   a:hover,
   a:active {
-    color: #006aad;
-    border-bottom: 1px outset #006aad;
+    color: $blue;
+    text-decoration-color: $gold;
+    text-decoration-thickness: 2px;
   }
 
   /* Customizations for Search results page */
