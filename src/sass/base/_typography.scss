@@ -39,9 +39,12 @@ h1, .h1 {
 		line-height: 1.2;
 
 		@include media($tablet) {
-
 			@include fontSize(48);
+		}
 
+		.news & {
+			position: absolute;
+			left: -900em;
 		}
 
 	}

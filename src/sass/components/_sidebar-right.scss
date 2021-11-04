@@ -3,17 +3,13 @@
 .right-column .sidebar {
 
   .inner {
-
-
-
     margin-bottom: 2em;
     @include clearfix;
   }
 
-   h4, .header {
-    font-size: 1.2em;
+   .block-header {
+    font-size: 1.3em;
     font-weight: bold;
-    padding-bottom: 0.5em;
     margin-top: 0;
    }
 
@@ -41,7 +37,6 @@
 
 // Modifier for news site.
 .news.right-column .sidebar {
-  margin-top:3.4em;
   ul li {
     line-height: 1.4;
     margin-bottom: 0.65em;
