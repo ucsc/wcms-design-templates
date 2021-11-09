@@ -1,5 +1,11 @@
 exports.pages=[
 	{
+		"name": "styleguide",
+		"site": "https://www.ucsc.edu",
+		"path": "/styleguide/",
+		"file": "index.html"
+	},
+	{
 		"name": "campus-home",
 		"site": "https://www.ucsc.edu",
 		"path": "/",
@@ -8,14 +14,14 @@ exports.pages=[
 	{		
 		"name": "campus-landing",
 		"site": "https://www.ucsc.edu",
-		"path": "/about/",
+		"path": "/admissions/",
 		"file": "index.html"
 	},
 	{		
 		"name": "campus-left-column",
 		"site": "https://www.ucsc.edu",
-		"path": "/research/",
-		"file": "divisions.html"
+		"path": "/quickstart/prospective-students/",
+		"file": "index.html"
 	},
 	{		
 		"name": "campus-single-column",
@@ -32,8 +38,8 @@ exports.pages=[
 	{		
 		"name": "campus-news-article",
 		"site": "https://news.ucsc.edu",
-		"path": "/2014/02/",
-		"file": "friends-foundation-international.html"
+		"path": "/2021/11/",
+		"file": "decadal-survey.html"
 	},	
 	{		
 		"name": "division-home",
@@ -43,7 +49,7 @@ exports.pages=[
 	},
 	{		
 		"name": "department-home",
-		"site": "https://history.ucsc.edu",
+		"site": "https://lals.ucsc.edu/",
 		"path": "/",
 		"file": "index.html"
 	},	
@@ -61,9 +67,9 @@ exports.pages=[
 	},
 	{		
 		"name": "course-catalog",
-		"site": "https://history.ucsc.edu",
+		"site": "https://www.math.ucsc.edu",
 		"path": "/courses/",
-		"file": "class-schedule-view.php"
+		"file": "general-catalog-list.php"
 	},
 	{		
 		"name": "course-schedule",
@@ -86,30 +92,30 @@ exports.pages=[
 	{
 		"name": "department-left-column",
 		"site": "https://www.astro.ucsc.edu",
-		"path": "/about_department/",
+		"path": "/about/",
 		"file": "index.html"		
 	},
 	{
-		"name": "department-news-article",
+		"name": "department-news-index",
 		"site": "https://www.astro.ucsc.edu",
-		"path": "/news-events/recent/",
+		"path": "/news-events/news/",
 		"file": "index.html"		
 	},
 	{
 		"name": "department-gallery-page",
 		"site": "https://www.astro.ucsc.edu",
-		"path": "/about_department/image_gallery/",
-		"file": "gallery-page_people.html"		
+		"path": "/about/image-galleries/research/",
+		"file": "index.html"		
 	},
 	{
 		"name": "department-courses-table",
 		"site": "https://history.ucsc.edu",
 		"path": "/courses/",
-		"file": "courses-at-a-glance.html"		
+		"file": "catalog-view.php"		
 	},
 	{
 		"name": "feedback-form",
-		"site": "https://www.eeb.ucsc.edu",
+		"site": "https://www.astro.ucsc.edu",
 		"path": "/",
 		"file": "feedback.php"
 	}

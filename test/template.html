@@ -1,0 +1,71 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<!-- BLOCK: uniform campus head  -->
+
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+<link href="https://www.ucsc.edu/favicon.ico" rel="shortcut icon">
+<link href="https://www.ucsc.edu/apple-touch-icon.png" rel="apple-touch-icon">
+
+<link href="css/ucsc.css?v=4.1.0" rel="stylesheet" type="text/css" media="all">
+<script src="js/modernizr.js" type="text/javascript"></script>
+<script src="lib/jquery/dist/jquery.js" type="text/javascript"></script>
+<script async="async" src="js/main.js?t=20210315124600" type="text/javascript"></script>
+<!-- END BLOCK: included uniform campus head  -->
+
+<title>Local Files</title>
+
+</head>
+
+<body class="single-column www">
+
+
+ <div id="wrap">
+   <div id="container">
+     <div id="content">
+       
+ <div class="site-header" role="banner">
+ 
+  <div class="main-header">
+    
+    <div class="row names">
+      <div class="campus-name">
+        <h1><a class="campus-logo" href="../index.html" id="logo">UC Santa Cruz</a></h1>
+        <a class="mobile-menu" href="#mainNav"></a>
+      </div>  
+    </div>
+    
+  </div>
+  
+</div>
+
+        <div class="row" id="sprflt">
+         
+          <div id="main" role="main">
+            <div class="main-content" id="mainContent">
+                
+                <h1 id="title">WCMS template previews</h1>
+                <p>Fetched: <mark>{{fetched}}</mark></p>
+                <div class="contentBox">                                
+                  <ul>
+                    {{#each pages}}
+                      <li>
+                        <a href="{{name}}.html">{{name}}</a> - 
+                        <small class="date">{{site}}</small>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>                
+            </div>
+          </div>    
+        
+         </div>
+
+        
+      </div><!-- /content -->
+    </div><!-- /container -->
+  </div><!-- /wrap -->
+
+</body>
+</html>
