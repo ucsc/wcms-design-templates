@@ -49,10 +49,16 @@ exports.pages=[
 	},
 	{		
 		"name": "department-home",
-		"site": "https://lals.ucsc.edu/",
+		"site": "https://lals.ucsc.edu",
 		"path": "/",
 		"file": "index.html"
-	},	
+	},
+	{
+		"name": "department-home--long-nav",
+		"site": "https://financialaid.ucsc.edu",
+		"path": "/",
+		"file": "index.html"
+	},
 	{		
 		"name": "simplified-home",
 		"site": "https://audit.ucsc.edu",
