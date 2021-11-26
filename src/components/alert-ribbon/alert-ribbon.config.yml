@@ -1,0 +1,29 @@
+title: "Alert Ribbon"
+status: "ready"
+preview: "@preview-no-layout"
+notes: "This component appears at the top of campus home pages when we need to communicate timely information to the campus community. The appearance of this banner, and its contents, are maintained by the Communications & Marketing unit."
+variants:
+  - name: default
+    label: Notice
+    context:
+      appearance: "notice"
+      title: "Header for the NOTICE message type"
+      message: "Description text for the NOTICE message type. These may include links to more information."
+  - name: clear
+    label: Clear
+    context:
+      appearance: "clear"
+      title: "Header for the CLEAR message type"
+      message: "Description text for the CLEAR message type. These may include links to more information."      
+  - name: warning
+    label: Warning
+    context:
+      appearance: "warning"
+      title: "Header for the WARNING message type"
+      message: "Description text for the WARNING message type. These may include links to more information."
+  - name: emergency
+    label: Emergency
+    context:
+      appearance: "emergency"
+      title: "Header for the EMERGENCY message type"
+      message: "Description text for the EMERGENCY message type. These may include links to more information."    

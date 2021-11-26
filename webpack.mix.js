@@ -21,6 +21,6 @@ mix.minify('dist/js/*.js', 'bundle.js');
 // Copy images to distribution folder
 mix.copyDirectory('src/images', 'dist/images');
 
-mix.browserSync({
-    server: "./dist"
-});
+// mix.browserSync({
+//     server: "./dist"
+// });
