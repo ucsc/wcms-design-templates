@@ -8,3 +8,4 @@ build
 test/pages
 .cache
 _local
+!src/stories/assets
