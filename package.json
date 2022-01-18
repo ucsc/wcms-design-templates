@@ -2,7 +2,7 @@
   "name": "redwood",
   "description": "UI components and visual style guide for UC Santa Cruz websites",
   "repository": "https://github.com/ucsc/wcms-design-templates/",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "main": "index.js",
   "scripts": {
     "dev": "npx mix watch",

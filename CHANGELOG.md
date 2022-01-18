@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/ucsc/wcms-design-templates/compare/v4.1.0...v4.2.0) (2022-01-18)
+
+
+### Features
+
+* ✨ Full implementation of local testing is completed! ([fc31ae3](https://github.com/ucsc/wcms-design-templates/commit/fc31ae3db73be1cce80b9bdb02fa07aea8d0cd9f))
+* **Design System:** ✨ Update Fractal settings and add alert ribbon ([9f48298](https://github.com/ucsc/wcms-design-templates/commit/9f4829894f3d8d3e766886b8fe6d53d2b535a6e1))
+
+
+### Bug Fixes
+
+* 🐛 Increase the size of text underlines for links ([0a5a42e](https://github.com/ucsc/wcms-design-templates/commit/0a5a42ef867fd7ee356bea7e2a646580384469bf))
+* 🐛 Pad the alert ribbon when the screen is below our designated layout width ([ffa7826](https://github.com/ucsc/wcms-design-templates/commit/ffa7826695d97faea36c2dce164dd1b98251e06e))
+* 🐛 Reduce gap between columns in 3-column rows ([42beac1](https://github.com/ucsc/wcms-design-templates/commit/42beac1e1c82775813e1551287b8b74044cd25c9))
+* 🐛 Remove beige background from some images. None more beige! ([3132494](https://github.com/ucsc/wcms-design-templates/commit/31324944a013378ac19879f34124dd0936aaafba))
+* 🐛 Remove justified spacing for main nav ([ab5fb5b](https://github.com/ucsc/wcms-design-templates/commit/ab5fb5b8a19342f8380b47e19b52bc5150faf48e))
+
 ## [4.1.0](https://github.com/ucsc/wcms-design-templates/compare/v2.1.0...v4.1.0) (2021-11-05)
 
 
