@@ -15,8 +15,8 @@
 #mainNav,
 .site-nav {
   display:flex;
-  justify-content: space-between;
-  gap: .25em;
+  justify-content: flex-start;
+  gap: 1em  2.5em;
   padding:0;
   margin:0;
   flex-direction: column;
@@ -24,6 +24,7 @@
   @include media($tablet) {
 
     flex-direction: row;
+    flex-wrap: wrap;
 
   }
 
