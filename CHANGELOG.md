@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/ucsc/wcms-design-templates/compare/v4.2.0...v4.2.1) (2022-01-20)
+
+
+### Bug Fixes
+
+* 🐛 Add index file to server root and headers for Netlify ([a365f94](https://github.com/ucsc/wcms-design-templates/commit/a365f94c69554153b1f76acc0076c41e96efff57))
+* 🐛 Reduce gap between links; switch site and global nav to standard case ([c11ec14](https://github.com/ucsc/wcms-design-templates/commit/c11ec1476d95ba83dcbf2d97582a491860880e7e))
+
 ## [4.2.0](https://github.com/ucsc/wcms-design-templates/compare/v4.1.0...v4.2.0) (2022-01-18)
 
 
