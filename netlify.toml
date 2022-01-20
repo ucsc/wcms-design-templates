@@ -1,0 +1,7 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://siteimproveanalytics.com *.siteimproveanalytics.io data: *.ucsc.edu *.google-analytics.com ajax.googleapis.com *.googletagmanager.com use.fontawesome.com *.google.com *.netlify.com *.unpkg.com fonts.googleapis.com fonts.gstatic.com unpkg.com *.fontawesome.com visualizedata.ucop.edu;frame-src 'self' *.youtube.com *.google.com visualizedata.ucop.edu;object-src 'none';frame-ancestors 'self' *.google.com *.youtube.com;"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    X-Frame-Options = "DENY"
