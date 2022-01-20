@@ -29,3 +29,5 @@ mix.copyDirectory("src/images", "assets/images");
 // mix.browserSync({
 //     server: "./dist"
 // });
+
+mix.copy(["src/netlify/index.html", "src/netlify/_headers"], "assets");
