@@ -30,4 +30,4 @@ mix.copyDirectory("src/images", "assets/images");
 //     server: "./dist"
 // });
 
-mix.copy(["src/netlify/index.html", "src/netlify/_headers"], "assets");
+mix.copy(["src/netlify/index.html"], "assets");
