@@ -16,7 +16,8 @@
 .site-nav {
   display:flex;
   justify-content: flex-start;
-  gap: 1em  2em;
+  row-gap: 1em;
+  column-gap: 2em;
   padding:0;
   margin:0;
   flex-direction: column;
