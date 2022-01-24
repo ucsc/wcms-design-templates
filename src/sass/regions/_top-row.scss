@@ -82,13 +82,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     font-size: .9em;
-    margin: 0;
-    row-gap: .8em;
-    column-gap: .8em;
-    
+    margin: -0.8em 0 0 -0.8em;
     
     li {
-      margin: 0;
+      margin: 0.8em 0 0 0.8em;
       padding:0;
       list-style: none;
       flex: 1 1 46%;
@@ -104,8 +101,7 @@
     @include media($tablet) {
 
         flex-wrap: nowrap;
-        gap: 0.8em;
-        margin: 0;
+        margin: -0.8em 0 0 -0.8em;
 
         > li {          
           line-height: 1.2em;
