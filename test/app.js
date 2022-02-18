@@ -40,7 +40,7 @@ pages.forEach(function (i) {
         var hrefSrc = $(this)
           .attr("href")
           .replace(
-            /^(https\:)?\/\/(webassets|static).ucsc.edu\/(_responsive\/)?/gm,
+            /^(https\:)?\/\/ucsc-webassets.netlify.app\/(_responsive\/)?/gm,
             ""
           );
 
@@ -54,7 +54,7 @@ pages.forEach(function (i) {
           var scriptSrc = $(this)
             .attr("src")
             .replace(
-              /^(https\:)?\/\/(webassets|static).ucsc.edu\/(_responsive\/)?/gm,
+              /^(https\:)?\/\/ucsc-webassets.netlify.app\/(_responsive\/)?/gm,
               ""
             );
           $(this).attr("src", scriptSrc);
