@@ -1,35 +1,11 @@
-// Rules for a list of teasers for news articles or videos, etc.
-// This is our all-purpose tool for displaying previews of stuff.
-//
-// .item-border - Adds a border to the bottom of each list item.
-// .image-right - Move the thumbnail to the right side of each list item.
-// .horizontal - Flat list of items that take up 33% of the width.
-//
-// markup:
-// <ul class="archive-list {$modifiers}">
-//   <li>
-//     <a href="#URL">
-//       <img alt="Text description of this image" class="thumbnail" src="http://placehold.it/80x80">
-//     </a>
-//     <span class="date">December 17, 2015</span>
-//     <h3>
-//       <a href="#URL">The title of your article or video</a>
-//     </h3>
-//     <p>Researchers found record levels of the algal toxin domoic acid in samples from a wide range of marine organisms in 2015.</p>
-//   </li>
-// </ul>
-//
-// Styleguide 2.0.0
-
 .archive-list {
   list-style: none;
   margin: 0;
   padding: 0;
 
   li {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     margin-left: 0;
-    table-layout: fixed;
 
     @include clearfix;
 
@@ -60,8 +36,7 @@
     font-size:0.9em;
   }
 
-  img {
-    float:left;
+  img {    
     margin:0 0.5em 1em 0;
   }
 
@@ -111,8 +86,8 @@
       list-style-type: none;
       display:flex;
       align-items: flex-start;
-      margin:1em 0;
-      gap: .85em;
+      margin:0 0 1rem;
+      gap: 1em;
     }
 
     .item-media {
