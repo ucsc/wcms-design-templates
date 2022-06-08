@@ -82,7 +82,7 @@ h4 {
 h5 {
 	font-weight: 700;
 	font-size: 1em;
-	line-height: 1;
+	line-height: 1.5;
 	margin: 1.5em 0 0.25em;
    -webkit-font-smoothing: antialiased;
 }
@@ -90,7 +90,7 @@ h5 {
 h6 {
 	font-weight: 700;
 	font-size: 0.875em;
-	line-height: 1.1429;
+	line-height: 1.5;
 	margin: 1.7em 0 0.15em;
    -webkit-font-smoothing: antialiased;
 }
@@ -175,7 +175,7 @@ dd, li {
 /* Grouping > Figures */
 figcaption {
 	font-size: .9rem;
-	line-height: 1.35;
+	line-height: 1.5;
 	padding: .5em .25em;
 	font-family:$font-family-sans-serif;
 	margin: 0;
@@ -309,7 +309,7 @@ caption {
 	caption-side: bottom;
 	color: #999;
 	font-size: 0.75em; /* 12px */
-	line-height: 1.3334; /* 16px */
+	line-height: 1.5; /* 16px */
 	text-align: left;
 	margin: 1em 0; /* 12px 0 */
 }

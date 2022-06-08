@@ -8,13 +8,13 @@
   .subhead,
   .campus-message {
     color: $gray-dark;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0 0 1em 0;
     @include media($tablet) {
 
-      @include fontSize(20);
+      font-size: 1.2rem;
 
     }
   }
