@@ -8,16 +8,16 @@ const hbs = require("handlebars");
 const pages = require("./pages.js").pages;
 const appPath = "./assets/";
 
-// We create a new index file each time we fetch
+// We create a new list file each time we fetch
 // the sample pages, just in case we've added more to the list.
-fs.open(appPath + "index.html", "r", function (err, fd) {
+fs.open(appPath + "list.html", "r", function (err, fd) {
   if (fd) {
-    fs.unlink(appPath + "index.html", function (err) {
+    fs.unlink(appPath + "list.html", function (err) {
       if (err) throw err;
-      console.log("Removing index.html...");
+      console.log("Removing list.html...");
     });
   } else {
-    console.error("No index.html file. Proceeding...");
+    console.error("No list.html file. Proceeding...");
   }
 });
 
@@ -106,9 +106,9 @@ fs.readFile("test/template.html", function (err, templateFile) {
   var htmlFinal = template({ pages: pages });
 
   mkdirp(appPath, function (e) {
-    fs.writeFile(appPath + "index.html", htmlFinal, (err) => {
+    fs.writeFile(appPath + "list.html", htmlFinal, (err) => {
       if (err) throw err;
-      console.log("index.html file saved");
+      console.log("list.html file saved");
     });
   });
 });
